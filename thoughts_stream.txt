@@ -1,0 +1,13 @@
+FinalGraph:
+    Словарь[вершина, [соседи]]
+
+InputPicture:
+    bitmap файлик
+
+def GraphBuilder(InputPicture) -> FinalGraph:
+    '''делает из картинки граф'''
+    pass
+
+-----------
+    |   |
+    |_ _|
