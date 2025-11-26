@@ -3,26 +3,23 @@ body{
     margin:0;
     font-family: 'Golos', sans-serif;
     font-weight: 900;
-    /* Теперь это будет работать корректно */
 }
 
 @font-face {
-  font-family: 'Golos'; /* Это имя семейства */
+  font-family: 'Golos';
   src: url('golos/Golos\ Text_Bold.ttf') format('truetype');
-  /* Явно указываем, что этот конкретный файл является "черным" или очень жирным */
-  font-weight: 900; /* Используйте 900 для "Black" */
+  font-weight: 900;
   font-style: normal;
 }
 
 
 h1{
     font-size: 80pt;
-    margin-bottom: 20px; /* Добавлен отступ снизу для заголовка */
 }
 
 h2{
     font-size: 40pt;
-    margin: 0; /* Убираем стандартные отступы у h2 */
+    margin: 0; 
 }
 
 header{
@@ -50,11 +47,11 @@ header{
     padding-top: 20px;
     display: none;
     position: fixed;
-    top: 165px;                     /* НАЧИНАЕМ ПОД header */
+    top: 165px;
     left: 0;
     width: 100%;
-    height: calc(100% - 165px);     /* занимаем всё, кроме шапки */
-    background-color: rgba(0,0,0,0.5); /* затемнение */
+    height: calc(100% - 165px);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
 
@@ -62,25 +59,20 @@ header{
   display: block;
 }
 
-/* Белая панель меню справа */
 .menu-panel {
     text-decoration: none;
     position: absolute;
-    top: 0;                         /* внутри .menu — от её верха */
+    top: 0;
     right: 0;
     width: 70%;
     height: 100%;
     background-color: #ffffff;
 }
+
 .menu-panel .menu-item:first-child {
-    margin-top: 80px;   /* или сколько нужно */
-    /* можно ещё добавить padding-top, если нужно */
-    /* padding-top: 20px; */
+    margin-top: 80px;
 }
 
-
-
-/* Элементы меню */
 .menu-item {
   padding-left: 5%;
   width: 100%;
@@ -89,7 +81,6 @@ header{
   padding-top: 2%;
   color: #8C8C8C;
 }
-
 
 #menu-icon{
     margin-top:45px;
@@ -109,14 +100,14 @@ header{
 }
 
 .block{
-    width:98%; /* Или лучше width: auto; с учетом padding */
+    width:98%;
     background-color: rgba(0, 138, 205, 0.52);
     border-radius: 48px;
     margin-bottom: 40px;
-    padding-bottom: 20px; /* Добавляем внутренний отступ снизу для контента */
+    padding-bottom: 20px;
     padding-inline: 15px;
     padding-top: 3px;
-    text-decoration: none ;
+    text-decoration: none;
 }
 
 .block-link{
@@ -124,45 +115,36 @@ header{
 }
 
 .block-img{
-    /*margin-left: 1.5%;*/ /* Убраны, т.к. padding на .block лучше */
     margin-top: 1.5%;
-    width: 100%; /* Занимает всю ширину контейнера */
-    border-radius: 32px 32px 0 0; /* Скругляем только верхние углы изображения */
-    display: block; /* Убираем лишний пробел под изображением */
+    width: 100%;
+    border-radius: 32px 32px 0 0;
+    display: block;
 }
 
 .block-text{
     margin-left: 1.5%;
-    /* margin-top: -10px; - Убрано, т.к. h2 margin: 0 */
     font-weight: bold;
-    padding-top: 15px; /* Отступ между фото и названием */
+    padding-top: 15px;
     color: black;
 }
 
-/* !!! НОВЫЕ СТИЛИ ДЛЯ АДРЕСА И ИКОНКИ !!! */
 .location-info{
     display: flex;
-    align-items: center; /* Выравнивает значок и текст по вертикали */
-    margin-top: 10px; /* Отступ между названием и адресом */
+    align-items: center;
+    margin-top: 10px;
 }
 
 .location-icon{
-    height: 50px; /* Уменьшаем размер иконки для соответствия тексту */
-    margin-right: 10px; /* Отступ справа от иконки до текста */
+    height: 50px;
+    margin-right: 10px;
 }
 
 .address-text {
-    font-size: 32pt; /* Устанавливаем размер текста адреса */
-    margin: 0; /* Убираем стандартные отступы у параграфа */
+    font-size: 32pt;
+    margin: 0;
     color: white;
     text-decoration: none;
 }
-
-/* Старые, неиспользуемые стили из вашего кода (можно удалить) */
-/*
-.block-text-adress{ display: flex; justify-content: space-between; height: 50px; }
-.block-text-adress-location{ height: 50px; }
-*/
 
 footer{
     background-color: black;
@@ -177,7 +159,7 @@ input,
 button,
 textarea {
     font-family: inherit;
-    font-size: inherit; /* Также полезно для размера шрифта */
+    font-size: inherit;
 }
 
 #floor-selector{
