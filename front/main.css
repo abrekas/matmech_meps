@@ -1,0 +1,192 @@
+body{
+    padding:0;
+    margin:0;
+    font-family: 'Golos', sans-serif;
+    font-weight: 900;
+    /* Теперь это будет работать корректно */
+}
+
+@font-face {
+  font-family: 'Golos'; /* Это имя семейства */
+  src: url('golos/Golos\ Text_Bold.ttf') format('truetype');
+  /* Явно указываем, что этот конкретный файл является "черным" или очень жирным */
+  font-weight: 900; /* Используйте 900 для "Black" */
+  font-style: normal;
+}
+
+
+h1{
+    font-size: 80pt;
+    margin-bottom: 20px; /* Добавлен отступ снизу для заголовка */
+}
+
+h2{
+    font-size: 40pt;
+    margin: 0; /* Убираем стандартные отступы у h2 */
+}
+
+header{
+    width: 100%;
+    height: 165px;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    background-color: rgba(0, 138, 205, 0.52);
+    padding:0;
+    margin:0;
+}
+
+#logo{
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.logo-img {
+    width: 120px;
+    height: auto;
+}
+
+.menu {
+    padding-top: 20px;
+    display: none;
+    position: fixed;
+    top: 165px;                     /* НАЧИНАЕМ ПОД header */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 165px);     /* занимаем всё, кроме шапки */
+    background-color: rgba(0,0,0,0.5); /* затемнение */
+    z-index: 1000;
+}
+
+.menu.active {
+  display: block;
+}
+
+/* Белая панель меню справа */
+.menu-panel {
+    text-decoration: none;
+    position: absolute;
+    top: 0;                         /* внутри .menu — от её верха */
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background-color: #ffffff;
+}
+.menu-panel .menu-item:first-child {
+    margin-top: 80px;   /* или сколько нужно */
+    /* можно ещё добавить padding-top, если нужно */
+    /* padding-top: 20px; */
+}
+
+
+
+/* Элементы меню */
+.menu-item {
+  padding-left: 5%;
+  width: 100%;
+  margin-top: 20px;
+  height: 80px;
+  padding-top: 2%;
+  color: #8C8C8C;
+}
+
+
+#menu-icon{
+    margin-top:45px;
+    margin-right: 35px;
+}
+
+.menu-img {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+}
+
+#loop{
+    padding-top: 160px;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+}
+
+.block{
+    width:98%; /* Или лучше width: auto; с учетом padding */
+    background-color: rgba(0, 138, 205, 0.52);
+    border-radius: 48px;
+    margin-bottom: 40px;
+    padding-bottom: 20px; /* Добавляем внутренний отступ снизу для контента */
+    padding-inline: 15px;
+    padding-top: 3px;
+    text-decoration: none ;
+}
+
+.block-link{
+    text-decoration: none;
+}
+
+.block-img{
+    /*margin-left: 1.5%;*/ /* Убраны, т.к. padding на .block лучше */
+    margin-top: 1.5%;
+    width: 100%; /* Занимает всю ширину контейнера */
+    border-radius: 32px 32px 0 0; /* Скругляем только верхние углы изображения */
+    display: block; /* Убираем лишний пробел под изображением */
+}
+
+.block-text{
+    margin-left: 1.5%;
+    /* margin-top: -10px; - Убрано, т.к. h2 margin: 0 */
+    font-weight: bold;
+    padding-top: 15px; /* Отступ между фото и названием */
+    color: black;
+}
+
+/* !!! НОВЫЕ СТИЛИ ДЛЯ АДРЕСА И ИКОНКИ !!! */
+.location-info{
+    display: flex;
+    align-items: center; /* Выравнивает значок и текст по вертикали */
+    margin-top: 10px; /* Отступ между названием и адресом */
+}
+
+.location-icon{
+    height: 50px; /* Уменьшаем размер иконки для соответствия тексту */
+    margin-right: 10px; /* Отступ справа от иконки до текста */
+}
+
+.address-text {
+    font-size: 32pt; /* Устанавливаем размер текста адреса */
+    margin: 0; /* Убираем стандартные отступы у параграфа */
+    color: white;
+    text-decoration: none;
+}
+
+/* Старые, неиспользуемые стили из вашего кода (можно удалить) */
+/*
+.block-text-adress{ display: flex; justify-content: space-between; height: 50px; }
+.block-text-adress-location{ height: 50px; }
+*/
+
+footer{
+    background-color: black;
+    color: white;
+}
+
+
+/***************************************/
+select, 
+option,
+input,
+button,
+textarea {
+    font-family: inherit;
+    font-size: inherit; /* Также полезно для размера шрифта */
+}
+
+#floor-selector{
+    width: 600px;
+    height: 100px;
+    border-radius: 20px;
+    font-size: 30pt;
+}
+
+#floor-selector-option{
+    font-size: 30pt;
+}
