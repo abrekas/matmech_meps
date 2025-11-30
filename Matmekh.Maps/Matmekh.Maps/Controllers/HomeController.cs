@@ -15,7 +15,8 @@ namespace Matmekh.Maps.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),
+            "wwwroot", "index.html"), "text/html");
         }
 
         public IActionResult Privacy()

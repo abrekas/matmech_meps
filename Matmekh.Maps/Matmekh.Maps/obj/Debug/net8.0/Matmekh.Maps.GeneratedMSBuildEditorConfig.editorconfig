@@ -9,43 +9,43 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Matmekh.Maps
 build_property.RootNamespace = Matmekh.Maps
-build_property.ProjectDir = C:\Users\adm\source\repos\Matmekh.Maps\Matmekh.Maps\
+build_property.ProjectDir = D:\repos\matmech_meps\Matmekh.Maps\Matmekh.Maps\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\adm\source\repos\Matmekh.Maps\Matmekh.Maps
+build_property.MSBuildProjectDirectory = D:\repos\matmech_meps\Matmekh.Maps\Matmekh.Maps
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/adm/source/repos/Matmekh.Maps/Matmekh.Maps/Views/Home/Index.cshtml]
+[D:/repos/matmech_meps/Matmekh.Maps/Matmekh.Maps/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adm/source/repos/Matmekh.Maps/Matmekh.Maps/Views/Home/Privacy.cshtml]
+[D:/repos/matmech_meps/Matmekh.Maps/Matmekh.Maps/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adm/source/repos/Matmekh.Maps/Matmekh.Maps/Views/Home/Privacy2.cshtml]
+[D:/repos/matmech_meps/Matmekh.Maps/Matmekh.Maps/Views/Home/Privacy2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5Mi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adm/source/repos/Matmekh.Maps/Matmekh.Maps/Views/Shared/Error.cshtml]
+[D:/repos/matmech_meps/Matmekh.Maps/Matmekh.Maps/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adm/source/repos/Matmekh.Maps/Matmekh.Maps/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/repos/matmech_meps/Matmekh.Maps/Matmekh.Maps/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adm/source/repos/Matmekh.Maps/Matmekh.Maps/Views/_ViewImports.cshtml]
+[D:/repos/matmech_meps/Matmekh.Maps/Matmekh.Maps/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adm/source/repos/Matmekh.Maps/Matmekh.Maps/Views/_ViewStart.cshtml]
+[D:/repos/matmech_meps/Matmekh.Maps/Matmekh.Maps/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adm/source/repos/Matmekh.Maps/Matmekh.Maps/Views/Shared/_Layout.cshtml]
+[D:/repos/matmech_meps/Matmekh.Maps/Matmekh.Maps/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-kesiezq4fm

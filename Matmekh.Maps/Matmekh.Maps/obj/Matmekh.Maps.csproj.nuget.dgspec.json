@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Matmekh.Maps.csproj": {}
+    "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Matmekh.Maps.csproj": {}
   },
   "projects": {
-    "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Matmekh.Maps.csproj": {
+    "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Matmekh.Maps.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Matmekh.Maps.csproj",
+        "projectUniqueName": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Matmekh.Maps.csproj",
         "projectName": "Matmekh.Maps",
-        "projectPath": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Matmekh.Maps.csproj",
+        "projectPath": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Matmekh.Maps.csproj",
         "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\obj\\",
+        "outputPath": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",

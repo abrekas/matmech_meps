@@ -7,10 +7,37 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\golos\Golos Text_Black.ttf" />
+    <None Include="wwwroot\golos\Golos Text_Bold.ttf" />
+    <None Include="wwwroot\golos\Golos Text_DemiBold.ttf" />
+    <None Include="wwwroot\golos\Golos Text_Medium.ttf" />
+    <None Include="wwwroot\golos\Golos Text_Regular.ttf" />
+    <None Include="wwwroot\golos\__MACOSX\._Golos Text_Black.ttf" />
+    <None Include="wwwroot\golos\__MACOSX\._Golos Text_Bold.ttf" />
+    <None Include="wwwroot\golos\__MACOSX\._Golos Text_DemiBold.ttf" />
+    <None Include="wwwroot\golos\__MACOSX\._Golos Text_Medium.ttf" />
+    <None Include="wwwroot\golos\__MACOSX\._Golos Text_Regular.ttf" />
+    <None Include="wwwroot\images\kuybysheva.png" />
+    <None Include="wwwroot\images\location.png" />
+    <None Include="wwwroot\images\logo.png" />
+    <None Include="wwwroot\images\matmeh.png" />
+    <None Include="wwwroot\images\menu.png" />
+    <None Include="wwwroot\index.html" />
+    <None Include="wwwroot\main.css" />
+    <None Include="wwwroot\matmeh.html" />
+    <None Include="wwwroot\matmeh.zip" />
+    <None Include="wwwroot\script.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="Views\Home\Privacy2.cshtml">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\front\" />
   </ItemGroup>
 
 </Project>
