@@ -2,7 +2,7 @@ using Matmekh.Maps.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace Matmekh.Maps.Controllers
+namespace Matmekh.Maps.API.Controllers
 {
     public class HomeController : Controller
     {
