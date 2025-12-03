@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const floorMap    = document.getElementById("floorMap");
     
     const floorImages = {
-        "5": "../img/floor5map.png",
-        "6": "../img/floor6map.png"
+        "5": "images/floor5map.png",
+        "6": "images/floor6map.png"
     };
     
     const initValue = floorSelect.value;
