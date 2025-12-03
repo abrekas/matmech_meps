@@ -1,57 +1,57 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\",
+  "WorkspaceRootPath": "D:\\repos\\matmech_meps\\Matmekh.Maps\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|c:\\users\\adm\\source\\repos\\matmekh.maps\\matmekh.maps\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|d:\\repos\\matmech_meps\\matmekh.maps\\matmekh.maps\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|solutionrelative:matmekh.maps\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|c:\\users\\adm\\source\\repos\\matmekh.maps\\matmekh.maps\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|d:\\repos\\matmech_meps\\matmekh.maps\\matmekh.maps\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|solutionrelative:matmekh.maps\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|c:\\users\\adm\\source\\repos\\matmekh.maps\\matmekh.maps\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|d:\\repos\\matmech_meps\\matmekh.maps\\matmekh.maps\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|solutionrelative:matmekh.maps\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|c:\\users\\adm\\source\\repos\\matmekh.maps\\matmekh.maps\\views\\home\\privacy2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|d:\\repos\\matmech_meps\\matmekh.maps\\matmekh.maps\\views\\home\\privacy2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|solutionrelative:matmekh.maps\\views\\home\\privacy2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|c:\\users\\adm\\source\\repos\\matmekh.maps\\matmekh.maps\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|d:\\repos\\matmech_meps\\matmekh.maps\\matmekh.maps\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|solutionrelative:matmekh.maps\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|c:\\users\\adm\\source\\repos\\matmekh.maps\\matmekh.maps\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|d:\\repos\\matmech_meps\\matmekh.maps\\matmekh.maps\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|solutionrelative:matmekh.maps\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|c:\\users\\adm\\source\\repos\\matmekh.maps\\matmekh.maps\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|d:\\repos\\matmech_meps\\matmekh.maps\\matmekh.maps\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|solutionrelative:matmekh.maps\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|c:\\users\\adm\\source\\repos\\matmekh.maps\\matmekh.maps\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|d:\\repos\\matmech_meps\\matmekh.maps\\matmekh.maps\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|solutionrelative:matmekh.maps\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|c:\\users\\adm\\source\\repos\\matmekh.maps\\matmekh.maps\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|d:\\repos\\matmech_meps\\matmekh.maps\\matmekh.maps\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|solutionrelative:matmekh.maps\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|c:\\users\\adm\\source\\repos\\matmekh.maps\\matmekh.maps\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|d:\\repos\\matmech_meps\\matmekh.maps\\matmekh.maps\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|solutionrelative:matmekh.maps\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|c:\\users\\adm\\source\\repos\\matmekh.maps\\matmekh.maps\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|d:\\repos\\matmech_meps\\matmekh.maps\\matmekh.maps\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|solutionrelative:matmekh.maps\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|c:\\users\\adm\\source\\repos\\matmekh.maps\\matmekh.maps\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|d:\\repos\\matmech_meps\\matmekh.maps\\matmekh.maps\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|solutionrelative:matmekh.maps\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|c:\\users\\adm\\source\\repos\\matmekh.maps\\matmekh.maps\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|d:\\repos\\matmech_meps\\matmekh.maps\\matmekh.maps\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CCB25E6A-08D6-456F-B75B-80CA182B82E8}|Matmekh.Maps\\Matmekh.Maps.csproj|solutionrelative:matmekh.maps\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -72,11 +72,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Matmekh.Maps\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Matmekh.Maps\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAA1wAkAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-22T13:56:04.722Z",
               "EditorCaption": ""
@@ -85,9 +85,9 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Views\\_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Matmekh.Maps\\Views\\_ViewStart.cshtml",
-              "ToolTip": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Views\\_ViewStart.cshtml",
               "RelativeToolTip": "Matmekh.Maps\\Views\\_ViewStart.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -97,9 +97,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Views\\_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "Matmekh.Maps\\Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Views\\_ViewImports.cshtml",
               "RelativeToolTip": "Matmekh.Maps\\Views\\_ViewImports.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -109,9 +109,9 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Models\\ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Matmekh.Maps\\Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Models\\ErrorViewModel.cs",
               "RelativeToolTip": "Matmekh.Maps\\Models\\ErrorViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -121,74 +121,69 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Privacy2.cshtml",
-              "DocumentMoniker": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Views\\Home\\Privacy2.cshtml",
+              "DocumentMoniker": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Views\\Home\\Privacy2.cshtml",
               "RelativeDocumentMoniker": "Matmekh.Maps\\Views\\Home\\Privacy2.cshtml",
-              "ToolTip": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Views\\Home\\Privacy2.cshtml",
+              "ToolTip": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Views\\Home\\Privacy2.cshtml",
               "RelativeToolTip": "Matmekh.Maps\\Views\\Home\\Privacy2.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T17:53:38.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T17:53:38.816Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Matmekh.Maps\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Matmekh.Maps\\Views\\Home\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-22T11:59:05.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-22T11:59:05.469Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Privacy.cshtml",
-              "DocumentMoniker": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Views\\Home\\Privacy.cshtml",
+              "DocumentMoniker": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "Matmekh.Maps\\Views\\Home\\Privacy.cshtml",
-              "ToolTip": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Views\\Home\\Privacy.cshtml",
               "RelativeToolTip": "Matmekh.Maps\\Views\\Home\\Privacy.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T17:47:49.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T17:47:49.917Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Program.cs",
+              "DocumentMoniker": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Program.cs",
               "RelativeDocumentMoniker": "Matmekh.Maps\\Program.cs",
-              "ToolTip": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Program.cs",
+              "ToolTip": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Program.cs",
               "RelativeToolTip": "Matmekh.Maps\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T11:57:37.432Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-22T11:57:37.432Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Matmekh.Maps\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Matmekh.Maps\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T17:48:39.298Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T17:48:39.298Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "Matmekh.Maps\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeToolTip": "Matmekh.Maps\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -198,9 +193,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\appsettings.json",
+              "DocumentMoniker": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\appsettings.json",
               "RelativeDocumentMoniker": "Matmekh.Maps\\appsettings.json",
-              "ToolTip": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\appsettings.json",
+              "ToolTip": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\appsettings.json",
               "RelativeToolTip": "Matmekh.Maps\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -210,9 +205,9 @@
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "_Layout.cshtml.css",
-              "DocumentMoniker": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Views\\Shared\\_Layout.cshtml.css",
+              "DocumentMoniker": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Views\\Shared\\_Layout.cshtml.css",
               "RelativeDocumentMoniker": "Matmekh.Maps\\Views\\Shared\\_Layout.cshtml.css",
-              "ToolTip": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Views\\Shared\\_Layout.cshtml.css",
               "RelativeToolTip": "Matmekh.Maps\\Views\\Shared\\_Layout.cshtml.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -222,9 +217,9 @@
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "Error.cshtml",
-              "DocumentMoniker": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Views\\Shared\\Error.cshtml",
+              "DocumentMoniker": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "Matmekh.Maps\\Views\\Shared\\Error.cshtml",
-              "ToolTip": "C:\\Users\\adm\\source\\repos\\Matmekh.Maps\\Matmekh.Maps\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Views\\Shared\\Error.cshtml",
               "RelativeToolTip": "Matmekh.Maps\\Views\\Shared\\Error.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
