@@ -44,8 +44,6 @@ header{
 }
 
 .menu {
-    padding-top: 20px;
-    display: none;
     position: fixed;
     top: 165px;
     left: 0;
@@ -53,10 +51,15 @@ header{
     height: calc(100% - 165px);
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
+    
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
 }
 
 .menu.active {
-  display: block;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .menu-panel {
@@ -67,11 +70,19 @@ header{
     width: 70%;
     height: 100%;
     background-color: #ffffff;
+
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.15);
 }
 
-.menu-panel .menu-item:first-child {
-    margin-top: 80px;
+.menu.active .menu-panel {
+    transform: translateX(0);
 }
+
+/*.menu-panel .menu-item:first-child {*/
+/*    margin-top: 80px;*/
+/*}*/
 
 .menu-item {
   padding-left: 5%;
