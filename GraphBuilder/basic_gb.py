@@ -8,7 +8,6 @@ from skimage.morphology import thin, skeletonize
 from skimage import measure
 from typing import Tuple
 
-
 class GraphBuilder:
     def __init__(self, img_path):
         self.image = cv2.imread(img_path)
@@ -216,6 +215,7 @@ def run_gb():
 
     section = 'floor6'
     name = 'prep_plan6.png'
+    
     image_path = f'input_images\\{section}\\{name}'
 
     gb = GraphBuilder(img_path=image_path)
