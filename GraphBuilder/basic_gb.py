@@ -94,73 +94,6 @@ class GraphBuilder:
             else:
                 break
 
-    def _split_into_polygons(self):
-        c_len = len(self.contour_compressed)
-        height, width = self.binary_mask.shape
-        self.polygon_field = self.binary_mask.copy()
-        # self.polygon_field[2,5] = '52' (2 по y, 5 по x)
-        for p in range(c_len):
-            # line_coeffs: Tuple[int, int] = None
-            a, b = (
-                self.contour_compressed[p],
-                self.contour_compressed[(p + 1) % c_len],
-            )  # а здесь [0] - по x, [1] - по y
-            difx = a[0] - b[0]
-            dify = a[1] - b[1]
-
-            if difx != 0 and dify != 0:
-                # raise RuntimeError("Диагональ!!! аааа")
-                # print(f"непрямая на {a}, {b}!!!")
-                if abs(a[0] - b[0]) > 1 and abs(a[1] - b[1]) > 1:
-                    print(f"нетривиальная непрямая на {a},{b}")
-
-            if dify != 0:  # прямая по y
-                start = a if a[1] < b[1] else b
-                self._make_cardinal_axis_line(
-                    start_x=start[0], start_y=start[1], finish=height, is_x_dir=False
-                )
-                self._make_cardinal_axis_line(
-                    start_x=start[0],
-                    start_y=0,
-                    finish=start[1],
-                    is_x_dir=False,
-                    reverse=True,
-                )
-
-            elif difx != 0:  # прямая по x
-                start = a if a[0] < b[0] else b
-                self._make_cardinal_axis_line(
-                    start_x=start[0], start_y=start[1], finish=width, is_x_dir=True
-                )
-                self._make_cardinal_axis_line(
-                    start_x=0,
-                    start_y=start[1],
-                    finish=start[0],
-                    is_x_dir=True,
-                    reverse=True,
-                )
-            else:
-                print(f"poing doubling: {a}")
-        # print("aboba")
-
-        """
-        (!!!) UPDATE: непрямые линии не сохраняются в виде уравнения, 
-        а в виде горизонтальных / вертикальных отрезочков (!!!)
-
-        A(x1, y1) B(x2, y2) : ax + by + c = 0
-        1. находим a,b,c
-        2. проводим прямую и смотрим для каждой последовательной пары точек, есть ли пересечение с contour
-            (!) а если прямая очень неровная, то будем смотреть окрестность?
-                наверно нет, стоит просто понять какой конфигурацией алгоритма построения прямой мы это делаем
-                и применить именно его. должны очев получить ту же самую прямую
-            если нашлось, берём самое ближнее:
-                если получились точки с обеих сторон отрезка AB, то берём обе самые ближние точки к A и B соотв.
-                    хотя могло получиться что и больше точек нужно...
-            иначе ничего
-        получили список точек, их добавляем на картинку наравне с corner_points (которые получились из appox_simple)
-
-        """
-
     def p2p_distance(self, p1: list, p2: list) -> float:
         return ((p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2) ** 0.5
 
@@ -169,8 +102,9 @@ class GraphBuilder:
         height, width = self.binary_mask.shape
         self.polygon_field = self.binary_mask.copy()
         # self.polygon_field[2,5] = '52' (2 по y, 5 по x)
-        p = 0
-        while p < c_len:
+        p = -1
+        while p < c_len-1:
+            p += 1
             # line_coeffs: Tuple[int, int] = None
             a, b = (
                 self.contour_compressed[p],
@@ -212,8 +146,6 @@ class GraphBuilder:
                     is_x_dir=is_x_axis,
                     reverse=True,
                 )
-
-            p += 1
 
     def run(self):
         self._process_floor_plan()
@@ -281,7 +213,11 @@ def run_gb():
     image_path = "input_images\\basic\\basic.png"
     image_path = "input_images\\floor5\\greenmask.png"
     image_path = "input_images\\floor6\\prep_plan6.png"
-    # image_path = "prep_plan6.png"
+
+    section = 'floor6'
+    name = 'prep_plan6.png'
+    image_path = f'input_images\\{section}\\{name}'
+
     gb = GraphBuilder(img_path=image_path)
     gb.run()
 
