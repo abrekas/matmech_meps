@@ -1,3 +1,4 @@
+using Microsoft.Extensions.FileProviders;
 using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,7 +20,14 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(builder.Environment.ContentRootPath, "Infrastructure", "wwwroot")),
+    RequestPath = ""
+});
+
+app.Run();
 
 app.UseRouting();
 

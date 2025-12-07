@@ -1,57 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>МАТМЕХ УРФУ НАВИГАТОР</title>
-    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <title>Навигация по корпусу</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/map_style.css">
 </head>
 <body>
-    <header>
-        <div id="logo">
-            <a href="index.html">
-                <img class="logo-img" src="images/logo.png" alt="Logo">
-            </a>
-        </div>
-        <div id="menu-icon">
-            <img class="menu-img" src="images/menu.png" alt="Menu" onclick="activateMenu(event)">
-        </div>
+    <div class="app">
+        <header class="app-header">
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+                <span></span><span></span><span></span>
+            </button>
+        </header>
 
-    </header>
+        <main class="app-main">
+            <!-- поиск -->
+            <div class="search-box">
+                <span class="search-icon"></span>
+                <input class="search-input"
+                       type="text"
+                       placeholder="поиск аудитории"
+                       id="searchInput" />
+            </div>
 
-    <div id="loop">
-        <div id="myMenu" class="menu">
-            <div class="menu-panel">
-                <a href="index.html" style="text-decoration: none;"><div class="menu-item">
-                    <h2>ГЛАВНАЯ</h2>
-                </div></a>
-                <div class="menu-item">
-                    <h2>МАТМЕХ</h2>
+            <!-- выбор этажа -->
+            <div class="floor-select">
+                <div class="select-wrapper">
+                    <span id="floorLabel">6 этаж</span>
+                    <span class="select-arrow"></span>
                 </div>
-                <div class="menu-item">
-                    <h2>КУЙБЫШЕВА</h2>
+                <select name="floor" id="floorSelect">
+                    <option value="6" selected>6 этаж</option>
+                    <option value="5">5 этаж</option>
+                </select>
+            </div>
+
+            <!-- карта -->
+            <div class="map-wrapper">
+                <div class="map-container" id="mapContainer">
+                    <div class="map-inner" id="mapInner">
+                        <img id="floorMap" src="images/floor5map.png" alt="Карта этажа">
+                    </div>
                 </div>
-                <div class="menu-item">
-                    <h2>МАТМЕХ-УГИ</h2>
-                </div>
-                <div class="menu-item">
-                    <h2>КОНТАКТЫ</h2>
-                </div>
-                <div class="menu-item">
-                    <h2>ПОСТРОИТЬ МАРШРУТ</h2>
+
+                <div class="map-zoom-controls">
+                    <button class="zoom-btn" id="zoomInBtn">+</button>
+                    <button class="zoom-btn" id="zoomOutBtn">−</button>
                 </div>
             </div>
-        </div>
-
-        <div id="floor">
-            <select name="floor-selector" id="floor-selector">
-            <option value="6 этаж" id="floor-selector-option">6 этаж</option>
-            <option value="5 этаж" id="floor-selector-option">5 этаж</option>
-            </select>
-        </div>
 
 
-        </div>
+            <!-- избранное -->
+            <div class="favorites">
+                <div class="select-wrapper">
+                    <div>
+                        <span class="favorites-icon">★</span>
+                        <span id="favLabel">Избранное</span>
+                    </div>
+                    <span class="select-arrow"></span>
+                </div>
+                <select name="favorites" id="favoritesSelect">
+                    <option value="">Избранное</option>
+                    <option value="aud-101">Аудитория 101</option>
+                    <option value="aud-202">Аудитория 202</option>
+                </select>
+            </div>
+        </main>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/map_script.js"></script>
 </body>
 </html>
