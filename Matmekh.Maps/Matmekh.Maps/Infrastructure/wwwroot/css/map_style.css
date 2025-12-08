@@ -5,10 +5,17 @@
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: 'Golos', sans-serif;
     background: #ffffff;
     color: #333;
     min-height: 100vh;
+}
+
+@font-face {
+  font-family: 'Golos';
+  src: url('golos/Golos\ Text_Bold.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
 }
 
 html, body {
@@ -39,7 +46,7 @@ html, body {
     width: 56px;
     height: 56px;
     border-radius: 50%;     
-    background: #ffffff;
+    background: none;
     display: flex;
     align-items: center;
     justify-content: center;

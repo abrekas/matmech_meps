@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>МАТМЕХ УРФУ НАВИГАТОР</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header>
-        <div id="logo">
+<div class="app">    
+    <header class="app-header">
+        <div class="logo">
             <a href="index.html">
-                <img class="logo-img" src="images/logo.png" alt="Logo">
-            </a>
-        </div>
-        <div id="menu-icon">
-            <img class="menu-img" src="images/menu.png" alt="Menu" onclick="activateMenu(event)">
-        </div>
+            <img src="images/logo.png" alt="">
+        </div></a>
+        <button class="burger" id="burgerBtn" aria-label="Открыть меню" onclick="activateMenu(event)">
+            <span></span><span></span><span></span>
+        </button>
     </header>
 
-    <div id="loop">
+    <main class="app-main">
         
         <!-- меню шторка -->
         <div id="menu-placeholder"></div>
@@ -29,7 +30,7 @@
                 <img class="block-img" src="images/matmeh.png" alt="Matmeh building">
                 <div class="block-text">
                     <div class="block-text-name">
-                        <h2>МАТМЕХ</h2>
+                        <h2>мат-мех</h2>
                     </div>
                     <div class="location-info">
                         <img src="images/location.png" class="location-icon" alt="Location Icon">
@@ -44,7 +45,7 @@
                 <img class="block-img" src="images/kuybysheva.png" alt="kuybysheva building">
                 <div class="block-text">
                     <div class="block-text-name">
-                        <h2>ИЕНИМ</h2>
+                        <h2>иеним</h2>
                     </div>
                     <div class="location-info">
                         <img src="images/location.png" class="location-icon" alt="Location Icon">
@@ -68,14 +69,17 @@
                 </div>
             </div>
         </a>
+
+        
     </div>
 
-    <footer>
+</div>    
+<footer>
         <div id="about">
             <h2>РАЗРАБОТАНО НА НАПРАВЛЕНИИ ФУНДАМЕНТАЛЬНАЯ 
             ИНФОРМАТИКА И ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ В РАМКАХ УЧЕБНОГО ПРОЕКТА</h2>
         </div>
     </footer>
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
