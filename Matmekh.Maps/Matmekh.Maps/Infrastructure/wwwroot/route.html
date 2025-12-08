@@ -7,65 +7,62 @@
   <link rel="stylesheet" href="css/map_style.css">
 </head>
 <body>
-<div class="app">
-  <header class="app-header">
-    <div class="logo">
-      <a href="index.html">
-        <img src="images/logo.png" alt="">
-      </a>
+    <div class="app">
+        <header class="app-header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="">
+                </a>
+            </div>
+            <button class="burger" id="burgerBtn" aria-label="Открыть меню" onclick="activateMenu(event)">
+                <span></span><span></span><span></span>
+            </button>
+        </header>
+
+        <main class="app-main">
+            <!-- шторка-меню-->
+            <div id="menu-placeholder"></div>
+
+            <!-- выбор этажа -->
+            <div class="floor-select">
+                <div class="select-wrapper">
+                    <span id="floorLabel">5 этаж</span>
+                    <span class="select-arrow"></span>
+                </div>
+                <select name="floor" id="floorSelect">
+                    <option value="5" selected>5 этаж</option>
+                    <option value="6">6 этаж</option>
+                </select>
+            </div>
+
+            <!-- блок маршрута внизу экрана -->
+            <section class="route-card">
+                <div class="route-field">
+                    <span class="route-field-label">Откуда</span>
+                    <!-- бэк -->
+                    <input id="routeFrom"
+                           class="route-field-input"
+                           type="text"
+                           placeholder="">
+                </div>
+
+                <div class="route-field">
+                    <span class="route-field-label">Куда</span>
+                    <!-- бэк -->
+                    <input id="routeTo"
+                           class="route-field-input"
+                           type="text"
+                           placeholder="">
+                </div>
+
+                <button class="route-submit-btn" type="button">
+                    ПОСТРОИТЬ
+                </button>
+            </section>
+        </main>
     </div>
-    <button class="burger" id="burgerBtn" aria-label="Открыть меню" onclick="activateMenu(event)">
-      <span></span><span></span><span></span>
-    </button>
-  </header>
 
-  <main class="app-main">
-    <!-- шторка-меню-->
-    <div id="menu-placeholder"></div>
-
-    <!-- выбор этажа -->
-    <div class="floor-select">
-      <div class="select-wrapper">
-        <span id="floorLabel">5 этаж</span>
-        <span class="select-arrow"></span>
-      </div>
-      <select name="floor" id="floorSelect">
-        <option value="5" selected>5 этаж</option>
-        <option value="6">6 этаж</option>
-      </select>
-    </div>
-    
-    <!-- блок маршрута внизу экрана -->
-    <section class="route-card">
-      <div class="route-field">
-        <span class="route-field-label">Откуда</span>
-        <!-- бэк -->
-        <input
-                id="routeFrom"
-                class="route-field-input"
-                type="text"
-                placeholder=""
-        >
-      </div>
-
-      <div class="route-field">
-        <span class="route-field-label">Куда</span>
-        <!-- бэк -->
-        <input
-                id="routeTo"
-                class="route-field-input"
-                type="text"
-                placeholder=""
-        >
-      </div>
-
-      <button class="route-submit-btn" type="button">
-        ПОСТРОИТЬ
-      </button>
-    </section>
-  </main>
-</div>
-
-<script src="js/map_script.js"></script>
+    <script src="js/map_script.js"></script>
+    <script src="js/route_request.js"></script>
 </body>
 </html>
