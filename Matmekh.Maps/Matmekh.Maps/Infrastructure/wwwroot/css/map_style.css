@@ -121,6 +121,7 @@ body {
 .floor-select,
 .favorites {
     position: relative;
+    margin-top: 16px;
 }
 
 .select-wrapper {

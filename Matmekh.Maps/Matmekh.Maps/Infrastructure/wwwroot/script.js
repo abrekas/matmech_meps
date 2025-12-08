@@ -1,17 +1,25 @@
-function activateMenu(e) {
-  e.stopPropagation();
+document.addEventListener("DOMContentLoaded", async () => {
+  const resp = await fetch("menu.html");
+  const menuHtml = await resp.text();
 
+  const placeholder = document.getElementById("menu-placeholder");
+  placeholder.innerHTML = menuHtml;
+
+  initMenu();
+});
+
+function initMenu() {
   const menu = document.getElementById('myMenu');
-  menu.classList.toggle('active');
+  if (!menu) return;
+  const panel = menu.querySelector(".menu-panel");
+  window.activateMenu = function(e){
+    e.stopPropagation();
+    menu.classList.toggle("active");
+  };
+  if (panel){
+    panel.addEventListener("click", (e) => e.stopPropagation());
+  }
+  
+  menu.addEventListener("click", () => menu.classList.remove("active"));
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  const menu = document.getElementById('myMenu');
-  const panel = document.querySelector('.menu-panel');
-  panel.addEventListener('click', function(e) {
-    e.stopPropagation();
-  });
-  menu.addEventListener('click', function() {
-    menu.classList.remove('active');
-  });
-});
