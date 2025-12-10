@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Навигация по корпусу</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/map_style.css">
+</head>
+<body>
+<div class="app">
+    <header class="app-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="">
+        </div></a>
+        <button class="burger" id="burgerBtn" aria-label="Открыть меню" onclick="activateMenu(event)">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main class="app-main">
+
+        <!-- меню шторка -->
+        <div id="menu-placeholder"></div>
+
+        <!-- поиск -->
+        <div class="search-box">
+            <span class="search-icon"></span>
+            <input
+                    class="search-input"
+                    type="text"
+                    placeholder="поиск аудитории"
+                    id="searchInput"
+            />
+        </div>
+
+        <!-- выбор этажа -->
+        <div class="floor-select">
+            <div class="select-wrapper">
+                <span id="floorLabel">1 этаж</span>
+                <span class="select-arrow"></span>
+            </div>
+            <select name="floor" id="floorSelect">
+                <option value="1 этаж" selected>1 этаж</option>
+                <option value="3 этаж">3 этаж</option>
+                <option value="2 этаж контуровские классы">2 контуровские классы</option>
+                <option value="1 этаж контуровские классы">1 контуровские классы</option>
+            </select>
+        </div>
+
+        <!-- карта -->
+        <div class="map-wrapper">
+            <div class="map-container" id="mapContainer">
+                <div class="map-inner" id="mapInner">
+                    <img id="floorMap" src="images/enter_k.jpg" alt="Карта этажа">
+                </div>
+            </div>
+
+            <div class="map-zoom-controls">
+                <button class="zoom-btn" id="zoomInBtn">+</button>
+                <button class="zoom-btn" id="zoomOutBtn">−</button>
+            </div>
+
+        </div>
+        
+        <!-- построить маршрут -->
+        <div class="route-bar">
+            <button class="route-bar__action" id="goRoute">
+                ПОСТРОИТЬ МАРШРУТ
+            </button>
+            <button class="route-bar__close" id="closeRoute" aria-label="Закрыть">
+                <span></span><span></span>
+            </button>
+        </div>
+    </main>
+</div>
+
+<script src="js/map_kuibysheva_script.js"></script>
+<script src="js/route.js"></script>
+</body>
+</html>

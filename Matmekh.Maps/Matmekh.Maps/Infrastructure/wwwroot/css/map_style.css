@@ -169,38 +169,49 @@ select {
 
 /* КАРТА */
 
-.map-wrapper{
+.map-wrapper {
     position: relative;
+    flex: 1;
+    min-height: 0;       
+    display: flex;
 }
+
 .map-container {
     flex: 1;
+    min-height: 0;
     border-radius: 16px;
     background: #f5f5f7;
     overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
 }
+
 
 .map-inner {
     display: inline-block;
     transform-origin: left top;
+    width: max-content;
+    height: max-content;
 }
+
 
 .map-inner img {
     display: block;
-    max-height: 100%;           
     height: auto;
-    max-width: none;            
+    width: auto;
+    max-width: none;
+    max-height: none;     
 }
+
 
 /* ЗУМ */
 .map-zoom-controls {
     position: absolute;
     right: 16px;
-    bottom: 56px;
+    bottom: 16px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -291,7 +302,7 @@ select {
 /* НИЖНЯЯ ПАНЕЛЬ МАРШРУТА */
 
 .route-bar {
-    margin-top: auto;         
+    margin-top: 0;         
     display: flex;
     align-items: center;
     gap: 12px;
@@ -345,17 +356,6 @@ select {
     transform: rotate(-45deg);
 }
 
-/* ===== СТРАНИЦА МАРШРУТА ===== */
-
-.app-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 0 16px 16px;
-    gap: 8px;
-    min-height: 0;
-    overflow-y: auto;
-}
 
 .floor-select {
     margin-top: 8px;
