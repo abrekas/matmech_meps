@@ -5,26 +5,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     const placeholder = document.getElementById("menu-placeholder");
     placeholder.innerHTML = menuHtml;
 
-    initMenu(); 
     initMap(); 
 });
 
-function initMenu() {
-    function activateMenu(e) {
-        e.stopPropagation();
-        const menu = document.getElementById("myMenu");
-        menu.classList.toggle("active");
-    }
-
-    const menu = document.getElementById("myMenu");
-    const panel = menu.querySelector(".menu-panel");
-    const burgerBtn = document.getElementById("burgerBtn");
-
-    burgerBtn.addEventListener("click", activateMenu);
-
-    panel.addEventListener("click", e => e.stopPropagation());
-    menu.addEventListener("click", () => menu.classList.remove("active"));
-}
 
 function initMap() {
     const floorSelect = document.getElementById("floorSelect");

@@ -89,6 +89,18 @@ html, body {
     overflow-y: auto;          
 }
 
+.back-btn{
+    border-radius: 16px;
+    border: 2px solid #d1d5db;
+    background: #ffffff;
+    padding: 8px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    height: 56px;
+}
+
 .search-box {
     margin-top: 8px;
     background: #f1f1f3;
@@ -364,7 +376,7 @@ select {
 .route-card {
     margin-top: auto;
     background: #f5f5f7;
-    border-radius: 32px 32px 0 0;
+    border-radius: 32px;
     padding: 24px 16px 24px;
     display: flex;
     flex-direction: column;
@@ -397,7 +409,6 @@ select {
 
 /* синяя кнопка "ПОСТРОИТЬ" */
 .route-submit-btn {
-    margin-top: 8px;
     width: 100%;
     height: 56px;
     border-radius: 20px;

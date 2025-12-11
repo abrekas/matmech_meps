@@ -9,31 +9,18 @@
 <body>
     <div class="app">
         <header class="app-header">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="">
-                </a>
-            </div>
-            <button class="burger" id="burgerBtn" aria-label="Открыть меню" onclick="activateMenu(event)">
-                <span></span><span></span><span></span>
-            </button>
-        </header>
+        <div class="logo">
+            <a href="index.html">
+            <img src="images/logo.png" alt="">
+        </div></a>
+        <button class="burger" id="burgerBtn" aria-label="Открыть меню" onclick="activateMenu(event)">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
 
         <main class="app-main">
             <!-- шторка-меню-->
             <div id="menu-placeholder"></div>
-
-            <!-- выбор этажа -->
-            <div class="floor-select">
-                <div class="select-wrapper">
-                    <span id="floorLabel">5 этаж</span>
-                    <span class="select-arrow"></span>
-                </div>
-                <select name="floor" id="floorSelect">
-                    <option value="5" selected>5 этаж</option>
-                    <option value="6">6 этаж</option>
-                </select>
-            </div>
 
             <!-- блок маршрута внизу экрана -->
             <section class="route-card">
@@ -54,15 +41,20 @@
                            type="text"
                            placeholder="">
                 </div>
-
-                <button class="route-submit-btn" type="button">
-                    ПОСТРОИТЬ
-                </button>
+                <div class="route-bar">
+                    <button class="route-submit-btn" type="button">
+                        ПОСТРОИТЬ
+                    </button>
+                    <button class="route-bar__close" id="closeRoute" aria-label="Закрыть">
+                        <span></span><span></span>
+                    </button>
+                </div>
             </section>
         </main>
     </div>
 
     <script src="js/map_script.js"></script>
     <script src="js/route_request.js"></script>
+    <script src="js/menu_script.js"></script>
 </body>
 </html>
