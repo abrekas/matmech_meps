@@ -122,17 +122,9 @@ class GraphBuilderSVG:
         self._parse_meaning_string()
         self.is_graph_connected = self._check_conectedness()
 
-'''а что дальше?
-- проверить, нормально ли связан граф а не по-дибильному
-    1. замкнуть по транзитивности (матрицей и возвести в степень )
-    2. убрать все рёбра, которые можно заменить маршрутом большей длины - хотя может наломать мне всё...
-    0. а если сначала нарисовать скелет коридора, потом добавить проходы до кабинетов, то норм
-
-
-'''
 def main():
-    image_path = "svg_parser\\Vector 639 (1).svg"
-    image_path = "svg_parser\\Vector 711 (2).svg"
+    image_path = "svg_parser\\input_images\\Vector 639 (1).svg"
+    image_path = "svg_parser\\input_images\\Vector 711 (2).svg"
     gb = GraphBuilderSVG(image_path)
     gb.run()
     if gb.is_graph_connected:
