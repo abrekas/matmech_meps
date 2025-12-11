@@ -1,17 +1,13 @@
-﻿using Microsoft.Extensions.FileProviders;
-
-var infrastructurePath = Path.GetFullPath(
-    Path.Combine(Directory.GetCurrentDirectory(), "Infrastructure"));
-
-var wwwrootPath = Path.Combine(infrastructurePath, "wwwroot");
-
-var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+﻿var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 {
-    WebRootPath = wwwrootPath,
+    WebRootPath = Path.Combine("Infrastructure", "wwwroot"),
     Args = args
 });
+
 builder.Services.AddControllers();
+
 var app = builder.Build();
+
 app.UseStaticFiles();
 app.UseRouting();
 app.MapControllers();
