@@ -339,10 +339,17 @@ select {
     padding: 0;
     cursor: pointer;
     position: relative;
-    
 }
 
+.route-card { 
+    position: sticky; 
+    bottom: 0;
+    z-index: 10;
+}
+
+
 .route-bar__close span {
+    pointer-events: none;
     position: absolute;
     width: 20px;
     height: 2px;
