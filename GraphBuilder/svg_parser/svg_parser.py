@@ -1,4 +1,5 @@
 from collections import defaultdict
+import re
 
 
 class queue:
@@ -29,6 +30,8 @@ class GraphBuilderSVG:
         self.data = self._read_source_file()
         self.main_string = self.data[1]
 
+        self.valid_tags = frozenset(["g", "path", "text"])
+
         self.points = set()
         self.edges = set()
 
@@ -43,7 +46,41 @@ class GraphBuilderSVG:
         with open(self.source_file_path) as f:
             return f.readlines()
 
-    def _read_a_pair(self, i: int):
+    def _parse_svg_file(self):
+        groups_stack = []
+        rooms_dict = {}
+        temp_id = ''
+        with open(self.source_file_path) as f:
+            for s in f:
+                tag = re.search(r"\S* ", s).group()[1:-1]
+                if tag not in self.valid_tags:
+                    continue
+                id = re.search(r' id=[\S]*[" ]', s).group()[5:-1]
+                if tag == "g":
+                    groups_stack.append(id)
+                elif tag == "/g":
+                    groups_stack.pop()
+
+                if re.search(r"graph", id):
+                    self.main_string = s
+                    self._parse_meaning_string()
+                
+                elif groups_stack[-1] == 'rooms_numbers' and tag == 'text':
+                    x = re.search(r'x="\S+"', s).group()[3:-1]
+                    y = re.search(r'y="\S+"', s).group()[3:-1]
+                    rooms_dict[id] = (x,y)
+                
+                elif len(groups_stack) > 2 and groups_stack[-2] == 'rooms_numbers':
+                    if tag == 'g':
+                        temp_id = id
+                    else:
+                        x = re.search(r'x="\S+"', s).group()[3:-1]
+                        y = re.search(r'y="\S+"', s).group()[3:-1]
+                        rooms_dict[temp_id] = (x,y)
+                #вот и все ифы получается
+                print('aboba')
+
+    def _read_a_pair(self, i: int) -> tuple[tuple[float, float], int]:
         buf = [[], []]
         i += 1
         k = 0
@@ -53,7 +90,7 @@ class GraphBuilderSVG:
             elif k < 2:
                 buf[k].append(self.main_string[i])
             i += 1
-        return float("".join(buf[0])), float("".join(buf[1])), i - 1
+        return (float("".join(buf[0])), float("".join(buf[1]))), i - 1
 
     def _read_a_point(self, i):
         buf = []
@@ -71,33 +108,27 @@ class GraphBuilderSVG:
         i += 1
         while self.main_string[i] != '"':
             if self.main_string[i] == "M":
-                t1, t2, i = self._read_a_pair(i)
-                self.cursor_x = t1
-                self.cursor_y = t2
-                self.points.add((t1, t2))
-                if (t1, t2) not in self.graph.keys():
-                    self.graph[(t1, t2)] = set()
+                new_point, i = self._read_a_pair(i)
+                self.cursor_x, self.cursor_y = new_point
+                self.points.add(new_point)
+                if new_point not in self.graph.keys():
+                    self.graph[new_point] = set()
 
-            elif self.main_string[i] == "V" or self.main_string[i] == "H":
-                command = self.main_string[i]
-                t, i = self._read_a_point(i)
-                new_point = (
-                    (self.cursor_x, t)
-                    if command == "V"
-                    else (t, self.cursor_y)
-                )
+            elif self.main_string[i] == "L":
+                new_point, i = self._read_a_pair(i)
                 if new_point != (self.cursor_x, self.cursor_y):
                     self.graph[new_point].add((self.cursor_x, self.cursor_y))
                     self.graph[(self.cursor_x, self.cursor_y)].add(new_point)
                     self.cursor_x, self.cursor_y = new_point
 
-            elif self.main_string[i] == "L":
+            elif self.main_string[i] == "V" or self.main_string[i] == "H":
                 command = self.main_string[i]
-                t1,t2, i = self._read_a_pair(i)
-                if (t1,t2) != (self.cursor_x, self.cursor_y):
-                    self.graph[(t1,t2)].add((self.cursor_x, self.cursor_y))
-                    self.graph[(self.cursor_x, self.cursor_y)].add((t1,t2))
-                    self.cursor_x, self.cursor_y = t1,t2
+                t, i = self._read_a_point(i)
+                new_point = (self.cursor_x, t) if command == "V" else (t, self.cursor_y)
+                if new_point != (self.cursor_x, self.cursor_y):
+                    self.graph[new_point].add((self.cursor_x, self.cursor_y))
+                    self.graph[(self.cursor_x, self.cursor_y)].add(new_point)
+                    self.cursor_x, self.cursor_y = new_point
             i += 1
 
     def _bfs(self) -> set:
@@ -119,12 +150,14 @@ class GraphBuilderSVG:
         return self.visited == self.graph.keys()
 
     def run(self):
+        self._parse_svg_file()
         self._parse_meaning_string()
         self.is_graph_connected = self._check_conectedness()
 
+
 def main():
     image_path = "svg_parser\\input_images\\Vector 639 (1).svg"
-    image_path = "svg_parser\\input_images\\Vector 711 (2).svg"
+    image_path = "svg_parser\\floor6 matmeh.svg"
     gb = GraphBuilderSVG(image_path)
     gb.run()
     if gb.is_graph_connected:
@@ -132,7 +165,7 @@ def main():
     else:
         print("kys")
         print(gb.visited.difference(set(gb.graph.keys())))
-        print('525252')
+        print("525252")
         print(set(gb.graph.keys()).difference(gb.visited))
 
 
