@@ -4,11 +4,23 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Golos', sans-serif;
     background: #ffffff;
     color: #333;
     min-height: 100vh;
+}
+
+
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Важно: занимаем всю высоту экрана */
 }
 
 @font-face {
@@ -18,11 +30,6 @@ body {
   font-style: normal;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    overflow: hidden;          
-}
 
 .app {
     height: 100%;
@@ -34,7 +41,7 @@ html, body {
 /* ШАПКА */
 
 .app-header {
-    height: 72px;
+    height: 64px;
     background: #71c2e6;
     padding: 0 20px;
     display: flex;
@@ -43,6 +50,7 @@ html, body {
 }
 
 .logo {
+    padding:2px;
     width: 56px;
     height: 56px;
     border-radius: 50%;     
@@ -83,7 +91,7 @@ html, body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 16px;
+    padding: 8px;
     gap: 8px;
     min-height: 0;             
     overflow-y: auto;          
@@ -115,10 +123,14 @@ html, body {
     color: black;
 }
 
+.block-text-name{
+    font-size: 16pt;
+}
+
 .location-info{
+    margin-top: 0px;
     display: flex;
     align-items: center;
-    margin-top: 10px;
 }
 
 .location-icon{
@@ -133,9 +145,28 @@ html, body {
 }
 
 footer{
+    margin-top: 16px;
+    gap: 16px;
     background-color: black;
     color: white;
-    height: 500px;
+    height: 200px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.logos{
+    width: 48px;
+    gap: 16px;
+    display: flex;
+    flex-direction:row;
+    position: relative;
+}
+
+.footer-logo{
+    width: auto;
+    height: 32px;
 }
 
 
@@ -143,7 +174,7 @@ footer{
 
 .menu {
     position: absolute;
-    top: 72px;                     
+    top: 64px;                     
     left: 0;
     width: 100%;
     height: calc(100% - 72px);
@@ -161,8 +192,8 @@ footer{
 }
 
 .menu-panel {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 64;
     right: 0;
     width: 70%;
     height: 100%;

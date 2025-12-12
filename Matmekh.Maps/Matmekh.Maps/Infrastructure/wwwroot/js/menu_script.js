@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 function initMenu() {
   const menu = document.getElementById('myMenu');
+  const clickBtn = document.getElementById('menu-item')
   if (!menu) return;
   const panel = menu.querySelector(".menu-panel");
   window.activateMenu = function(e){
@@ -19,7 +20,7 @@ function initMenu() {
   if (panel){
     panel.addEventListener("click", (e) => e.stopPropagation());
   }
-  
+  clickBtn.addEventListener("click", () => menu.classList.remove("active"))
   menu.addEventListener("click", () => menu.classList.remove("active"));
 }
 

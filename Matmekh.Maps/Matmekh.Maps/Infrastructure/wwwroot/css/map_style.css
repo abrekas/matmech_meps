@@ -34,7 +34,7 @@ html, body {
 /* ШАПКА */
 
 .app-header {
-    height: 72px;
+    height: 64px;
     background: #71c2e6;
     padding: 0 20px;
     display: flex;
@@ -43,6 +43,7 @@ html, body {
 }
 
 .logo {
+    padding:2px;
     width: 56px;
     height: 56px;
     border-radius: 50%;     
@@ -83,29 +84,17 @@ html, body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 16px;
+    padding: 8px;
     gap: 8px;
     min-height: 0;             
     overflow-y: auto;          
 }
 
-.back-btn{
-    border-radius: 16px;
-    border: 2px solid #d1d5db;
-    background: #ffffff;
-    padding: 8px 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    width: 100%;
-    height: 56px;
-}
-
 .search-box {
-    margin-top: 8px;
     background: #f1f1f3;
     border-radius: 16px;
     padding: 12px 16px;
+    height: 48px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -147,6 +136,7 @@ html, body {
 
 .floor-select,
 .favorites {
+    height: 48px;
     position: relative;
     margin-top: 16px;
 }
@@ -161,6 +151,7 @@ html, body {
     font-size: 18px;
     color: #4b5563;
     background: #ffffff;
+    height: 48px;
 }
 
 select {
@@ -192,7 +183,7 @@ select {
     flex: 1;
     min-height: 0;
     border-radius: 16px;
-    background: #f5f5f7;
+    background: #ffffff;
     overflow-x: auto;
     overflow-y: auto;
     display: flex;
@@ -260,7 +251,7 @@ select {
 
 .menu {
     position: absolute;
-    top: 72px;                     
+    top: 64px;                     
     left: 0;
     width: 100%;
     height: calc(100% - 72px);
