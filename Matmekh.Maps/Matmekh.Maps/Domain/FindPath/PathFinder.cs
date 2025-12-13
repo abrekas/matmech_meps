@@ -1,6 +1,12 @@
-﻿namespace Matmekh.Maps.Domain.FindPath
+﻿using Matmekh.Maps.Infrastructure;
+
+namespace Matmekh.Maps.Domain.FindPath
 {
-    public class PathFinder
+    public static class PathFinder
     {
+        public static List<Point> FindPath(string start, string end)
+        {
+            return default;
+        }
     }
 }
