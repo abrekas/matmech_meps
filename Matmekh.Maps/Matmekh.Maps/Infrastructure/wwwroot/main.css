@@ -15,14 +15,6 @@ body {
     min-height: 100vh;
 }
 
-
-
-.app {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Важно: занимаем всю высоту экрана */
-}
-
 @font-face {
   font-family: 'Golos';
   src: url('golos/Golos\ Text_Bold.ttf') format('truetype');
@@ -30,13 +22,12 @@ body {
   font-style: normal;
 }
 
-
 .app {
-    height: 100%;
     display: flex;
     flex-direction: column;
-    position: relative;
+    min-height: 100vh;
 }
+
 
 /* ШАПКА */
 
@@ -53,12 +44,11 @@ body {
     padding:2px;
     width: 56px;
     height: 56px;
-    border-radius: 50%;     
-    background: none;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;       
+    overflow: hidden; 
 }
 
 .logo img {
@@ -66,7 +56,6 @@ body {
     height: 100%;
     object-fit: contain;     
 }
-
 
 .burger {
     width: 26px;
@@ -85,6 +74,7 @@ body {
     background: #ffffff;
 }
 
+
 /* КОНТЕНТ */
 
 .app-main {
@@ -101,9 +91,7 @@ body {
     background-color: rgba(0, 138, 205, 0.52);
     border-radius: 16px;
     margin-bottom: 8px;
-    padding-bottom: 8px;
-    padding-inline: 8px;
-    padding-top: 3px;
+    padding: 8px;
     text-decoration: none;
 }
 
@@ -112,13 +100,11 @@ body {
 }
 
 .block-img{
-    margin-top: 1.5%;
     width: 100%;
     display: block;
 }
 
 .block-text{
-    margin-left: 1.5%;
     font-weight: bold;
     color: black;
 }
@@ -144,12 +130,18 @@ body {
     text-decoration: none;
 }
 
+@media (min-width: 800px) {
+    .app-main{
+        width: 800px;
+    }
+}
+
 footer{
     margin-top: 16px;
     gap: 16px;
     background-color: black;
     color: white;
-    height: 200px;
+    height: auto;
     padding: 8px;
     display: flex;
     flex-direction: column;
