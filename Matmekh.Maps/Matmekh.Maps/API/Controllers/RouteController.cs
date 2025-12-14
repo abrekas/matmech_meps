@@ -1,5 +1,6 @@
 ﻿using Matmekh.Maps.Models;
 using Microsoft.AspNetCore.Mvc;
+using Matmekh.Maps.Domain;
 
 namespace Matmekh.Maps.API.Controllers
 {
@@ -18,6 +19,8 @@ namespace Matmekh.Maps.API.Controllers
 
             // Здесь будет логика построения маршрута
             Console.WriteLine($"Построение маршрута: {request.From} → {request.To}");
+
+            PathFinder.FindPath(request.From, request.To);
 
             // Возвращаем результат
             return Ok(new

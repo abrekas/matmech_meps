@@ -39,5 +39,16 @@
         {
             return Math.Abs(X - other.X) + Math.Abs(Y - other.Y);
         }
+
+        public static Point Parse(string str)
+        {
+            var parts = str.Split(' ');
+            if (parts.Length != 2)
+                throw new FormatException($"Неверный формат точки: {str}");
+
+            return new Point(
+                int.Parse(parts[0].Trim()),
+                int.Parse(parts[1].Trim()));
+        }
     }
 }
