@@ -26,7 +26,7 @@
 
         <!-- поиск -->
         <div class="search-box">
-            <span class="search-icon"></span>
+            <img src="images/search_icon.png">
             <input
                     class="search-input"
                     type="text"
@@ -51,18 +51,22 @@
 
         <!-- карта -->
         <div class="map-wrapper">
-            <div class="map-container" id="mapContainer">
-                <div class="map-inner" id="mapInner">
-                    <img id="floorMap" src="images/enter_k.jpg" alt="Карта этажа">
-                </div>
+            <div class="map-viewport">
+                <svg id="mySvgContainer"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="map-svg"
+                    preserveAspectRatio="xMinYMin meet">
+                <image id="floorMap" href="images/enter_k.jpg" x="0" y="0"></image>
+                </svg>
             </div>
 
             <div class="map-zoom-controls">
                 <button class="zoom-btn" id="zoomInBtn">+</button>
                 <button class="zoom-btn" id="zoomOutBtn">−</button>
             </div>
-
         </div>
+
+
         
         <!-- построить маршрут -->
         <div class="route-bar">
