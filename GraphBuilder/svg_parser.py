@@ -15,7 +15,7 @@ class RoomInfo:
 
 
 class GraphBuilderSVG:
-    def __init__(self, src_file_path: str):
+    def __init__(self, src_file_path: str, output_json_path = 'test.json'):
         self.source_file_path = src_file_path
         self.points: Set[Tuple[float, float]] = set()
         self.edges: Set[Tuple[Tuple[float, float], Tuple[float, float]]] = set()
@@ -29,6 +29,9 @@ class GraphBuilderSVG:
 
         # Максимальное расстояние для связывания комнаты с вершиной
         self.room_link_threshold = 40.0
+
+        self.stupid_json_path = 'navigation_graph_with_rooms.json'
+        self.sensible_json_path = output_json_path
 
     def _process_svg(self):
         """строит граф по файлу"""
@@ -72,7 +75,7 @@ class GraphBuilderSVG:
                         self._add_room_by_id(s, temp_id)
 
                 # вот и все ифы получается
-                print("aboba")
+                # print("aboba")
 
     def _add_room_by_id(self, s, id):
         transform_match = re.search(r"transform", s)
@@ -365,8 +368,52 @@ class GraphBuilderSVG:
     def run(self):
         self._process_svg()
         self._visualize()
-        self._export_with_rooms("navigation_graph_with_rooms.json")
+        self._export_with_rooms(self.stupid_json_path)
+        self._convert_to_sensible_format()
 
+
+    def _convert_to_sensible_format(self):
+        import json
+
+        dicta = {}
+
+        with open(self.stupid_json_path, "r", encoding="utf-8") as file:
+            dicta = json.load(file)
+
+        nodes = dicta["nodes"]
+        edges = dicta["edges"]
+        names = dicta["rooms"]
+
+        names_result = {}
+
+        nodes_dict = {}
+        result_dict = {}
+
+        result_dict_coords = {}
+
+        for node in nodes:
+            result_dict[node["id"]] = []
+            nodes_dict[node["id"]] = " ".join((str(int(node["x"])), str(int(node["y"]))))
+            for edge in edges:
+                if edge["from"] == node["id"]:
+                    result_dict[node["id"]].append(edge["to"])
+                if edge["to"] == node["id"]:
+                    result_dict[node["id"]].append(edge["from"])
+
+        for des in result_dict.keys():
+            result_dict_coords[nodes_dict[des]] = list(map(lambda x: nodes_dict[x], result_dict[des]))
+
+        for name in names:
+            names_result[name["number"]] = nodes_dict[name["node_id"]]
+
+        with open("graph.json", "w", encoding='utf-8') as f:
+            json.dump(result_dict_coords, f, ensure_ascii=False, indent=2)
+
+        with open("names.json", "w", encoding='utf-8') as f:
+            json.dump(names_result, f, ensure_ascii=False, indent=2)
+
+        # Точка (563, 132)
+        print(result_dict_coords)
 
 # Пример использования
 def main():
