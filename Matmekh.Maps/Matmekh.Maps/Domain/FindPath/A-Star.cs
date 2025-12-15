@@ -1,9 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Matmekh.Maps.Domain;
-using Matmekh.Maps.Domain.FindPath;
+﻿using Matmekh.Maps.Domain.ValueTypes;
+using Matmekh.Maps.Infrastructure.Scripts;
 
-namespace Matmekh.Maps.Application
+namespace Matmekh.Maps.Domain.FindPath
 {
     public class AStar : ISearcher
     {
@@ -15,11 +13,11 @@ namespace Matmekh.Maps.Application
         /// <param name="end">Конечная точка</param>
         /// <param name="heuristic">Функция эвристики (null = Манхэттенское расстояние)</param>
         /// <returns>Список точек от start до end или пустой список если путь не найден</returns>
-        public List<Point> FindPath(
-            Dictionary<Point, List<Point>> graph,
-            Point start,
-            Point end,
-            Func<Point, Point, double>? heuristic = null)
+        public List<Coordinates> FindPath(
+            Dictionary<Coordinates, List<Coordinates>> graph,
+            Coordinates start,
+            Coordinates end,
+            Func<Coordinates, Coordinates, double>? heuristic = null)
         {
             // Проверка входных данных
             if (!graph.ContainsKey(start))
@@ -35,10 +33,10 @@ namespace Matmekh.Maps.Application
             var openSet = new PriorityQueue<Node, double>();
 
             // Закрытый список (уже исследованные точки)
-            var closedSet = new HashSet<Point>();
+            var closedSet = new HashSet<Coordinates>();
 
             // Для быстрого доступа к узлам
-            var allNodes = new Dictionary<Point, Node>();
+            var allNodes = new Dictionary<Coordinates, Node>();
 
             // Начинаем со стартовой точки
             var startNode = new Node(start)
@@ -99,15 +97,15 @@ namespace Matmekh.Maps.Application
             }
 
             // Путь не найден
-            return new List<Point>();
+            return new List<Coordinates>();
         }
 
         /// <summary>
         /// Восстанавливает путь от конечного узла к начальному
         /// </summary>
-        private List<Point> ReconstructPath(Node endNode)
+        private List<Coordinates> ReconstructPath(Node endNode)
         {
-            var path = new List<Point>();
+            var path = new List<Coordinates>();
             var currentNode = endNode;
 
             while (currentNode != null)

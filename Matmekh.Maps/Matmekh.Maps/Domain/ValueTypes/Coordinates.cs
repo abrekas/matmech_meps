@@ -1,52 +1,52 @@
-﻿namespace Matmekh.Maps.Domain
+﻿namespace Matmekh.Maps.Domain.ValueTypes
 {
-    public struct Point : IEquatable<Point>
+    public struct Coordinates : IEquatable<Coordinates>
     {
         public int X { get; }
         public int Y { get; }
 
-        public Point(int x, int y)
+        public Coordinates(int x, int y)
         {
             X = x;
             Y = y;
         }
 
         public override bool Equals(object obj) =>
-            obj is Point point && Equals(point);
+            obj is Coordinates point && Equals(point);
 
-        public bool Equals(Point other) =>
+        public bool Equals(Coordinates other) =>
             X == other.X && Y == other.Y;
 
         public override int GetHashCode() =>
             HashCode.Combine(X, Y);
 
-        public static bool operator ==(Point left, Point right) =>
+        public static bool operator ==(Coordinates left, Coordinates right) =>
             left.Equals(right);
 
-        public static bool operator !=(Point left, Point right) =>
+        public static bool operator !=(Coordinates left, Coordinates right) =>
             !(left == right);
 
         public override string ToString() =>
             $"({X}, {Y})";
 
-        public double DistanceTo(Point other)
+        public double DistanceTo(Coordinates other)
         {
             int dx = X - other.X;
             int dy = Y - other.Y;
             return Math.Sqrt(dx * dx + dy * dy);
         }
-        public int ManhattanDistance(Point other)
+        public int ManhattanDistance(Coordinates other)
         {
             return Math.Abs(X - other.X) + Math.Abs(Y - other.Y);
         }
 
-        public static Point Parse(string str)
+        public static Coordinates Parse(string str)
         {
             var parts = str.Split(' ');
             if (parts.Length != 2)
                 throw new FormatException($"Неверный формат точки: {str}");
 
-            return new Point(
+            return new Coordinates(
                 int.Parse(parts[0].Trim()),
                 int.Parse(parts[1].Trim()));
         }

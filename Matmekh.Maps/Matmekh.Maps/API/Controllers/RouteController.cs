@@ -4,6 +4,7 @@ using System.Text.Json;
 using Matmekh.Maps.Infrastructure.Models;
 using Matmekh.Maps.Application;
 using Matmekh.Maps.Domain.FindPath;
+using Matmekh.Maps.Domain.ValueTypes;
 
 namespace Matmekh.Maps.API.Controllers
 {
@@ -11,9 +12,9 @@ namespace Matmekh.Maps.API.Controllers
     [Route("api/[controller]")]  // Будет: /api/route
     public class RouteController : ControllerBase
     {
-        private readonly IPathFinder pathFinder;
+        private readonly IPathFinderApp pathFinder;
 
-        public RouteController(IPathFinder pathFinder) 
+        public RouteController(IPathFinderApp pathFinder) 
         { 
             this.pathFinder = pathFinder;
         }
@@ -30,7 +31,16 @@ namespace Matmekh.Maps.API.Controllers
             // Здесь будет логика построения маршрута
             Console.WriteLine($"Построение маршрута: {request.From} → {request.To}");
 
-            var graph = pathFinder.FindPath(request.From, request.To);
+            var graph = new List<Coordinates>();
+
+            try
+            {
+                graph = pathFinder.FindPath(request.From, request.To).Points;
+            }
+            catch (Exception ex)
+            {
+				return BadRequest(new { error = ex.ToString() });
+			}
 
             var options = new JsonSerializerOptions
             {

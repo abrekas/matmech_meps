@@ -7,17 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Update="Views\Home\Privacy2.cshtml">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\front\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Include="Infrastructure/wwwroot/**">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>

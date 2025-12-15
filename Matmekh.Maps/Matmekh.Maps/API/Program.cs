@@ -1,21 +1,33 @@
 ﻿using Matmekh.Maps.Application;
 using Matmekh.Maps.Domain.FindPath;
+using Matmekh.Maps.Infrastructure.Scripts;
 
-var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+namespace Matmekh.Maps.API;
+
+class Program
 {
-    WebRootPath = Path.Combine("Infrastructure", "wwwroot"),
-    Args = args
-});
+    static void Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+        {
+            WebRootPath = Path.Combine("Infrastructure", "wwwroot"),
+            Args = args
+        });
 
-builder.Services.AddControllers();
-builder.Services.AddScoped<ISearcher, AStar>();
-builder.Services.AddScoped<IPathFinder, PathFinder>();
+        builder.Services.AddControllers();
 
-var app = builder.Build();
+        builder.Services.AddScoped<ISearcher, AStar>();
+        builder.Services.AddScoped<IPathFinderService, PathFinderService>();
+        builder.Services.AddScoped<IJSONGraphLoader, JSONGraphLoader>();
+        builder.Services.AddScoped<IPathFinderApp, PathFinderApp>();
 
-app.UseStaticFiles();
-app.UseRouting();
-app.MapControllers();
-app.MapFallbackToFile("index.html");
+        var app = builder.Build();
 
-app.Run();
+        app.UseStaticFiles();
+        app.UseRouting();
+        app.MapControllers();
+        app.MapFallbackToFile("index.html");
+
+        app.Run();
+    }
+}

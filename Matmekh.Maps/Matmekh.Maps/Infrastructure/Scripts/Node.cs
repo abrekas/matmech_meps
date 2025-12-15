@@ -1,14 +1,16 @@
-﻿namespace Matmekh.Maps.Domain
+﻿using Matmekh.Maps.Domain.ValueTypes;
+
+namespace Matmekh.Maps.Infrastructure.Scripts
 {
     public class Node : IComparable<Node>
     {
-        public Point Position { get; }
+        public Coordinates Position { get; }
         public Node? Parent { get; set; }
         public double G { get; set; }
         public double H { get; set; }
         public double F => G + H;
 
-        public Node(Point position)
+        public Node(Coordinates position)
         {
             Position = position;
             G = 0;

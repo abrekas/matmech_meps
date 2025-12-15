@@ -1,11 +1,13 @@
-﻿namespace Matmekh.Maps.Domain.FindPath
+﻿using Matmekh.Maps.Domain.ValueTypes;
+
+namespace Matmekh.Maps.Domain.FindPath
 {
     public interface ISearcher
     {
-		public List<Point> FindPath(
-			Dictionary<Point, List<Point>> graph,
-			Point start,
-			Point end,
-			Func<Point, Point, double>? heuristic = null);
-	}
+        public List<Coordinates> FindPath(
+            Dictionary<Coordinates, List<Coordinates>> graph,
+            Coordinates start,
+            Coordinates end,
+            Func<Coordinates, Coordinates, double>? heuristic = null);
+    }
 }
