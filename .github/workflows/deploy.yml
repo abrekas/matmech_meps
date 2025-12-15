@@ -41,6 +41,6 @@ jobs:
             docker rm matmeh-maps || true
             docker run -d \
               --name matmeh-maps \
-              -p 80:8080 \
+              -p 8080:8080 \
               --restart always \
               matmeh-maps
