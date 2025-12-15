@@ -40,6 +40,7 @@ msbuild.wrn
 
 # Visual Studio 2015/2017 cache/options directory
 Matmekh.Maps/.vs/
+.vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 # !wwwroot/
 
@@ -399,3 +400,4 @@ FodyWeavers.xsd
 *.sln.iml
 
 ## End of https://www.toptal.com/developers/gitignore/api/visualstudio
+/Matmekh.Maps/Matmekh.Maps/obj
