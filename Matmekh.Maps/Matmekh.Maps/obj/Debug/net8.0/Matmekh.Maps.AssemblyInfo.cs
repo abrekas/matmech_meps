@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Matmekh.Maps")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb34236af926b4806e50e1d48a25b3070d606538")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3570fae6ee339cd7a9a421b5fb36b16669e531f9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Matmekh.Maps")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Matmekh.Maps")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
