@@ -472,7 +472,7 @@
       "x": 532.5,
       "y": 169.5,
       "rooms": [
-        "wc w"
+        "wc w 6"
       ]
     },
     {
@@ -986,7 +986,7 @@
       "node_id": "node_70"
     },
     {
-      "number": "wc w",
+      "number": "wc w 6",
       "x": 513.0,
       "y": 132.8,
       "node_id": "node_73"

@@ -1,4 +1,9 @@
 import re
+import json
+from pathlib import Path
+from typing import NamedTuple
+
+# from __future__ import annotations
 
 # import xml.etree.ElementTree as ET
 from collections import defaultdict
@@ -6,6 +11,16 @@ from math import sqrt, isclose
 from dataclasses import dataclass
 from typing import Dict, Set, Tuple, List, Optional
 import os
+
+
+FINAL_GRAPH_JSON_PATH = ''
+
+class Node(NamedTuple):
+    x: float
+    y: float
+    neighbours: List[str]
+    floor: str
+    korpus: str
 
 
 @dataclass
@@ -17,13 +32,18 @@ class RoomInfo:
 
 
 class GraphBuilderSVG:
-    def __init__(self, src_file_path: str, output_json_path="test.json"):
+    def __init__(self, src_file_path: str):
+
         self.source_file_path = src_file_path
         self.points: Set[Tuple[float, float]] = set()
         self.edges: Set[Tuple[Tuple[float, float], Tuple[float, float]]] = set()
         self.graph: defaultdict[Tuple[float, float], Set[Tuple[float, float]]] = (
             defaultdict(set)
         )
+
+        name_args = Path(self.source_file_path).name[:-4].split()
+        self.floor = name_args[1]
+        self.korpus = name_args[2]
 
         # Для хранения информации о кабинетах
         self.rooms: List[RoomInfo] = []
@@ -34,7 +54,8 @@ class GraphBuilderSVG:
 
         self.staircase_pattern = "staircase"
 
-        self.output_folder_name = self.source_file_path[:-4]
+        file_path = Path(self.source_file_path)
+        self.output_folder_name = file_path.parent.parent / file_path.stem
         os.makedirs(self.output_folder_name, exist_ok=True)
 
         self.stupid_json_path = os.path.join(
@@ -43,14 +64,15 @@ class GraphBuilderSVG:
         self.graph_json_path = os.path.join(self.output_folder_name, "graph.json")
         self.names_json_path = os.path.join(self.output_folder_name, "names.json")
 
-        self.sensible_json_path = output_json_path
-
         self.coordinate_patterns = [
             re.compile(r"translate\(([\d.]+) ([\d.]+)\)"),
             re.compile(r"matrix\([-\d.]+ [-\d.]+ [-\d.]+ [-\d.]+ ([\d.]+) ([\d.]+)\)"),
-            re.compile(r'd="M(\d+) (\d+)'),
+            re.compile(r'd="M([\d.]+) ([\d.]+)'),
             re.compile(r'x="([\d.]+)" y="([\d.]+)"'),
         ]
+
+        self.names_result = {}
+        self.result_dict_coords = {}
 
     def _process_svg(self):
         """строит граф по файлу"""
@@ -58,10 +80,7 @@ class GraphBuilderSVG:
         # 1. Парсим файлик и вносим все нужные данные
         self._parse_svg_file()
 
-        # 2. Удаляем промежуточные точки на прямых линиях
-        # self._simplify_graph()
-
-        # 4. Привязываем кабинеты к ближайшим вершинам
+        # 2. Привязываем кабинеты к ближайшим вершинам
         self._link_rooms_to_graph()
 
     def _parse_svg_file(self):
@@ -83,8 +102,6 @@ class GraphBuilderSVG:
                     groups_stack.append(id)
 
                 if re.search(r"graph", id):
-                    # self.main_string = s
-                    # self._parse_meaning_string()
                     self._parse_path_data(s)
 
                 elif (
@@ -208,6 +225,7 @@ class GraphBuilderSVG:
     def _is_edge_redundant(
         self, p1: Tuple[float, float], p2: Tuple[float, float]
     ) -> bool:
+        # return False
         """Проверяет, является ли ребро избыточным"""
         # Проверяем, есть ли путь между p1 и p2 через другие точки
         visited = set()
@@ -240,7 +258,7 @@ class GraphBuilderSVG:
                     closest_node = node
 
             if closest_node:
-                # closest_node_neighbour = next(iter(self.graph[closest_node]))
+
                 closest_node_neighbour = self.graph[closest_node].pop()
                 del self.graph[closest_node]
                 self.graph[closest_node_neighbour].remove(closest_node)
@@ -251,7 +269,6 @@ class GraphBuilderSVG:
                 else:
                     raise RuntimeError(f"ошибка при обработке комнаты {room.number}")
 
-                # self.points.remove(closest_node)
                 room.node_id = closest_node_neighbour
                 # Добавляем информацию о комнате в граф
                 if "rooms" not in self.graph[room.node_id]:
@@ -356,12 +373,14 @@ class GraphBuilderSVG:
 
     def run(self):
         self._process_svg()
-        self._visualize()
+        # self._visualize()
         self._export_with_rooms(self.stupid_json_path)
-        self._convert_to_sensible_format()
+        # self._convert_to_sensible_format()
+
+        self._convert_to_correct_format()
+        self.dump_correct_json(self.correct_graph, self.correct_names)
 
     def _convert_to_sensible_format(self):
-        import json
 
         dicta = {}
 
@@ -372,12 +391,12 @@ class GraphBuilderSVG:
         edges = dicta["edges"]
         names = dicta["rooms"]
 
-        names_result = {}
+        self.names_result = {}
 
         nodes_dict = {}
         result_dict = {}
 
-        result_dict_coords = {}
+        self.result_dict_coords = {}
 
         for node in nodes:
             result_dict[node["id"]] = []
@@ -391,35 +410,137 @@ class GraphBuilderSVG:
                     result_dict[node["id"]].append(edge["from"])
 
         for des in result_dict.keys():
-            result_dict_coords[nodes_dict[des]] = list(
+            self.result_dict_coords[nodes_dict[des]] = list(
                 map(lambda x: nodes_dict[x], result_dict[des])
             )
 
         for name in names:
-            names_result[name["number"]] = nodes_dict[name["node_id"]]
-
-        with open(self.graph_json_path, "w", encoding="utf-8") as f:
-            json.dump(result_dict_coords, f, ensure_ascii=False, indent=2)
-
-        with open(self.names_json_path, "w", encoding="utf-8") as f:
-            json.dump(names_result, f, ensure_ascii=False, indent=2)
+            self.names_result[name["number"]] = nodes_dict[name["node_id"]]
 
         # Точка (563, 132)
-        print(result_dict_coords)
+        print(self.result_dict_coords)
+
+    def get_new_id(self, id):
+        return f"{id} {self.floor} {self.korpus}"
+
+    def get_new_name(self, name):
+        return f"{name} {self.korpus}"
+
+    def _convert_to_correct_format(self):
+        dicta = {}
+
+        with open(self.stupid_json_path, "r", encoding="utf-8") as file:
+            dicta = json.load(file)
+
+        nodes = dicta["nodes"]
+        edges = dicta["edges"]
+        names = dicta["rooms"]
+
+        self.correct_graph: dict[str, Node] = {}
+        self.correct_names: dict[str, str] = {}
+
+        for node in nodes:
+            self.correct_graph[self.get_new_id(node["id"])] = Node(
+                node["x"], node["y"], list(), self.floor, self.korpus
+            )
+
+        for edge in edges:
+            v1 = edge["to"]
+            v2 = edge["from"]
+            self.correct_graph[self.get_new_id(v1)].neighbours.append(
+                self.get_new_id(v2)
+            )
+            self.correct_graph[self.get_new_id(v2)].neighbours.append(
+                self.get_new_id(v1)
+            )
+
+        for name in names:
+            room_name = self.get_new_name(name["number"])
+            node_name = self.get_new_id(name["node_id"])
+            self.correct_names[room_name] = node_name
+
+    def dump_correct_json(self, result_graph, result_names):
+        with open(self.graph_json_path, "w", encoding="utf-8") as f:
+            json.dump(result_graph, f, ensure_ascii=False, indent=2)
+
+        with open(self.names_json_path, "w", encoding="utf-8") as f:
+            json.dump(result_names, f, ensure_ascii=False, indent=2)
 
 
-# Пример использования
+def merge_correct_jsons(parsers: List[GraphBuilderSVG], result_folder_path: Path):
+    ans_dict_graph: Dict[str, Node] = {}
+    ans_dict_names: Dict[str, str] = {}
+    staircases_patterns = frozenset(["staircase", "lifts"])
+    staircases: Dict[str, Dict[int, str]] = defaultdict(
+        dict
+    )  # [dict[stair_index -> dict[floor -> name]] ]
+
+    for p in parsers:
+        ans_dict_graph.update(p.correct_graph)
+        ans_dict_names.update(p.correct_names)
+        for key in p.correct_names:
+            t = key.split()
+            if t[0] in staircases_patterns:
+                index = "1" if len(t) < 4 else t[2]
+                staircases[f"{t[0]}:{index}"][t[1]] = key
+
+    for stair in staircases.keys():
+        floors = sorted(staircases[stair].keys())
+        for i in range(1, len(floors)):
+            ans_dict_graph[
+                ans_dict_names[staircases[stair][floors[i - 1]]]
+            ].neighbours.append(ans_dict_names[staircases[stair][floors[i]]])
+            ans_dict_graph[
+                ans_dict_names[staircases[stair][floors[i]]]
+            ].neighbours.append(ans_dict_names[staircases[stair][floors[i - 1]]])
+
+    with open(parsers[0].output_folder_name.parent / Path("ans_graph.json"), "w", encoding="utf-8") as f:
+        json.dump(ans_dict_graph, f, ensure_ascii=False, indent=2)
+
+    with open(parsers[0].output_folder_name.parent / Path("ans_names.json"), "w", encoding="utf-8") as f:
+        json.dump(ans_dict_names, f, ensure_ascii=False, indent=2)
+
+    ans_ans_dict_names = {}
+    ans_ans_dict_graph = {}
+
+    for name in ans_dict_names.keys():
+        curr_node = ans_dict_graph[ans_dict_names[name]]
+        node_coordinate = (
+            f"{curr_node.x} {curr_node.y} {curr_node.korpus}_{curr_node.floor}"
+        )
+        old_name_from_new = ' '.join(name.split()[:-1])
+        ans_ans_dict_names[old_name_from_new] = node_coordinate
+        ans_ans_dict_graph[node_coordinate] = [
+            f"{ans_dict_graph[node_name].x} {ans_dict_graph[node_name].y} {ans_dict_graph[node_name].korpus}_{ans_dict_graph[node_name].floor}"
+            for node_name in curr_node.neighbours
+        ]
+
+    
+    
+    with open(result_folder_path / Path("ans_ans_graph.json"), "w", encoding="utf-8") as f:
+        json.dump(ans_ans_dict_graph, f, ensure_ascii=False, indent=2)
+
+    with open(result_folder_path / Path("ans_ans_names.json"), "w", encoding="utf-8") as f:
+        json.dump(ans_ans_dict_names, f, ensure_ascii=False, indent=2)
+
+
+
 def main():
-    # Путь к вашему SVG файлу
-    svg_path = "floor5 matmeh.svg"
-    svg_path = ".\\svg_parser\\floor5 matmeh.svg"
-    svg_path = ".\\GB\\GraphBuilder\\svg_parser\\floor6 matmeh.svg"
-    svg_path = ".\\GB\\GraphBuilder\\svg_parser\\floor6 matmeh (1).svg"
+    # svg_path = "floor5 matmeh.svg"
+    # svg_path = ".\\svg_parser\\floor5 matmeh.svg"
+    # svg_path = ".\\GB\\GraphBuilder\\svg_parser\\floor6 matmeh.svg"
+    # svg_path = ".\\GB\\GraphBuilder\\svg_parser\\floor6 matmeh (1).svg"
 
+    svg_paths = [
+        ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 6 matmeh.svg",
+        ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 5 matmeh.svg",
+    ]
+
+    parsers = [GraphBuilderSVG(path) for path in svg_paths]
     # Создаем парсер
-    parser = GraphBuilderSVG(svg_path)
-
-    parser.run()
+    for p in parsers:
+        p.run()
+    merge_correct_jsons(parsers, parsers[0].output_folder_name.parent.parent.parent)
 
 
 if __name__ == "__main__":
