@@ -79,7 +79,7 @@
 <text id="619" opacity="0.5" transform="matrix(0 -1 1 0 1208.32 153.449)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="15.5819" letter-spacing="0em"><tspan x="0" y="15.7328">619</tspan></text>
 <text id="625" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="1703.38" y="121.203">625</tspan></text>
 <text id="623" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="1625" y="121.849">623</tspan></text>
-<text id="lifts 5" transform="translate(1547.11 140.038) rotate(-90.1555)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="11" letter-spacing="0em"><tspan x="0" y="11.4">&#x43b;&#x438;&#x444;&#x442;&#x44b;</tspan></text>
+<text id="lifts 6" transform="translate(1547.11 140.038) rotate(-90.1555)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="11" letter-spacing="0em"><tspan x="0" y="11.4">&#x43b;&#x438;&#x444;&#x442;&#x44b;</tspan></text>
 <text id="609" transform="matrix(0 1 -1 0 843 104)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="0" y="23.8492">609</tspan></text>
 <text id="613" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="1099" y="132.849">613</tspan></text>
 <text id="621" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="1303" y="132.849">621</tspan></text>
@@ -90,8 +90,8 @@
 <text id="626" transform="matrix(0 -1 1 0 1154 311)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="0" y="23.8492">626</tspan></text>
 <text id="632" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="1430" y="292.849">632</tspan></text>
 <text id="602" transform="translate(125.536 452.356) rotate(-113)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="0" y="23.8492">602</tspan></text>
-<text id="wc w" fill="white" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="32" letter-spacing="0em"><tspan x="513" y="132.8">&#x436;</tspan></text>
-<text id="dekanat" transform="translate(167 375.934) rotate(-23)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="0" y="23.8492">&#x434;&#x435;&#x43a;&#x430;&#x43d;&#x430;&#x442;</tspan></text>
+<text id="wc w 6" fill="white" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="32" letter-spacing="0em"><tspan x="513" y="132.8">&#x436;</tspan></text>
+<text id="dekanat_matmeh" transform="translate(167 375.934) rotate(-23)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="0" y="23.8492">&#x434;&#x435;&#x43a;&#x430;&#x43d;&#x430;&#x442;</tspan></text>
 <text id="630" opacity="0.5" transform="matrix(0 -1 1 0 1348 321)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="0" y="23.8492">630</tspan></text>
 </g>
 <g id="lift">
@@ -107,7 +107,7 @@
 <path id="Rectangle 154" d="M1235 74H1338.37H1412V158.5V177H1355V189H1235V74Z" fill="#75D3FF" fill-opacity="0.52"/>
 <path id="Rectangle 153" d="M1095 74H1129.65H1154V158.004V189H1095V74Z" fill="#75D3FF" fill-opacity="0.52"/>
 <path id="Rectangle 155" d="M1194 230H1280.33H1341V314.004V345H1194V230Z" fill="#75D3FF" fill-opacity="0.52"/>
-<g id="staircases">
+<g id="staircase">
 <g id="staircase 6 1 group">
 <path id="staircase 6 1" d="M473 91H483V153H473V91Z" stroke="black" stroke-width="5"/>
 <path id="Vector 664" d="M505 151H483M505 151H483" stroke="black" stroke-width="3"/>
@@ -184,7 +184,6 @@
 <path id="Vector 878" d="M320 408L287.5 331" stroke="black" stroke-width="5"/>
 <path id="Vector 879" d="M280 422L258 370" stroke="black" stroke-width="5"/>
 <path id="Vector 880" d="M248 348L233 312" stroke="black" stroke-width="5"/>
-<path id="Rectangle 171" d="M148 351.922L247.512 309.682L317.439 280L350.473 357.824L362.662 386.54L193.224 458.463L148 351.922Z" fill="#75D3FF" fill-opacity="0.52"/>
 <rect id="Rectangle 101" x="18" y="303" width="72" height="182" fill="#D9D9D9"/>
 <path id="Rectangle 186" d="M1746 172H1757.6H1763V192.074V253H1746V172Z" fill="#D9D9D9"/>
 <path id="Rectangle 180" d="M1418 74H1445.28H1458V102.748V172.5L1438.5 172.5V190L1418 190V74Z" fill="#D9D9D9"/>
@@ -193,5 +192,6 @@
 <path id="Rectangle 172" d="M96.4999 414L96.4999 372.5L143.439 354L176.473 431.824L188.662 460.54L96.5001 500.5L96.4999 414Z" fill="#75D3FF" fill-opacity="0.52"/>
 <text id="&#209;&#129;&#208;&#191;&#209;&#131;&#209;&#129;&#208;&#186; &#208;&#178; &#208;&#179;&#208;&#176;&#209;&#128;&#208;&#180;&#208;&#181;&#209;&#128;&#208;&#190;&#208;&#177;" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="1353" y="55.8492">&#x441;&#x43f;&#x443;&#x441;&#x43a; &#x432; &#x433;&#x430;&#x440;&#x434;&#x435;&#x440;&#x43e;&#x431;</tspan></text>
 <path id="graph floor6 matmeh" d="M1729.5 215.5V178V120.5M1729.5 215.5V234.5V307M1729.5 215.5H1666M1666 215.5V234.5V307M1666 215.5H1653M1666 215.5H1627.5M1653 215.5V178V120.5M1653 215.5H1627.5M1627.5 215.5V234.5V307M1627.5 215.5H1587.5M1587.5 215.5V234.5V307M1587.5 215.5H1576M1576 215.5V178L1557 115M1576 215.5H1548.5M1548.5 215.5V234.5V307M1548.5 215.5H1477M1477 215.5V183L1472 90.5M1477 215.5H1450M1450 215.5V234.5V307M1450 215.5H1363.5M1363.5 215.5V234.5V299.5M1363.5 215.5H1265.5M1265.5 215.5V234.5V307M1265.5 215.5H1256.5M1256.5 215.5V199.5L1322.5 129.5M1256.5 215.5H1220.5M1168.5 215.5V234.5V299.5M1168.5 215.5H1125M1168.5 215.5V199.5V143.5M1168.5 215.5H1194M1125 215.5V199.5V129.5M1125 215.5H1105M1194 215.5V199.5V143.5M1194 215.5H1220.5M1220.5 215.5V199.5V143.5M1030 215.5V199.5L998 132.5M1030 215.5H992M1030 215.5H1105M992 215.5V258.5L1018.5 307M992 215.5H917M917 215.5V234.5L918.5 304.5M917 215.5H873.75M830.5 215.5V199.5V132.5M830.5 215.5H827M830.5 215.5H873.75M827 215.5V234.5V293.5M827 215.5H778M778 215.5V199.5L768 132.5M778 215.5H768M768 215.5V234.5V307M768 215.5H693.5M693.5 215.5V199.5L678.5 128.5M693.5 215.5H686M686 215.5V234.5V307M686 215.5H607M607 215.5V199.5L589 128.5M607 215.5V234.5L563.5 292.5M607 215.5H532.5H508M498.5 215.5V234.5L477.5 292.5M498.5 215.5H461.5V209.5H440.5L355.717 246M498.5 215.5H508M498.5 215.5L491 184.5L477.5 172.5L472.5 93.5M1105 215.5V234.5V307M263.5 267.314L128.5 321L109 359.5L128.5 439M263.5 267.314L349.5 233.115L355.717 246M263.5 267.314L279 307L182.5 395.5M525.5 132.5L532.5 169.5L508 215.5M392 325.5L366 267.314L355.717 246M873.75 215.5V179V91" stroke="#FF0000" stroke-width="3"/>
+<path id="Rectangle 171" d="M148 351.922L247.512 309.682L317.439 280L350.473 357.824L362.662 386.54L193.224 458.463L148 351.922Z" fill="#75D3FF" fill-opacity="0.52"/>
 </g>
 </svg>
