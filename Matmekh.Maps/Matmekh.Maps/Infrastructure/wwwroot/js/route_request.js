@@ -33,7 +33,7 @@
                 // Получаем ответ
                 const result = await response.json();
 
-                if (response.ok) {
+                if (response.ok && result.success) {
                     // Успешный ответ
                     // сохраняем точки маршрута
                     localStorage.setItem("routePoints", JSON.stringify(result.path));

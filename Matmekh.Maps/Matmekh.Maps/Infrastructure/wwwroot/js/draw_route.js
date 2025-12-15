@@ -68,21 +68,3 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Ошибка чтения маршрута", e);
     }
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-    const raw = localStorage.getItem("routePoints");
-    console.log("RAW routePoints =", raw); 
-
-    if (!raw) return;
-
-    try {
-        const points = JSON.parse(raw);
-        console.log("PARSED points =", points); 
-        drawRoute(points);
-        localStorage.removeItem("routePoints");
-    } catch (e) {
-        console.error("Ошибка чтения маршрута", e);
-    }
-});
-
-
