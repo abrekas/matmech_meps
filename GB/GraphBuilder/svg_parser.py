@@ -1,5 +1,6 @@
 import re
-import xml.etree.ElementTree as ET
+
+# import xml.etree.ElementTree as ET
 from collections import defaultdict
 from math import sqrt, isclose
 from dataclasses import dataclass
@@ -31,6 +32,8 @@ class GraphBuilderSVG:
         # Максимальное расстояние для связывания комнаты с вершиной
         self.room_link_threshold = 40.0
 
+        self.staircase_pattern = "staircase"
+
         self.output_folder_name = self.source_file_path[:-4]
         os.makedirs(self.output_folder_name, exist_ok=True)
 
@@ -41,6 +44,13 @@ class GraphBuilderSVG:
         self.names_json_path = os.path.join(self.output_folder_name, "names.json")
 
         self.sensible_json_path = output_json_path
+
+        self.coordinate_patterns = [
+            re.compile(r"translate\(([\d.]+) ([\d.]+)\)"),
+            re.compile(r"matrix\([-\d.]+ [-\d.]+ [-\d.]+ [-\d.]+ ([\d.]+) ([\d.]+)\)"),
+            re.compile(r'd="M(\d+) (\d+)'),
+            re.compile(r'x="([\d.]+)" y="([\d.]+)"'),
+        ]
 
     def _process_svg(self):
         """строит граф по файлу"""
@@ -56,9 +66,7 @@ class GraphBuilderSVG:
 
     def _parse_svg_file(self):
         groups_stack = []
-        temp_id = ""
-        staircase_pattern = "staircases"
-        tags = set()
+
         with open(self.source_file_path) as f:
             for s in f:
                 tag = re.search(r"(\S+ )|(<\S+>)", s).group()[1:-1]
@@ -87,34 +95,23 @@ class GraphBuilderSVG:
 
                 elif (
                     len(groups_stack) > 2
-                    and groups_stack[-2] == staircase_pattern
-                    and tag == "rect"
+                    and re.search(self.staircase_pattern, groups_stack[-2])
+                    and tag == "path"
                 ):
-                    self._add_room_by_id(s, id)
+                    if self.staircase_pattern in id:
+                        self._add_room_by_id(s, id)
 
                 # вот и все ифы получается
                 # print("aboba")
 
     def _add_room_by_id(self, s, id):
-        transform_match = re.search(r"transform", s)
-        if transform_match:
-            pattern1 = re.compile(r"translate\(([\d.]+) ([\d.]+)\)")
-            pattern2 = re.compile(
-                r"matrix\([-\d.]+ [-\d.]+ [-\d.]+ [-\d.]+ ([\d.]+) ([\d.]+)\)"
-            )
-            coord_match1 = re.search(pattern=pattern1, string=s)
-            coord_match2 = re.search(pattern=pattern2, string=s)
-
-            if coord_match1:
-                x, y = float(coord_match1.group(1)), float(coord_match1.group(2))
-            elif coord_match2:
-                x, y = float(coord_match2.group(1)), float(coord_match2.group(2))
-            else:
-                raise RuntimeError("somehow regex didnt work")
-
+        for ptrn in self.coordinate_patterns:
+            xy_match = re.search(ptrn, s)
+            if xy_match:
+                x, y = float(xy_match.group(1)), float(xy_match.group(2))
+                break
         else:
-            x = re.search(r' x="([\d.]+)"', s).group(1)
-            y = re.search(r' y="([\d.]+)"', s).group(1)
+            RuntimeError("somehow regex didnt work")
 
         self.rooms.append(RoomInfo(number=id, x=float(x), y=float(y)))
 
@@ -247,8 +244,14 @@ class GraphBuilderSVG:
                 closest_node_neighbour = self.graph[closest_node].pop()
                 del self.graph[closest_node]
                 self.graph[closest_node_neighbour].remove(closest_node)
-                self.edges.remove((closest_node_neighbour, closest_node))
-                self.points.remove(closest_node)
+                if (closest_node_neighbour, closest_node) in self.edges:
+                    self.edges.remove((closest_node_neighbour, closest_node))
+                elif (closest_node, closest_node_neighbour) in self.edges:
+                    self.edges.remove((closest_node, closest_node_neighbour))
+                else:
+                    raise RuntimeError(f"ошибка при обработке комнаты {room.number}")
+
+                # self.points.remove(closest_node)
                 room.node_id = closest_node_neighbour
                 # Добавляем информацию о комнате в граф
                 if "rooms" not in self.graph[room.node_id]:
@@ -410,7 +413,8 @@ def main():
     # Путь к вашему SVG файлу
     svg_path = "floor5 matmeh.svg"
     svg_path = ".\\svg_parser\\floor5 matmeh.svg"
-    svg_path = ".\\svg_parser\\floor6 matmeh.svg"
+    svg_path = ".\\GB\\GraphBuilder\\svg_parser\\floor6 matmeh.svg"
+    svg_path = ".\\GB\\GraphBuilder\\svg_parser\\floor6 matmeh (1).svg"
 
     # Создаем парсер
     parser = GraphBuilderSVG(svg_path)
