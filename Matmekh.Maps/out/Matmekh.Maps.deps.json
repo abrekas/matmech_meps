@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Matmekh.Maps/1.0.0": {
+        "runtime": {
+          "Matmekh.Maps.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Matmekh.Maps/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

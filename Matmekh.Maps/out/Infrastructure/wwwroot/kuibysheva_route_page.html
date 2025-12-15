@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Построить маршрут</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/map_style.css">
+</head>
+<body>
+<div class="app">
+    <header class="app-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="">
+            </a>
+        </div>
+        <button class="burger" id="burgerBtn" aria-label="Открыть меню" onclick="activateMenu(event)">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main class="app-main">
+        <!-- шторка-меню-->
+        <div id="menu-placeholder"></div>
+
+        <!-- блок маршрута внизу экрана -->
+        <section class="route-card">
+            <div class="route-field">
+                <span class="route-field-label">Откуда</span>
+                <!-- бэк -->
+                <input id="routeFrom"
+                       class="route-field-input"
+                       type="text"
+                       placeholder="">
+            </div>
+
+            <div class="route-field">
+                <span class="route-field-label">Куда</span>
+                <!-- бэк -->
+                <input id="routeTo"
+                       class="route-field-input"
+                       type="text"
+                       placeholder="">
+            </div>
+            <div class="route-bar">
+                <button class="route-submit-btn" type="button">
+                    ПОСТРОИТЬ
+                </button>
+                <button class="route-bar__close" id="closeRouteK" aria-label="Закрыть">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="js/route_request.js"></script>
+<script src="js/menu_script.js"></script>
+<script src="js/route.js"></script>
+</body>
+</html>

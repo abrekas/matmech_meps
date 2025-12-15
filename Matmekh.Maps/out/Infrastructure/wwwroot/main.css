@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Golos', sans-serif;
+    background: #ffffff;
+    color: #333;
+    min-height: 100vh;
+}
+
+@font-face {
+  font-family: 'Golos';
+  src: url('golos/Golos\ Text_Bold.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* ШАПКА */
+
+.app-header {
+    height: 64px;
+    background: #71c2e6;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    padding:2px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;     
+}
+
+.burger {
+    width: 26px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.burger span {
+    height: 3px;
+    border-radius: 3px;
+    background: #ffffff;
+}
+
+
+/* КОНТЕНТ */
+
+.app-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    gap: 8px;
+    min-height: 0;             
+    overflow-y: auto;          
+}
+
+.block{
+    background-color: rgba(0, 138, 205, 0.52);
+    border-radius: 16px;
+    margin-bottom: 8px;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.block-link{
+    text-decoration: none;
+}
+
+.block-img{
+    width: 100%;
+    display: block;
+}
+
+.block-text{
+    font-weight: bold;
+    color: black;
+}
+
+.block-text-name{
+    font-size: 16pt;
+}
+
+.location-info{
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.location-icon{
+    height: 16px;
+    margin-right: 10px;
+}
+
+.address-text {
+    margin: 0;
+    color: white;
+    text-decoration: none;
+}
+
+@media (min-width: 800px) {
+    .app-main{
+        width: 800px;
+    }
+}
+
+footer{
+    margin-top: 16px;
+    gap: 16px;
+    background-color: black;
+    color: white;
+    height: auto;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.logos{
+    width: 48px;
+    gap: 16px;
+    display: flex;
+    flex-direction:row;
+    position: relative;
+}
+
+.footer-logo{
+    width: auto;
+    height: 32px;
+}
+
+
+/* ШТОРКА */
+
+.menu {
+    position: absolute;
+    top: 64px;                     
+    left: 0;
+    width: 100%;
+    height: calc(100% - 72px);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.menu.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu-panel {
+    position: fixed;
+    top: 64;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background-color: #ffffff;
+
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
+
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; 
+}
+
+.menu.active .menu-panel {
+    transform: translateX(0);
+}
+
+
+.menu-item {
+    width: 100%;
+    padding: 8px 5%;
+    color: #8C8C8C;
+}
+
+.menu-item h2 {
+    font-size: 20px;
+    margin: 0;
+}
