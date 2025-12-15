@@ -5,17 +5,17 @@ using System.Text.Json.Serialization;
 
 namespace Matmekh.Maps.Application;
 
-public static class PathFinder
+public class PathFinder : IPathFinder
 {
     // Приватные поля для кэширования
-    private static Dictionary<Point, List<Point>>? _graph;
-    private static Dictionary<string, Point>? _names;
-    private static readonly object _lock = new object();
-    private static readonly string BasePath = Path.Combine("Infrastructure");
-    private static ISearcher searcher;
+    private Dictionary<Point, List<Point>>? _graph;
+    private Dictionary<string, Point>? _names;
+    private readonly object _lock = new object();
+    private readonly string BasePath = Path.Combine("Infrastructure");
+    private ISearcher searcher;
 
 
-    public static void SetSearcher(ISearcher search)
+    public PathFinder(ISearcher search)
     {
         searcher = search;
     }
@@ -44,7 +44,7 @@ public static class PathFinder
     /// <summary>
     /// Загружает граф из graph.json
     /// </summary>
-    private static Dictionary<Point, List<Point>> LoadGraph()
+    private Dictionary<Point, List<Point>> LoadGraph()
     {
         var graphPath = Path.Combine(BasePath, "graph.json");
 
@@ -82,7 +82,7 @@ public static class PathFinder
     /// <summary>
     /// Загружает имена из names.json
     /// </summary>
-    private static Dictionary<string, Point> LoadNames()
+    private Dictionary<string, Point> LoadNames()
     {
         var namesPath = Path.Combine(BasePath, "names.json");
 
@@ -108,7 +108,7 @@ public static class PathFinder
     /// <summary>
     /// Возвращает граф (загружает при первом вызове)
     /// </summary>
-    public static Dictionary<Point, List<Point>> Graph
+    public Dictionary<Point, List<Point>> Graph
     {
         get
         {
@@ -126,7 +126,7 @@ public static class PathFinder
     /// <summary>
     /// Возвращает словарь имен (загружает при первом вызове)
     /// </summary>
-    public static Dictionary<string, Point> Names
+    public Dictionary<string, Point> Names
     {
         get
         {
@@ -144,7 +144,7 @@ public static class PathFinder
     /// <summary>
     /// Обновляет граф из файла (если файл изменился)
     /// </summary>
-    public static void ReloadGraph()
+    public void ReloadGraph()
     {
         lock (_lock)
         {
@@ -155,7 +155,7 @@ public static class PathFinder
     /// <summary>
     /// Обновляет имена из файла (если файл изменился)
     /// </summary>
-    public static void ReloadNames()
+    public void ReloadNames()
     {
         lock (_lock)
         {
@@ -169,7 +169,7 @@ public static class PathFinder
     /// <param name="startName">Название начальной точки</param>
     /// <param name="endName">Название конечной точки</param>
     /// <returns>Список точек пути или пустой список если путь не найден</returns>
-    public static List<Point> FindPath(string startName, string endName)
+    public List<Point> FindPath(string startName, string endName)
     {
         // 1. Проверяем существование имен
         if (!Names.TryGetValue(startName, out var startPoint))
@@ -212,7 +212,7 @@ public static class PathFinder
     /// <summary>
     /// Находит путь и возвращает названия точек
     /// </summary>
-    public static List<string> FindPathAsNames(string startName, string endName)
+    public List<string> FindPathAsNames(string startName, string endName)
     {
         var path = FindPath(startName, endName);
 
@@ -230,7 +230,7 @@ public static class PathFinder
     /// <summary>
     /// Находит путь и возвращает смешанный список (точки + названия)
     /// </summary>
-    public static List<object> FindPathMixed(string startName, string endName)
+    public List<object> FindPathMixed(string startName, string endName)
     {
         var path = FindPath(startName, endName);
         var result = new List<object>();
@@ -250,7 +250,7 @@ public static class PathFinder
     /// <summary>
     /// Получает все доступные названия точек
     /// </summary>
-    public static List<string> GetAllLocationNames()
+    public List<string> GetAllLocationNames()
     {
         return Names.Keys.OrderBy(x => x).ToList();
     }
@@ -258,7 +258,7 @@ public static class PathFinder
     /// <summary>
     /// Получает соседей точки по названию
     /// </summary>
-    public static List<string> GetNeighbors(string locationName)
+    public List<string> GetNeighbors(string locationName)
     {
         if (!Names.TryGetValue(locationName, out var point))
             throw new ArgumentException($"Не найдена точка: {locationName}");
@@ -280,7 +280,7 @@ public static class PathFinder
     /// <summary>
     /// Проверяет существование точки по названию
     /// </summary>
-    public static bool LocationExists(string locationName)
+    public bool LocationExists(string locationName)
     {
         return Names.ContainsKey(locationName);
     }
@@ -288,7 +288,7 @@ public static class PathFinder
     /// <summary>
     /// Получает координаты точки по названию
     /// </summary>
-    public static Point? GetPointByName(string locationName)
+    public Point? GetPointByName(string locationName)
     {
         return Names.TryGetValue(locationName, out var point) ? point : null;
     }
@@ -296,7 +296,7 @@ public static class PathFinder
     /// <summary>
     /// Получает название по координатам
     /// </summary>
-    public static string? GetNameByPoint(Point point)
+    public string? GetNameByPoint(Point point)
     {
         return Names.FirstOrDefault(n => n.Value.Equals(point)).Key;
     }

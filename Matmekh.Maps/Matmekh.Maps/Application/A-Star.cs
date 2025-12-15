@@ -2,7 +2,6 @@
 using System.Linq;
 using Matmekh.Maps.Domain;
 using Matmekh.Maps.Domain.FindPath;
-using Matmekh.Maps.Infrastructure;
 
 namespace Matmekh.Maps.Application
 {
