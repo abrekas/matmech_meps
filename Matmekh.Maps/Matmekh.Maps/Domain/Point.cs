@@ -1,4 +1,4 @@
-﻿namespace Matmekh.Maps.Infrastructure
+﻿namespace Matmekh.Maps.Domain
 {
     public struct Point : IEquatable<Point>
     {

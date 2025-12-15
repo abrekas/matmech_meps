@@ -1,4 +1,6 @@
-﻿namespace Matmekh.Maps.Infrastructure
+﻿using Matmekh.Maps.Domain;
+
+namespace Matmekh.Maps.Infrastructure
 {
     public class Node : IComparable<Node>
     {

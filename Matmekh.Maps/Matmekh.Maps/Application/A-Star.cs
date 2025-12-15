@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Matmekh.Maps.Domain;
+using Matmekh.Maps.Domain.FindPath;
 using Matmekh.Maps.Infrastructure;
 
-namespace Matmekh.Maps.Domain.FindPath
+namespace Matmekh.Maps.Application
 {
-    public static class AStar
+    public class AStar : ISearcher
     {
         /// <summary>
         /// Находит путь от start до end в графе
@@ -14,7 +16,7 @@ namespace Matmekh.Maps.Domain.FindPath
         /// <param name="end">Конечная точка</param>
         /// <param name="heuristic">Функция эвристики (null = Манхэттенское расстояние)</param>
         /// <returns>Список точек от start до end или пустой список если путь не найден</returns>
-        public static List<Point> FindPath(
+        public List<Point> FindPath(
             Dictionary<Point, List<Point>> graph,
             Point start,
             Point end,
@@ -104,7 +106,7 @@ namespace Matmekh.Maps.Domain.FindPath
         /// <summary>
         /// Восстанавливает путь от конечного узла к начальному
         /// </summary>
-        private static List<Point> ReconstructPath(Node endNode)
+        private List<Point> ReconstructPath(Node endNode)
         {
             var path = new List<Point>();
             var currentNode = endNode;

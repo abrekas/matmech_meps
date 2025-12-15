@@ -1,8 +1,8 @@
-﻿using Matmekh.Maps.Models;
-using Microsoft.AspNetCore.Mvc;
-using Matmekh.Maps.Domain;
+﻿using Microsoft.AspNetCore.Mvc;
 using Matmekh.Maps.Infrastructure;
 using System.Text.Json;
+using Matmekh.Maps.Infrastructure.Models;
+using Matmekh.Maps.Application;
 
 namespace Matmekh.Maps.API.Controllers
 {

@@ -1,4 +1,4 @@
-namespace Matmekh.Maps.Models
+namespace Matmekh.Maps.Infrastructure.Models
 {
     public class ErrorViewModel
     {

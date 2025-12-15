@@ -1,9 +1,9 @@
-﻿using Matmekh.Maps.Domain.FindPath;
+﻿using Matmekh.Maps.Domain;
+using Matmekh.Maps.Domain.FindPath;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Matmekh.Maps.Infrastructure;
 
-namespace Matmekh.Maps.Domain;
+namespace Matmekh.Maps.Application;
 
 public static class PathFinder
 {
@@ -12,6 +12,13 @@ public static class PathFinder
     private static Dictionary<string, Point>? _names;
     private static readonly object _lock = new object();
     private static readonly string BasePath = Path.Combine("Infrastructure");
+    private static ISearcher searcher;
+
+
+    public static void SetSearcher(ISearcher search)
+    {
+        searcher = search;
+    }
 
     // Конвертер JSON для Point
     private class PointJsonConverter : JsonConverter<Point>
@@ -181,7 +188,7 @@ public static class PathFinder
             throw new InvalidOperationException($"Точка {endPoint} не найдена в графе");
 
         // 3. Вызываем алгоритм A*
-        var path = AStar.FindPath(Graph, startPoint, endPoint);
+        var path = searcher.FindPath(Graph, startPoint, endPoint);
 
         // 4. Логируем результат
         if (path.Count > 0)

@@ -1,4 +1,4 @@
-using Matmekh.Maps.Models;
+using Matmekh.Maps.Infrastructure.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
