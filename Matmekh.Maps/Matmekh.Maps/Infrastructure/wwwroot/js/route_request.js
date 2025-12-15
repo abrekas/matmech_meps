@@ -35,9 +35,10 @@
 
                 if (response.ok) {
                     // Успешный ответ
-                    alert(result.message);
-                    console.log('Результат:', result);
-
+                    // сохраняем точки маршрута
+                    localStorage.setItem("routePoints", JSON.stringify(result.path));
+                    // переходим на страницу карты
+                    window.location.href = "matmeh_start_page.html";
                     // Здесь можно отобразить маршрут на карте
                     // Например: displayRouteOnMap(result);
                 } else {
