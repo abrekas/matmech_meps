@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0C6YI1FlE0u4AXP9IDmrFki71LX0TOeuHfPzDHvW/dA=",
+  "Hash": "8V7ac/xiXQ3oWPQEofRCGHwyrmEkKMjDhYZVMqhmxDg=",
   "Source": "Matmekh.Maps",
   "BasePath": "_content/Matmekh.Maps",
   "Mode": "Default",
@@ -9,10 +9,10 @@
   "DiscoveryPatterns": [],
   "Assets": [
     {
-      "Identity": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Matmekh.Maps.styles.css",
+      "Identity": "/Users/ilonakazanceva/Desktop/matmex.maps/matmech_meps/Matmekh.Maps/Matmekh.Maps/obj/Debug/net8.0/scopedcss/bundle/Matmekh.Maps.styles.css",
       "SourceId": "Matmekh.Maps",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "/Users/ilonakazanceva/Desktop/matmex.maps/matmech_meps/Matmekh.Maps/Matmekh.Maps/obj/Debug/net8.0/scopedcss/bundle/",
       "BasePath": "_content/Matmekh.Maps",
       "RelativePath": "Matmekh.Maps.styles.css",
       "AssetKind": "All",
@@ -25,13 +25,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Matmekh.Maps.styles.css"
+      "OriginalItemSpec": "/Users/ilonakazanceva/Desktop/matmex.maps/matmech_meps/Matmekh.Maps/Matmekh.Maps/obj/Debug/net8.0/scopedcss/bundle/Matmekh.Maps.styles.css"
     },
     {
-      "Identity": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Matmekh.Maps.bundle.scp.css",
+      "Identity": "/Users/ilonakazanceva/Desktop/matmex.maps/matmech_meps/Matmekh.Maps/Matmekh.Maps/obj/Debug/net8.0/scopedcss/projectbundle/Matmekh.Maps.bundle.scp.css",
       "SourceId": "Matmekh.Maps",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "/Users/ilonakazanceva/Desktop/matmex.maps/matmech_meps/Matmekh.Maps/Matmekh.Maps/obj/Debug/net8.0/scopedcss/projectbundle/",
       "BasePath": "_content/Matmekh.Maps",
       "RelativePath": "Matmekh.Maps.bundle.scp.css",
       "AssetKind": "All",
@@ -44,7 +44,7 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Matmekh.Maps.bundle.scp.css"
+      "OriginalItemSpec": "/Users/ilonakazanceva/Desktop/matmex.maps/matmech_meps/Matmekh.Maps/Matmekh.Maps/obj/Debug/net8.0/scopedcss/projectbundle/Matmekh.Maps.bundle.scp.css"
     }
   ]
 }

@@ -8,26 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\adm\\.nuget\\packages\\": {}
+    "/Users/ilonakazanceva/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Matmekh.Maps.csproj",
+      "projectUniqueName": "/Users/ilonakazanceva/Desktop/matmex.maps/matmech_meps/Matmekh.Maps/Matmekh.Maps/Matmekh.Maps.csproj",
       "projectName": "Matmekh.Maps",
-      "projectPath": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\Matmekh.Maps.csproj",
-      "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-      "outputPath": "D:\\repos\\matmech_meps\\Matmekh.Maps\\Matmekh.Maps\\obj\\",
+      "projectPath": "/Users/ilonakazanceva/Desktop/matmex.maps/matmech_meps/Matmekh.Maps/Matmekh.Maps/Matmekh.Maps.csproj",
+      "packagesPath": "/Users/ilonakazanceva/.nuget/packages/",
+      "outputPath": "/Users/ilonakazanceva/Desktop/matmex.maps/matmech_meps/Matmekh.Maps/Matmekh.Maps/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/ilonakazanceva/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -69,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

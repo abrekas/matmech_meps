@@ -1,9 +1,14 @@
 function drawRoute(points) {
     const svg = document.getElementById("routeLayer");
+    if (!svg || !Array.isArray(points)) return;
+
+    const safePoints = points.filter(p =>
+        p && (p.X != null || p.x != null) && (p.Y != null || p.y != null)
+    );
+
+    if (safePoints.length < 2) return;
 
     svg.innerHTML = "";
-
-    if (!points || points.length < 2) return;
 
     const polyline = document.createElementNS(
         "http://www.w3.org/2000/svg",
@@ -12,7 +17,7 @@ function drawRoute(points) {
 
     polyline.setAttribute(
         "points",
-        points.map(p => `${p.x},${p.y}`).join(" ")
+        safePoints.map(p => `${p.X ?? p.x},${p.Y ?? p.y}`).join(" ")
     );
 
     polyline.setAttribute("fill", "none");
@@ -22,35 +27,62 @@ function drawRoute(points) {
     polyline.setAttribute("stroke-linejoin", "round");
 
     svg.appendChild(polyline);
-    
-    drawPoint(points[0], "green");
-    drawPoint(points.at(-1), "red");
+
+    drawPoint(safePoints[0], "green");
+    drawPoint(safePoints[safePoints.length - 1], "red");
 }
 
 function drawPoint(point, color) {
     const svg = document.getElementById("routeLayer");
+
+    const cx = point.X ?? point.x;
+    const cy = point.Y ?? point.y;
+
+    if (cx == null || cy == null) return;
+
     const circle = document.createElementNS(
         "http://www.w3.org/2000/svg",
         "circle"
     );
 
-    circle.setAttribute("cx", point.x);
-    circle.setAttribute("cy", point.y);
+    circle.setAttribute("cx", cx);
+    circle.setAttribute("cy", cy);
     circle.setAttribute("r", 8);
     circle.setAttribute("fill", color);
 
     svg.appendChild(circle);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const testPoints = [
-        { x: 258, y: 350 },
-        { x: 266, y: 285 },
-        { x: 260, y: 262 },
-        { x: 345, y: 224 },
-        { x: 379, y: 301 }
-    ];
 
-    drawRoute(testPoints);
+document.addEventListener("DOMContentLoaded", () => {
+    const raw = localStorage.getItem("routePoints");
+    if (!raw) return;
+
+    try {
+        const points = JSON.parse(raw);
+        drawRoute(points);
+        
+        localStorage.removeItem("routePoints");
+
+    } catch (e) {
+        console.error("Ошибка чтения маршрута", e);
+    }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const raw = localStorage.getItem("routePoints");
+    console.log("RAW routePoints =", raw); 
+
+    if (!raw) return;
+
+    try {
+        const points = JSON.parse(raw);
+        console.log("PARSED points =", points); 
+        drawRoute(points);
+        localStorage.removeItem("routePoints");
+    } catch (e) {
+        console.error("Ошибка чтения маршрута", e);
+    }
+});
+
 
