@@ -21,22 +21,22 @@ yarn-error.log*
 *.userprefs
 
 # Build results
-Matmekh.Maps/[Dd]ebug/
-Matmekh.Maps/[Dd]ebugPublic/
-Matmekh.Maps/[Rr]elease/
-Matmekh.Maps/[Rr]eleases/
-Matmekh.Maps/x64/
-Matmekh.Maps/x86/
-Matmekh.Maps/[Ww][Ii][Nn]32/
-Matmekh.Maps/[Aa][Rr][Mm]/
-Matmekh.Maps/[Aa][Rr][Mm]64/
-Matmekh.Maps/bld/
-Matmekh.Maps/[Bb]in/
-Matmekh.Maps/[Oo]bj/
-Matmekh.Maps/[Oo]ut/
-Matmekh.Maps/msbuild.log
-Matmekh.Maps/msbuild.err
-Matmekh.Maps/msbuild.wrn
+Matmekh.Maps/Matmekh.Maps/[Dd]ebug/
+Matmekh.Maps/Matmekh.Maps/[Dd]ebugPublic/
+Matmekh.Maps/Matmekh.Maps/[Rr]elease/
+Matmekh.Maps/Matmekh.Maps/[Rr]eleases/
+Matmekh.Maps/Matmekh.Maps/x64/
+Matmekh.Maps/Matmekh.Maps/x86/
+Matmekh.Maps/Matmekh.Maps/[Ww][Ii][Nn]32/
+Matmekh.Maps/Matmekh.Maps/[Aa][Rr][Mm]/
+Matmekh.Maps/Matmekh.Maps/[Aa][Rr][Mm]64/
+Matmekh.Maps/Matmekh.Maps/bld/
+Matmekh.Maps/Matmekh.Maps/[Bb]in/
+Matmekh.Maps/Matmekh.Maps/[Oo]bj/
+Matmekh.Maps/Matmekh.Maps/[Oo]ut/
+Matmekh.Maps/Matmekh.Maps/msbuild.log
+Matmekh.Maps/Matmekh.Maps/msbuild.err
+Matmekh.Maps/Matmekh.Maps/msbuild.wrn
 
 # Visual Studio 2015/2017 cache/options directory
 Matmekh.Maps/.vs/
