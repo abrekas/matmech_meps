@@ -4,6 +4,7 @@ from collections import defaultdict
 from math import sqrt, isclose
 from dataclasses import dataclass
 from typing import Dict, Set, Tuple, List, Optional
+import os
 
 
 @dataclass
@@ -15,22 +16,30 @@ class RoomInfo:
 
 
 class GraphBuilderSVG:
-    def __init__(self, src_file_path: str, output_json_path = 'test.json'):
+    def __init__(self, src_file_path: str, output_json_path="test.json"):
         self.source_file_path = src_file_path
         self.points: Set[Tuple[float, float]] = set()
         self.edges: Set[Tuple[Tuple[float, float], Tuple[float, float]]] = set()
-        self.graph: defaultdict[Tuple[float, float], Set[Tuple[float, float]]] = defaultdict(
-            set
+        self.graph: defaultdict[Tuple[float, float], Set[Tuple[float, float]]] = (
+            defaultdict(set)
         )
 
         # Для хранения информации о кабинетах
         self.rooms: List[RoomInfo] = []
-        self.valid_tags = frozenset(["g", "path", "text", "/g"])
+        self.valid_tags = frozenset(["g", "path", "text", "/g", "rect"])
 
         # Максимальное расстояние для связывания комнаты с вершиной
         self.room_link_threshold = 40.0
 
-        self.stupid_json_path = 'navigation_graph_with_rooms.json'
+        self.output_folder_name = self.source_file_path[:-4]
+        os.makedirs(self.output_folder_name, exist_ok=True)
+
+        self.stupid_json_path = os.path.join(
+            self.output_folder_name, "navigation_graph_with_rooms.json"
+        )
+        self.graph_json_path = os.path.join(self.output_folder_name, "graph.json")
+        self.names_json_path = os.path.join(self.output_folder_name, "names.json")
+
         self.sensible_json_path = output_json_path
 
     def _process_svg(self):
@@ -48,15 +57,20 @@ class GraphBuilderSVG:
     def _parse_svg_file(self):
         groups_stack = []
         temp_id = ""
+        staircase_pattern = "staircases"
+        tags = set()
         with open(self.source_file_path) as f:
             for s in f:
                 tag = re.search(r"(\S+ )|(<\S+>)", s).group()[1:-1]
-                if (tag not in self.valid_tags) and (tag[1:] not in self.valid_tags):
+                if tag not in self.valid_tags:
                     continue
                 if tag == "/g":
                     groups_stack.pop()
                     continue
-                id = re.search(r' id=.+?"', s).group()[5:-1]
+                id_match = re.search(r' id=.+?"', s)
+                if not id_match:
+                    continue
+                id = id_match.group()[5:-1]
                 if tag == "g":
                     groups_stack.append(id)
 
@@ -65,14 +79,18 @@ class GraphBuilderSVG:
                     # self._parse_meaning_string()
                     self._parse_path_data(s)
 
-                elif groups_stack[-1] == "rooms_numbers" and tag == "text":
+                elif (
+                    groups_stack[-1] == "rooms_numbers"
+                    or groups_stack[-1] == "room_ids"
+                ) and tag == "text":
                     self._add_room_by_id(s, id)
 
-                elif len(groups_stack) > 2 and groups_stack[-2] == "rooms_numbers":
-                    if tag == "g":
-                        temp_id = id
-                    else:
-                        self._add_room_by_id(s, temp_id)
+                elif (
+                    len(groups_stack) > 2
+                    and groups_stack[-2] == staircase_pattern
+                    and tag == "rect"
+                ):
+                    self._add_room_by_id(s, id)
 
                 # вот и все ифы получается
                 # print("aboba")
@@ -98,12 +116,11 @@ class GraphBuilderSVG:
             x = re.search(r' x="([\d.]+)"', s).group(1)
             y = re.search(r' y="([\d.]+)"', s).group(1)
 
-
         self.rooms.append(RoomInfo(number=id, x=float(x), y=float(y)))
 
     def _parse_path_data(self, path_data: str):
         """Парсит данные пути из SVG"""
-        path_data = re.search(r' d="(.+)" ', path_data).group(1)
+        path_data = re.search(r' d="(.+?)"', path_data).group(1)
         commands = []
         current_command = None
         current_args = []
@@ -212,43 +229,6 @@ class GraphBuilderSVG:
 
         return False
 
-    def _simplify_graph(self):
-        '''не понадобилось, но на всякий случай'''
-        """Упрощает граф, удаляя промежуточные точки на прямых линиях"""
-        points_to_remove = set()
-
-        for point in list(self.graph.keys()):
-            neighbors = list(self.graph[point])
-
-            # Если точка имеет только двух соседей и они коллинеарны
-            if len(neighbors) == 2:
-                p1, p2 = neighbors
-
-                # Проверяем коллинеарность
-                if self._are_points_collinear(p1, point, p2):
-                    # Добавляем прямое ребро между соседями
-                    self._add_edge(p1, p2)
-
-                    # Удаляем промежуточную точку
-                    self.graph[p1].remove(point)
-                    self.graph[p2].remove(point)
-                    if point in self.graph:
-                        del self.graph[point]
-                    points_to_remove.add(point)
-
-        # Удаляем точки из общего множества
-        self.points -= points_to_remove
-
-    def _are_points_collinear(self, p1, p2, p3, tolerance=1e-6):
-        """Проверяет, лежат ли три точки на одной прямой"""
-        x1, y1 = p1
-        x2, y2 = p2
-        x3, y3 = p3
-
-        # Вычисляем площадь треугольника
-        area = abs((x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2)) / 2.0)
-        return area < tolerance
-
     def _link_rooms_to_graph(self):
         """Привязывает кабинеты к ближайшим вершинам графа"""
         for room in self.rooms:
@@ -263,16 +243,23 @@ class GraphBuilderSVG:
                     closest_node = node
 
             if closest_node:
-                room.node_id = closest_node
+                # closest_node_neighbour = next(iter(self.graph[closest_node]))
+                closest_node_neighbour = self.graph[closest_node].pop()
+                del self.graph[closest_node]
+                self.graph[closest_node_neighbour].remove(closest_node)
+                self.edges.remove((closest_node_neighbour, closest_node))
+                self.points.remove(closest_node)
+                room.node_id = closest_node_neighbour
                 # Добавляем информацию о комнате в граф
-                if "rooms" not in self.graph[closest_node]:
-                    self.graph[closest_node] = {"neighbors": set(), "rooms": []}
-                elif isinstance(self.graph[closest_node], set):
+                if "rooms" not in self.graph[room.node_id]:
+                    self.graph[room.node_id] = {"neighbors": set(), "rooms": []}
+                elif isinstance(self.graph[room.node_id], set):
                     # Конвертируем старую структуру в новую
-                    neighbors = self.graph[closest_node]
-                    self.graph[closest_node] = {"neighbors": neighbors, "rooms": []}
+                    neighbors = self.graph[room.node_id]
+                    self.graph[room.node_id] = {"neighbors": neighbors, "rooms": []}
+                    raise RuntimeError("две комнаты под одной вершиной графа")
 
-                self.graph[closest_node]["rooms"].append(room.number)
+                self.graph[room.node_id]["rooms"].append(room.number)
 
     def _export_with_rooms(self, output_path: str):
         """Экспортирует граф с информацией о комнатах"""
@@ -321,7 +308,6 @@ class GraphBuilderSVG:
     def _visualize(self):
         """Визуализирует граф с комнатами (для отладки)"""
         import matplotlib.pyplot as plt
-        import matplotlib.patches as patches
 
         fig, ax = plt.subplots(figsize=(12, 8))
 
@@ -371,7 +357,6 @@ class GraphBuilderSVG:
         self._export_with_rooms(self.stupid_json_path)
         self._convert_to_sensible_format()
 
-
     def _convert_to_sensible_format(self):
         import json
 
@@ -393,7 +378,9 @@ class GraphBuilderSVG:
 
         for node in nodes:
             result_dict[node["id"]] = []
-            nodes_dict[node["id"]] = " ".join((str(int(node["x"])), str(int(node["y"]))))
+            nodes_dict[node["id"]] = " ".join(
+                (str(int(node["x"])), str(int(node["y"])))
+            )
             for edge in edges:
                 if edge["from"] == node["id"]:
                     result_dict[node["id"]].append(edge["to"])
@@ -401,24 +388,29 @@ class GraphBuilderSVG:
                     result_dict[node["id"]].append(edge["from"])
 
         for des in result_dict.keys():
-            result_dict_coords[nodes_dict[des]] = list(map(lambda x: nodes_dict[x], result_dict[des]))
+            result_dict_coords[nodes_dict[des]] = list(
+                map(lambda x: nodes_dict[x], result_dict[des])
+            )
 
         for name in names:
             names_result[name["number"]] = nodes_dict[name["node_id"]]
 
-        with open("graph.json", "w", encoding='utf-8') as f:
+        with open(self.graph_json_path, "w", encoding="utf-8") as f:
             json.dump(result_dict_coords, f, ensure_ascii=False, indent=2)
 
-        with open("names.json", "w", encoding='utf-8') as f:
+        with open(self.names_json_path, "w", encoding="utf-8") as f:
             json.dump(names_result, f, ensure_ascii=False, indent=2)
 
         # Точка (563, 132)
         print(result_dict_coords)
 
+
 # Пример использования
 def main():
     # Путь к вашему SVG файлу
-    svg_path = "svg_parser\\floor6 matmeh4.svg"
+    svg_path = "floor5 matmeh.svg"
+    svg_path = ".\\svg_parser\\floor5 matmeh.svg"
+    svg_path = ".\\svg_parser\\floor6 matmeh.svg"
 
     # Создаем парсер
     parser = GraphBuilderSVG(svg_path)
