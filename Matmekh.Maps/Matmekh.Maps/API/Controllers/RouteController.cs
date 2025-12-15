@@ -36,15 +36,13 @@ namespace Matmekh.Maps.API.Controllers
             Directory.CreateDirectory(Path.GetDirectoryName(filePath)!);
             System.IO.File.WriteAllText(filePath, json);
 
-            // Возвращаем результат
             return Ok(new
             {
                 success = true,
-                message = $"Маршрут от '{request.From}' до чиназес '{request.To}' построен!",
+                message = $"Маршрут от '{request.From}' до '{request.To}' построен!",
                 from = request.From,
                 to = request.To,
-                distance = "700 км",
-                duration = "8 часов"
+                path = graph
             });
         }
     }
