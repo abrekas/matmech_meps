@@ -1,6 +1,8 @@
 ﻿using Matmekh.Maps.Models;
 using Microsoft.AspNetCore.Mvc;
 using Matmekh.Maps.Domain;
+using Matmekh.Maps.Infrastructure;
+using System.Text.Json;
 
 namespace Matmekh.Maps.API.Controllers
 {
@@ -20,7 +22,19 @@ namespace Matmekh.Maps.API.Controllers
             // Здесь будет логика построения маршрута
             Console.WriteLine($"Построение маршрута: {request.From} → {request.To}");
 
-            PathFinder.FindPath(request.From, request.To);
+            var graph = PathFinder.FindPath(request.From, request.To);
+
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+            };
+
+            string json = JsonSerializer.Serialize(graph, options);
+
+            string filePath = Path.Combine("Infrastructure", "result.json");
+            Directory.CreateDirectory(Path.GetDirectoryName(filePath)!);
+            System.IO.File.WriteAllText(filePath, json);
 
             // Возвращаем результат
             return Ok(new
