@@ -18,15 +18,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (raw) {
         try {
             const points = JSON.parse(raw);
-            let floorNumber = "5";
-            if (Array.isArray(points) && points.length > 0) {
-                const floorCode = points[0].floor;
-                const floorNumber = floorCode.split("_").pop();
-                if (typeof floorCode === "string") {
-                    const match = floorCode.match(/(\d+)/);
-                    if (match) floorNumber = match[1];
-                }
-            }
+            const floorCode = points[0].floor;
+            const floorNumber = floorCode.split("_").pop();
+            
             setFloor(floorNumber);
             drawRoute(points);
         } catch (e) {
