@@ -13,11 +13,12 @@ from typing import Dict, Set, Tuple, List, Optional
 import os
 
 
-FINAL_GRAPH_JSON_PATH = ''
+FINAL_GRAPH_JSON_PATH = ""
+
 
 class Node(NamedTuple):
-    x: float
-    y: float
+    x: int
+    y: int
     neighbours: List[str]
     floor: str
     korpus: str
@@ -325,51 +326,51 @@ class GraphBuilderSVG:
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump(output_data, f, indent=2, ensure_ascii=False)
 
-    #def _visualize(self):
-        #"""Визуализирует граф с комнатами (для отладки)"""
-        #import matplotlib.pyplot as plt
-#
-        #fig, ax = plt.subplots(figsize=(12, 8))
-#
-        ## Рисуем ребра
-        #for edge in self.edges:
-        #    p1, p2 = edge
-        #    x_values = [p1[0], p2[0]]
-        #    y_values = [p1[1], p2[1]]
-        #    ax.plot(x_values, y_values, "b-", alpha=0.7, linewidth=1)
-#
-        ## Рисуем вершины
-        #nodes_x = [p[0] for p in self.graph.keys()]
-        #nodes_y = [p[1] for p in self.graph.keys()]
-        #ax.scatter(nodes_x, nodes_y, c="red", s=30, zorder=5)
-#
-        ## Рисуем номера кабинетов
-        #for room in self.rooms:
-        #    ax.text(
-        #        room.x,
-        #        room.y,
-        #        room.number,
-        #        fontsize=9,
-        #        ha="center",
-        #        va="center",
-        #        bbox=dict(boxstyle="round,pad=0.3", facecolor="yellow", alpha=0.7),
-        #    )
-#
-        #    # Показываем связь с вершиной
-        #    if room.node_id:
-        #        node = room.node_id
-        #        ax.plot(
-        #            [room.x, node[0]],
-        #            [room.y, node[1]],
-        #            "g--",
-        #            alpha=0.3,
-        #            linewidth=0.5,
-        #        )
-#
-        #ax.set_aspect("equal")
-        #plt.title("Граф навигации с привязанными кабинетами")
-        #plt.grid(True, alpha=0.3)
-        #plt.show()
+    # def _visualize(self):
+    # """Визуализирует граф с комнатами (для отладки)"""
+    # import matplotlib.pyplot as plt
+    #
+    # fig, ax = plt.subplots(figsize=(12, 8))
+    #
+    ## Рисуем ребра
+    # for edge in self.edges:
+    #    p1, p2 = edge
+    #    x_values = [p1[0], p2[0]]
+    #    y_values = [p1[1], p2[1]]
+    #    ax.plot(x_values, y_values, "b-", alpha=0.7, linewidth=1)
+    #
+    ## Рисуем вершины
+    # nodes_x = [p[0] for p in self.graph.keys()]
+    # nodes_y = [p[1] for p in self.graph.keys()]
+    # ax.scatter(nodes_x, nodes_y, c="red", s=30, zorder=5)
+    #
+    ## Рисуем номера кабинетов
+    # for room in self.rooms:
+    #    ax.text(
+    #        room.x,
+    #        room.y,
+    #        room.number,
+    #        fontsize=9,
+    #        ha="center",
+    #        va="center",
+    #        bbox=dict(boxstyle="round,pad=0.3", facecolor="yellow", alpha=0.7),
+    #    )
+    #
+    #    # Показываем связь с вершиной
+    #    if room.node_id:
+    #        node = room.node_id
+    #        ax.plot(
+    #            [room.x, node[0]],
+    #            [room.y, node[1]],
+    #            "g--",
+    #            alpha=0.3,
+    #            linewidth=0.5,
+    #        )
+    #
+    # ax.set_aspect("equal")
+    # plt.title("Граф навигации с привязанными кабинетами")
+    # plt.grid(True, alpha=0.3)
+    # plt.show()
 
     def run(self):
         self._process_svg()
@@ -467,6 +468,14 @@ class GraphBuilderSVG:
             json.dump(result_names, f, ensure_ascii=False, indent=2)
 
 
+name_change_dict: Dict[str, str] = {
+    "dekanat": "деканат",
+    "wc_m": "туалет мужской",
+    "wc_w": "туалет женский",
+    "a": "а",
+}
+
+
 def merge_correct_jsons(parsers: List[GraphBuilderSVG], result_folder_path: Path):
     ans_dict_graph: Dict[str, Node] = {}
     ans_dict_names: Dict[str, str] = {}
@@ -494,50 +503,68 @@ def merge_correct_jsons(parsers: List[GraphBuilderSVG], result_folder_path: Path
                 ans_dict_names[staircases[stair][floors[i]]]
             ].neighbours.append(ans_dict_names[staircases[stair][floors[i - 1]]])
 
-    with open(parsers[0].output_folder_name.parent / Path("ans_graph.json"), "w", encoding="utf-8") as f:
+    with open(
+        parsers[0].output_folder_name.parent / Path("ans_graph.json"),
+        "w",
+        encoding="utf-8",
+    ) as f:
         json.dump(ans_dict_graph, f, ensure_ascii=False, indent=2)
 
-    with open(parsers[0].output_folder_name.parent / Path("ans_names.json"), "w", encoding="utf-8") as f:
+    with open(
+        parsers[0].output_folder_name.parent / Path("ans_names.json"),
+        "w",
+        encoding="utf-8",
+    ) as f:
         json.dump(ans_dict_names, f, ensure_ascii=False, indent=2)
 
     ans_ans_dict_names = {}
     ans_ans_dict_graph = {}
 
-    for name in ans_dict_graph.keys():
-        curr_node = ans_dict_graph[name]
-        node_coordinate = (
-            f"{curr_node.x} {curr_node.y} {curr_node.korpus}_{curr_node.floor}"
-        )
-        old_name_from_new = ' '.join(name.split()[:-1])
-        ans_ans_dict_names[old_name_from_new] = node_coordinate
+    for node_id in ans_dict_graph.keys():
+        curr_node = ans_dict_graph[node_id]
+
+        node_coordinate = f"{int(curr_node.x)} {int(curr_node.y)} {curr_node.korpus}_{curr_node.floor}"
+
         ans_ans_dict_graph[node_coordinate] = [
-            f"{ans_dict_graph[node_name].x} {ans_dict_graph[node_name].y} {ans_dict_graph[node_name].korpus}_{ans_dict_graph[node_name].floor}"
+            f"{int(ans_dict_graph[node_name].x)} {int(ans_dict_graph[node_name].y)} {ans_dict_graph[node_name].korpus}_{ans_dict_graph[node_name].floor}"
             for node_name in curr_node.neighbours
         ]
 
-    
-    
-    with open(result_folder_path / Path("ans_ans_graph.json"), "w", encoding="utf-8") as f:
+    for name in ans_dict_names.keys():
+        if any((p in name) for p in staircases_patterns):
+            continue
+        curr_node = ans_dict_graph[ans_dict_names[name]]
+
+        node_coordinate = f"{int(curr_node.x)} {int(curr_node.y)} {curr_node.korpus}_{curr_node.floor}"
+
+        name = " ".join(name.split()[:-1])
+
+        for str_to_change in name_change_dict.keys():
+            if str_to_change in name:
+                name = re.sub(pattern=str_to_change, string=name, repl=name_change_dict[str_to_change], count=1)
+
+        ans_ans_dict_names[name] = node_coordinate
+
+    with open(
+        result_folder_path / Path("ans_ans_graph.json"), "w", encoding="utf-8"
+    ) as f:
         json.dump(ans_ans_dict_graph, f, ensure_ascii=False, indent=2)
 
-    with open(result_folder_path / Path("ans_ans_names.json"), "w", encoding="utf-8") as f:
+    with open(
+        result_folder_path / Path("ans_ans_names.json"), "w", encoding="utf-8"
+    ) as f:
         json.dump(ans_ans_dict_names, f, ensure_ascii=False, indent=2)
 
 
-
 def main():
-    # svg_path = "floor5 matmeh.svg"
-    # svg_path = ".\\svg_parser\\floor5 matmeh.svg"
-    # svg_path = ".\\GB\\GraphBuilder\\svg_parser\\floor6 matmeh.svg"
-    # svg_path = ".\\GB\\GraphBuilder\\svg_parser\\floor6 matmeh (1).svg"
 
     svg_paths = [
-        ".\\svg_parser\\input_images\\floor 6 matmeh.svg",
-        ".\\svg_parser\\input_images\\floor 5 matmeh.svg",
+        ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 6 matmeh.svg",
+        ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 5 matmeh.svg",
     ]
 
     parsers = [GraphBuilderSVG(path) for path in svg_paths]
-    # Создаем парсер
+
     for p in parsers:
         p.run()
     merge_correct_jsons(parsers, parsers[0].output_folder_name.parent.parent.parent)
@@ -545,3 +572,15 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+"""
+
+убрать:
+-х лестницы, лифты: из ans_ans_names.json
+-х matmeh в конце названий кабинетов
+-х перевести все кабинеты на русский
+
+-+- убрать туалеты (возможно)
+
+"""

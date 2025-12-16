@@ -1,5 +1,6 @@
 ﻿using Matmekh.Maps.Application;
 using Matmekh.Maps.Domain.FindPath;
+using Matmekh.Maps.Domain.ValueTypes;
 using Matmekh.Maps.Infrastructure.Scripts;
 
 namespace Matmekh.Maps.API;
@@ -20,6 +21,7 @@ class Program
         builder.Services.AddScoped<IPathFinderService, PathFinderService>();
         builder.Services.AddScoped<IJSONGraphLoader, JSONGraphLoader>();
         builder.Services.AddScoped<IPathFinderApp, PathFinderApp>();
+        builder.Services.AddScoped<IGraph, Graph>();
 
         var app = builder.Build();
 
