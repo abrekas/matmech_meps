@@ -464,7 +464,7 @@
       "x": 279.0,
       "y": 307.0,
       "rooms": [
-        "dekanat_matmeh"
+        "dekanat"
       ]
     },
     {
@@ -472,7 +472,7 @@
       "x": 532.5,
       "y": 169.5,
       "rooms": [
-        "wc w 6"
+        "wc_w 6"
       ]
     },
     {
@@ -986,13 +986,13 @@
       "node_id": "node_70"
     },
     {
-      "number": "wc w 6",
+      "number": "wc_w 6",
       "x": 513.0,
       "y": 132.8,
       "node_id": "node_73"
     },
     {
-      "number": "dekanat_matmeh",
+      "number": "dekanat",
       "x": 167.0,
       "y": 375.934,
       "node_id": "node_72"

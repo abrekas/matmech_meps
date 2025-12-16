@@ -90,8 +90,8 @@
 <text id="626" transform="matrix(0 -1 1 0 1154 311)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="0" y="23.8492">626</tspan></text>
 <text id="632" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="1430" y="292.849">632</tspan></text>
 <text id="602" transform="translate(125.536 452.356) rotate(-113)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="0" y="23.8492">602</tspan></text>
-<text id="wc w 6" fill="white" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="32" letter-spacing="0em"><tspan x="513" y="132.8">&#x436;</tspan></text>
-<text id="dekanat_matmeh" transform="translate(167 375.934) rotate(-23)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="0" y="23.8492">&#x434;&#x435;&#x43a;&#x430;&#x43d;&#x430;&#x442;</tspan></text>
+<text id="wc_w 6" fill="white" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="32" letter-spacing="0em"><tspan x="513" y="132.8">&#x436;</tspan></text>
+<text id="dekanat" transform="translate(167 375.934) rotate(-23)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="0" y="23.8492">&#x434;&#x435;&#x43a;&#x430;&#x43d;&#x430;&#x442;</tspan></text>
 <text id="630" opacity="0.5" transform="matrix(0 -1 1 0 1348 321)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="0" y="23.8492">630</tspan></text>
 </g>
 <g id="lift">
