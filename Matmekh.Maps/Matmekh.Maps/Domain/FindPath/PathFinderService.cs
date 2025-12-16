@@ -6,56 +6,32 @@ namespace Matmekh.Maps.Domain.FindPath;
 
 public class PathFinderService : IPathFinderService
 {
-    // Приватные поля для кэширования
-    private Dictionary<Coordinates, List<Coordinates>>? _graph;
-    private Dictionary<string, Cabinet>? _names;
-    private readonly object _lock = new object();
     private ISearcher searcher;
-    private IJSONGraphLoader graphLoader;
+    private IGraph graph;
 
+	public Dictionary<Coordinates, List<Coordinates>> Graph 
+    { 
+        get 
+        { 
+            return graph.GraphDictionary;
+        } 
+    }
 
-    public PathFinderService(ISearcher search, IJSONGraphLoader loader)
-    {
-        searcher = search;
-        graphLoader = loader;
-
+	public Dictionary<string, Cabinet> Names
+	{
+		get
+		{
+			return graph.Names;
+		}
 	}
 
-    /// <summary>
-    /// Возвращает граф (загружает при первом вызове)
-    /// </summary>
-    public Dictionary<Coordinates, List<Coordinates>> Graph
-    {
-        get
-        {
-            if (_graph == null)
-            {
-                lock (_lock)
-                {
-                    _graph ??= graphLoader.LoadGraph();
-                }
-            }
-            return _graph;
-        }
-    }
 
-    /// <summary>
-    /// Возвращает словарь имен (загружает при первом вызове)
-    /// </summary>
-    public Dictionary<string, Cabinet> Names
+	public PathFinderService(ISearcher search, IGraph graph)
     {
-        get
-        {
-            if (_names == null)
-            {
-                lock (_lock)
-                {
-                    _names ??= graphLoader.LoadNames();
-                }
-            }
-            return _names;
-        }
-    }
+        searcher = search;
+        this.graph = graph;
+
+	}
 
     /// <summary>
     /// Основной метод поиска пути

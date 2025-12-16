@@ -1,6 +1,7 @@
 ﻿using Matmekh.Maps.Domain.Entities;
 using Matmekh.Maps.Domain.ValueTypes;
 using System.Text.Json;
+using System.Xml.Linq;
 
 namespace Matmekh.Maps.Infrastructure.Scripts
 {
@@ -60,8 +61,9 @@ namespace Matmekh.Maps.Infrastructure.Scripts
 				Converters = { new PointJsonConverter() }
 			};
 
-			var names = JsonSerializer.Deserialize<
-				Dictionary<string, Coordinates>>(json, options);
+
+
+			var names = JsonSerializer.Deserialize<Dictionary<string, Coordinates>>(json, options);
 			var namesCabinets = names.Select(p => new KeyValuePair<string, Cabinet>(p.Key, new Cabinet(p.Key, p.Value))).ToDictionary();
 
 			if (names == null)
