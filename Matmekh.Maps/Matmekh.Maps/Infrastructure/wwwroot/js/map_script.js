@@ -15,8 +15,8 @@ function initMap() {
     const floorMap    = document.getElementById("floorMap");
 
     const floorImages = {
-        "5": "images/floor5map.png",
-        "6": "images/floor6map.png"
+        "5": "images/floor5.png",
+        "6": "images/floor6.png"
     };
 
     const initValue = floorSelect.value;
@@ -29,8 +29,8 @@ function initMap() {
     const zoomOutBtn = document.getElementById("zoomOutBtn");
 
     if (mapInner && zoomInBtn && zoomOutBtn) {
-        let scale = 0.7;
-        const MIN_SCALE = 0.7;
+        let scale = 0.25;
+        const MIN_SCALE = 0.25;
         const MAX_SCALE = 3;
         const STEP = 0.25;
 

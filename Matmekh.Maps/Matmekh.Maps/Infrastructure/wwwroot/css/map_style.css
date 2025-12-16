@@ -108,7 +108,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 8px;
-    gap: 8px;
+    gap: 16px;
     overflow: hidden; /* Запрещаем скролл в основном контейнере */
     min-height: 0; /* Важно для flex-потомков */
     position: relative;
@@ -124,7 +124,6 @@ body {
     border: 1px solid #cbd0d6;
     position: relative;
     border-radius: 16px;
-    margin-top: 8px;
     overflow: auto; /* Переносим скролл сюда */
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -326,6 +325,7 @@ select {
     letter-spacing: 0.02em;
     text-transform: uppercase;
     cursor: pointer;
+    font-family: 'Golos', sans-serif;
 }
 
 .route-bar__close {
