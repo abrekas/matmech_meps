@@ -34,15 +34,9 @@
                 const result = await response.json();
 
                 if (response.ok && result.success) {
-                    // Успешный ответ
-                    // сохраняем точки маршрута
-                    localStorage.setItem("routePoints", JSON.stringify(result.path));
-                    // переходим на страницу карты
+                    localStorage.setItem("routePoints", JSON.stringify(result.Path));
                     window.location.href = "matmeh_start_page.html";
-                    // Здесь можно отобразить маршрут на карте
-                    // Например: displayRouteOnMap(result);
                 } else {
-                    // Ошибка от сервера
                     alert(result.error || 'Ошибка сервера');
                 }
 

@@ -53,18 +53,14 @@ function drawPoint(point, color) {
     svg.appendChild(circle);
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const raw = localStorage.getItem("routePoints");
     if (!raw) return;
 
-    try {
-        const points = JSON.parse(raw);
-        drawRoute(points);
-        
-        localStorage.removeItem("routePoints");
-
-    } catch (e) {
-        console.error("Ошибка чтения маршрута", e);
-    }
+    const points = JSON.parse(raw);
+    drawRoute(points);
+    localStorage.removeItem("routePoints");
 });
+
+
+
