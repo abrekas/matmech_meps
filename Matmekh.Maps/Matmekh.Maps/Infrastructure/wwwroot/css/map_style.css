@@ -124,14 +124,35 @@ body {
     border: 1px solid #cbd0d6;
     position: relative;
     border-radius: 16px;
-    overflow: auto; /* Переносим скролл сюда */
+
+    overflow: auto;                 /* скролл внутри карты */
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+
+    scrollbar-width: thin;          /* Firefox: показать */
+    scrollbar-color: #9ca3af #f3f4f6;
 }
 
 .map-wrapper::-webkit-scrollbar {
-    display: none;
+    width: 10px;      /* вертикальный */
+    height: 10px;     /* горизонтальный */
 }
+
+.map-wrapper::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 10px;
+}
+
+.map-wrapper::-webkit-scrollbar-thumb {
+    background: #9ca3af;
+    border-radius: 10px;
+    border: 2px solid #f3f4f6;
+}
+
+.map-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+}
+
+
 
 .map-container {
     width: 100%;
@@ -434,4 +455,17 @@ input, textarea {
     -moz-user-select: text;
     -ms-user-select: text;
     user-select: text;
+}
+
+
+@media (min-width:1024px) {
+    .app-main{
+        width: 80%;
+        margin-left: 16px;
+    }
+
+    .map-zoom-controls{
+        margin-right: 20%;
+        margin-bottom: 20%;
+    }
 }
