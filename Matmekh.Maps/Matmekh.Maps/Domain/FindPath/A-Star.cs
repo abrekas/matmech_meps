@@ -62,6 +62,10 @@ namespace Matmekh.Maps.Domain.FindPath
                 // Добавляем в закрытый список
                 closedSet.Add(currentNode.Position);
 
+                foreach (var item in graph.Keys)
+                {
+                    Console.WriteLine(item);
+                }
                 // Проверяем всех соседей
                 foreach (var neighborPos in graph[currentNode.Position])
                 {

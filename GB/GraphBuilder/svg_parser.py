@@ -325,51 +325,51 @@ class GraphBuilderSVG:
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump(output_data, f, indent=2, ensure_ascii=False)
 
-    def _visualize(self):
-        """Визуализирует граф с комнатами (для отладки)"""
-        import matplotlib.pyplot as plt
-
-        fig, ax = plt.subplots(figsize=(12, 8))
-
-        # Рисуем ребра
-        for edge in self.edges:
-            p1, p2 = edge
-            x_values = [p1[0], p2[0]]
-            y_values = [p1[1], p2[1]]
-            ax.plot(x_values, y_values, "b-", alpha=0.7, linewidth=1)
-
-        # Рисуем вершины
-        nodes_x = [p[0] for p in self.graph.keys()]
-        nodes_y = [p[1] for p in self.graph.keys()]
-        ax.scatter(nodes_x, nodes_y, c="red", s=30, zorder=5)
-
-        # Рисуем номера кабинетов
-        for room in self.rooms:
-            ax.text(
-                room.x,
-                room.y,
-                room.number,
-                fontsize=9,
-                ha="center",
-                va="center",
-                bbox=dict(boxstyle="round,pad=0.3", facecolor="yellow", alpha=0.7),
-            )
-
-            # Показываем связь с вершиной
-            if room.node_id:
-                node = room.node_id
-                ax.plot(
-                    [room.x, node[0]],
-                    [room.y, node[1]],
-                    "g--",
-                    alpha=0.3,
-                    linewidth=0.5,
-                )
-
-        ax.set_aspect("equal")
-        plt.title("Граф навигации с привязанными кабинетами")
-        plt.grid(True, alpha=0.3)
-        plt.show()
+    #def _visualize(self):
+        #"""Визуализирует граф с комнатами (для отладки)"""
+        #import matplotlib.pyplot as plt
+#
+        #fig, ax = plt.subplots(figsize=(12, 8))
+#
+        ## Рисуем ребра
+        #for edge in self.edges:
+        #    p1, p2 = edge
+        #    x_values = [p1[0], p2[0]]
+        #    y_values = [p1[1], p2[1]]
+        #    ax.plot(x_values, y_values, "b-", alpha=0.7, linewidth=1)
+#
+        ## Рисуем вершины
+        #nodes_x = [p[0] for p in self.graph.keys()]
+        #nodes_y = [p[1] for p in self.graph.keys()]
+        #ax.scatter(nodes_x, nodes_y, c="red", s=30, zorder=5)
+#
+        ## Рисуем номера кабинетов
+        #for room in self.rooms:
+        #    ax.text(
+        #        room.x,
+        #        room.y,
+        #        room.number,
+        #        fontsize=9,
+        #        ha="center",
+        #        va="center",
+        #        bbox=dict(boxstyle="round,pad=0.3", facecolor="yellow", alpha=0.7),
+        #    )
+#
+        #    # Показываем связь с вершиной
+        #    if room.node_id:
+        #        node = room.node_id
+        #        ax.plot(
+        #            [room.x, node[0]],
+        #            [room.y, node[1]],
+        #            "g--",
+        #            alpha=0.3,
+        #            linewidth=0.5,
+        #        )
+#
+        #ax.set_aspect("equal")
+        #plt.title("Граф навигации с привязанными кабинетами")
+        #plt.grid(True, alpha=0.3)
+        #plt.show()
 
     def run(self):
         self._process_svg()
@@ -503,8 +503,8 @@ def merge_correct_jsons(parsers: List[GraphBuilderSVG], result_folder_path: Path
     ans_ans_dict_names = {}
     ans_ans_dict_graph = {}
 
-    for name in ans_dict_names.keys():
-        curr_node = ans_dict_graph[ans_dict_names[name]]
+    for name in ans_dict_graph.keys():
+        curr_node = ans_dict_graph[name]
         node_coordinate = (
             f"{curr_node.x} {curr_node.y} {curr_node.korpus}_{curr_node.floor}"
         )
@@ -532,8 +532,8 @@ def main():
     # svg_path = ".\\GB\\GraphBuilder\\svg_parser\\floor6 matmeh (1).svg"
 
     svg_paths = [
-        ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 6 matmeh.svg",
-        ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 5 matmeh.svg",
+        ".\\svg_parser\\input_images\\floor 6 matmeh.svg",
+        ".\\svg_parser\\input_images\\floor 5 matmeh.svg",
     ]
 
     parsers = [GraphBuilderSVG(path) for path in svg_paths]

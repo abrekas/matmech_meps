@@ -4,18 +4,20 @@
     {
         public int X { get; }
         public int Y { get; }
+        public string Floor { get; }
 
-        public Coordinates(int x, int y)
+        public Coordinates(int x, int y, string floor)
         {
             X = x;
             Y = y;
+            Floor = floor;
         }
 
         public override bool Equals(object obj) =>
             obj is Coordinates point && Equals(point);
 
         public bool Equals(Coordinates other) =>
-            X == other.X && Y == other.Y;
+            X == other.X && Y == other.Y && Floor == other.Floor;
 
         public override int GetHashCode() =>
             HashCode.Combine(X, Y);
@@ -27,7 +29,7 @@
             !(left == right);
 
         public override string ToString() =>
-            $"({X}, {Y})";
+            $"({X}, {Y}, {Floor})";
 
         public double DistanceTo(Coordinates other)
         {
@@ -43,12 +45,13 @@
         public static Coordinates Parse(string str)
         {
             var parts = str.Split(' ');
-            if (parts.Length != 2)
+            if (parts.Length != 3)
                 throw new FormatException($"Неверный формат точки: {str}");
 
             return new Coordinates(
                 int.Parse(parts[0].Trim()),
-                int.Parse(parts[1].Trim()));
+                int.Parse(parts[1].Trim()),
+				parts[2].Trim());
         }
     }
 }

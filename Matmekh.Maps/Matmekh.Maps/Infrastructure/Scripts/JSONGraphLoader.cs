@@ -40,7 +40,7 @@ namespace Matmekh.Maps.Infrastructure.Scripts
 				graph[point] = neighbors;
 			}
 
-			Console.WriteLine($"✅ Загружен граф: {graph.Count} точек");
+			Console.WriteLine($"Загружен граф: {graph.Count} точек");
 			return graph;
 		}
 
