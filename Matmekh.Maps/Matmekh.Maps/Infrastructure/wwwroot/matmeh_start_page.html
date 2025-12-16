@@ -40,30 +40,27 @@
                 <span class="select-arrow"></span>
             </div>
             <select name="floor" id="floorSelect">
-                <option value="6" selected>6 этаж</option>
+                <option value="6">6 этаж</option>
                 <option value="5">5 этаж</option>
             </select>
         </div>
 
         <!-- карта -->
         <div class="map-wrapper">
-  <div class="map-scroll">
-    <div class="map-container" id="mapContainer">
-      <div class="map-inner" id="mapInner">
-        <img id="floorMap" src="images/floor6map.png" alt="">
-        <svg id="routeLayer" class="route-layer" ...></svg>
-      </div>
-    </div>
-  </div>
+            <div class="map-scroll">
+                <div class="map-container" id="mapContainer">
+                    <div class="map-inner" id="mapInner">
+                        <img id="floorMap" src="images/floor6.png" alt="">
+                        <svg id="routeLayer" class="route-layer" ...></svg>
+                    </div>
+                </div>
+            </div>
 
-  <div class="map-zoom-controls">
-    <button class="zoom-btn" id="zoomInBtn">+</button>
-    <button class="zoom-btn" id="zoomOutBtn">−</button>
-  </div>
-</div>
-
-
-
+            <div class="map-zoom-controls">
+                <button class="zoom-btn" id="zoomInBtn">+</button>
+                <button class="zoom-btn" id="zoomOutBtn">−</button>
+            </div>
+        </div>
 
         <!-- построить маршрут -->
         <div class="route-bar">
