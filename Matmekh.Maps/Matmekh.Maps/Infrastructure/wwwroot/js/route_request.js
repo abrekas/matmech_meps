@@ -1,77 +1,78 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
     const buildButton = document.querySelector('.route-submit-btn');
 
-    if (buildButton) {
-        buildButton.addEventListener('click', async function () {
-            // Берем значения из полей ввода
-            const from = document.getElementById('routeFrom').value;
-            const to = document.getElementById('routeTo').value;
+    if (!buildButton) return;
 
-            // Проверяем, что поля заполнены
-            if (!from || !to) {
-                alert('Пожалуйста, заполните оба поля!');
-                return;
-            }
+    buildButton.addEventListener('click', async function () {
+        const from = document.getElementById('routeFrom').value;
+        const to   = document.getElementById('routeTo').value;
 
-            try {
-                // Показываем загрузку
-                buildButton.textContent = 'Строим...';
-                buildButton.disabled = true;
+        if (!from || !to) {
+            alert('Пожалуйста, заполните оба поля!');
+            return;
+        }
 
-                // Отправляем запрос на сервер
-                const response = await fetch('/api/route/build', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        from: from,
-                        to: to
-                    })
-                });
+        try {
+            buildButton.textContent = 'Строим...';
+            buildButton.disabled = true;
 
-                // Получаем ответ
-                const result = await response.json();
+            const response = await fetch('/api/route/build', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ from, to })
+            });
 
-                if (response.ok && result.success) {
+            const result = await response.json();
+
+            if (response.ok && result.success) {
+                // сохраняем точки маршрута
                 localStorage.setItem("routePoints", JSON.stringify(result.path));
+                let startFloor    = null;   
+                let startLocation = null;   
 
-                // 1) Определяем этаж старта
-                let startFloor = null;
+                if (Array.isArray(result.path) &&
+                    result.path.length &&
+                    result.path[0].Floor != null) {
 
-                // Вариант A (лучше): если сервер возвращает floor у точек маршрута
-            if (Array.isArray(result.path) && result.path.length && result.path[0].floor != null) {
-                    startFloor = String(result.path[0].floor);
+                    const floorField = String(result.path[0].Floor); // "matmeh_5" / "kuibysheva_3"
+                    const parts = floorField.split("_");             // ["matmeh","5"]
+
+                    if (parts[0]) startLocation = parts[0];
+                    if (parts[1]) startFloor    = parts[1];
                 } else {
-                    // Вариант B: берём из номера кабинета "509" -> 5 этаж, "632" -> 6 этаж
-                    // (достаём первое число и берём его первую цифру)
-                    const m = String(from).match(/\d+/); // найдёт "509" даже если введут "каб. 509"
+                    // fallback: вытаскиваем этаж из номера кабинета
+                    const m = String(from).match(/\d+/);
                     if (m && m[0].length) startFloor = m[0][0];
                 }
 
+                // сохраняем в localStorage
                 if (startFloor) {
                     localStorage.setItem("routeStartFloor", startFloor);
                 } else {
                     localStorage.removeItem("routeStartFloor");
                 }
 
-                // 2) Переходим на страницу карты
-                window.location.href = "matmeh_start_page.html";
-            }
-            else {
-                    // Ошибка от сервера
-                    alert(result.error || 'Ошибка сервера');
+                if (startLocation) {
+                    localStorage.setItem("routeStartLocation", startLocation);
+                } else {
+                    localStorage.removeItem("routeStartLocation");
                 }
-
-            } catch (error) {
-                // Ошибка сети
-                console.error('Ошибка:', error);
-                alert('Ошибка сети. Проверьте подключение.');
-            } finally {
-                // Восстанавливаем кнопку
-                buildButton.textContent = 'ПОСТРОИТЬ';
-                buildButton.disabled = false;
+                
+                if (startLocation === "matmeh") {
+                    window.location.href = "matmeh_start_page.html";
+                } else {
+                    window.location.href = "kuibysheva_start_page.html";
+                }
+            } else {
+                alert(result.error || 'Ошибка сервера');
             }
-        });
-    }
+
+        } catch (error) {
+            console.error('Ошибка:', error);
+            alert('Ошибка сети. Проверьте подключение.');
+        } finally {
+            buildButton.textContent = 'ПОСТРОИТЬ';
+            buildButton.disabled = false;
+        }
+    });
 });
