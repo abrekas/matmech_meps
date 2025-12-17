@@ -1,6 +1,5 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
     const buildButton = document.querySelector('.route-submit-btn');
-
     if (!buildButton) return;
 
     buildButton.addEventListener('click', async function () {
@@ -23,29 +22,38 @@
             });
 
             const result = await response.json();
+            console.log('result from /api/route/build:', result);
 
             if (response.ok && result.success) {
-                // сохраняем точки маршрута
-                localStorage.setItem("routePoints", JSON.stringify(result.path));
+                const path = Array.isArray(result.path) ? result.path : [];
+                localStorage.setItem("routePoints", JSON.stringify(path));
+
+                
                 let startFloor    = null;   
                 let startLocation = null;   
+                
+                const firstWithFloor = path.find(p => p && (p.Floor != null || p.floor != null)) || null;
 
-                if (Array.isArray(result.path) &&
-                    result.path.length &&
-                    result.path[0].Floor != null) {
+                if (firstWithFloor) {
+                    const floorField = String(firstWithFloor.Floor ?? firstWithFloor.floor);
 
-                    const floorField = String(result.path[0].Floor); // "matmeh_5" / "kuibysheva_3"
-                    const parts = floorField.split("_");             // ["matmeh","5"]
+                    const [loc, floorNum] = floorField.split('_'); 
 
-                    if (parts[0]) startLocation = parts[0];
-                    if (parts[1]) startFloor    = parts[1];
-                } else {
-                    // fallback: вытаскиваем этаж из номера кабинета
+                    if (loc)      startLocation = loc;
+                    if (floorNum) startFloor    = floorNum;
+                }
+                
+                if (!startFloor) {
                     const m = String(from).match(/\d+/);
                     if (m && m[0].length) startFloor = m[0][0];
                 }
+                
+                if (!startLocation) {
+                    startLocation = "matmeh";
+                }
 
-                // сохраняем в localStorage
+                console.log('startLocation:', startLocation, 'startFloor:', startFloor);
+                
                 if (startFloor) {
                     localStorage.setItem("routeStartFloor", startFloor);
                 } else {
@@ -57,12 +65,15 @@
                 } else {
                     localStorage.removeItem("routeStartLocation");
                 }
-                
-                if (startLocation === "matmeh") {
-                    window.location.href = "matmeh_start_page.html";
-                } else {
-                    window.location.href = "kuibysheva_start_page.html";
-                }
+
+                const targetPage =
+                    startLocation === "kuibysheva"
+                        ? "kuibysheva_start_page.html"
+                        : "matmeh_start_page.html";
+
+                console.log('redirect to:', targetPage);
+                window.location.href = targetPage;
+
             } else {
                 alert(result.error || 'Ошибка сервера');
             }

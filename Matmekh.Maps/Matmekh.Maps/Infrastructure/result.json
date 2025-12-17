@@ -1,92 +1,17 @@
 [
   {
-    "X": 1399,
+    "X": 564,
     "Y": 1998,
     "Floor": "kuibysheva_3"
   },
   {
-    "X": 1399,
-    "Y": 2054,
+    "X": 636,
+    "Y": 1998,
     "Floor": "kuibysheva_3"
   },
   {
-    "X": 1567,
-    "Y": 2054,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1737,
-    "Y": 2054,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1838,
-    "Y": 2054,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1838,
-    "Y": 1989,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1838,
-    "Y": 1917,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1838,
-    "Y": 1877,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1819,
-    "Y": 1877,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1819,
-    "Y": 1811,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1819,
-    "Y": 1610,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1819,
-    "Y": 1504,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1819,
-    "Y": 1279,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1819,
-    "Y": 1124,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1819,
-    "Y": 1072,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1819,
-    "Y": 963,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1819,
-    "Y": 900,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1866,
-    "Y": 900,
+    "X": 636,
+    "Y": 1979,
     "Floor": "kuibysheva_3"
   }
 ]
