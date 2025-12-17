@@ -464,7 +464,7 @@
       "x": 279.0,
       "y": 307.0,
       "rooms": [
-        "dekanat"
+        "dekanat_m"
       ]
     },
     {
@@ -992,7 +992,7 @@
       "node_id": "node_73"
     },
     {
-      "number": "dekanat",
+      "number": "dekanat_m",
       "x": 167.0,
       "y": 375.934,
       "node_id": "node_72"
