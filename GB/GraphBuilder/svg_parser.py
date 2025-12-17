@@ -128,7 +128,7 @@ class GraphBuilderSVG:
                         parsed_id[1]
                     ), float(parsed_id[2])
                     if len(parsed_id)==4:
-                        self.remove_offset = True
+                        self.remove_offset = False
 
                 elif re.search(r"graph", id):
                     self._parse_path_data(s)
