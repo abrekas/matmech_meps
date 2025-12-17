@@ -1,4 +1,9 @@
+let isKuibysheva = false;
+let isMatmeh = false;
+let routePoints = null;  
+
 document.addEventListener("DOMContentLoaded", async () => {
+  // 1. Подтягиваем меню
   try {
     const resp = await fetch("menu.html");
     if (resp.ok) {
@@ -17,22 +22,21 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const floorSelect = document.getElementById("floorSelect");
 
-
+  // 2. Читаем сохранённый этаж старта (цифру)
   const raw = localStorage.getItem("routeStartFloor");
   let savedDigit = null;
   if (raw) {
     const m = String(raw).match(/\d/);
-    if (m) savedDigit = m[0];
+    if (m) savedDigit = m[0]; // "1","2","3","5","6"
   }
 
-  // 3. Определяем, какая страница: матмех или Куйбышева
-  const isKuibysheva = !!document.getElementById("mySvgContainer");
-  const isMatmeh     = !isKuibysheva;
+  // 3. Определяем кампус по DOM
+  isKuibysheva = !!document.getElementById("mySvgContainer");
+  isMatmeh     = !isKuibysheva;
 
-  // 4. Выставляем значение select в зависимости от кампуса
+  // 4. Выставляем значение select
   if (floorSelect) {
     if (isKuibysheva) {
-      // Куйбышева – value совпадает с текстом
       const valueMap = {
         "1": "1 этаж",
         "2": "2 этаж контуровские классы",
@@ -42,10 +46,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (mapped) {
         floorSelect.value = mapped;
       }
-      // если нет сохранённого – оставляем то, что в HTML
+      // если нет сохранённого – остаётся дефолт из HTML
     } else {
-      // МАТМЕХ: ищем опцию, где текст начинается с цифры (5 или 6)
-      const desiredDigit = savedDigit || "5"; // дефолт – 5 этаж
+      const desiredDigit = savedDigit || "5"; // по умолчанию 5 этаж
       let targetOption = null;
 
       for (const opt of floorSelect.options) {
@@ -55,8 +58,6 @@ document.addEventListener("DOMContentLoaded", async () => {
           break;
         }
       }
-
-      // если нашли – ставим её, иначе берём первую "нормальную" опцию с цифрой
       if (targetOption) {
         floorSelect.value = targetOption.value;
       } else {
@@ -76,17 +77,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     initMatmehMap();
   }
 
-  // 6. Если есть сохранённый маршрут — рисуем его
+  // 6. Забираем маршрут и сохраняем его в routePoints
   const rawRoute = localStorage.getItem("routePoints");
   if (rawRoute) {
     try {
       const points = JSON.parse(rawRoute);
       if (Array.isArray(points) && points.length) {
-        drawRoute(points); // рисует в #routeLayer
+        routePoints = points;      // храним весь путь
+        updateRouteForCurrentFloor(); // рисуем только текущий этаж
       }
     } catch (e) {
       console.error("Ошибка чтения маршрута", e);
     } finally {
+      // можно очистить, т.к. копия уже лежит в routePoints
       localStorage.removeItem("routePoints");
     }
   }
@@ -112,7 +115,7 @@ function initMenuIfExists() {
   menu.addEventListener("click", () => menu.classList.remove("active"));
 }
 
-/* --------- МАТМЕХ --------- */
+/* ========= МАТМЕХ ========= */
 
 function initMatmehMap() {
   const floorSelect = document.getElementById("floorSelect");
@@ -131,7 +134,6 @@ function initMatmehMap() {
   const applyFloor = (value) => {
     if (!floorSelect) return;
 
-    // берём красивый текст из option
     const opt = floorSelect.querySelector(`option[value="${value}"]`);
     const labelText = opt ? opt.textContent.trim() : value;
 
@@ -139,7 +141,6 @@ function initMatmehMap() {
       floorLabel.textContent = labelText;
     }
     if (floorMap) {
-      // value может быть '5' или '6', картинку выбираем по цифре
       const digit = labelText.match(/\d/)?.[0] ?? value;
       const src   = floorImages[digit];
       if (src) {
@@ -182,16 +183,12 @@ function initMatmehMap() {
   if (floorSelect) {
     floorSelect.addEventListener("change", () => {
       applyFloor(floorSelect.value);
-
-      const routeLayer = document.getElementById("routeLayer");
-      if (routeLayer) {
-        routeLayer.innerHTML = "";
-      }
+      updateRouteForCurrentFloor();   // ПЕРЕРИСОВАТЬ маршрут под новый этаж
     });
   }
 }
 
-/* --------- КУЙБЫШЕВА --------- */
+/* ========= КУЙБЫШЕВА ========= */
 
 function initKuibyshevaMap() {
   const floorSelect = document.getElementById("floorSelect");
@@ -274,10 +271,71 @@ function initKuibyshevaMap() {
 
   floorSelect.addEventListener("change", () => {
     loadFloor(floorSelect.value);
-
-    const routeLayer = document.getElementById("routeLayer");
-    if (routeLayer) {
-      routeLayer.innerHTML = "";
-    }
+    updateRouteForCurrentFloor();   // ПЕРЕРИСОВАТЬ маршрут
   });
+}
+
+/* ========= ОБЩАЯ ФУНКЦИЯ ДЛЯ МАРШРУТА ПО ЭТАЖУ ========= */
+
+function updateRouteForCurrentFloor() {
+  const routeLayer  = document.getElementById("routeLayer");
+  const floorSelect = document.getElementById("floorSelect");
+
+  if (!routeLayer || !floorSelect || !Array.isArray(routePoints) || routePoints.length < 2) {
+    console.log("updateRouteForCurrentFloor: нет routeLayer / floorSelect / routePoints");
+    return;
+  }
+
+  // очищаем слой маршрута
+  routeLayer.innerHTML = "";
+
+  // --- 1. Достаём цифру этажа из value ИЛИ из текста option ---
+  const rawValue = String(floorSelect.value || "");
+  const textValue = floorSelect.options[floorSelect.selectedIndex]
+      ?.textContent?.trim() || "";
+
+  const digitFromValue = rawValue.match(/\d/)?.[0] || null;
+  const digitFromText  = textValue.match(/\d/)?.[0] || null;
+
+  const digit = digitFromValue || digitFromText;
+  if (!digit) {
+    console.log("updateRouteForCurrentFloor: не нашли цифру этажа", { rawValue, textValue });
+    return;
+  }
+
+  // --- 2. Берём префикс здания из самого маршрута ---
+  const anyFloorPoint = routePoints.find(p => p && (p.Floor != null || p.floor != null));
+  if (!anyFloorPoint) {
+    console.log("updateRouteForCurrentFloor: в routePoints нет поля Floor", routePoints);
+    return;
+  }
+
+  const floorField = String(anyFloorPoint.Floor ?? anyFloorPoint.floor); // "matmeh_6"
+  const prefix = floorField.split("_")[0];                               // "matmeh" / "kuibysheva"
+  const floorCode = `${prefix}_${digit}`;                                // "matmeh_6" или "matmeh_5"
+
+  // --- 3. Фильтруем точки только этого этажа ---
+  const pointsForFloor = routePoints.filter(p => {
+    const code = String(p.Floor ?? p.floor);
+    return code === floorCode;
+  });
+
+  console.log("updateRouteForCurrentFloor:", {
+    rawValue,
+    textValue,
+    digit,
+    floorField,
+    prefix,
+    floorCode,
+    allFloors: [...new Set(routePoints.map(p => String(p.Floor ?? p.floor)))],
+    count: pointsForFloor.length
+  });
+
+  if (pointsForFloor.length < 2) {
+    console.log("updateRouteForCurrentFloor: для", floorCode, "мало точек, ничего не рисуем");
+    return;
+  }
+
+  // --- 4. Рисуем только точки текущего этажа ---
+  drawRoute(pointsForFloor);
 }
