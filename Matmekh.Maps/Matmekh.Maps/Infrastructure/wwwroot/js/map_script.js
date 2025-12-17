@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   initMap();
 
-  if (savedFloor && floorSelect) {
-    floorSelect.dispatchEvent(new Event("change"));
-  }
+  // if (savedFloor && floorSelect) {
+  //   floorSelect.dispatchEvent(new Event("change"));
+  // }
 });
 
 function initMap() {
@@ -47,8 +47,10 @@ function initMap() {
       }
     }
   };
-
-  applyFloor(floorSelect.value);
+  if (floorSelect) {
+    applyFloor(floorSelect.value);
+  }
+ 
 
   const mapInner = document.getElementById("mapInner");
   const zoomInBtn = document.getElementById("zoomInBtn");
@@ -76,8 +78,13 @@ function initMap() {
       applyScale();
     });
   }
-
-  floorSelect.addEventListener("change", () => {
-    applyFloor(floorSelect.value);
-  });
+  if (floorSelect) {
+    floorSelect.addEventListener("change", () => {
+      applyFloor(floorSelect.value);
+      const routeLayer = document.getElementById("routeLayer");
+      if (routeLayer) {
+        routeLayer.innerHTML = "";
+      }
+    });
+  }
 }
