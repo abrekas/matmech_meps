@@ -329,9 +329,7 @@ select {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 8px 0;
-    flex-shrink: 0; /* Не сжимается */
-    padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+    flex-shrink: 0;
 }
 
 .route-bar__action {
@@ -380,10 +378,41 @@ select {
 }
 
 /* ДОПОЛНИТЕЛЬНЫЕ ЭЛЕМЕНТЫ МАРШРУТА */
+.route-build{
+    display: flex;
+    flex-direction: column; 
+    gap: 16px;
+}
+
+/* Блок подсказок*/
+.autocomplete-clues {
+    width: 100%;
+    border-radius: 16px;
+    background-color: #f5f5f7;
+    display: none; 
+    padding: 16px;
+    display: flex;
+    flex-direction: column; 
+    gap: 16px;
+    padding: 16px;
+}
+
+.clues-header{
+    height: 16px;
+}
+
+.clue1{
+    border: 2px solid #d1d5db;
+    border-radius: 16px;
+    height: 56px;
+    padding: 16px;
+}
+/**/
+
 .route-card {
     background: #f5f5f7;
-    border-radius: 32px;
-    padding: 24px 16px 24px;
+    border-radius: 16px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     gap: 16px;

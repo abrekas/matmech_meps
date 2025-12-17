@@ -23,40 +23,53 @@
             <!-- шторка-меню-->
             <div id="menu-placeholder"></div>
 
-            
 
-            <!-- блок маршрута внизу экрана -->
-            <section class="route-card">
-                <div class="route-field">
-                    <span class="route-field-label">Откуда</span>
-                    <!-- бэк -->
-                    <input id="routeFrom"
-                           class="route-field-input"
-                           type="text"
-                           placeholder="">
+            <div class="route-build">
+                <div id="autocomplete-clues" class="autocomplete-clues">
+                    <div class="clues-header">
+                        <p>Поиск с ИИ...</p>
+                    </div>
+                    <div id="clue1" class="clue1">
+                        <p></p>
+                    </div>
                 </div>
 
-                <div class="route-field">
-                    <span class="route-field-label">Куда</span>
-                    <!-- бэк -->
-                    <input id="routeTo"
-                           class="route-field-input"
-                           type="text"
-                           placeholder="">
-                </div>
-                <div class="route-bar">
-                    <button class="route-submit-btn" type="button">
-                        ПОСТРОИТЬ
-                    </button>
-                    <button class="route-bar__close" id="closeRouteM" aria-label="Закрыть">
-                        <span></span><span></span>
-                    </button>
-                </div>
-            </section>
+                <!-- блок маршрута внизу экрана -->
+                <section class="route-card">
+                    
+
+                    <div class="route-field">
+                        <span class="route-field-label">Откуда</span>
+                        <!-- бэк -->
+                        <input id="routeFrom"
+                            class="route-field-input"
+                            type="text"
+                            placeholder="">
+                    </div>
+
+                    <div class="route-field">
+                        <span class="route-field-label">Куда</span>
+                        <!-- бэк -->
+                        <input id="routeTo"
+                            class="route-field-input"
+                            type="text"
+                            placeholder="">
+                    </div>
+                    <div class="route-bar">
+                        <button class="route-submit-btn" type="button">
+                            ПОСТРОИТЬ
+                        </button>
+                        <button class="route-bar__close" id="closeRouteM" aria-label="Закрыть">
+                            <span></span><span></span>
+                        </button>
+                    </div>
+                </section>
+            </div>
         </main>
     </div>
     
     <script src="js/route_request.js"></script>
     <script src="js/menu_script.js"></script>
+    <script src="js/autocomplete.js"></script>
 </body>
 </html>

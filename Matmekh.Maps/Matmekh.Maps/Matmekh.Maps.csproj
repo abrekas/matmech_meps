@@ -7,9 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Infrastructure/wwwroot/**" />
     <Content Include="Infrastructure/wwwroot/**">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
   </ItemGroup>
-  
+
 </Project>
