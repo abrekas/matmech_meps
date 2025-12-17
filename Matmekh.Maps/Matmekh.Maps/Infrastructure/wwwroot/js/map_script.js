@@ -204,10 +204,10 @@ function initKuibyshevaMap() {
   }
 
   const floorImages = {
-    "1 этаж": "images/NEW_1floor_k.png",
+    "1 этаж": "images/1floor_k.png",
     "3 этаж": "images/3floor_k.jpg",
-    "2 этаж контуровские классы": "images/NEW_2floor_k_k.png",
-    "1 этаж контуровские классы": "images/NEW_1floor_k_k.png"
+    "2 этаж контуровские классы": "images/2floor_k_k.png",
+    "1 этаж контуровские классы": "images/1floor_k_k.png"
   };
 
   let scale     = 1;
