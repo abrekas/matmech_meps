@@ -1,56 +1,59 @@
-<svg width="788" height="483" viewBox="0 0 788 483" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="853" height="687" viewBox="0 0 853 687" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="floor 1k kuibysheva">
-<rect width="483" height="788" transform="matrix(0 1 -1 0 788 0)" fill="white"/>
-<g id="Component 29 82 not">
+<rect width="852.396" height="686.5" fill="white"/>
 <g id="room_ids">
-<text id="178" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="619.25" y="172.849">178</tspan></text>
-<text id="179" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="570.25" y="360.849">179</tspan></text>
-<text id="180" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="136.25" y="346.849">180</tspan></text>
-<text id="181" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="136.25" y="168.849">181</tspan></text>
+<text id="178" transform="translate(702.201 264.228)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="0" y="28.4535">178</tspan></text>
+<text id="179" transform="translate(643.907 511.926)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="0" y="28.4535">179</tspan></text>
+<text id="180" transform="translate(127.591 493.48)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="0" y="28.4535">180</tspan></text>
+<text id="181" transform="translate(127.591 258.958)" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="0" y="28.4535">181</tspan></text>
 </g>
 <g id="no_use 1">
-<path id="Rectangle 218" d="M525.25 86H652.694H742.25V197.031V238H525.25V86Z" fill="#75D3FF" fill-opacity="0.52"/>
-<path id="Rectangle 219" d="M445.25 241H621.44H745.25V391.477V447H445.25V241Z" fill="#75D3FF" fill-opacity="0.52"/>
-<path id="Rectangle 220" d="M31.25 244H212.139H339.25V394.477V450H31.25V244Z" fill="#75D3FF" fill-opacity="0.52"/>
-<path id="Rectangle 221" d="M31.25 89H178.663H282.25V197.84V238H31.25V89Z" fill="#75D3FF" fill-opacity="0.52"/>
-<path id="Rectangle 222" d="M346 372H399.444H437V427.516V448H346V372Z" fill="#808080" fill-opacity="0.52"/>
-<path id="Vector 422" d="M494 85.5H520M742.5 85.5L520 85.5M520 85.5V160" stroke="black" stroke-width="7"/>
-<path id="Vector 418" d="M745.5 82V446.5H428V469.5M430.75 449.5H391.25H337.75" stroke="black" stroke-width="7"/>
-<path id="Vector 426" d="M344.5 265.75H438.001" stroke="black" stroke-width="3"/>
-<path id="Vector 427" d="M438.5 272.5H344.5" stroke="black" stroke-width="3"/>
-<path id="Vector 428" d="M344.5 280.5H437.5" stroke="black" stroke-width="3"/>
-<path id="Vector 429" d="M438.5 288.5H344.5" stroke="black" stroke-width="3"/>
-<path id="Vector 430" d="M344.5 295.5H440.5" stroke="black" stroke-width="3"/>
-<path id="Vector 431" d="M439.5 302.5H344.5" stroke="black" stroke-width="3"/>
-<path id="Vector 432" d="M344.5 310.5H438.5" stroke="black" stroke-width="3"/>
-<path id="Vector 433" d="M439.5 318.5H344.5" stroke="black" stroke-width="3"/>
-<path id="Vector 434" d="M344.5 327.5H438.5" stroke="black" stroke-width="3"/>
-<path id="Vector 435" d="M438.5 336.5H344.5" stroke="black" stroke-width="3"/>
-<path id="Vector 436" d="M444 111V149" stroke="black" stroke-width="3"/>
-<path id="Vector 437" d="M436 150.5V111" stroke="black" stroke-width="3"/>
-<path id="Vector 438" d="M426.5 110.5V149" stroke="black" stroke-width="3"/>
-<path id="Vector 439" d="M417.75 151.502V110.499" stroke="black" stroke-width="3"/>
-<path id="Vector 440" d="M409 111V150" stroke="black" stroke-width="3"/>
-<path id="Vector 441" d="M401.5 150.5V110.5" stroke="black" stroke-width="3"/>
-<path id="Vector 442" d="M444.25 85.478V111.022" stroke="black" stroke-width="5"/>
-<path id="Vector 443" d="M399.25 109L442.25 109" stroke="black" stroke-width="5"/>
-<path id="Vector 444" d="M402 151H518" stroke="black" stroke-width="5"/>
-<path id="Vector 419" d="M451 239.5H440.5V448" stroke="black" stroke-width="7"/>
-<path id="Vector 446" d="M451 239.5H440.5V448" stroke="black" stroke-width="7"/>
-<path id="Vector 420" d="M350.5 469.5V449.5H29V84L451 84" stroke="black" stroke-width="7"/>
-<path id="Vector 421" d="M283.5 148V241H30H293" stroke="black" stroke-width="7"/>
-<path id="Vector 423" d="M521 204V238H494H744" stroke="black" stroke-width="7"/>
-<path id="Vector 424" d="M440.503 371.25H418.497" stroke="black" stroke-width="7"/>
-<path id="Vector 425" d="M344.5 371.5H371.5" stroke="black" stroke-width="7"/>
-<path id="Vector 445" d="M282 86V107.5" stroke="black" stroke-width="7"/>
-<path id="Vector 637" d="M343.25 446V241H332.25" stroke="black" stroke-width="7"/>
-<path id="Vector 882" d="M368.75 371.5H420.75" stroke="#808080" stroke-width="7"/>
+<path id="Rectangle 218" d="M590.372 181.223H741.989H848.53V327.511V381.489H590.372V181.223Z" fill="#75D3FF" fill-opacity="0.52"/>
+<path id="Rectangle 219" d="M495.199 385.442H704.807H852.099V583.701V656.855H495.199V385.442Z" fill="#75D3FF" fill-opacity="0.52"/>
+<path id="Rectangle 220" d="M2.67676 389.395H217.874H369.094V587.654V660.808H2.67676L2.67676 389.395Z" fill="#75D3FF" fill-opacity="0.52"/>
+<path id="Rectangle 221" d="M2.67676 185.176H178.049H301.283V328.577V381.489H2.67676L2.67676 185.176Z" fill="#75D3FF" fill-opacity="0.52"/>
+<path id="Rectangle 222" d="M377.125 558.04H440.706H485.384V631.184V658.173H377.125V558.04Z" fill="#808080" fill-opacity="0.52"/>
+<path id="Vector 426" d="M375.339 418.051H486.575" stroke="black" stroke-width="3"/>
+<path id="Vector 427" d="M487.168 426.945H375.34" stroke="black" stroke-width="3"/>
+<path id="Vector 428" d="M375.34 437.485H485.979" stroke="black" stroke-width="3"/>
+<path id="Vector 429" d="M487.168 448.025H375.34" stroke="black" stroke-width="3"/>
+<path id="Vector 430" d="M375.34 457.248H489.548" stroke="black" stroke-width="3"/>
+<path id="Vector 431" d="M488.358 466.471H375.34" stroke="black" stroke-width="3"/>
+<path id="Vector 432" d="M375.34 477.011H487.168" stroke="black" stroke-width="3"/>
+<path id="Vector 433" d="M488.358 487.551H375.34" stroke="black" stroke-width="3"/>
+<path id="Vector 434" d="M375.34 499.409H487.168" stroke="black" stroke-width="3"/>
+<path id="Vector 435" d="M487.168 511.267H375.34" stroke="black" stroke-width="3"/>
+<path id="Vector 436" d="M493.712 214.162V264.228" stroke="black" stroke-width="3"/>
+<path id="Vector 437" d="M484.194 266.205V214.162" stroke="black" stroke-width="3"/>
+<path id="Vector 438" d="M472.893 213.503V264.228" stroke="black" stroke-width="3"/>
+<path id="Vector 439" d="M462.483 267.524V213.501" stroke="black" stroke-width="3"/>
+<path id="Vector 440" d="M452.073 214.162V265.546" stroke="black" stroke-width="3"/>
+<path id="Vector 441" d="M443.151 266.205V213.503" stroke="black" stroke-width="3"/>
+<path id="Vector 419" d="M502.04 383.466H489.548V658.173" stroke="black" stroke-width="7"/>
+<path id="Vector" d="M584.126 180.565H553.195V166.73H720.938M584.126 180.565H848.827M584.126 180.565V278.721M852.396 175.953V656.197H474.677V660.149M474.677 660.149V686.5M474.677 660.149H477.949M474.677 660.149H367.31M494.009 180.536V214.191M440.474 211.527H491.63M443.746 266.863H581.747M502.039 383.466H489.548V658.173M382.478 686.5V660.149H0L0 178.588H458.617H502.039V166.73H485.384M302.77 262.911V385.442M302.77 385.442H1.18967M302.77 385.442H314.072M585.316 336.693V381.489M585.316 381.489H553.195M585.316 381.489H850.612M489.551 557.052H463.372M375.34 557.381H407.461M300.986 181.223V209.55M373.853 655.538V385.442H360.766M485.384 166.73V152.896M485.384 166.73H464M485.384 92.9007H502.039H584.126M485.384 92.9007V106M485.384 92.9007H464M678 92.9007H635.877H584.126M720.938 166.73V152.896M720.938 166.73H753.059M720.938 110.688V102.123V91.2538H750.68V19L635.877 19H584.126V92.9007" stroke="black" stroke-width="7"/>
+<path id="Vector 882" d="M404.189 557.381H466.052" stroke="#808080" stroke-width="7"/>
+<rect id="Rectangle 225" x="718" y="95" width="35" height="69" fill="#D9D9D9"/>
+<rect id="Rectangle 224" x="464" y="95" width="25" height="71" fill="#D9D9D9"/>
+<path id="staircase 5 3" d="M613 64.6946V49.2946L673 49.2946V64.6946L630.179 64.6946H613Z" stroke="black" stroke-width="5"/>
+<path id="Vector 664" d="M669.973 20.3994V51.1994" stroke="black" stroke-width="3"/>
+<path id="Vector 665" d="M651.586 20.3994V51.1994" stroke="black" stroke-width="3"/>
+<path id="Vector 666" d="M660.296 20.3994V51.1994" stroke="black" stroke-width="3"/>
+<path id="Vector 667" d="M642.877 18.9998V51.1998" stroke="black" stroke-width="3"/>
+<path id="Vector 668" d="M624.49 20.3994V51.1994" stroke="black" stroke-width="3"/>
+<path id="Vector 669" d="M615.78 20.3994V51.1994" stroke="black" stroke-width="3"/>
+<path id="Vector 670" d="M634.167 20.3994V51.1994" stroke="black" stroke-width="3"/>
+<path id="Vector 671" d="M669.973 63.7996V95.9996" stroke="black" stroke-width="3"/>
+<path id="Vector 672" d="M651.586 63.7996V95.9996" stroke="black" stroke-width="3"/>
+<path id="Vector 673" d="M660.296 63.7996V95.9996" stroke="black" stroke-width="3"/>
+<path id="Vector 674" d="M642.678 63.3882V94.1882" stroke="black" stroke-width="3"/>
+<path id="Vector 675" d="M624.49 63.7996V95.9996" stroke="black" stroke-width="3"/>
+<path id="Vector 676" d="M615.78 63.7996V95.9996" stroke="black" stroke-width="3"/>
+<path id="Vector 677" d="M634.167 63.7996V95.9996" stroke="black" stroke-width="3"/>
 </g>
-<path id="graph floor 1" d="M136.25 159.5L274.25 128H311.75M311.75 128H365.75H471.75V86L326.5 28M311.75 128V189.75M136.25 336.5L311.75 251.5V189.75M311.75 189.75H471.75M622.25 159.5L543.75 189.75H471.75M471.75 189.75V251.5L575.25 353.5" stroke="#FF0000" stroke-width="3"/>
+<path id="graph floor 1" d="M129 271.5L278.5 240H346.5M346.5 240H400.5H528.5V195V130H695.5V76H656.5L232.5 20.5M346.5 240V301.75M129 509L346.5 403.5V301.75M346.5 301.75H534.5M710 279L617 301.75H534.5M534.5 301.75V403.5L648.5 527.5" stroke="#FF0000" stroke-width="3"/>
 <g id="staircase">
 <g id="staircase 1 kontur group">
-<text id="staircase 1 kontur" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="323" y="38.3492">&#x43f;&#x43e;&#x434;&#x44a;&#x451;&#x43c; &#x43d;&#x430; 2-&#x439; &#x44d;&#x442;&#x430;&#x436; </tspan><tspan x="323" y="67.3492">&#x43a;&#x43e;&#x43d;&#x442;&#x443;&#x440;&#x43e;&#x432;&#x441;&#x43a;&#x438;&#x445; &#x43a;&#x43b;&#x430;&#x441;&#x441;&#x43e;&#x432;</tspan></text>
-</g>
+<text id="staircase 1 kontur" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="233" y="43.3492">&#x43f;&#x43e;&#x434;&#x44a;&#x451;&#x43c; &#x43d;&#x430; 2-&#x439; &#x44d;&#x442;&#x430;&#x436; </tspan><tspan x="233" y="72.3492">&#x43a;&#x43e;&#x43d;&#x442;&#x443;&#x440;&#x43e;&#x432;&#x441;&#x43a;&#x438;&#x445; &#x43a;&#x43b;&#x430;&#x441;&#x441;&#x43e;&#x432;</tspan></text>
 </g>
 </g>
 </g>

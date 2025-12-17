@@ -1,0 +1,27 @@
+<svg width="934" height="611" viewBox="0 0 934 611" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="floor 2k kuibysheva">
+<rect width="934" height="611" fill="white"/>
+<g id="Component 18 24 yes">
+<g id="room_ids">
+<text id="286" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="789" y="225.849">286</tspan></text>
+<text id="290" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="133" y="240.849">290</tspan></text>
+<text id="289" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="133" y="461.849">289</tspan></text>
+<text id="288" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="456" y="456.849">288</tspan></text>
+<text id="287" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="751" y="461.849">287</tspan></text>
+</g>
+<g id="staircase">
+<g id="staircase 2 kontur group">
+<text id="staircase 2 kontur" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="430" y="103.349">&#x43f;&#x43e;&#x434;&#x44a;&#x451;&#x43c; &#x43d;&#x430; 3-&#x439; &#x44d;&#x442;&#x430;&#x436;</tspan></text>
+</g>
+</g>
+<g id="no_use 1">
+<rect id="Rectangle 223" x="245" y="133" width="168" height="83" fill="#D9D9D9"/>
+<path id="Rectangle 108" d="M715 129H828.349H908V261.945V311H715V129Z" fill="#75D3FF" fill-opacity="0.52"/>
+<path id="Rectangle 107" d="M27 129H152.683H241V267.059V318H27V129Z" fill="#75D3FF" fill-opacity="0.52"/>
+<path id="Rectangle 106" d="M27 318H544.413H908V506.461V576H27V318Z" fill="#75D3FF" fill-opacity="0.52"/>
+<path id="Vector 883" d="M27 320V129H240.5M27 320V578H313M27 320H240.5M240.5 320V260M240.5 320H251.5M240.5 226.5V215M240.5 215H366.5M240.5 215V129M240.5 129H417.5M417.5 129V215H398M417.5 129H574M712 129H908V313.5M712 129V165M712 129H628.5M908 313.5H712M908 313.5V578H641.5M700.5 313.5H712M712 313.5V199.5M641.5 578V313.5M641.5 578H313M641.5 313.5H656M641.5 313.5H502.5M313 578V320M447.5 313.5H313V320M313 320H297" stroke="black" stroke-width="7"/>
+</g>
+<path id="graph 2 kontur" d="M596.5 181V127L432.5 93M596.5 181H737.5L794 217M596.5 181V239.5M596.5 239.5H676.5V331.5L756 453M596.5 239.5H472.5M275 239.5H219L136 229.5M275 239.5V331.5L136 448M275 239.5H472.5M472.5 239.5V331.5L459.5 448" stroke="#FF0000" stroke-width="3"/>
+</g>
+</g>
+</svg>

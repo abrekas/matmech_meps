@@ -1,27 +1,44 @@
-<svg width="934" height="611" viewBox="0 0 934 611" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="floor 2k kuibysheva">
-<rect width="934" height="611" fill="white"/>
-<g id="Component 18 24 not">
+<svg width="915" height="624" viewBox="0 0 915 624" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="exp_2floor_k_k">
+<rect width="915" height="624" fill="white"/>
 <g id="room_ids">
-<text id="286" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="789" y="225.849">286</tspan></text>
-<text id="290" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="133" y="240.849">290</tspan></text>
-<text id="289" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="133" y="461.849">289</tspan></text>
-<text id="288" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="456" y="456.849">288</tspan></text>
-<text id="287" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="751" y="461.849">287</tspan></text>
+<text id="286" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="791.407" y="256.817">286</tspan></text>
+<text id="290" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="110.091" y="272.44">290</tspan></text>
+<text id="289" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="110.091" y="502.63">289</tspan></text>
+<text id="288" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="445.556" y="497.422">288</tspan></text>
+<text id="287" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="751.94" y="502.63">287</tspan></text>
 </g>
 <g id="staircase">
 <g id="staircase 2 kontur group">
-<text id="staircase 2 kontur" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="430" y="103.349">&#x43f;&#x43e;&#x434;&#x44a;&#x451;&#x43c; &#x43d;&#x430; 3-&#x439; &#x44d;&#x442;&#x430;&#x436;</tspan></text>
+<text id="staircase 2 kontur" fill="black" xml:space="preserve" style="white-space: pre" font-family="Martian Mono" font-size="23.3729" letter-spacing="0em"><tspan x="374" y="29.8492">&#x43f;&#x43e;&#x434;&#x44a;&#x451;&#x43c; &#x43d;&#x430; 3-&#x439; &#x44d;&#x442;&#x430;&#x436;, </tspan><tspan x="374" y="58.8492">&#x441;&#x43f;&#x443;&#x441;&#x43a; &#x43d;&#x430; 1-&#x439; &#x44d;&#x442;&#x430;&#x436;</tspan></text>
 </g>
 </g>
 <g id="no_use 1">
-<rect id="Rectangle 223" x="245" y="133" width="168" height="83" fill="#D9D9D9"/>
-<path id="Rectangle 108" d="M715 129H828.349H908V261.945V311H715V129Z" fill="#75D3FF" fill-opacity="0.52"/>
-<path id="Rectangle 107" d="M27 129H152.683H241V267.059V318H27V129Z" fill="#75D3FF" fill-opacity="0.52"/>
-<path id="Rectangle 106" d="M27 318H544.413H908V506.461V576H27V318Z" fill="#75D3FF" fill-opacity="0.52"/>
-<path id="Vector 883" d="M27 320V129H240.5M27 320V578H313M27 320H240.5M240.5 320V260M240.5 320H251.5M240.5 226.5V215M240.5 215H366.5M240.5 215V129M240.5 129H417.5M417.5 129V215H398M417.5 129H574M712 129H908V313.5M712 129V165M712 129H628.5M908 313.5H712M908 313.5V578H641.5M700.5 313.5H712M712 313.5V199.5M641.5 578V313.5M641.5 578H313M641.5 313.5H656M641.5 313.5H502.5M313 578V320M447.5 313.5H313V320M313 320H297" stroke="black" stroke-width="7"/>
+<rect id="Rectangle 223" x="226.413" y="160.495" width="174.484" height="86.4515" fill="#D9D9D9"/>
+<path id="Rectangle 108" d="M714.552 156.329H832.275H915V294.802V345.897H714.552V156.329Z" fill="#75D3FF" fill-opacity="0.52"/>
+<path id="Rectangle 107" d="M0 156.329H130.533H222.259V300.128V353.188H0V156.329Z" fill="#75D3FF" fill-opacity="0.52"/>
+<path id="Rectangle 106" d="M0 353.188H537.381H915V549.486V621.917H0V353.188Z" fill="#75D3FF" fill-opacity="0.52"/>
+<path id="Vector 883" d="M0 355.271V156.329H221.739M0 355.271V624H297.037M0 355.271H221.739M221.739 355.271V292.776M221.739 355.271H233.164M221.739 257.883V245.905M221.739 245.905H352.602M221.739 245.905V156.329M915 156.329H711.436M915 156.329V348.501M915 156.329V72.5M221.739 156.329H405.57M405.57 156.329V245.905H385.318M405.57 156.329H525.5M711.436 156.329V193.826M711.436 156.329H668.075H624.713M915 348.501H711.436M915 348.501V624H638.215M699.492 348.501H711.436M711.436 348.501V229.76M638.215 624V348.501M638.215 624H297.037M638.215 348.501H653.275M638.215 348.501H493.851M297.037 624V355.271M436.728 348.501H297.037V355.271M297.037 355.271H280.42M568.11 156.329H525.5M525.5 156.329V72.5H691.5M915 72.5H890.5M915 72.5V0H691.5V72.5M833.5 72.5H813.5H691.5" stroke="black" stroke-width="7"/>
+<g id="staircase 5 3 group">
+<path id="staircase 5 3" d="M726 44.5V29.5L791 29.5V44.5L744.611 44.5H726Z" stroke="black" stroke-width="5"/>
+<path id="Vector 667" d="M787.387 0.499878V31.2362" stroke="black" stroke-width="3"/>
+<path id="Vector 668" d="M770.532 1.83594V31.2359" stroke="black" stroke-width="3"/>
+<path id="Vector 669" d="M762.548 1.83594V31.2359" stroke="black" stroke-width="3"/>
+<path id="Vector 670" d="M779.403 1.83594V31.2359" stroke="black" stroke-width="3"/>
+<path id="Vector 674" d="M787.205 42.8706V72.2706" stroke="black" stroke-width="3"/>
+<path id="Vector 675" d="M770.532 43.2635V73.9999" stroke="black" stroke-width="3"/>
+<path id="Vector 676" d="M762.548 43.2635V73.9999" stroke="black" stroke-width="3"/>
+<path id="Vector 677" d="M779.403 43.2635V73.9999" stroke="black" stroke-width="3"/>
+<path id="Vector 664" d="M754.226 1.83594V31.2359" stroke="black" stroke-width="3"/>
+<path id="Vector 665" d="M737.371 1.83594V31.2359" stroke="black" stroke-width="3"/>
+<path id="Vector 666" d="M745.355 1.83594V31.2359" stroke="black" stroke-width="3"/>
+<path id="Vector 667_2" d="M729.387 0.499878V31.2362" stroke="black" stroke-width="3"/>
+<path id="Vector 671" d="M754.226 43.2635V73.9999" stroke="black" stroke-width="3"/>
+<path id="Vector 672" d="M737.371 43.2635V73.9999" stroke="black" stroke-width="3"/>
+<path id="Vector 673" d="M745.355 43.2635V73.9999" stroke="black" stroke-width="3"/>
+<path id="Vector 674_2" d="M729.205 42.8706V72.2706" stroke="black" stroke-width="3"/>
 </g>
-<path id="graph 2 kontur" d="M596.5 181V127L432.5 93M596.5 181H737.5L794 217M596.5 181V239.5M596.5 239.5H676.5V331.5L756 453M596.5 239.5H472.5M275 239.5H219L136 229.5M275 239.5V331.5L136 448M275 239.5H472.5M472.5 239.5V331.5L459.5 448" stroke="#FF0000" stroke-width="3"/>
 </g>
+<path id="graph 2 kontur" d="M588.5 221H729.5L786 257M588.5 221V279.5M588.5 221V113.5H859V55H775L381.5 21M588.5 279.5H668.5V371.5L748 493M588.5 279.5H464.5M267 279.5H211L128 269.5M267 279.5V371.5L128 488M267 279.5H464.5M464.5 279.5V371.5L451.5 488" stroke="#FF0000" stroke-width="3"/>
 </g>
 </svg>

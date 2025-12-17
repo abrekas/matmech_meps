@@ -126,7 +126,7 @@
     178.0,
     [
       "node_11 6 matmeh",
-      "node_42 5 matmeh"
+      "node_45 5 matmeh"
     ],
     "6",
     "matmeh"
@@ -167,7 +167,7 @@
     183.0,
     [
       "node_15 6 matmeh",
-      "node_45 5 matmeh"
+      "node_23 5 matmeh"
     ],
     "6",
     "matmeh"
@@ -672,7 +672,7 @@
     172.5,
     [
       "node_65 6 matmeh",
-      "node_6 5 matmeh"
+      "node_10 5 matmeh"
     ],
     "6",
     "matmeh"
@@ -758,17 +758,17 @@
     179.0,
     [
       "node_41 6 matmeh",
-      "node_46 5 matmeh"
+      "node_25 5 matmeh"
     ],
     "6",
     "matmeh"
   ],
   "node_0 5 matmeh": [
     1712.0,
-    220.0,
+    215.0,
     [
-      "node_1 5 matmeh",
       "node_2 5 matmeh",
+      "node_1 5 matmeh",
       "node_3 5 matmeh"
     ],
     "5",
@@ -776,18 +776,18 @@
   ],
   "node_1 5 matmeh": [
     1652.0,
-    220.0,
+    215.0,
     [
-      "node_44 5 matmeh",
-      "node_0 5 matmeh",
-      "node_41 5 matmeh"
+      "node_4 5 matmeh",
+      "node_5 5 matmeh",
+      "node_0 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_2 5 matmeh": [
     1712.0,
-    183.0,
+    167.5,
     [
       "node_0 5 matmeh"
     ],
@@ -796,7 +796,7 @@
   ],
   "node_3 5 matmeh": [
     1712.0,
-    238.5,
+    237.0,
     [
       "node_0 5 matmeh"
     ],
@@ -804,322 +804,327 @@
     "matmeh"
   ],
   "node_4 5 matmeh": [
-    600.5,
-    220.0,
+    1616.75,
+    215.0,
     [
-      "node_8 5 matmeh",
-      "node_5 5 matmeh",
-      "node_7 5 matmeh"
+      "node_46 5 matmeh",
+      "node_22 5 matmeh",
+      "node_1 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_5 5 matmeh": [
-    471.0,
-    220.0,
+    1652.0,
+    167.5,
     [
-      "node_6 5 matmeh",
-      "node_4 5 matmeh"
+      "node_1 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_6 5 matmeh": [
-    471.0,
-    186.5,
+    600.5,
+    215.0,
     [
-      "node_5 5 matmeh",
-      "node_66 6 matmeh"
+      "node_8 5 matmeh",
+      "node_9 5 matmeh",
+      "node_7 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_7 5 matmeh": [
     600.5,
-    207.0,
+    185.0,
     [
-      "node_4 5 matmeh"
+      "node_6 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_8 5 matmeh": [
     697.0,
-    220.0,
+    215.0,
     [
-      "node_11 5 matmeh",
-      "node_10 5 matmeh",
-      "node_9 5 matmeh",
-      "node_4 5 matmeh"
+      "node_13 5 matmeh",
+      "node_12 5 matmeh",
+      "node_14 5 matmeh",
+      "node_6 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_9 5 matmeh": [
-    697.0,
-    240.0,
+    529.5,
+    215.0,
     [
-      "node_8 5 matmeh"
+      "node_48 5 matmeh",
+      "node_11 5 matmeh",
+      "node_6 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_10 5 matmeh": [
-    756.0,
-    220.0,
+    471.0,
+    181.5,
     [
-      "node_8 5 matmeh",
-      "node_16 5 matmeh",
-      "node_17 5 matmeh"
+      "node_11 5 matmeh",
+      "node_66 6 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_11 5 matmeh": [
-    691.0,
-    209.0,
+    471.0,
+    215.0,
+    [
+      "node_9 5 matmeh",
+      "node_10 5 matmeh"
+    ],
+    "5",
+    "matmeh"
+  ],
+  "node_12 5 matmeh": [
+    697.0,
+    235.0,
     [
       "node_8 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
-  "node_12 5 matmeh": [
-    1449.0,
-    220.0,
-    [
-      "node_14 5 matmeh",
-      "node_13 5 matmeh",
-      "node_15 5 matmeh"
-    ],
-    "5",
-    "matmeh"
-  ],
   "node_13 5 matmeh": [
-    1449.0,
-    200.5,
+    756.0,
+    215.0,
     [
-      "node_12 5 matmeh"
+      "node_8 5 matmeh",
+      "node_15 5 matmeh",
+      "node_16 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_14 5 matmeh": [
-    1420.0,
-    220.0,
+    691.0,
+    185.0,
     [
-      "node_38 5 matmeh",
-      "node_12 5 matmeh",
-      "node_36 5 matmeh"
+      "node_8 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_15 5 matmeh": [
-    1477.0,
-    220.0,
+    756.0,
+    185.0,
     [
-      "node_45 5 matmeh",
-      "node_39 5 matmeh",
-      "node_12 5 matmeh"
+      "node_13 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_16 5 matmeh": [
-    756.0,
-    209.0,
+    874.5,
+    215.0,
     [
-      "node_10 5 matmeh"
+      "node_25 5 matmeh",
+      "node_24 5 matmeh",
+      "node_13 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_17 5 matmeh": [
-    874.5,
-    220.0,
+    1420.0,
+    215.0,
     [
-      "node_46 5 matmeh",
       "node_18 5 matmeh",
-      "node_10 5 matmeh"
+      "node_20 5 matmeh",
+      "node_21 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_18 5 matmeh": [
-    914.0,
-    220.0,
+    1462.5,
+    215.0,
     [
-      "node_20 5 matmeh",
-      "node_19 5 matmeh",
-      "node_17 5 matmeh"
+      "node_17 5 matmeh",
+      "node_19 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_19 5 matmeh": [
-    914.0,
-    238.5,
+    1477.0,
+    215.0,
     [
-      "node_18 5 matmeh"
+      "node_23 5 matmeh",
+      "node_18 5 matmeh",
+      "node_22 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_20 5 matmeh": [
-    989.0,
-    220.0,
+    1338.5,
+    215.0,
     [
-      "node_18 5 matmeh",
-      "node_21 5 matmeh",
-      "node_22 5 matmeh"
+      "node_17 5 matmeh",
+      "node_41 5 matmeh",
+      "node_43 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_21 5 matmeh": [
-    989.0,
-    263.5,
+    1420.0,
+    237.0,
     [
-      "node_20 5 matmeh"
+      "node_17 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_22 5 matmeh": [
-    1019.0,
-    220.0,
+    1521.5,
+    215.0,
     [
-      "node_23 5 matmeh",
-      "node_30 5 matmeh",
-      "node_20 5 matmeh"
+      "node_44 5 matmeh",
+      "node_45 5 matmeh",
+      "node_4 5 matmeh",
+      "node_19 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_23 5 matmeh": [
-    1082.5,
-    220.0,
+    1477.0,
+    189.5,
     [
-      "node_22 5 matmeh",
-      "node_24 5 matmeh",
-      "node_25 5 matmeh"
+      "node_19 5 matmeh",
+      "node_47 5 matmeh",
+      "node_16 6 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_24 5 matmeh": [
-    1082.5,
-    238.5,
+    914.0,
+    215.0,
     [
-      "node_23 5 matmeh"
+      "node_26 5 matmeh",
+      "node_27 5 matmeh",
+      "node_16 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_25 5 matmeh": [
-    1110.5,
-    220.0,
+    874.5,
+    180.0,
     [
-      "node_26 5 matmeh",
-      "node_23 5 matmeh",
-      "node_29 5 matmeh"
+      "node_16 5 matmeh",
+      "node_75 6 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_26 5 matmeh": [
-    1118.0,
-    220.0,
+    914.0,
+    233.5,
     [
-      "node_25 5 matmeh",
-      "node_28 5 matmeh",
-      "node_27 5 matmeh"
+      "node_24 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_27 5 matmeh": [
-    1118.0,
-    238.5,
+    989.0,
+    215.0,
     [
-      "node_26 5 matmeh"
+      "node_24 5 matmeh",
+      "node_28 5 matmeh",
+      "node_29 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_28 5 matmeh": [
-    1243.0,
-    220.0,
+    989.0,
+    258.5,
     [
-      "node_31 5 matmeh",
-      "node_34 5 matmeh",
-      "node_26 5 matmeh"
+      "node_27 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_29 5 matmeh": [
-    1110.5,
-    206.0,
+    1019.0,
+    215.0,
     [
-      "node_25 5 matmeh"
+      "node_30 5 matmeh",
+      "node_31 5 matmeh",
+      "node_27 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_30 5 matmeh": [
-    1019.0,
-    206.0,
+    1082.5,
+    215.0,
     [
-      "node_22 5 matmeh"
-    ],
-    "5",
-    "matmeh"
-  ],
-  "node_31 5 matmeh": [
-    1263.5,
-    220.0,
-    [
-      "node_28 5 matmeh",
       "node_32 5 matmeh",
+      "node_29 5 matmeh",
       "node_33 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
-  "node_32 5 matmeh": [
-    1263.5,
-    206.0,
+  "node_31 5 matmeh": [
+    1019.0,
+    190.0,
     [
-      "node_31 5 matmeh"
+      "node_29 5 matmeh"
+    ],
+    "5",
+    "matmeh"
+  ],
+  "node_32 5 matmeh": [
+    1082.5,
+    237.0,
+    [
+      "node_30 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_33 5 matmeh": [
-    1287.0,
-    220.0,
+    1110.5,
+    215.0,
     [
+      "node_34 5 matmeh",
       "node_35 5 matmeh",
-      "node_36 5 matmeh",
-      "node_31 5 matmeh"
+      "node_30 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_34 5 matmeh": [
-    1243.0,
-    238.5,
+    1118.0,
+    215.0,
     [
-      "node_28 5 matmeh"
+      "node_36 5 matmeh",
+      "node_33 5 matmeh",
+      "node_37 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_35 5 matmeh": [
-    1287.0,
-    238.5,
+    1110.5,
+    190.0,
     [
       "node_33 5 matmeh"
     ],
@@ -1127,150 +1132,209 @@
     "matmeh"
   ],
   "node_36 5 matmeh": [
-    1338.5,
-    220.0,
+    1118.0,
+    237.0,
     [
-      "node_37 5 matmeh",
-      "node_14 5 matmeh",
-      "node_33 5 matmeh"
+      "node_34 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_37 5 matmeh": [
-    1338.5,
-    238.5,
+    1243.0,
+    215.0,
     [
-      "node_36 5 matmeh"
+      "node_39 5 matmeh",
+      "node_34 5 matmeh",
+      "node_38 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_38 5 matmeh": [
-    1420.0,
-    238.5,
+    1263.5,
+    215.0,
     [
-      "node_14 5 matmeh"
+      "node_41 5 matmeh",
+      "node_40 5 matmeh",
+      "node_37 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_39 5 matmeh": [
-    1521.5,
-    220.0,
+    1243.0,
+    237.0,
     [
-      "node_15 5 matmeh",
-      "node_42 5 matmeh",
-      "node_40 5 matmeh",
-      "node_41 5 matmeh"
+      "node_37 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_40 5 matmeh": [
-    1521.5,
-    238.5,
+    1263.5,
+    190.0,
     [
-      "node_39 5 matmeh"
+      "node_38 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_41 5 matmeh": [
-    1616.75,
-    220.0,
+    1287.0,
+    215.0,
     [
-      "node_43 5 matmeh",
-      "node_1 5 matmeh",
-      "node_39 5 matmeh"
+      "node_38 5 matmeh",
+      "node_42 5 matmeh",
+      "node_20 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_42 5 matmeh": [
-    1521.5,
-    183.0,
+    1287.0,
+    237.0,
     [
-      "node_39 5 matmeh",
+      "node_41 5 matmeh"
+    ],
+    "5",
+    "matmeh"
+  ],
+  "node_43 5 matmeh": [
+    1338.5,
+    237.0,
+    [
+      "node_20 5 matmeh"
+    ],
+    "5",
+    "matmeh"
+  ],
+  "node_44 5 matmeh": [
+    1521.5,
+    237.0,
+    [
+      "node_22 5 matmeh"
+    ],
+    "5",
+    "matmeh"
+  ],
+  "node_45 5 matmeh": [
+    1521.5,
+    178.0,
+    [
+      "node_22 5 matmeh",
       "node_87 3 kuibysheva",
       "node_12 6 matmeh"
     ],
     "5",
     "matmeh"
   ],
-  "node_43 5 matmeh": [
-    1616.75,
-    238.5,
-    [
-      "node_41 5 matmeh"
-    ],
-    "5",
-    "matmeh"
-  ],
-  "node_44 5 matmeh": [
-    1652.0,
-    183.0,
-    [
-      "node_1 5 matmeh"
-    ],
-    "5",
-    "matmeh"
-  ],
-  "node_45 5 matmeh": [
-    1477.0,
-    189.0,
-    [
-      "node_15 5 matmeh",
-      "node_16 6 matmeh"
-    ],
-    "5",
-    "matmeh"
-  ],
   "node_46 5 matmeh": [
-    874.5,
-    185.0,
+    1616.75,
+    237.0,
     [
-      "node_17 5 matmeh",
-      "node_75 6 matmeh"
+      "node_4 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_47 5 matmeh": [
-    529.0,
-    219.0,
+    1427.0,
+    189.5,
     [
-      "node_48 5 matmeh"
+      "node_23 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
   "node_48 5 matmeh": [
-    529.0,
-    177.0,
+    529.5,
+    174.0,
     [
-      "node_47 5 matmeh"
+      "node_9 5 matmeh"
     ],
     "5",
     "matmeh"
   ],
-  "node_49 5 matmeh": [
-    1449.5,
-    201.0,
+  "node_0 1 kuibysheva": [
+    719.0,
+    316.0,
     [
-      "node_50 5 matmeh"
+      "node_3 1 kuibysheva",
+      "node_1 1 kuibysheva",
+      "node_2 1 kuibysheva"
     ],
-    "5",
-    "matmeh"
+    "1",
+    "kuibysheva"
   ],
-  "node_50 5 matmeh": [
-    1435.0,
-    189.0,
+  "node_1 1 kuibysheva": [
+    719.0,
+    205.5,
     [
-      "node_49 5 matmeh"
+      "node_0 1 kuibysheva",
+      "node_85 3 kuibysheva"
     ],
-    "5",
-    "matmeh"
+    "1",
+    "kuibysheva"
+  ],
+  "node_2 1 kuibysheva": [
+    517.75,
+    316.0,
+    [
+      "node_5 1 kuibysheva",
+      "node_7 1 kuibysheva",
+      "node_0 1 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ],
+  "node_3 1 kuibysheva": [
+    762.0,
+    316.0,
+    [
+      "node_0 1 kuibysheva",
+      "node_4 1 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ],
+  "node_4 1 kuibysheva": [
+    762.0,
+    338.5,
+    [
+      "node_3 1 kuibysheva",
+      "node_87 3 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ],
+  "node_5 1 kuibysheva": [
+    316.5,
+    316.0,
+    [
+      "node_6 1 kuibysheva",
+      "node_2 1 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ],
+  "node_6 1 kuibysheva": [
+    316.5,
+    455.5,
+    [
+      "node_5 1 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ],
+  "node_7 1 kuibysheva": [
+    517.75,
+    329.5,
+    [
+      "node_2 1 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
   ],
   "node_0 3 kuibysheva": [
     210.0,
@@ -2120,7 +2184,7 @@
     217.0,
     [
       "node_83 3 kuibysheva",
-      "node_1 2k kuibysheva"
+      "node_6 2k kuibysheva"
     ],
     "3",
     "kuibysheva"
@@ -2151,94 +2215,14 @@
     [
       "node_86 3 kuibysheva",
       "node_4 1 kuibysheva",
-      "node_42 5 matmeh"
+      "node_45 5 matmeh"
     ],
     "3",
     "kuibysheva"
   ],
-  "node_0 1 kuibysheva": [
-    719.0,
-    316.0,
-    [
-      "node_3 1 kuibysheva",
-      "node_1 1 kuibysheva",
-      "node_2 1 kuibysheva"
-    ],
-    "1",
-    "kuibysheva"
-  ],
-  "node_1 1 kuibysheva": [
-    719.0,
-    205.5,
-    [
-      "node_0 1 kuibysheva",
-      "node_85 3 kuibysheva"
-    ],
-    "1",
-    "kuibysheva"
-  ],
-  "node_2 1 kuibysheva": [
-    517.75,
-    316.0,
-    [
-      "node_5 1 kuibysheva",
-      "node_7 1 kuibysheva",
-      "node_0 1 kuibysheva"
-    ],
-    "1",
-    "kuibysheva"
-  ],
-  "node_3 1 kuibysheva": [
-    762.0,
-    316.0,
-    [
-      "node_0 1 kuibysheva",
-      "node_4 1 kuibysheva"
-    ],
-    "1",
-    "kuibysheva"
-  ],
-  "node_4 1 kuibysheva": [
-    762.0,
-    338.5,
-    [
-      "node_3 1 kuibysheva",
-      "node_87 3 kuibysheva"
-    ],
-    "1",
-    "kuibysheva"
-  ],
-  "node_5 1 kuibysheva": [
-    316.5,
-    316.0,
-    [
-      "node_6 1 kuibysheva",
-      "node_2 1 kuibysheva"
-    ],
-    "1",
-    "kuibysheva"
-  ],
-  "node_6 1 kuibysheva": [
-    316.5,
-    455.5,
-    [
-      "node_5 1 kuibysheva"
-    ],
-    "1",
-    "kuibysheva"
-  ],
-  "node_7 1 kuibysheva": [
-    517.75,
-    329.5,
-    [
-      "node_2 1 kuibysheva"
-    ],
-    "1",
-    "kuibysheva"
-  ],
   "node_0 1k kuibysheva": [
-    303.25,
-    210.0,
+    278.5,
+    240.0,
     [
       "node_1 1k kuibysheva"
     ],
@@ -2246,19 +2230,19 @@
     "kuibysheva"
   ],
   "node_1 1k kuibysheva": [
-    340.75,
-    210.0,
+    346.5,
+    240.0,
     [
-      "node_5 1k kuibysheva",
+      "node_2 1k kuibysheva",
       "node_0 1k kuibysheva",
-      "node_2 1k kuibysheva"
+      "node_9 1k kuibysheva"
     ],
     "1k",
     "kuibysheva"
   ],
   "node_2 1k kuibysheva": [
-    394.75,
-    210.0,
+    400.5,
+    240.0,
     [
       "node_3 1k kuibysheva",
       "node_1 1k kuibysheva"
@@ -2267,77 +2251,117 @@
     "kuibysheva"
   ],
   "node_3 1k kuibysheva": [
-    500.75,
-    210.0,
+    528.5,
+    240.0,
     [
-      "node_4 1k kuibysheva",
-      "node_2 1k kuibysheva"
+      "node_2 1k kuibysheva",
+      "node_4 1k kuibysheva"
     ],
     "1k",
     "kuibysheva"
   ],
   "node_4 1k kuibysheva": [
-    500.75,
-    168.0,
+    528.5,
+    195.0,
     [
       "node_3 1k kuibysheva",
-      "node_1 2k kuibysheva"
-    ],
-    "1k",
-    "kuibysheva"
-  ],
-  "node_5 1k kuibysheva": [
-    340.75,
-    271.75,
-    [
-      "node_1 1k kuibysheva",
-      "node_7 1k kuibysheva",
-      "node_6 1k kuibysheva"
-    ],
-    "1k",
-    "kuibysheva"
-  ],
-  "node_6 1k kuibysheva": [
-    340.75,
-    333.5,
-    [
       "node_5 1k kuibysheva"
     ],
     "1k",
     "kuibysheva"
   ],
-  "node_7 1k kuibysheva": [
-    500.75,
-    271.75,
+  "node_5 1k kuibysheva": [
+    528.5,
+    130.0,
+    [
+      "node_6 1k kuibysheva",
+      "node_4 1k kuibysheva"
+    ],
+    "1k",
+    "kuibysheva"
+  ],
+  "node_6 1k kuibysheva": [
+    695.5,
+    130.0,
     [
       "node_5 1k kuibysheva",
-      "node_9 1k kuibysheva",
-      "node_8 1k kuibysheva"
+      "node_7 1k kuibysheva"
+    ],
+    "1k",
+    "kuibysheva"
+  ],
+  "node_7 1k kuibysheva": [
+    695.5,
+    76.0,
+    [
+      "node_8 1k kuibysheva",
+      "node_6 1k kuibysheva"
     ],
     "1k",
     "kuibysheva"
   ],
   "node_8 1k kuibysheva": [
-    572.75,
-    271.75,
+    656.5,
+    76.0,
     [
-      "node_7 1k kuibysheva"
+      "node_7 1k kuibysheva",
+      "node_6 2k kuibysheva"
     ],
     "1k",
     "kuibysheva"
   ],
   "node_9 1k kuibysheva": [
-    500.75,
-    333.5,
+    346.5,
+    301.75,
     [
-      "node_7 1k kuibysheva"
+      "node_10 1k kuibysheva",
+      "node_11 1k kuibysheva",
+      "node_1 1k kuibysheva"
+    ],
+    "1k",
+    "kuibysheva"
+  ],
+  "node_10 1k kuibysheva": [
+    346.5,
+    403.5,
+    [
+      "node_9 1k kuibysheva"
+    ],
+    "1k",
+    "kuibysheva"
+  ],
+  "node_11 1k kuibysheva": [
+    534.5,
+    301.75,
+    [
+      "node_9 1k kuibysheva",
+      "node_12 1k kuibysheva",
+      "node_13 1k kuibysheva"
+    ],
+    "1k",
+    "kuibysheva"
+  ],
+  "node_12 1k kuibysheva": [
+    617.0,
+    301.75,
+    [
+      "node_11 1k kuibysheva"
+    ],
+    "1k",
+    "kuibysheva"
+  ],
+  "node_13 1k kuibysheva": [
+    534.5,
+    403.5,
+    [
+      "node_11 1k kuibysheva"
     ],
     "1k",
     "kuibysheva"
   ],
   "node_0 2k kuibysheva": [
-    614.5,
-    205.0,
+    588.5,
+    221.0,
     [
       "node_1 2k kuibysheva",
       "node_2 2k kuibysheva",
@@ -2347,30 +2371,29 @@
     "kuibysheva"
   ],
   "node_1 2k kuibysheva": [
-    614.5,
-    151.0,
-    [
-      "node_0 2k kuibysheva",
-      "node_4 1k kuibysheva",
-      "node_84 3 kuibysheva"
-    ],
-    "2k",
-    "kuibysheva"
-  ],
-  "node_2 2k kuibysheva": [
-    755.5,
-    205.0,
+    729.5,
+    221.0,
     [
       "node_0 2k kuibysheva"
     ],
     "2k",
     "kuibysheva"
   ],
-  "node_3 2k kuibysheva": [
-    614.5,
-    263.5,
+  "node_2 2k kuibysheva": [
+    588.5,
+    279.5,
     [
-      "node_6 2k kuibysheva",
+      "node_0 2k kuibysheva",
+      "node_7 2k kuibysheva",
+      "node_9 2k kuibysheva"
+    ],
+    "2k",
+    "kuibysheva"
+  ],
+  "node_3 2k kuibysheva": [
+    588.5,
+    113.5,
+    [
       "node_4 2k kuibysheva",
       "node_0 2k kuibysheva"
     ],
@@ -2378,8 +2401,8 @@
     "kuibysheva"
   ],
   "node_4 2k kuibysheva": [
-    694.5,
-    263.5,
+    859.0,
+    113.5,
     [
       "node_3 2k kuibysheva",
       "node_5 2k kuibysheva"
@@ -2388,39 +2411,39 @@
     "kuibysheva"
   ],
   "node_5 2k kuibysheva": [
-    694.5,
-    355.5,
+    859.0,
+    55.0,
     [
-      "node_4 2k kuibysheva"
+      "node_4 2k kuibysheva",
+      "node_6 2k kuibysheva"
     ],
     "2k",
     "kuibysheva"
   ],
   "node_6 2k kuibysheva": [
-    490.5,
-    263.5,
+    775.0,
+    55.0,
     [
-      "node_7 2k kuibysheva",
-      "node_3 2k kuibysheva",
-      "node_10 2k kuibysheva"
+      "node_5 2k kuibysheva",
+      "node_8 1k kuibysheva",
+      "node_84 3 kuibysheva"
     ],
     "2k",
     "kuibysheva"
   ],
   "node_7 2k kuibysheva": [
-    293.0,
-    263.5,
+    668.5,
+    279.5,
     [
-      "node_6 2k kuibysheva",
       "node_8 2k kuibysheva",
-      "node_9 2k kuibysheva"
+      "node_2 2k kuibysheva"
     ],
     "2k",
     "kuibysheva"
   ],
   "node_8 2k kuibysheva": [
-    237.0,
-    263.5,
+    668.5,
+    371.5,
     [
       "node_7 2k kuibysheva"
     ],
@@ -2428,19 +2451,50 @@
     "kuibysheva"
   ],
   "node_9 2k kuibysheva": [
-    293.0,
-    355.5,
+    464.5,
+    279.5,
     [
-      "node_7 2k kuibysheva"
+      "node_13 2k kuibysheva",
+      "node_2 2k kuibysheva",
+      "node_10 2k kuibysheva"
     ],
     "2k",
     "kuibysheva"
   ],
   "node_10 2k kuibysheva": [
-    490.5,
-    355.5,
+    267.0,
+    279.5,
     [
-      "node_6 2k kuibysheva"
+      "node_9 2k kuibysheva",
+      "node_12 2k kuibysheva",
+      "node_11 2k kuibysheva"
+    ],
+    "2k",
+    "kuibysheva"
+  ],
+  "node_11 2k kuibysheva": [
+    211.0,
+    279.5,
+    [
+      "node_10 2k kuibysheva"
+    ],
+    "2k",
+    "kuibysheva"
+  ],
+  "node_12 2k kuibysheva": [
+    267.0,
+    371.5,
+    [
+      "node_10 2k kuibysheva"
+    ],
+    "2k",
+    "kuibysheva"
+  ],
+  "node_13 2k kuibysheva": [
+    464.5,
+    371.5,
+    [
+      "node_9 2k kuibysheva"
     ],
     "2k",
     "kuibysheva"

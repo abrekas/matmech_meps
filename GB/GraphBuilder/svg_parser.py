@@ -576,22 +576,6 @@ def merge_correct_jsons(parsers: List[GraphBuilderSVG], result_folder_path: Path
 
     for node_id in ans_dict_graph.keys():
         curr_node = ans_dict_graph[node_id]
-
-        # if p.remove_offset:
-        #     node_coordinate = f"{int(curr_node.x-p.global_x_offset)} {int(curr_node.y-p.global_y_offset)} {curr_node.korpus}_{curr_node.floor}"
-
-        #     ans_ans_dict_graph[node_coordinate] = [
-        #         f"{int(ans_dict_graph[node_name].x-p.global_x_offset)} {int(ans_dict_graph[node_name].y-p.global_y_offset)} {ans_dict_graph[node_name].korpus}_{ans_dict_graph[node_name].floor}"
-        #         for node_name in curr_node.neighbours
-        #     ]
-
-        # else:
-        #     node_coordinate = f"{int(curr_node.x)} {int(curr_node.y)} {curr_node.korpus}_{curr_node.floor}"
-
-        #     ans_ans_dict_graph[node_coordinate] = [
-        #         f"{int(ans_dict_graph[node_name].x)} {int(ans_dict_graph[node_name].y)} {ans_dict_graph[node_name].korpus}_{ans_dict_graph[node_name].floor}"
-        #         for node_name in curr_node.neighbours
-        #     ]
         
         node_coordinate = get_final_node_coordinate(curr_node)
 
@@ -607,11 +591,6 @@ def merge_correct_jsons(parsers: List[GraphBuilderSVG], result_folder_path: Path
         curr_node = ans_dict_graph[ans_dict_names[name]]
 
         name = " ".join(name.split()[:-1])
-
-        # if p.remove_offset:
-        #     node_coordinate = f"{int(curr_node.x-p.global_x_offset)} {int(curr_node.y-p.global_y_offset)} {curr_node.korpus}_{curr_node.floor}"
-        # else:
-        #     node_coordinate = f"{int(curr_node.x)} {int(curr_node.y)} {curr_node.korpus}_{curr_node.floor}"
 
         node_coordinate = get_final_node_coordinate(curr_node)
 
@@ -652,8 +631,8 @@ def main():
     svg_paths = [
         ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 6 matmeh.svg",
         ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 5 matmeh.svg",
-        ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 3 kuibysheva.svg",
         ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 1 kuibysheva.svg",
+        ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 3 kuibysheva.svg",
         ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 1k kuibysheva.svg",
         ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 2k kuibysheva.svg",
     ]
