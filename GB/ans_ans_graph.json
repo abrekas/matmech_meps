@@ -481,6 +481,7 @@
   ],
   "1521 183 matmeh_5": [
     "1521 220 matmeh_5",
+    "240 1929 kuibysheva_3",
     "1576 178 matmeh_6"
   ],
   "1616 238 matmeh_5": [
@@ -508,5 +509,358 @@
   ],
   "1435 189 matmeh_5": [
     "1449 201 matmeh_5"
+  ],
+  "210 1991 kuibysheva_3": [
+    "210 1962 kuibysheva_3",
+    "210 2010 kuibysheva_3",
+    "233 1991 kuibysheva_3"
+  ],
+  "210 2010 kuibysheva_3": [
+    "210 1991 kuibysheva_3",
+    "210 2054 kuibysheva_3",
+    "182 2010 kuibysheva_3"
+  ],
+  "233 1991 kuibysheva_3": [
+    "210 1991 kuibysheva_3"
+  ],
+  "210 1962 kuibysheva_3": [
+    "210 1991 kuibysheva_3",
+    "210 1929 kuibysheva_3",
+    "177 1962 kuibysheva_3"
+  ],
+  "182 2010 kuibysheva_3": [
+    "210 2010 kuibysheva_3"
+  ],
+  "210 2054 kuibysheva_3": [
+    "210 2074 kuibysheva_3",
+    "210 2308 kuibysheva_3",
+    "210 2010 kuibysheva_3",
+    "636 2054 kuibysheva_3"
+  ],
+  "210 2074 kuibysheva_3": [
+    "179 2074 kuibysheva_3",
+    "210 2054 kuibysheva_3",
+    "210 2116 kuibysheva_3"
+  ],
+  "179 2074 kuibysheva_3": [
+    "210 2074 kuibysheva_3"
+  ],
+  "210 2116 kuibysheva_3": [
+    "210 2074 kuibysheva_3",
+    "210 2123 kuibysheva_3",
+    "241 2116 kuibysheva_3"
+  ],
+  "241 2116 kuibysheva_3": [
+    "210 2116 kuibysheva_3"
+  ],
+  "210 2123 kuibysheva_3": [
+    "182 2123 kuibysheva_3",
+    "210 2116 kuibysheva_3",
+    "210 2175 kuibysheva_3"
+  ],
+  "182 2123 kuibysheva_3": [
+    "210 2123 kuibysheva_3"
+  ],
+  "210 2175 kuibysheva_3": [
+    "210 2189 kuibysheva_3",
+    "187 2175 kuibysheva_3",
+    "210 2123 kuibysheva_3"
+  ],
+  "187 2175 kuibysheva_3": [
+    "210 2175 kuibysheva_3"
+  ],
+  "210 2189 kuibysheva_3": [
+    "210 2175 kuibysheva_3",
+    "241 2189 kuibysheva_3",
+    "210 2201 kuibysheva_3"
+  ],
+  "241 2189 kuibysheva_3": [
+    "210 2189 kuibysheva_3"
+  ],
+  "210 2201 kuibysheva_3": [
+    "187 2201 kuibysheva_3",
+    "210 2189 kuibysheva_3",
+    "210 2247 kuibysheva_3"
+  ],
+  "187 2201 kuibysheva_3": [
+    "210 2201 kuibysheva_3"
+  ],
+  "210 2247 kuibysheva_3": [
+    "187 2247 kuibysheva_3",
+    "210 2201 kuibysheva_3",
+    "210 2308 kuibysheva_3",
+    "241 2247 kuibysheva_3"
+  ],
+  "187 2247 kuibysheva_3": [
+    "210 2247 kuibysheva_3"
+  ],
+  "241 2247 kuibysheva_3": [
+    "210 2247 kuibysheva_3"
+  ],
+  "210 2308 kuibysheva_3": [
+    "210 2054 kuibysheva_3",
+    "228 2308 kuibysheva_3",
+    "210 2247 kuibysheva_3"
+  ],
+  "228 2308 kuibysheva_3": [
+    "210 2308 kuibysheva_3"
+  ],
+  "636 2054 kuibysheva_3": [
+    "806 2054 kuibysheva_3",
+    "636 1998 kuibysheva_3",
+    "210 2054 kuibysheva_3"
+  ],
+  "636 1998 kuibysheva_3": [
+    "636 2054 kuibysheva_3",
+    "701 1998 kuibysheva_3",
+    "636 1979 kuibysheva_3",
+    "564 1998 kuibysheva_3"
+  ],
+  "806 2054 kuibysheva_3": [
+    "636 2054 kuibysheva_3",
+    "806 1970 kuibysheva_3",
+    "1038 2054 kuibysheva_3"
+  ],
+  "564 1998 kuibysheva_3": [
+    "636 1998 kuibysheva_3"
+  ],
+  "636 1979 kuibysheva_3": [
+    "636 1998 kuibysheva_3"
+  ],
+  "701 1998 kuibysheva_3": [
+    "636 1998 kuibysheva_3"
+  ],
+  "806 1970 kuibysheva_3": [
+    "806 2054 kuibysheva_3"
+  ],
+  "1038 2054 kuibysheva_3": [
+    "1038 1970 kuibysheva_3",
+    "806 2054 kuibysheva_3",
+    "1088 2054 kuibysheva_3"
+  ],
+  "1038 1970 kuibysheva_3": [
+    "1038 2054 kuibysheva_3"
+  ],
+  "1088 2054 kuibysheva_3": [
+    "1120 2054 kuibysheva_3",
+    "1088 1919 kuibysheva_3",
+    "1038 2054 kuibysheva_3"
+  ],
+  "1088 1919 kuibysheva_3": [
+    "1088 2054 kuibysheva_3"
+  ],
+  "1120 2054 kuibysheva_3": [
+    "1088 2054 kuibysheva_3",
+    "1120 2008 kuibysheva_3",
+    "1399 2054 kuibysheva_3"
+  ],
+  "1120 2008 kuibysheva_3": [
+    "1156 2008 kuibysheva_3",
+    "1120 2054 kuibysheva_3"
+  ],
+  "1156 2008 kuibysheva_3": [
+    "1120 2008 kuibysheva_3"
+  ],
+  "1399 2054 kuibysheva_3": [
+    "1399 1998 kuibysheva_3",
+    "1567 2054 kuibysheva_3",
+    "1120 2054 kuibysheva_3"
+  ],
+  "1399 1998 kuibysheva_3": [
+    "1399 2054 kuibysheva_3"
+  ],
+  "1567 2054 kuibysheva_3": [
+    "1737 2054 kuibysheva_3",
+    "1567 1998 kuibysheva_3",
+    "1399 2054 kuibysheva_3"
+  ],
+  "1567 1998 kuibysheva_3": [
+    "1567 2054 kuibysheva_3"
+  ],
+  "1737 2054 kuibysheva_3": [
+    "1737 2008 kuibysheva_3",
+    "1567 2054 kuibysheva_3",
+    "1838 2054 kuibysheva_3"
+  ],
+  "1737 2008 kuibysheva_3": [
+    "1737 2054 kuibysheva_3"
+  ],
+  "1838 2054 kuibysheva_3": [
+    "1838 1989 kuibysheva_3",
+    "1737 2054 kuibysheva_3"
+  ],
+  "1838 1989 kuibysheva_3": [
+    "1838 2054 kuibysheva_3",
+    "1838 1917 kuibysheva_3",
+    "1904 1989 kuibysheva_3"
+  ],
+  "1904 1989 kuibysheva_3": [
+    "1838 1989 kuibysheva_3"
+  ],
+  "1838 1917 kuibysheva_3": [
+    "1838 1877 kuibysheva_3",
+    "1838 1989 kuibysheva_3"
+  ],
+  "1838 1877 kuibysheva_3": [
+    "1838 1917 kuibysheva_3",
+    "1819 1877 kuibysheva_3",
+    "2002 1877 kuibysheva_3"
+  ],
+  "2002 1877 kuibysheva_3": [
+    "1838 1877 kuibysheva_3"
+  ],
+  "1819 1877 kuibysheva_3": [
+    "1819 1811 kuibysheva_3",
+    "1838 1877 kuibysheva_3"
+  ],
+  "1819 1811 kuibysheva_3": [
+    "1819 1610 kuibysheva_3",
+    "1819 1877 kuibysheva_3",
+    "1886 1811 kuibysheva_3"
+  ],
+  "1886 1811 kuibysheva_3": [
+    "1819 1811 kuibysheva_3"
+  ],
+  "1819 1610 kuibysheva_3": [
+    "1819 1811 kuibysheva_3",
+    "1819 1504 kuibysheva_3",
+    "1872 1610 kuibysheva_3"
+  ],
+  "1872 1610 kuibysheva_3": [
+    "1819 1610 kuibysheva_3"
+  ],
+  "1819 1504 kuibysheva_3": [
+    "1819 1279 kuibysheva_3",
+    "1897 1504 kuibysheva_3",
+    "1819 1610 kuibysheva_3"
+  ],
+  "1897 1504 kuibysheva_3": [
+    "1819 1504 kuibysheva_3"
+  ],
+  "1819 1279 kuibysheva_3": [
+    "1819 1504 kuibysheva_3",
+    "1819 1124 kuibysheva_3",
+    "1740 1279 kuibysheva_3"
+  ],
+  "1740 1279 kuibysheva_3": [
+    "1819 1279 kuibysheva_3"
+  ],
+  "1819 1124 kuibysheva_3": [
+    "1819 1072 kuibysheva_3",
+    "1819 1279 kuibysheva_3"
+  ],
+  "1819 1072 kuibysheva_3": [
+    "1819 1124 kuibysheva_3",
+    "1866 1072 kuibysheva_3",
+    "1819 963 kuibysheva_3"
+  ],
+  "1866 1072 kuibysheva_3": [
+    "1819 1072 kuibysheva_3"
+  ],
+  "1819 963 kuibysheva_3": [
+    "1819 900 kuibysheva_3",
+    "1866 963 kuibysheva_3",
+    "1819 1072 kuibysheva_3"
+  ],
+  "1866 963 kuibysheva_3": [
+    "1819 963 kuibysheva_3"
+  ],
+  "1819 900 kuibysheva_3": [
+    "1819 963 kuibysheva_3",
+    "1819 695 kuibysheva_3",
+    "1866 900 kuibysheva_3"
+  ],
+  "1866 900 kuibysheva_3": [
+    "1819 900 kuibysheva_3"
+  ],
+  "1819 695 kuibysheva_3": [
+    "1869 695 kuibysheva_3",
+    "1819 900 kuibysheva_3",
+    "1819 536 kuibysheva_3"
+  ],
+  "1869 695 kuibysheva_3": [
+    "1819 695 kuibysheva_3"
+  ],
+  "1819 536 kuibysheva_3": [
+    "1887 536 kuibysheva_3",
+    "1819 695 kuibysheva_3",
+    "1819 510 kuibysheva_3"
+  ],
+  "1887 536 kuibysheva_3": [
+    "1819 536 kuibysheva_3"
+  ],
+  "1819 510 kuibysheva_3": [
+    "1819 438 kuibysheva_3",
+    "1747 510 kuibysheva_3",
+    "1819 536 kuibysheva_3"
+  ],
+  "1747 510 kuibysheva_3": [
+    "1819 510 kuibysheva_3"
+  ],
+  "1819 438 kuibysheva_3": [
+    "1819 510 kuibysheva_3",
+    "1819 367 kuibysheva_3",
+    "1775 438 kuibysheva_3"
+  ],
+  "1775 438 kuibysheva_3": [
+    "1819 438 kuibysheva_3"
+  ],
+  "1819 367 kuibysheva_3": [
+    "1798 367 kuibysheva_3",
+    "1819 438 kuibysheva_3"
+  ],
+  "1798 367 kuibysheva_3": [
+    "1685 367 kuibysheva_3",
+    "1819 367 kuibysheva_3"
+  ],
+  "1685 367 kuibysheva_3": [
+    "1798 367 kuibysheva_3",
+    "1685 317 kuibysheva_3",
+    "1590 367 kuibysheva_3"
+  ],
+  "1685 317 kuibysheva_3": [
+    "1685 367 kuibysheva_3"
+  ],
+  "1590 367 kuibysheva_3": [
+    "1440 367 kuibysheva_3",
+    "1590 317 kuibysheva_3",
+    "1685 367 kuibysheva_3"
+  ],
+  "1590 317 kuibysheva_3": [
+    "1590 367 kuibysheva_3"
+  ],
+  "1440 367 kuibysheva_3": [
+    "1440 317 kuibysheva_3",
+    "1590 367 kuibysheva_3",
+    "1257 367 kuibysheva_3"
+  ],
+  "1440 317 kuibysheva_3": [
+    "1440 367 kuibysheva_3"
+  ],
+  "1257 367 kuibysheva_3": [
+    "1440 367 kuibysheva_3",
+    "1257 326 kuibysheva_3"
+  ],
+  "1257 326 kuibysheva_3": [
+    "1257 367 kuibysheva_3",
+    "1239 326 kuibysheva_3"
+  ],
+  "1239 326 kuibysheva_3": [
+    "1239 217 kuibysheva_3",
+    "1257 326 kuibysheva_3"
+  ],
+  "1239 217 kuibysheva_3": [
+    "1239 326 kuibysheva_3"
+  ],
+  "177 1962 kuibysheva_3": [
+    "210 1962 kuibysheva_3"
+  ],
+  "210 1929 kuibysheva_3": [
+    "240 1929 kuibysheva_3",
+    "210 1962 kuibysheva_3"
+  ],
+  "240 1929 kuibysheva_3": [
+    "210 1929 kuibysheva_3",
+    "1521 183 matmeh_5"
   ]
 }

@@ -56,6 +56,7 @@ class GraphBuilderSVG:
         self.staircase_pattern = "staircase"
         self.no_use_pattern = "no_use"
         self.component_pattern = "Component"
+        self.general_staircases_patterns = frozenset(["staircase", "lifts"])
 
         self.global_x_offset = 0.0
         self.global_y_offset = 0.0
@@ -119,7 +120,9 @@ class GraphBuilderSVG:
                     parsed_id = id.split()
                     if len(parsed_id) != 3:
                         raise RuntimeError("invalid component format")
-                    self.global_x_offset, self.global_y_offset = float(parsed_id[1]), float(parsed_id[2])
+                    self.global_x_offset, self.global_y_offset = float(
+                        parsed_id[1]
+                    ), float(parsed_id[2])
 
                 elif re.search(r"graph", id):
                     self._parse_path_data(s)
@@ -135,7 +138,7 @@ class GraphBuilderSVG:
                     and re.search(self.staircase_pattern, groups_stack[-2])
                     and (tag == "path" or tag == "text")
                 ):
-                    if self.staircase_pattern in id:
+                    if any((ptrn in id) for ptrn in self.general_staircases_patterns):
                         self._add_room_by_id(s, id)
 
                 # вот и все ифы получается
@@ -150,7 +153,13 @@ class GraphBuilderSVG:
         else:
             RuntimeError("somehow regex didnt work")
 
-        self.rooms.append(RoomInfo(number=id, x=float(x)+self.global_x_offset, y=float(y)+self.global_y_offset))
+        self.rooms.append(
+            RoomInfo(
+                number=id,
+                x=float(x) + self.global_x_offset,
+                y=float(y) + self.global_y_offset,
+            )
+        )
 
     def _parse_path_data(self, path_data: str):
         """Парсит данные пути из SVG"""
@@ -198,7 +207,10 @@ class GraphBuilderSVG:
                 for j in range(0, len(numeric_args), 2):
                     if j + 1 < len(numeric_args):
                         x, y = numeric_args[j], numeric_args[j + 1]
-                        current_point = (x+self.global_x_offset, y+self.global_y_offset)
+                        current_point = (
+                            x + self.global_x_offset,
+                            y + self.global_y_offset,
+                        )
                         if start_point is None:
                             start_point = current_point
                         self.points.add(current_point)
@@ -207,21 +219,21 @@ class GraphBuilderSVG:
                 for j in range(0, len(numeric_args), 2):
                     if j + 1 < len(numeric_args):
                         x, y = numeric_args[j], numeric_args[j + 1]
-                        new_point = (x+self.global_x_offset, y+self.global_y_offset)
+                        new_point = (x + self.global_x_offset, y + self.global_y_offset)
                         self._add_edge(current_point, new_point)
                         current_point = new_point
                         self.points.add(current_point)
 
             elif command == "H":  # Horizontal Line
                 for x in numeric_args:
-                    new_point = (x+self.global_x_offset, current_point[1])
+                    new_point = (x + self.global_x_offset, current_point[1])
                     self._add_edge(current_point, new_point)
                     current_point = new_point
                     self.points.add(current_point)
 
             elif command == "V":  # Vertical Line
                 for y in numeric_args:
-                    new_point = (current_point[0], y+self.global_y_offset)
+                    new_point = (current_point[0], y + self.global_y_offset)
                     self._add_edge(current_point, new_point)
                     current_point = new_point
                     self.points.add(current_point)
@@ -230,6 +242,9 @@ class GraphBuilderSVG:
                 if start_point is not None:
                     self._add_edge(current_point, start_point)
                     current_point = start_point
+            
+            else:
+                raise RuntimeError(f"unexpected command: {command}.")
 
     def _add_edge(self, p1: Tuple[float, float], p2: Tuple[float, float]):
         """Добавляет ребро в граф, проверяя коллинеарность"""
@@ -279,7 +294,7 @@ class GraphBuilderSVG:
 
             if closest_node:
                 if isinstance(self.graph[closest_node], Dict):
-                    print("room double count .__.") #почему случается?????
+                    print("room double count .__.")  # почему случается?????
                     continue
                 closest_node_neighbour = self.graph[closest_node].pop()
                 del self.graph[closest_node]
@@ -350,21 +365,21 @@ class GraphBuilderSVG:
     def _visualize(self):
         """Визуализирует граф с комнатами (для отладки)"""
         import matplotlib.pyplot as plt
-        
+
         fig, ax = plt.subplots(figsize=(12, 8))
-        
+
         # Рисуем ребра
         for edge in self.edges:
             p1, p2 = edge
             x_values = [p1[0], p2[0]]
             y_values = [p1[1], p2[1]]
             ax.plot(x_values, y_values, "b-", alpha=0.7, linewidth=1)
-            
-            # Рисуем вершины
-            nodes_x = [p[0] for p in self.graph.keys()]
-            nodes_y = [p[1] for p in self.graph.keys()]
-            ax.scatter(nodes_x, nodes_y, c="red", s=30, zorder=5)
-            
+
+        # Рисуем вершины
+        nodes_x = [p[0] for p in self.graph.keys()]
+        nodes_y = [p[1] for p in self.graph.keys()]
+        ax.scatter(nodes_x, nodes_y, c="red", s=30, zorder=5)
+
         # Рисуем номера кабинетов
         for room in self.rooms:
             ax.text(
@@ -375,19 +390,19 @@ class GraphBuilderSVG:
                 ha="center",
                 va="center",
                 bbox=dict(boxstyle="round,pad=0.3", facecolor="yellow", alpha=0.7),
-        )
-        
-        # Показываем связь с вершиной
-        if room.node_id:
-            node = room.node_id
-            ax.plot(
-                [room.x, node[0]],
-                [room.y, node[1]],
-                "g--",
-                alpha=0.3,
-                linewidth=0.5,
             )
-        
+
+            # Показываем связь с вершиной
+            if room.node_id:
+                node = room.node_id
+                ax.plot(
+                    [room.x, node[0]],
+                    [room.y, node[1]],
+                    "g--",
+                    alpha=0.3,
+                    linewidth=0.5,
+                )
+
         ax.set_aspect("equal")
         plt.title("Граф навигации с привязанными кабинетами")
         plt.grid(True, alpha=0.3)
@@ -493,9 +508,9 @@ name_change_dict: Dict[str, str] = {
     "dekanat": "деканат",
     "wc_m": "туалет мужской",
     "wc_w": "туалет женский",
-    "a": "а",
     "stolovaya": "столовая",
     "library": "библиотека",
+    "a": "а",
 }
 
 
@@ -587,17 +602,17 @@ def merge_correct_jsons(parsers: List[GraphBuilderSVG], result_folder_path: Path
 def main():
 
     svg_paths = [
-        # ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 6 matmeh.svg",
+        ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 6 matmeh.svg",
         ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 5 matmeh.svg",
-        # ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 3 kuibysheva.svg"
+        ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 3 kuibysheva.svg",
     ]
 
     parsers = [GraphBuilderSVG(path) for path in svg_paths]
 
     for p in parsers:
         p.run()
-    print('aboba')
-    # merge_correct_jsons(parsers, parsers[0].output_folder_name.parent.parent.parent)
+    print("aboba")
+    merge_correct_jsons(parsers, parsers[0].output_folder_name.parent.parent.parent)
 
 
 if __name__ == "__main__":

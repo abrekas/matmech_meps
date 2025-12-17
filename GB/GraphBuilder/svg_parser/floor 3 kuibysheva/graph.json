@@ -3,6 +3,7 @@
     210.0,
     1991.0,
     [
+      "node_3 3 kuibysheva",
       "node_1 3 kuibysheva",
       "node_2 3 kuibysheva"
     ],
@@ -10,7 +11,18 @@
     "kuibysheva"
   ],
   "node_1 3 kuibysheva": [
-    243.5,
+    210.0,
+    2010.5,
+    [
+      "node_0 3 kuibysheva",
+      "node_5 3 kuibysheva",
+      "node_4 3 kuibysheva"
+    ],
+    "3",
+    "kuibysheva"
+  ],
+  "node_2 3 kuibysheva": [
+    233.0,
     1991.0,
     [
       "node_0 3 kuibysheva"
@@ -18,269 +30,263 @@
     "3",
     "kuibysheva"
   ],
-  "node_2 3 kuibysheva": [
+  "node_3 3 kuibysheva": [
     210.0,
-    2010.5,
+    1962.5,
     [
       "node_0 3 kuibysheva",
-      "node_4 3 kuibysheva",
-      "node_3 3 kuibysheva"
-    ],
-    "3",
-    "kuibysheva"
-  ],
-  "node_3 3 kuibysheva": [
-    182.0,
-    2010.5,
-    [
-      "node_2 3 kuibysheva"
+      "node_86 3 kuibysheva",
+      "node_85 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_4 3 kuibysheva": [
-    210.0,
-    2054.0,
+    182.0,
+    2010.5,
     [
-      "node_5 3 kuibysheva",
-      "node_20 3 kuibysheva",
-      "node_2 3 kuibysheva",
-      "node_22 3 kuibysheva"
+      "node_1 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_5 3 kuibysheva": [
     210.0,
-    2074.0,
+    2054.0,
     [
       "node_6 3 kuibysheva",
-      "node_4 3 kuibysheva",
-      "node_7 3 kuibysheva"
+      "node_21 3 kuibysheva",
+      "node_1 3 kuibysheva",
+      "node_23 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_6 3 kuibysheva": [
-    179.0,
+    210.0,
     2074.0,
     [
-      "node_5 3 kuibysheva"
-    ],
-    "3",
-    "kuibysheva"
-  ],
-  "node_7 3 kuibysheva": [
-    210.0,
-    2116.0,
-    [
+      "node_7 3 kuibysheva",
       "node_5 3 kuibysheva",
-      "node_9 3 kuibysheva",
       "node_8 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
+  "node_7 3 kuibysheva": [
+    179.0,
+    2074.0,
+    [
+      "node_6 3 kuibysheva"
+    ],
+    "3",
+    "kuibysheva"
+  ],
   "node_8 3 kuibysheva": [
-    241.0,
+    210.0,
     2116.0,
     [
-      "node_7 3 kuibysheva"
+      "node_6 3 kuibysheva",
+      "node_10 3 kuibysheva",
+      "node_9 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_9 3 kuibysheva": [
-    210.0,
-    2123.5,
+    241.0,
+    2116.0,
     [
-      "node_10 3 kuibysheva",
-      "node_7 3 kuibysheva",
-      "node_11 3 kuibysheva"
+      "node_8 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_10 3 kuibysheva": [
-    182.0,
+    210.0,
     2123.5,
     [
-      "node_9 3 kuibysheva"
+      "node_11 3 kuibysheva",
+      "node_8 3 kuibysheva",
+      "node_12 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_11 3 kuibysheva": [
-    210.0,
-    2175.5,
+    182.0,
+    2123.5,
     [
-      "node_13 3 kuibysheva",
-      "node_12 3 kuibysheva",
-      "node_9 3 kuibysheva"
+      "node_10 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_12 3 kuibysheva": [
-    187.5,
+    210.0,
     2175.5,
     [
-      "node_11 3 kuibysheva"
+      "node_14 3 kuibysheva",
+      "node_13 3 kuibysheva",
+      "node_10 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_13 3 kuibysheva": [
-    210.0,
-    2189.0,
+    187.5,
+    2175.5,
     [
-      "node_11 3 kuibysheva",
-      "node_14 3 kuibysheva",
-      "node_15 3 kuibysheva"
+      "node_12 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_14 3 kuibysheva": [
-    241.0,
+    210.0,
     2189.0,
     [
-      "node_13 3 kuibysheva"
+      "node_12 3 kuibysheva",
+      "node_15 3 kuibysheva",
+      "node_16 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_15 3 kuibysheva": [
-    210.0,
-    2201.5,
+    241.0,
+    2189.0,
     [
-      "node_16 3 kuibysheva",
-      "node_13 3 kuibysheva",
-      "node_17 3 kuibysheva"
+      "node_14 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_16 3 kuibysheva": [
-    187.5,
+    210.0,
     2201.5,
     [
-      "node_15 3 kuibysheva"
+      "node_17 3 kuibysheva",
+      "node_14 3 kuibysheva",
+      "node_18 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_17 3 kuibysheva": [
-    210.0,
-    2247.5,
+    187.5,
+    2201.5,
     [
-      "node_18 3 kuibysheva",
-      "node_15 3 kuibysheva",
-      "node_20 3 kuibysheva",
-      "node_19 3 kuibysheva"
+      "node_16 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_18 3 kuibysheva": [
-    187.5,
+    210.0,
     2247.5,
     [
-      "node_17 3 kuibysheva"
+      "node_19 3 kuibysheva",
+      "node_16 3 kuibysheva",
+      "node_21 3 kuibysheva",
+      "node_20 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_19 3 kuibysheva": [
-    241.0,
+    187.5,
     2247.5,
     [
-      "node_17 3 kuibysheva"
+      "node_18 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_20 3 kuibysheva": [
-    210.0,
-    2308.0,
+    241.0,
+    2247.5,
     [
-      "node_4 3 kuibysheva",
-      "node_17 3 kuibysheva"
+      "node_18 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_21 3 kuibysheva": [
-    234.5,
-    2295.0,
-    [],
+    210.0,
+    2308.0,
+    [
+      "node_5 3 kuibysheva",
+      "node_22 3 kuibysheva",
+      "node_18 3 kuibysheva"
+    ],
     "3",
     "kuibysheva"
   ],
   "node_22 3 kuibysheva": [
-    636.0,
-    2054.0,
+    228.5,
+    2308.0,
     [
-      "node_24 3 kuibysheva",
-      "node_23 3 kuibysheva",
-      "node_4 3 kuibysheva"
+      "node_21 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_23 3 kuibysheva": [
     636.0,
-    1998.0,
+    2054.0,
     [
-      "node_22 3 kuibysheva",
-      "node_27 3 kuibysheva",
-      "node_26 3 kuibysheva",
-      "node_25 3 kuibysheva"
+      "node_25 3 kuibysheva",
+      "node_24 3 kuibysheva",
+      "node_5 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_24 3 kuibysheva": [
-    806.0,
-    2054.0,
+    636.0,
+    1998.0,
     [
-      "node_22 3 kuibysheva",
+      "node_23 3 kuibysheva",
       "node_28 3 kuibysheva",
-      "node_29 3 kuibysheva"
+      "node_27 3 kuibysheva",
+      "node_26 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_25 3 kuibysheva": [
-    564.5,
-    1998.0,
+    806.0,
+    2054.0,
     [
-      "node_23 3 kuibysheva"
+      "node_23 3 kuibysheva",
+      "node_29 3 kuibysheva",
+      "node_30 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_26 3 kuibysheva": [
-    636.0,
-    1979.5,
+    564.5,
+    1998.0,
     [
-      "node_23 3 kuibysheva"
+      "node_24 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_27 3 kuibysheva": [
-    701.5,
-    1998.0,
+    636.0,
+    1979.5,
     [
-      "node_23 3 kuibysheva"
+      "node_24 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_28 3 kuibysheva": [
-    806.0,
-    1970.5,
+    701.5,
+    1998.0,
     [
       "node_24 3 kuibysheva"
     ],
@@ -288,286 +294,288 @@
     "kuibysheva"
   ],
   "node_29 3 kuibysheva": [
-    1038.0,
-    2054.0,
+    806.0,
+    1970.5,
     [
-      "node_30 3 kuibysheva",
-      "node_24 3 kuibysheva",
-      "node_31 3 kuibysheva"
+      "node_25 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_30 3 kuibysheva": [
     1038.0,
-    1970.5,
+    2054.0,
     [
-      "node_29 3 kuibysheva"
+      "node_31 3 kuibysheva",
+      "node_25 3 kuibysheva",
+      "node_32 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_31 3 kuibysheva": [
-    1088.5,
-    2054.0,
+    1038.0,
+    1970.5,
     [
-      "node_33 3 kuibysheva",
-      "node_32 3 kuibysheva",
-      "node_29 3 kuibysheva"
+      "node_30 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_32 3 kuibysheva": [
     1088.5,
-    1919.0,
+    2054.0,
     [
-      "node_31 3 kuibysheva"
+      "node_34 3 kuibysheva",
+      "node_33 3 kuibysheva",
+      "node_30 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_33 3 kuibysheva": [
-    1120.5,
-    2054.0,
+    1088.5,
+    1919.0,
     [
-      "node_31 3 kuibysheva",
-      "node_34 3 kuibysheva",
-      "node_36 3 kuibysheva"
+      "node_32 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_34 3 kuibysheva": [
     1120.5,
-    2008.5,
+    2054.0,
     [
+      "node_32 3 kuibysheva",
       "node_35 3 kuibysheva",
-      "node_33 3 kuibysheva"
+      "node_37 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_35 3 kuibysheva": [
-    1156.0,
+    1120.5,
     2008.5,
     [
+      "node_36 3 kuibysheva",
       "node_34 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_36 3 kuibysheva": [
-    1399.5,
-    2054.0,
+    1156.0,
+    2008.5,
     [
-      "node_37 3 kuibysheva",
-      "node_38 3 kuibysheva",
-      "node_33 3 kuibysheva"
+      "node_35 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_37 3 kuibysheva": [
     1399.5,
-    1998.5,
+    2054.0,
     [
-      "node_36 3 kuibysheva"
+      "node_38 3 kuibysheva",
+      "node_39 3 kuibysheva",
+      "node_34 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_38 3 kuibysheva": [
-    1567.5,
-    2054.0,
+    1399.5,
+    1998.5,
     [
-      "node_40 3 kuibysheva",
-      "node_39 3 kuibysheva",
-      "node_36 3 kuibysheva"
+      "node_37 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_39 3 kuibysheva": [
     1567.5,
-    1998.5,
+    2054.0,
     [
-      "node_38 3 kuibysheva"
+      "node_41 3 kuibysheva",
+      "node_40 3 kuibysheva",
+      "node_37 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_40 3 kuibysheva": [
-    1737.0,
-    2054.0,
+    1567.5,
+    1998.5,
     [
-      "node_41 3 kuibysheva",
-      "node_38 3 kuibysheva",
-      "node_42 3 kuibysheva"
+      "node_39 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_41 3 kuibysheva": [
     1737.0,
-    2008.5,
+    2054.0,
     [
-      "node_40 3 kuibysheva"
+      "node_42 3 kuibysheva",
+      "node_39 3 kuibysheva",
+      "node_43 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_42 3 kuibysheva": [
-    1838.5,
-    2054.0,
+    1737.0,
+    2008.5,
     [
-      "node_43 3 kuibysheva",
-      "node_40 3 kuibysheva"
+      "node_41 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_43 3 kuibysheva": [
     1838.5,
-    1989.0,
+    2054.0,
     [
-      "node_42 3 kuibysheva",
-      "node_45 3 kuibysheva"
+      "node_44 3 kuibysheva",
+      "node_41 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_44 3 kuibysheva": [
-    1922.0,
+    1838.5,
     1989.0,
-    [],
+    [
+      "node_43 3 kuibysheva",
+      "node_46 3 kuibysheva",
+      "node_45 3 kuibysheva"
+    ],
     "3",
     "kuibysheva"
   ],
   "node_45 3 kuibysheva": [
-    1838.5,
-    1917.5,
+    1904.5,
+    1989.0,
     [
-      "node_46 3 kuibysheva",
-      "node_43 3 kuibysheva"
+      "node_44 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_46 3 kuibysheva": [
     1838.5,
-    1877.0,
+    1917.5,
     [
-      "node_45 3 kuibysheva",
-      "node_48 3 kuibysheva",
-      "node_47 3 kuibysheva"
+      "node_47 3 kuibysheva",
+      "node_44 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_47 3 kuibysheva": [
-    2002.0,
+    1838.5,
     1877.0,
     [
-      "node_46 3 kuibysheva"
+      "node_46 3 kuibysheva",
+      "node_49 3 kuibysheva",
+      "node_48 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_48 3 kuibysheva": [
-    1819.5,
+    2002.0,
     1877.0,
     [
-      "node_49 3 kuibysheva",
-      "node_46 3 kuibysheva"
+      "node_47 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_49 3 kuibysheva": [
     1819.5,
-    1811.5,
+    1877.0,
     [
-      "node_51 3 kuibysheva",
-      "node_48 3 kuibysheva",
-      "node_50 3 kuibysheva"
+      "node_50 3 kuibysheva",
+      "node_47 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_50 3 kuibysheva": [
-    1897.0,
+    1819.5,
     1811.5,
     [
-      "node_49 3 kuibysheva"
+      "node_52 3 kuibysheva",
+      "node_49 3 kuibysheva",
+      "node_51 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_51 3 kuibysheva": [
-    1819.5,
-    1610.0,
+    1886.5,
+    1811.5,
     [
-      "node_49 3 kuibysheva",
-      "node_53 3 kuibysheva",
-      "node_52 3 kuibysheva"
+      "node_50 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_52 3 kuibysheva": [
-    1872.0,
+    1819.5,
     1610.0,
     [
-      "node_51 3 kuibysheva"
-    ],
-    "3",
-    "kuibysheva"
-  ],
-  "node_53 3 kuibysheva": [
-    1819.5,
-    1504.5,
-    [
-      "node_55 3 kuibysheva",
+      "node_50 3 kuibysheva",
       "node_54 3 kuibysheva",
-      "node_51 3 kuibysheva"
-    ],
-    "3",
-    "kuibysheva"
-  ],
-  "node_54 3 kuibysheva": [
-    1897.0,
-    1504.5,
-    [
       "node_53 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
-  "node_55 3 kuibysheva": [
-    1819.5,
-    1279.5,
+  "node_53 3 kuibysheva": [
+    1872.0,
+    1610.0,
     [
-      "node_53 3 kuibysheva",
-      "node_58 3 kuibysheva",
-      "node_56 3 kuibysheva"
+      "node_52 3 kuibysheva"
+    ],
+    "3",
+    "kuibysheva"
+  ],
+  "node_54 3 kuibysheva": [
+    1819.5,
+    1504.5,
+    [
+      "node_56 3 kuibysheva",
+      "node_55 3 kuibysheva",
+      "node_52 3 kuibysheva"
+    ],
+    "3",
+    "kuibysheva"
+  ],
+  "node_55 3 kuibysheva": [
+    1897.0,
+    1504.5,
+    [
+      "node_54 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_56 3 kuibysheva": [
-    1740.0,
+    1819.5,
     1279.5,
     [
-      "node_57 3 kuibysheva",
-      "node_55 3 kuibysheva"
+      "node_54 3 kuibysheva",
+      "node_58 3 kuibysheva",
+      "node_57 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_57 3 kuibysheva": [
-    1686.0,
-    1260.0,
+    1740.0,
+    1279.5,
     [
       "node_56 3 kuibysheva"
     ],
@@ -579,7 +587,7 @@
     1124.5,
     [
       "node_59 3 kuibysheva",
-      "node_55 3 kuibysheva"
+      "node_56 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
@@ -589,15 +597,18 @@
     1072.5,
     [
       "node_58 3 kuibysheva",
+      "node_60 3 kuibysheva",
       "node_61 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_60 3 kuibysheva": [
-    1920.0,
+    1866.5,
     1072.5,
-    [],
+    [
+      "node_59 3 kuibysheva"
+    ],
     "3",
     "kuibysheva"
   ],
@@ -606,15 +617,18 @@
     963.0,
     [
       "node_63 3 kuibysheva",
+      "node_62 3 kuibysheva",
       "node_59 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_62 3 kuibysheva": [
-    1917.5,
+    1866.5,
     963.0,
-    [],
+    [
+      "node_61 3 kuibysheva"
+    ],
     "3",
     "kuibysheva"
   ],
@@ -630,7 +644,7 @@
     "kuibysheva"
   ],
   "node_64 3 kuibysheva": [
-    1887.5,
+    1866.5,
     900.0,
     [
       "node_63 3 kuibysheva"
@@ -642,6 +656,7 @@
     1819.5,
     695.0,
     [
+      "node_66 3 kuibysheva",
       "node_63 3 kuibysheva",
       "node_67 3 kuibysheva"
     ],
@@ -649,9 +664,11 @@
     "kuibysheva"
   ],
   "node_66 3 kuibysheva": [
-    1917.5,
-    698.5,
-    [],
+    1869.5,
+    695.0,
+    [
+      "node_65 3 kuibysheva"
+    ],
     "3",
     "kuibysheva"
   ],
@@ -687,7 +704,7 @@
     "kuibysheva"
   ],
   "node_70 3 kuibysheva": [
-    1737.0,
+    1747.5,
     510.5,
     [
       "node_69 3 kuibysheva"
@@ -835,26 +852,29 @@
     "kuibysheva"
   ],
   "node_85 3 kuibysheva": [
-    210.0,
-    1960.75,
+    177.0,
+    1962.5,
     [
-      "node_87 3 kuibysheva"
+      "node_3 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
   ],
   "node_86 3 kuibysheva": [
-    305.0,
-    1925.5,
-    [],
+    210.0,
+    1929.0,
+    [
+      "node_87 3 kuibysheva",
+      "node_3 3 kuibysheva"
+    ],
     "3",
     "kuibysheva"
   ],
   "node_87 3 kuibysheva": [
-    145.5,
-    1960.75,
+    240.0,
+    1929.0,
     [
-      "node_85 3 kuibysheva"
+      "node_86 3 kuibysheva"
     ],
     "3",
     "kuibysheva"
