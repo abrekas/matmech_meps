@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-
 function initMap() {
   const floorSelect = document.getElementById("floorSelect");
   const floorLabel  = document.getElementById("floorLabel");
