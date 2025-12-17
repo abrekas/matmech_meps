@@ -82,6 +82,7 @@ body {
     height: 3px;
     border-radius: 3px;
     background: #ffffff;
+    cursor: pointer;
 }
 
 
@@ -172,17 +173,15 @@ footer{
 }
 
 
-/* ШТОРКА */
-
+/* ШТОРКА МЕНЮ */
 .menu {
-    position: fixed;
-    top: 64px;                     
+    position: fixed; /* Фиксируем на весь экран */
+    top: 64px; /* Под шапкой */
     left: 0;
-    width: 100%;
-    height: calc(100% - 72px);
+    right: 0;
+    bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-
+    z-index: 2000;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.25s ease;
@@ -194,27 +193,25 @@ footer{
 }
 
 .menu-panel {
-    position: fixed;
-    top: 64;
+    position: absolute;
+    top: 0;
     right: 0;
     width: 70%;
     height: 100%;
     background-color: #ffffff;
-
     transform: translateX(100%);
     transition: transform 0.25s ease;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
-
     padding-top: 24px;
     display: flex;
     flex-direction: column;
-    gap: 12px; 
+    gap: 12px;
+    overflow-y: auto;
 }
 
 .menu.active .menu-panel {
     transform: translateX(0);
 }
-
 
 .menu-item {
     width: 100%;
@@ -222,8 +219,8 @@ footer{
     color: #8C8C8C;
 }
 
-.menu-item {
-    font-size: 16pt;
+.menu-item h2 {
+    font-size: 20px;
     margin: 0;
 }
 
