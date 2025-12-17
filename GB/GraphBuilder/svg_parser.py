@@ -545,7 +545,7 @@ def merge_correct_jsons(parsers: List[GraphBuilderSVG], result_folder_path: Path
             t = key.split()
             if t[0] in staircases_patterns:
                 index = "1" if len(t) < 4 else t[2]
-                staircases[f"{t[0]}:{index}"][t[1]] = key
+                staircases[f"{t[0]}:{index}:{p.korpus}"][t[1]] = key
 
     for stair in staircases.keys():
         floors = sorted(staircases[stair].keys())
