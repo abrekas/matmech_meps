@@ -1,17 +1,27 @@
 [
   {
-    "X": 499,
-    "Y": 1914,
-    "Floor": "kuibysheva_3"
+    "X": 914,
+    "Y": 238,
+    "Floor": "matmeh_5"
   },
   {
-    "X": 571,
-    "Y": 1914,
-    "Floor": "kuibysheva_3"
+    "X": 914,
+    "Y": 220,
+    "Floor": "matmeh_5"
   },
   {
-    "X": 571,
-    "Y": 1896,
-    "Floor": "kuibysheva_3"
+    "X": 989,
+    "Y": 220,
+    "Floor": "matmeh_5"
+  },
+  {
+    "X": 1019,
+    "Y": 220,
+    "Floor": "matmeh_5"
+  },
+  {
+    "X": 1019,
+    "Y": 206,
+    "Floor": "matmeh_5"
   }
 ]

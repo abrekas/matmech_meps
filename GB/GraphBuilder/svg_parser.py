@@ -61,7 +61,7 @@ class GraphBuilderSVG:
         self.global_x_offset = 0.0
         self.global_y_offset = 0.0
 
-        self.remove_offset: bool = True
+        self.remove_offset: bool = False
 
         file_path = Path(self.source_file_path)
         self.output_folder_name = file_path.parent.parent / file_path.stem
@@ -571,18 +571,18 @@ def merge_correct_jsons(parsers: List[GraphBuilderSVG], result_folder_path: Path
         curr_node = ans_dict_graph[node_id]
 
         if p.remove_offset:
-            node_coordinate = f"{int(curr_node.x)} {int(curr_node.y)} {curr_node.korpus}_{curr_node.floor}"
-
-            ans_ans_dict_graph[node_coordinate] = [
-                f"{int(ans_dict_graph[node_name].x)} {int(ans_dict_graph[node_name].y)} {ans_dict_graph[node_name].korpus}_{ans_dict_graph[node_name].floor}"
-                for node_name in curr_node.neighbours
-            ]
-
-        else:
             node_coordinate = f"{int(curr_node.x-p.global_x_offset)} {int(curr_node.y-p.global_y_offset)} {curr_node.korpus}_{curr_node.floor}"
 
             ans_ans_dict_graph[node_coordinate] = [
                 f"{int(ans_dict_graph[node_name].x-p.global_x_offset)} {int(ans_dict_graph[node_name].y-p.global_y_offset)} {ans_dict_graph[node_name].korpus}_{ans_dict_graph[node_name].floor}"
+                for node_name in curr_node.neighbours
+            ]
+
+        else:
+            node_coordinate = f"{int(curr_node.x)} {int(curr_node.y)} {curr_node.korpus}_{curr_node.floor}"
+
+            ans_ans_dict_graph[node_coordinate] = [
+                f"{int(ans_dict_graph[node_name].x)} {int(ans_dict_graph[node_name].y)} {ans_dict_graph[node_name].korpus}_{ans_dict_graph[node_name].floor}"
                 for node_name in curr_node.neighbours
             ]
 
@@ -593,8 +593,10 @@ def merge_correct_jsons(parsers: List[GraphBuilderSVG], result_folder_path: Path
 
         name = " ".join(name.split()[:-1])
 
-        node_coordinate = f"{int(curr_node.x-p.global_x_offset)} {int(curr_node.y-p.global_y_offset)} {curr_node.korpus}_{curr_node.floor}"
-
+        if p.remove_offset:
+            node_coordinate = f"{int(curr_node.x-p.global_x_offset)} {int(curr_node.y-p.global_y_offset)} {curr_node.korpus}_{curr_node.floor}"
+        else:
+            node_coordinate = f"{int(curr_node.x)} {int(curr_node.y)} {curr_node.korpus}_{curr_node.floor}"
         for str_to_change in name_change_dict.keys():
             if str_to_change in name:
                 name = re.sub(
