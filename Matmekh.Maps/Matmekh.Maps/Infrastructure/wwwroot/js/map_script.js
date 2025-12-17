@@ -1,9 +1,9 @@
 let isKuibysheva = false;
-let isMatmeh = false;
-let routePoints = null;  
+let isMatmeh     = false;
+let routePoints  = null;
+
 
 document.addEventListener("DOMContentLoaded", async () => {
-  // 1. Подтягиваем меню
   try {
     const resp = await fetch("menu.html");
     if (resp.ok) {
@@ -21,36 +21,36 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   const floorSelect = document.getElementById("floorSelect");
+  const rawFloor       = localStorage.getItem("routeStartFloor");
+  const savedFloorKey  = rawFloor ? String(rawFloor).trim() : null;
 
-  // 2. Читаем сохранённый этаж старта (цифру)
-  const raw = localStorage.getItem("routeStartFloor");
-  let savedDigit = null;
-  if (raw) {
-    const m = String(raw).match(/\d/);
-    if (m) savedDigit = m[0]; // "1","2","3","5","6"
-  }
 
-  // 3. Определяем кампус по DOM
-  isKuibysheva = !!document.getElementById("mySvgContainer");
-  isMatmeh     = !isKuibysheva;
+  isKuibysheva = !!document.getElementById("mySvgContainer"); 
+  isMatmeh     = !isKuibysheva;                               
 
-  // 4. Выставляем значение select
+
   if (floorSelect) {
     if (isKuibysheva) {
-      const valueMap = {
-        "1": "1 этаж",
-        "2": "2 этаж контуровские классы",
-        "3": "3 этаж"
+      const kuibMap = {
+        "1":  "1 этаж",
+        "3":  "3 этаж",
+        "1k": "1 этаж контуровские классы",
+        "2k": "2 этаж контуровские классы",
+        "2":  "2 этаж контуровские классы"
       };
-      const mapped = savedDigit ? valueMap[savedDigit] : null;
+
+      const mapped = savedFloorKey ? kuibMap[savedFloorKey] : null;
       if (mapped) {
         floorSelect.value = mapped;
       }
-      // если нет сохранённого – остаётся дефолт из HTML
-    } else {
-      const desiredDigit = savedDigit || "5"; // по умолчанию 5 этаж
-      let targetOption = null;
 
+    } else {
+      let desiredDigit = "5"; 
+      if (savedFloorKey && /^\d+$/.test(savedFloorKey)) {
+        desiredDigit = savedFloorKey; 
+      }
+
+      let targetOption = null;
       for (const opt of floorSelect.options) {
         const txt = opt.textContent.trim();
         if (txt.startsWith(desiredDigit)) {
@@ -69,31 +69,29 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     }
   }
-
-  // 5. Инициализируем карту
+  
   if (isKuibysheva) {
     initKuibyshevaMap();
   } else {
     initMatmehMap();
   }
-
-  // 6. Забираем маршрут и сохраняем его в routePoints
+  
   const rawRoute = localStorage.getItem("routePoints");
   if (rawRoute) {
     try {
       const points = JSON.parse(rawRoute);
       if (Array.isArray(points) && points.length) {
-        routePoints = points;      // храним весь путь
-        updateRouteForCurrentFloor(); // рисуем только текущий этаж
+        routePoints = points;          
+        updateRouteForCurrentFloor();   
       }
     } catch (e) {
       console.error("Ошибка чтения маршрута", e);
     } finally {
-      // можно очистить, т.к. копия уже лежит в routePoints
       localStorage.removeItem("routePoints");
     }
   }
 });
+
 
 function initMenuIfExists() {
   const menu      = document.getElementById("myMenu");
@@ -115,7 +113,6 @@ function initMenuIfExists() {
   menu.addEventListener("click", () => menu.classList.remove("active"));
 }
 
-/* ========= МАТМЕХ ========= */
 
 function initMatmehMap() {
   const floorSelect = document.getElementById("floorSelect");
@@ -134,15 +131,17 @@ function initMatmehMap() {
   const applyFloor = (value) => {
     if (!floorSelect) return;
 
-    const opt = floorSelect.querySelector(`option[value="${value}"]`);
+    const opt       = floorSelect.querySelector(`option[value="${value}"]`);
     const labelText = opt ? opt.textContent.trim() : value;
 
     if (floorLabel) {
       floorLabel.textContent = labelText;
     }
     if (floorMap) {
-      const digit = labelText.match(/\d/)?.[0] ?? value;
-      const src   = floorImages[digit];
+      const digitMatch = labelText.match(/\d+/);
+      const digit      = digitMatch ? digitMatch[0] : value; 
+      const src        = floorImages[digit];
+
       if (src) {
         floorMap.src = src;
         floorMap.alt = "";
@@ -156,12 +155,12 @@ function initMatmehMap() {
   if (floorSelect) {
     applyFloor(floorSelect.value);
   }
-
+  
   if (mapInner && zoomInBtn && zoomOutBtn) {
-    let scale = 0.25;
+    let scale       = 0.25;
     const MIN_SCALE = 0.25;
     const MAX_SCALE = 3;
-    const STEP = 0.25;
+    const STEP      = 0.25;
 
     const applyScale = () => {
       mapInner.style.transform = `scale(${scale})`;
@@ -183,12 +182,11 @@ function initMatmehMap() {
   if (floorSelect) {
     floorSelect.addEventListener("change", () => {
       applyFloor(floorSelect.value);
-      updateRouteForCurrentFloor();   // ПЕРЕРИСОВАТЬ маршрут под новый этаж
+      updateRouteForCurrentFloor();   
     });
   }
 }
 
-/* ========= КУЙБЫШЕВА ========= */
 
 function initKuibyshevaMap() {
   const floorSelect = document.getElementById("floorSelect");
@@ -245,10 +243,10 @@ function initKuibyshevaMap() {
       floorMap.setAttribute("height", baseH);
 
       if (value === "3 этаж") {
-        scale = 0.2;
+        scale    = 0.2;
         MIN_SCALE = 0.2;
       } else {
-        scale = 0.7;
+        scale    = 0.7;
         MIN_SCALE = 0.7;
       }
 
@@ -271,11 +269,38 @@ function initKuibyshevaMap() {
 
   floorSelect.addEventListener("change", () => {
     loadFloor(floorSelect.value);
-    updateRouteForCurrentFloor();   // ПЕРЕРИСОВАТЬ маршрут
+    updateRouteForCurrentFloor();
   });
 }
 
-/* ========= ОБЩАЯ ФУНКЦИЯ ДЛЯ МАРШРУТА ПО ЭТАЖУ ========= */
+
+function getCurrentFloorSuffix() {
+  const floorSelect = document.getElementById("floorSelect");
+  if (!floorSelect) return null;
+
+  const value = floorSelect.value || "";
+  const text  = floorSelect.options[floorSelect.selectedIndex]
+      ?.textContent?.trim() || value;
+
+  if (isKuibysheva) {
+    if (value.startsWith("1 этаж контуров")) return "1k";
+    if (value.startsWith("2 этаж контуров")) return "2k";
+
+    if (value.startsWith("1 этаж")) return "1";
+    if (value.startsWith("3 этаж")) return "3";
+    
+    if (/^1.*контуров/i.test(text)) return "1k";
+    if (/^2.*контуров/i.test(text)) return "2k";
+    if (/^1 этаж\b/.test(text))     return "1";
+    if (/^3 этаж\b/.test(text))     return "3";
+
+    return null;
+  } else {
+    const m = (value || text).match(/\d+/);
+    return m ? m[0] : null; 
+  }
+}
+
 
 function updateRouteForCurrentFloor() {
   const routeLayer  = document.getElementById("routeLayer");
@@ -285,45 +310,33 @@ function updateRouteForCurrentFloor() {
     console.log("updateRouteForCurrentFloor: нет routeLayer / floorSelect / routePoints");
     return;
   }
-
-  // очищаем слой маршрута
+  
   routeLayer.innerHTML = "";
 
-  // --- 1. Достаём цифру этажа из value ИЛИ из текста option ---
-  const rawValue = String(floorSelect.value || "");
-  const textValue = floorSelect.options[floorSelect.selectedIndex]
-      ?.textContent?.trim() || "";
-
-  const digitFromValue = rawValue.match(/\d/)?.[0] || null;
-  const digitFromText  = textValue.match(/\d/)?.[0] || null;
-
-  const digit = digitFromValue || digitFromText;
-  if (!digit) {
-    console.log("updateRouteForCurrentFloor: не нашли цифру этажа", { rawValue, textValue });
+  const floorSuffix = getCurrentFloorSuffix(); // "5","6","1","3","1k","2k"
+  if (!floorSuffix) {
+    console.log("updateRouteForCurrentFloor: не удалось определить суффикс этажа");
     return;
   }
-
-  // --- 2. Берём префикс здания из самого маршрута ---
-  const anyFloorPoint = routePoints.find(p => p && (p.Floor != null || p.floor != null));
+  
+  const anyFloorPoint = routePoints.find(
+      p => p && (p.Floor != null || p.floor != null)
+  );
   if (!anyFloorPoint) {
     console.log("updateRouteForCurrentFloor: в routePoints нет поля Floor", routePoints);
     return;
   }
 
-  const floorField = String(anyFloorPoint.Floor ?? anyFloorPoint.floor); // "matmeh_6"
-  const prefix = floorField.split("_")[0];                               // "matmeh" / "kuibysheva"
-  const floorCode = `${prefix}_${digit}`;                                // "matmeh_6" или "matmeh_5"
+  const floorField = String(anyFloorPoint.Floor ?? anyFloorPoint.floor); 
+  const prefix     = floorField.split("_")[0];                           
+  const floorCode  = `${prefix}_${floorSuffix}`;                         
 
-  // --- 3. Фильтруем точки только этого этажа ---
-  const pointsForFloor = routePoints.filter(p => {
-    const code = String(p.Floor ?? p.floor);
-    return code === floorCode;
-  });
+  const pointsForFloor = routePoints.filter(p =>
+      String(p.Floor ?? p.floor) === floorCode
+  );
 
   console.log("updateRouteForCurrentFloor:", {
-    rawValue,
-    textValue,
-    digit,
+    floorSuffix,
     floorField,
     prefix,
     floorCode,
@@ -335,7 +348,6 @@ function updateRouteForCurrentFloor() {
     console.log("updateRouteForCurrentFloor: для", floorCode, "мало точек, ничего не рисуем");
     return;
   }
-
-  // --- 4. Рисуем только точки текущего этажа ---
+  
   drawRoute(pointsForFloor);
 }

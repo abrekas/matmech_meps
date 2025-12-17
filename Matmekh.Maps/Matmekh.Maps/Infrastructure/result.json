@@ -1,92 +1,67 @@
 [
   {
-    "X": 1804,
-    "Y": 611,
-    "Floor": "kuibysheva_3"
+    "X": 293,
+    "Y": 355,
+    "Floor": "kuibysheva_2k"
   },
   {
-    "X": 1754,
-    "Y": 611,
-    "Floor": "kuibysheva_3"
+    "X": 293,
+    "Y": 263,
+    "Floor": "kuibysheva_2k"
   },
   {
-    "X": 1754,
-    "Y": 816,
-    "Floor": "kuibysheva_3"
+    "X": 490,
+    "Y": 263,
+    "Floor": "kuibysheva_2k"
   },
   {
-    "X": 1754,
-    "Y": 879,
-    "Floor": "kuibysheva_3"
+    "X": 614,
+    "Y": 263,
+    "Floor": "kuibysheva_2k"
   },
   {
-    "X": 1754,
-    "Y": 989,
-    "Floor": "kuibysheva_3"
+    "X": 614,
+    "Y": 205,
+    "Floor": "kuibysheva_2k"
   },
   {
-    "X": 1754,
-    "Y": 1041,
-    "Floor": "kuibysheva_3"
+    "X": 614,
+    "Y": 151,
+    "Floor": "kuibysheva_2k"
   },
   {
-    "X": 1754,
-    "Y": 1196,
-    "Floor": "kuibysheva_3"
+    "X": 500,
+    "Y": 168,
+    "Floor": "kuibysheva_1k"
   },
   {
-    "X": 1754,
-    "Y": 1421,
-    "Floor": "kuibysheva_3"
+    "X": 500,
+    "Y": 210,
+    "Floor": "kuibysheva_1k"
   },
   {
-    "X": 1754,
-    "Y": 1526,
-    "Floor": "kuibysheva_3"
+    "X": 394,
+    "Y": 210,
+    "Floor": "kuibysheva_1k"
   },
   {
-    "X": 1754,
-    "Y": 1728,
-    "Floor": "kuibysheva_3"
+    "X": 340,
+    "Y": 210,
+    "Floor": "kuibysheva_1k"
   },
   {
-    "X": 1754,
-    "Y": 1793,
-    "Floor": "kuibysheva_3"
+    "X": 340,
+    "Y": 271,
+    "Floor": "kuibysheva_1k"
   },
   {
-    "X": 1773,
-    "Y": 1793,
-    "Floor": "kuibysheva_3"
+    "X": 500,
+    "Y": 271,
+    "Floor": "kuibysheva_1k"
   },
   {
-    "X": 1773,
-    "Y": 1834,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1773,
-    "Y": 1905,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1773,
-    "Y": 1970,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1672,
-    "Y": 1970,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1502,
-    "Y": 1970,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1502,
-    "Y": 1915,
-    "Floor": "kuibysheva_3"
+    "X": 500,
+    "Y": 333,
+    "Floor": "kuibysheva_1k"
   }
 ]

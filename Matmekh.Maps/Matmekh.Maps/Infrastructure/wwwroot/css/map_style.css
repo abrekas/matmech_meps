@@ -345,6 +345,7 @@ select {
     text-transform: uppercase;
     cursor: pointer;
     font-family: 'Golos', sans-serif;
+    margin-top: 16px;
 }
 
 .route-bar__close {
@@ -381,31 +382,45 @@ select {
 .route-build{
     display: flex;
     flex-direction: column; 
-    gap: 16px;
+    gap: 8px;
+    margin-top: auto;
 }
 
 /* Блок подсказок*/
 .autocomplete-clues {
     width: 100%;
     border-radius: 16px;
-    background-color: #f5f5f7;
+    background-color: none ;
     display: none; 
     padding: 16px;
     display: flex;
     flex-direction: column; 
-    gap: 16px;
-    padding: 16px;
+    
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 .clues-header{
     height: 16px;
 }
 
-.clue1{
+.clue1, .clue2, .clue3, .clue4, .clue5 {
     border: 2px solid #d1d5db;
-    border-radius: 16px;
-    height: 56px;
-    padding: 16px;
+    border-radius: 8px;
+    height: 32px;
+    padding: 8px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.clue1:hover, .clue2:hover, .clue3:hover, .clue4:hover, .clue5:hover {
+    background-color: #ffffff;
+    border-color: #2f80c9;
+}
+
+.autocomplete-clues {
+    max-height: 300px;
+    overflow-y: auto;
 }
 /**/
 
