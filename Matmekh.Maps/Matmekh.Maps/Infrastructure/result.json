@@ -1,52 +1,17 @@
 [
   {
-    "X": 1821,
-    "Y": 1728,
+    "X": 499,
+    "Y": 1914,
     "Floor": "kuibysheva_3"
   },
   {
-    "X": 1754,
-    "Y": 1728,
+    "X": 571,
+    "Y": 1914,
     "Floor": "kuibysheva_3"
   },
   {
-    "X": 1754,
-    "Y": 1793,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1773,
-    "Y": 1793,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1773,
-    "Y": 1834,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1773,
-    "Y": 1905,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1773,
-    "Y": 1970,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1672,
-    "Y": 1970,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1502,
-    "Y": 1970,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1502,
-    "Y": 1915,
+    "X": 571,
+    "Y": 1896,
     "Floor": "kuibysheva_3"
   }
 ]
