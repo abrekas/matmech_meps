@@ -31,6 +31,7 @@ class RoomInfo:
     y: float
     node_id: Optional[str] = None
 
+offset_dict: Dict[str, Tuple[float,float]] = {}
 
 class GraphBuilderSVG:
     def __init__(self, src_file_path: str):
@@ -60,6 +61,8 @@ class GraphBuilderSVG:
 
         self.global_x_offset = 0.0
         self.global_y_offset = 0.0
+
+        offset_dict[f'{self.floor} {self.korpus}'] = (self.global_x_offset, self.global_y_offset)
 
         self.remove_offset: bool = True
 
@@ -122,13 +125,13 @@ class GraphBuilderSVG:
 
                 if re.search(self.component_pattern, id):
                     parsed_id = id.split()
-                    if not (3 <= len(parsed_id) <= 4):
+                    if len(parsed_id) != 4:
                         raise RuntimeError("invalid component format")
                     self.global_x_offset, self.global_y_offset = float(
                         parsed_id[1]
                     ), float(parsed_id[2])
-                    if len(parsed_id)==4:
-                        self.remove_offset = False
+                    if parsed_id[3] == "yes":
+                        offset_dict[f'{self.floor} {self.korpus}'] = (self.global_x_offset, self.global_y_offset)
 
                 elif re.search(r"graph", id):
                     self._parse_path_data(s)
@@ -416,7 +419,7 @@ class GraphBuilderSVG:
 
     def run(self):
         self._process_svg()
-        self._visualize()
+        # self._visualize()
         self._export_with_rooms(self.stupid_json_path)
         # self._convert_to_sensible_format()
 
@@ -509,6 +512,10 @@ class GraphBuilderSVG:
         with open(self.names_json_path, "w", encoding="utf-8") as f:
             json.dump(result_names, f, ensure_ascii=False, indent=2)
 
+def get_final_node_coordinate(node: Node):
+    x_offset, y_offset = offset_dict[f'{node.floor} {node.korpus}']
+    return f"{int(node.x-x_offset)} {int(node.y-y_offset)} {node.korpus}_{node.floor}"
+
 
 name_change_dict: Dict[str, str] = {
     "dekanat_k": "деканат куйбышева",
@@ -570,21 +577,29 @@ def merge_correct_jsons(parsers: List[GraphBuilderSVG], result_folder_path: Path
     for node_id in ans_dict_graph.keys():
         curr_node = ans_dict_graph[node_id]
 
-        if p.remove_offset:
-            node_coordinate = f"{int(curr_node.x)} {int(curr_node.y)} {curr_node.korpus}_{curr_node.floor}"
+        # if p.remove_offset:
+        #     node_coordinate = f"{int(curr_node.x-p.global_x_offset)} {int(curr_node.y-p.global_y_offset)} {curr_node.korpus}_{curr_node.floor}"
 
-            ans_ans_dict_graph[node_coordinate] = [
-                f"{int(ans_dict_graph[node_name].x)} {int(ans_dict_graph[node_name].y)} {ans_dict_graph[node_name].korpus}_{ans_dict_graph[node_name].floor}"
-                for node_name in curr_node.neighbours
-            ]
+        #     ans_ans_dict_graph[node_coordinate] = [
+        #         f"{int(ans_dict_graph[node_name].x-p.global_x_offset)} {int(ans_dict_graph[node_name].y-p.global_y_offset)} {ans_dict_graph[node_name].korpus}_{ans_dict_graph[node_name].floor}"
+        #         for node_name in curr_node.neighbours
+        #     ]
 
-        else:
-            node_coordinate = f"{int(curr_node.x-p.global_x_offset)} {int(curr_node.y-p.global_y_offset)} {curr_node.korpus}_{curr_node.floor}"
+        # else:
+        #     node_coordinate = f"{int(curr_node.x)} {int(curr_node.y)} {curr_node.korpus}_{curr_node.floor}"
 
-            ans_ans_dict_graph[node_coordinate] = [
-                f"{int(ans_dict_graph[node_name].x-p.global_x_offset)} {int(ans_dict_graph[node_name].y-p.global_y_offset)} {ans_dict_graph[node_name].korpus}_{ans_dict_graph[node_name].floor}"
-                for node_name in curr_node.neighbours
-            ]
+        #     ans_ans_dict_graph[node_coordinate] = [
+        #         f"{int(ans_dict_graph[node_name].x)} {int(ans_dict_graph[node_name].y)} {ans_dict_graph[node_name].korpus}_{ans_dict_graph[node_name].floor}"
+        #         for node_name in curr_node.neighbours
+        #     ]
+        
+        node_coordinate = get_final_node_coordinate(curr_node)
+
+        ans_ans_dict_graph[node_coordinate] = [
+            get_final_node_coordinate(ans_dict_graph[node_name])
+            for node_name in curr_node.neighbours
+        ]
+        
 
     for name in ans_dict_names.keys():
         if any((p in name) for p in staircases_patterns):
@@ -593,7 +608,12 @@ def merge_correct_jsons(parsers: List[GraphBuilderSVG], result_folder_path: Path
 
         name = " ".join(name.split()[:-1])
 
-        node_coordinate = f"{int(curr_node.x-p.global_x_offset)} {int(curr_node.y-p.global_y_offset)} {curr_node.korpus}_{curr_node.floor}"
+        # if p.remove_offset:
+        #     node_coordinate = f"{int(curr_node.x-p.global_x_offset)} {int(curr_node.y-p.global_y_offset)} {curr_node.korpus}_{curr_node.floor}"
+        # else:
+        #     node_coordinate = f"{int(curr_node.x)} {int(curr_node.y)} {curr_node.korpus}_{curr_node.floor}"
+
+        node_coordinate = get_final_node_coordinate(curr_node)
 
         for str_to_change in name_change_dict.keys():
             if str_to_change in name:
