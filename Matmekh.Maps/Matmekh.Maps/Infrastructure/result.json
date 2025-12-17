@@ -1,92 +1,52 @@
 [
   {
-    "X": 1399,
-    "Y": 1998,
+    "X": 1821,
+    "Y": 1728,
     "Floor": "kuibysheva_3"
   },
   {
-    "X": 1399,
-    "Y": 2054,
+    "X": 1754,
+    "Y": 1728,
     "Floor": "kuibysheva_3"
   },
   {
-    "X": 1567,
-    "Y": 2054,
+    "X": 1754,
+    "Y": 1793,
     "Floor": "kuibysheva_3"
   },
   {
-    "X": 1737,
-    "Y": 2054,
+    "X": 1773,
+    "Y": 1793,
     "Floor": "kuibysheva_3"
   },
   {
-    "X": 1838,
-    "Y": 2054,
+    "X": 1773,
+    "Y": 1834,
     "Floor": "kuibysheva_3"
   },
   {
-    "X": 1838,
-    "Y": 1989,
+    "X": 1773,
+    "Y": 1905,
     "Floor": "kuibysheva_3"
   },
   {
-    "X": 1838,
-    "Y": 1917,
+    "X": 1773,
+    "Y": 1970,
     "Floor": "kuibysheva_3"
   },
   {
-    "X": 1838,
-    "Y": 1877,
+    "X": 1672,
+    "Y": 1970,
     "Floor": "kuibysheva_3"
   },
   {
-    "X": 1819,
-    "Y": 1877,
+    "X": 1502,
+    "Y": 1970,
     "Floor": "kuibysheva_3"
   },
   {
-    "X": 1819,
-    "Y": 1811,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1819,
-    "Y": 1610,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1819,
-    "Y": 1504,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1819,
-    "Y": 1279,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1819,
-    "Y": 1124,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1819,
-    "Y": 1072,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1819,
-    "Y": 963,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1819,
-    "Y": 900,
-    "Floor": "kuibysheva_3"
-  },
-  {
-    "X": 1866,
-    "Y": 900,
+    "X": 1502,
+    "Y": 1915,
     "Floor": "kuibysheva_3"
   }
 ]

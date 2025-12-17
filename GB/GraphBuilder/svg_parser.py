@@ -561,10 +561,10 @@ def merge_correct_jsons(parsers: List[GraphBuilderSVG], result_folder_path: Path
     for node_id in ans_dict_graph.keys():
         curr_node = ans_dict_graph[node_id]
 
-        node_coordinate = f"{int(curr_node.x)} {int(curr_node.y)} {curr_node.korpus}_{curr_node.floor}"
+        node_coordinate = f"{int(curr_node.x-p.global_x_offset)} {int(curr_node.y-p.global_y_offset)} {curr_node.korpus}_{curr_node.floor}"
 
         ans_ans_dict_graph[node_coordinate] = [
-            f"{int(ans_dict_graph[node_name].x)} {int(ans_dict_graph[node_name].y)} {ans_dict_graph[node_name].korpus}_{ans_dict_graph[node_name].floor}"
+            f"{int(ans_dict_graph[node_name].x-p.global_x_offset)} {int(ans_dict_graph[node_name].y-p.global_y_offset)} {ans_dict_graph[node_name].korpus}_{ans_dict_graph[node_name].floor}"
             for node_name in curr_node.neighbours
         ]
 
@@ -573,7 +573,7 @@ def merge_correct_jsons(parsers: List[GraphBuilderSVG], result_folder_path: Path
             continue
         curr_node = ans_dict_graph[ans_dict_names[name]]
 
-        node_coordinate = f"{int(curr_node.x)} {int(curr_node.y)} {curr_node.korpus}_{curr_node.floor}"
+        node_coordinate = f"{int(curr_node.x-p.global_x_offset)} {int(curr_node.y-p.global_y_offset)} {curr_node.korpus}_{curr_node.floor}"
 
         name = " ".join(name.split()[:-1])
 
