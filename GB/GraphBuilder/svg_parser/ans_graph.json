@@ -2119,7 +2119,8 @@
     1239.0,
     217.0,
     [
-      "node_83 3 kuibysheva"
+      "node_83 3 kuibysheva",
+      "node_1 2k kuibysheva"
     ],
     "3",
     "kuibysheva"
@@ -2128,7 +2129,8 @@
     177.0,
     1962.5,
     [
-      "node_3 3 kuibysheva"
+      "node_3 3 kuibysheva",
+      "node_1 1 kuibysheva"
     ],
     "3",
     "kuibysheva"
@@ -2148,9 +2150,299 @@
     1929.0,
     [
       "node_86 3 kuibysheva",
+      "node_4 1 kuibysheva",
       "node_42 5 matmeh"
     ],
     "3",
+    "kuibysheva"
+  ],
+  "node_0 1 kuibysheva": [
+    719.0,
+    316.0,
+    [
+      "node_3 1 kuibysheva",
+      "node_1 1 kuibysheva",
+      "node_2 1 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ],
+  "node_1 1 kuibysheva": [
+    719.0,
+    205.5,
+    [
+      "node_0 1 kuibysheva",
+      "node_85 3 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ],
+  "node_2 1 kuibysheva": [
+    517.75,
+    316.0,
+    [
+      "node_5 1 kuibysheva",
+      "node_7 1 kuibysheva",
+      "node_0 1 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ],
+  "node_3 1 kuibysheva": [
+    762.0,
+    316.0,
+    [
+      "node_0 1 kuibysheva",
+      "node_4 1 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ],
+  "node_4 1 kuibysheva": [
+    762.0,
+    338.5,
+    [
+      "node_3 1 kuibysheva",
+      "node_87 3 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ],
+  "node_5 1 kuibysheva": [
+    316.5,
+    316.0,
+    [
+      "node_6 1 kuibysheva",
+      "node_2 1 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ],
+  "node_6 1 kuibysheva": [
+    316.5,
+    455.5,
+    [
+      "node_5 1 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ],
+  "node_7 1 kuibysheva": [
+    517.75,
+    329.5,
+    [
+      "node_2 1 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ],
+  "node_0 1k kuibysheva": [
+    303.25,
+    210.0,
+    [
+      "node_1 1k kuibysheva"
+    ],
+    "1k",
+    "kuibysheva"
+  ],
+  "node_1 1k kuibysheva": [
+    340.75,
+    210.0,
+    [
+      "node_5 1k kuibysheva",
+      "node_0 1k kuibysheva",
+      "node_2 1k kuibysheva"
+    ],
+    "1k",
+    "kuibysheva"
+  ],
+  "node_2 1k kuibysheva": [
+    394.75,
+    210.0,
+    [
+      "node_3 1k kuibysheva",
+      "node_1 1k kuibysheva"
+    ],
+    "1k",
+    "kuibysheva"
+  ],
+  "node_3 1k kuibysheva": [
+    500.75,
+    210.0,
+    [
+      "node_4 1k kuibysheva",
+      "node_2 1k kuibysheva"
+    ],
+    "1k",
+    "kuibysheva"
+  ],
+  "node_4 1k kuibysheva": [
+    500.75,
+    168.0,
+    [
+      "node_3 1k kuibysheva",
+      "node_1 2k kuibysheva"
+    ],
+    "1k",
+    "kuibysheva"
+  ],
+  "node_5 1k kuibysheva": [
+    340.75,
+    271.75,
+    [
+      "node_1 1k kuibysheva",
+      "node_7 1k kuibysheva",
+      "node_6 1k kuibysheva"
+    ],
+    "1k",
+    "kuibysheva"
+  ],
+  "node_6 1k kuibysheva": [
+    340.75,
+    333.5,
+    [
+      "node_5 1k kuibysheva"
+    ],
+    "1k",
+    "kuibysheva"
+  ],
+  "node_7 1k kuibysheva": [
+    500.75,
+    271.75,
+    [
+      "node_5 1k kuibysheva",
+      "node_9 1k kuibysheva",
+      "node_8 1k kuibysheva"
+    ],
+    "1k",
+    "kuibysheva"
+  ],
+  "node_8 1k kuibysheva": [
+    572.75,
+    271.75,
+    [
+      "node_7 1k kuibysheva"
+    ],
+    "1k",
+    "kuibysheva"
+  ],
+  "node_9 1k kuibysheva": [
+    500.75,
+    333.5,
+    [
+      "node_7 1k kuibysheva"
+    ],
+    "1k",
+    "kuibysheva"
+  ],
+  "node_0 2k kuibysheva": [
+    614.5,
+    205.0,
+    [
+      "node_1 2k kuibysheva",
+      "node_2 2k kuibysheva",
+      "node_3 2k kuibysheva"
+    ],
+    "2k",
+    "kuibysheva"
+  ],
+  "node_1 2k kuibysheva": [
+    614.5,
+    151.0,
+    [
+      "node_0 2k kuibysheva",
+      "node_4 1k kuibysheva",
+      "node_84 3 kuibysheva"
+    ],
+    "2k",
+    "kuibysheva"
+  ],
+  "node_2 2k kuibysheva": [
+    755.5,
+    205.0,
+    [
+      "node_0 2k kuibysheva"
+    ],
+    "2k",
+    "kuibysheva"
+  ],
+  "node_3 2k kuibysheva": [
+    614.5,
+    263.5,
+    [
+      "node_6 2k kuibysheva",
+      "node_4 2k kuibysheva",
+      "node_0 2k kuibysheva"
+    ],
+    "2k",
+    "kuibysheva"
+  ],
+  "node_4 2k kuibysheva": [
+    694.5,
+    263.5,
+    [
+      "node_3 2k kuibysheva",
+      "node_5 2k kuibysheva"
+    ],
+    "2k",
+    "kuibysheva"
+  ],
+  "node_5 2k kuibysheva": [
+    694.5,
+    355.5,
+    [
+      "node_4 2k kuibysheva"
+    ],
+    "2k",
+    "kuibysheva"
+  ],
+  "node_6 2k kuibysheva": [
+    490.5,
+    263.5,
+    [
+      "node_7 2k kuibysheva",
+      "node_3 2k kuibysheva",
+      "node_10 2k kuibysheva"
+    ],
+    "2k",
+    "kuibysheva"
+  ],
+  "node_7 2k kuibysheva": [
+    293.0,
+    263.5,
+    [
+      "node_6 2k kuibysheva",
+      "node_8 2k kuibysheva",
+      "node_9 2k kuibysheva"
+    ],
+    "2k",
+    "kuibysheva"
+  ],
+  "node_8 2k kuibysheva": [
+    237.0,
+    263.5,
+    [
+      "node_7 2k kuibysheva"
+    ],
+    "2k",
+    "kuibysheva"
+  ],
+  "node_9 2k kuibysheva": [
+    293.0,
+    355.5,
+    [
+      "node_7 2k kuibysheva"
+    ],
+    "2k",
+    "kuibysheva"
+  ],
+  "node_10 2k kuibysheva": [
+    490.5,
+    355.5,
+    [
+      "node_6 2k kuibysheva"
+    ],
+    "2k",
     "kuibysheva"
   ]
 }

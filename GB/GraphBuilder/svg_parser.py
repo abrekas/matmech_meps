@@ -61,9 +61,13 @@ class GraphBuilderSVG:
         self.global_x_offset = 0.0
         self.global_y_offset = 0.0
 
+        self.remove_offset: bool = True
+
         file_path = Path(self.source_file_path)
         self.output_folder_name = file_path.parent.parent / file_path.stem
         os.makedirs(self.output_folder_name, exist_ok=True)
+
+        self.final_folder_path = Path(".\\Matmekh.Maps\\Matmekh.Maps\\Infrastructure")
 
         self.stupid_json_path = os.path.join(
             self.output_folder_name, "navigation_graph_with_rooms.json"
@@ -118,11 +122,13 @@ class GraphBuilderSVG:
 
                 if re.search(self.component_pattern, id):
                     parsed_id = id.split()
-                    if len(parsed_id) != 3:
+                    if not (3 <= len(parsed_id) <= 4):
                         raise RuntimeError("invalid component format")
                     self.global_x_offset, self.global_y_offset = float(
                         parsed_id[1]
                     ), float(parsed_id[2])
+                    if len(parsed_id)==4:
+                        self.remove_offset = False
 
                 elif re.search(r"graph", id):
                     self._parse_path_data(s)
@@ -242,7 +248,7 @@ class GraphBuilderSVG:
                 if start_point is not None:
                     self._add_edge(current_point, start_point)
                     current_point = start_point
-            
+
             else:
                 raise RuntimeError(f"unexpected command: {command}.")
 
@@ -505,11 +511,14 @@ class GraphBuilderSVG:
 
 
 name_change_dict: Dict[str, str] = {
-    "dekanat": "деканат",
+    "dekanat_k": "деканат куйбышева",
+    "dekanat_m": "деканат матмех",
     "wc_m": "туалет мужской",
     "wc_w": "туалет женский",
     "stolovaya": "столовая",
     "library": "библиотека",
+    "wardrobe": "гардероб",
+    "START": "главный вход",
     "a": "а",
 }
 
@@ -561,21 +570,30 @@ def merge_correct_jsons(parsers: List[GraphBuilderSVG], result_folder_path: Path
     for node_id in ans_dict_graph.keys():
         curr_node = ans_dict_graph[node_id]
 
-        node_coordinate = f"{int(curr_node.x-p.global_x_offset)} {int(curr_node.y-p.global_y_offset)} {curr_node.korpus}_{curr_node.floor}"
+        if p.remove_offset:
+            node_coordinate = f"{int(curr_node.x)} {int(curr_node.y)} {curr_node.korpus}_{curr_node.floor}"
 
-        ans_ans_dict_graph[node_coordinate] = [
-            f"{int(ans_dict_graph[node_name].x-p.global_x_offset)} {int(ans_dict_graph[node_name].y-p.global_y_offset)} {ans_dict_graph[node_name].korpus}_{ans_dict_graph[node_name].floor}"
-            for node_name in curr_node.neighbours
-        ]
+            ans_ans_dict_graph[node_coordinate] = [
+                f"{int(ans_dict_graph[node_name].x)} {int(ans_dict_graph[node_name].y)} {ans_dict_graph[node_name].korpus}_{ans_dict_graph[node_name].floor}"
+                for node_name in curr_node.neighbours
+            ]
+
+        else:
+            node_coordinate = f"{int(curr_node.x-p.global_x_offset)} {int(curr_node.y-p.global_y_offset)} {curr_node.korpus}_{curr_node.floor}"
+
+            ans_ans_dict_graph[node_coordinate] = [
+                f"{int(ans_dict_graph[node_name].x-p.global_x_offset)} {int(ans_dict_graph[node_name].y-p.global_y_offset)} {ans_dict_graph[node_name].korpus}_{ans_dict_graph[node_name].floor}"
+                for node_name in curr_node.neighbours
+            ]
 
     for name in ans_dict_names.keys():
         if any((p in name) for p in staircases_patterns):
             continue
         curr_node = ans_dict_graph[ans_dict_names[name]]
 
-        node_coordinate = f"{int(curr_node.x-p.global_x_offset)} {int(curr_node.y-p.global_y_offset)} {curr_node.korpus}_{curr_node.floor}"
-
         name = " ".join(name.split()[:-1])
+
+        node_coordinate = f"{int(curr_node.x-p.global_x_offset)} {int(curr_node.y-p.global_y_offset)} {curr_node.korpus}_{curr_node.floor}"
 
         for str_to_change in name_change_dict.keys():
             if str_to_change in name:
@@ -598,6 +616,16 @@ def merge_correct_jsons(parsers: List[GraphBuilderSVG], result_folder_path: Path
     ) as f:
         json.dump(ans_ans_dict_names, f, ensure_ascii=False, indent=2)
 
+    with open(
+        p.final_folder_path / Path("graph.json"), "w", encoding="utf-8"
+    ) as f:
+        json.dump(ans_ans_dict_graph, f, ensure_ascii=False, indent=2)
+
+    with open(
+        p.final_folder_path / Path("names.json"), "w", encoding="utf-8"
+    ) as f:
+        json.dump(ans_ans_dict_names, f, ensure_ascii=False, indent=2)
+
 
 def main():
 
@@ -605,6 +633,9 @@ def main():
         ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 6 matmeh.svg",
         ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 5 matmeh.svg",
         ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 3 kuibysheva.svg",
+        ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 1 kuibysheva.svg",
+        ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 1k kuibysheva.svg",
+        ".\\GB\\GraphBuilder\\svg_parser\\input_images\\floor 2k kuibysheva.svg",
     ]
 
     parsers = [GraphBuilderSVG(path) for path in svg_paths]

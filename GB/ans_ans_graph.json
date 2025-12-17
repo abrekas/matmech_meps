@@ -1,863 +1,984 @@
 {
-  "1664 132 matmeh_6": [
-    "1664 94 matmeh_6",
-    "1664 151 matmeh_6",
-    "1601 132 matmeh_6"
-  ],
-  "1664 94 matmeh_6": [
-    "1664 132 matmeh_6"
-  ],
-  "1664 151 matmeh_6": [
-    "1664 132 matmeh_6"
-  ],
-  "1601 132 matmeh_6": [
-    "1588 132 matmeh_6",
-    "1562 132 matmeh_6",
-    "1601 151 matmeh_6",
-    "1664 132 matmeh_6"
-  ],
-  "1601 151 matmeh_6": [
-    "1601 132 matmeh_6"
-  ],
-  "1588 132 matmeh_6": [
-    "1601 132 matmeh_6",
-    "1562 132 matmeh_6",
-    "1588 94 matmeh_6"
-  ],
-  "1562 132 matmeh_6": [
-    "1562 151 matmeh_6",
-    "1522 132 matmeh_6",
-    "1601 132 matmeh_6",
-    "1588 132 matmeh_6"
-  ],
-  "1588 94 matmeh_6": [
-    "1588 132 matmeh_6"
-  ],
-  "1562 151 matmeh_6": [
-    "1562 132 matmeh_6"
-  ],
-  "1522 132 matmeh_6": [
-    "1562 132 matmeh_6",
-    "1511 132 matmeh_6",
-    "1522 151 matmeh_6"
-  ],
-  "1522 151 matmeh_6": [
-    "1522 132 matmeh_6"
-  ],
-  "1511 132 matmeh_6": [
-    "1522 132 matmeh_6",
-    "1511 94 matmeh_6",
-    "1483 132 matmeh_6"
-  ],
-  "1511 94 matmeh_6": [
-    "1511 132 matmeh_6",
-    "1456 99 matmeh_5"
-  ],
-  "1483 132 matmeh_6": [
-    "1511 132 matmeh_6",
-    "1412 132 matmeh_6",
-    "1483 151 matmeh_6"
-  ],
-  "1483 151 matmeh_6": [
-    "1483 132 matmeh_6"
-  ],
-  "1412 132 matmeh_6": [
-    "1385 132 matmeh_6",
-    "1412 99 matmeh_6",
-    "1483 132 matmeh_6"
-  ],
-  "1412 99 matmeh_6": [
-    "1412 132 matmeh_6",
-    "1412 105 matmeh_5"
-  ],
-  "1385 132 matmeh_6": [
-    "1385 151 matmeh_6",
-    "1298 132 matmeh_6",
-    "1412 132 matmeh_6"
-  ],
-  "1385 151 matmeh_6": [
-    "1385 132 matmeh_6"
-  ],
-  "1298 132 matmeh_6": [
-    "1298 151 matmeh_6",
-    "1385 132 matmeh_6",
-    "1200 132 matmeh_6"
-  ],
-  "1298 151 matmeh_6": [
-    "1298 132 matmeh_6"
-  ],
-  "1200 132 matmeh_6": [
-    "1191 132 matmeh_6",
-    "1298 132 matmeh_6",
-    "1200 151 matmeh_6"
-  ],
-  "1200 151 matmeh_6": [
-    "1200 132 matmeh_6"
-  ],
-  "1191 132 matmeh_6": [
-    "1155 132 matmeh_6",
-    "1191 116 matmeh_6",
-    "1200 132 matmeh_6"
-  ],
-  "1191 116 matmeh_6": [
-    "1191 132 matmeh_6"
-  ],
-  "1155 132 matmeh_6": [
-    "1129 132 matmeh_6",
-    "1155 116 matmeh_6",
-    "1191 132 matmeh_6"
-  ],
-  "1103 132 matmeh_6": [
-    "1060 132 matmeh_6",
-    "1103 151 matmeh_6",
-    "1103 116 matmeh_6",
-    "1129 132 matmeh_6"
-  ],
-  "1103 151 matmeh_6": [
-    "1103 132 matmeh_6"
-  ],
-  "1060 132 matmeh_6": [
-    "1103 132 matmeh_6",
-    "1040 132 matmeh_6",
-    "1060 116 matmeh_6"
-  ],
-  "1103 116 matmeh_6": [
-    "1103 132 matmeh_6"
-  ],
-  "1129 132 matmeh_6": [
-    "1155 132 matmeh_6",
-    "1103 132 matmeh_6",
-    "1129 116 matmeh_6"
-  ],
-  "1060 116 matmeh_6": [
-    "1060 132 matmeh_6"
-  ],
-  "1040 132 matmeh_6": [
-    "1060 132 matmeh_6",
-    "1040 151 matmeh_6",
-    "965 132 matmeh_6"
-  ],
-  "1129 116 matmeh_6": [
-    "1129 132 matmeh_6"
-  ],
-  "1155 116 matmeh_6": [
-    "1155 132 matmeh_6"
-  ],
-  "965 132 matmeh_6": [
-    "927 132 matmeh_6",
-    "1040 132 matmeh_6",
-    "965 116 matmeh_6"
-  ],
-  "965 116 matmeh_6": [
-    "965 132 matmeh_6"
-  ],
-  "927 132 matmeh_6": [
-    "927 175 matmeh_6",
-    "852 132 matmeh_6",
-    "965 132 matmeh_6"
-  ],
-  "927 175 matmeh_6": [
-    "927 132 matmeh_6"
-  ],
-  "852 132 matmeh_6": [
-    "927 132 matmeh_6",
-    "852 151 matmeh_6",
-    "808 132 matmeh_6"
-  ],
-  "852 151 matmeh_6": [
-    "852 132 matmeh_6"
-  ],
-  "808 132 matmeh_6": [
-    "808 95 matmeh_6",
-    "852 132 matmeh_6",
-    "765 132 matmeh_6"
-  ],
-  "765 132 matmeh_6": [
-    "762 132 matmeh_6",
-    "765 116 matmeh_6",
-    "808 132 matmeh_6"
-  ],
-  "765 116 matmeh_6": [
-    "765 132 matmeh_6"
-  ],
-  "762 132 matmeh_6": [
-    "713 132 matmeh_6",
-    "765 132 matmeh_6",
-    "762 151 matmeh_6"
-  ],
-  "762 151 matmeh_6": [
-    "762 132 matmeh_6"
-  ],
-  "713 132 matmeh_6": [
-    "703 132 matmeh_6",
-    "762 132 matmeh_6",
-    "713 116 matmeh_6"
-  ],
-  "713 116 matmeh_6": [
-    "713 132 matmeh_6"
-  ],
-  "703 132 matmeh_6": [
-    "703 151 matmeh_6",
-    "713 132 matmeh_6",
-    "628 132 matmeh_6"
-  ],
-  "703 151 matmeh_6": [
-    "703 132 matmeh_6"
+  "1711 191 matmeh_6": [
+    "1711 154 matmeh_6",
+    "1711 210 matmeh_6",
+    "1648 191 matmeh_6"
+  ],
+  "1711 154 matmeh_6": [
+    "1711 191 matmeh_6"
+  ],
+  "1711 210 matmeh_6": [
+    "1711 191 matmeh_6"
+  ],
+  "1648 191 matmeh_6": [
+    "1635 191 matmeh_6",
+    "1609 191 matmeh_6",
+    "1648 210 matmeh_6",
+    "1711 191 matmeh_6"
+  ],
+  "1648 210 matmeh_6": [
+    "1648 191 matmeh_6"
+  ],
+  "1635 191 matmeh_6": [
+    "1648 191 matmeh_6",
+    "1609 191 matmeh_6",
+    "1635 154 matmeh_6"
+  ],
+  "1609 191 matmeh_6": [
+    "1609 210 matmeh_6",
+    "1569 191 matmeh_6",
+    "1648 191 matmeh_6",
+    "1635 191 matmeh_6"
+  ],
+  "1635 154 matmeh_6": [
+    "1635 191 matmeh_6"
+  ],
+  "1609 210 matmeh_6": [
+    "1609 191 matmeh_6"
+  ],
+  "1569 191 matmeh_6": [
+    "1609 191 matmeh_6",
+    "1558 191 matmeh_6",
+    "1569 210 matmeh_6"
+  ],
+  "1569 210 matmeh_6": [
+    "1569 191 matmeh_6"
+  ],
+  "1558 191 matmeh_6": [
+    "1569 191 matmeh_6",
+    "1558 154 matmeh_6",
+    "1530 191 matmeh_6"
+  ],
+  "1558 154 matmeh_6": [
+    "1558 191 matmeh_6",
+    "1503 159 matmeh_5"
+  ],
+  "1530 191 matmeh_6": [
+    "1558 191 matmeh_6",
+    "1459 191 matmeh_6",
+    "1530 210 matmeh_6"
+  ],
+  "1530 210 matmeh_6": [
+    "1530 191 matmeh_6"
+  ],
+  "1459 191 matmeh_6": [
+    "1432 191 matmeh_6",
+    "1459 159 matmeh_6",
+    "1530 191 matmeh_6"
+  ],
+  "1459 159 matmeh_6": [
+    "1459 191 matmeh_6",
+    "1459 165 matmeh_5"
+  ],
+  "1432 191 matmeh_6": [
+    "1432 210 matmeh_6",
+    "1345 191 matmeh_6",
+    "1459 191 matmeh_6"
+  ],
+  "1432 210 matmeh_6": [
+    "1432 191 matmeh_6"
+  ],
+  "1345 191 matmeh_6": [
+    "1345 210 matmeh_6",
+    "1432 191 matmeh_6",
+    "1247 191 matmeh_6"
+  ],
+  "1345 210 matmeh_6": [
+    "1345 191 matmeh_6"
+  ],
+  "1247 191 matmeh_6": [
+    "1238 191 matmeh_6",
+    "1345 191 matmeh_6",
+    "1247 210 matmeh_6"
+  ],
+  "1247 210 matmeh_6": [
+    "1247 191 matmeh_6"
+  ],
+  "1238 191 matmeh_6": [
+    "1202 191 matmeh_6",
+    "1238 175 matmeh_6",
+    "1247 191 matmeh_6"
+  ],
+  "1238 175 matmeh_6": [
+    "1238 191 matmeh_6"
+  ],
+  "1202 191 matmeh_6": [
+    "1176 191 matmeh_6",
+    "1202 175 matmeh_6",
+    "1238 191 matmeh_6"
+  ],
+  "1150 191 matmeh_6": [
+    "1107 191 matmeh_6",
+    "1150 210 matmeh_6",
+    "1150 175 matmeh_6",
+    "1176 191 matmeh_6"
+  ],
+  "1150 210 matmeh_6": [
+    "1150 191 matmeh_6"
+  ],
+  "1107 191 matmeh_6": [
+    "1150 191 matmeh_6",
+    "1087 191 matmeh_6",
+    "1107 175 matmeh_6"
+  ],
+  "1150 175 matmeh_6": [
+    "1150 191 matmeh_6"
+  ],
+  "1176 191 matmeh_6": [
+    "1202 191 matmeh_6",
+    "1150 191 matmeh_6",
+    "1176 175 matmeh_6"
+  ],
+  "1107 175 matmeh_6": [
+    "1107 191 matmeh_6"
+  ],
+  "1087 191 matmeh_6": [
+    "1107 191 matmeh_6",
+    "1087 210 matmeh_6",
+    "1012 191 matmeh_6"
+  ],
+  "1176 175 matmeh_6": [
+    "1176 191 matmeh_6"
+  ],
+  "1202 175 matmeh_6": [
+    "1202 191 matmeh_6"
+  ],
+  "1012 191 matmeh_6": [
+    "974 191 matmeh_6",
+    "1087 191 matmeh_6",
+    "1012 175 matmeh_6"
+  ],
+  "1012 175 matmeh_6": [
+    "1012 191 matmeh_6"
+  ],
+  "974 191 matmeh_6": [
+    "974 234 matmeh_6",
+    "899 191 matmeh_6",
+    "1012 191 matmeh_6"
+  ],
+  "974 234 matmeh_6": [
+    "974 191 matmeh_6"
+  ],
+  "899 191 matmeh_6": [
+    "974 191 matmeh_6",
+    "899 210 matmeh_6",
+    "855 191 matmeh_6"
+  ],
+  "899 210 matmeh_6": [
+    "899 191 matmeh_6"
+  ],
+  "855 191 matmeh_6": [
+    "855 155 matmeh_6",
+    "899 191 matmeh_6",
+    "812 191 matmeh_6"
+  ],
+  "812 191 matmeh_6": [
+    "809 191 matmeh_6",
+    "812 175 matmeh_6",
+    "855 191 matmeh_6"
+  ],
+  "812 175 matmeh_6": [
+    "812 191 matmeh_6"
+  ],
+  "809 191 matmeh_6": [
+    "760 191 matmeh_6",
+    "812 191 matmeh_6",
+    "809 210 matmeh_6"
+  ],
+  "809 210 matmeh_6": [
+    "809 191 matmeh_6"
+  ],
+  "760 191 matmeh_6": [
+    "750 191 matmeh_6",
+    "809 191 matmeh_6",
+    "760 175 matmeh_6"
+  ],
+  "760 175 matmeh_6": [
+    "760 191 matmeh_6"
+  ],
+  "750 191 matmeh_6": [
+    "750 210 matmeh_6",
+    "760 191 matmeh_6",
+    "675 191 matmeh_6"
+  ],
+  "750 210 matmeh_6": [
+    "750 191 matmeh_6"
   ],
-  "628 132 matmeh_6": [
-    "703 132 matmeh_6",
-    "628 116 matmeh_6",
-    "621 132 matmeh_6"
-  ],
-  "628 116 matmeh_6": [
-    "628 132 matmeh_6"
-  ],
-  "621 132 matmeh_6": [
-    "621 151 matmeh_6",
-    "542 132 matmeh_6",
-    "628 132 matmeh_6"
-  ],
-  "621 151 matmeh_6": [
-    "621 132 matmeh_6"
-  ],
-  "542 132 matmeh_6": [
-    "467 132 matmeh_6",
-    "621 132 matmeh_6",
-    "542 116 matmeh_6",
-    "542 151 matmeh_6"
-  ],
-  "542 116 matmeh_6": [
-    "542 132 matmeh_6"
-  ],
-  "542 151 matmeh_6": [
-    "542 132 matmeh_6"
-  ],
-  "467 132 matmeh_6": [
-    "542 132 matmeh_6",
-    "443 132 matmeh_6"
-  ],
-  "443 132 matmeh_6": [
-    "433 132 matmeh_6",
-    "467 132 matmeh_6",
-    "467 86 matmeh_6"
-  ],
-  "433 132 matmeh_6": [
-    "433 151 matmeh_6",
-    "396 132 matmeh_6",
-    "443 132 matmeh_6",
-    "426 101 matmeh_6"
-  ],
-  "433 151 matmeh_6": [
-    "433 132 matmeh_6"
-  ],
-  "396 132 matmeh_6": [
-    "433 132 matmeh_6",
-    "396 126 matmeh_6"
-  ],
-  "396 126 matmeh_6": [
-    "375 126 matmeh_6",
-    "396 132 matmeh_6"
-  ],
-  "375 126 matmeh_6": [
-    "396 126 matmeh_6",
-    "290 162 matmeh_6"
-  ],
-  "290 162 matmeh_6": [
-    "301 183 matmeh_6",
-    "284 149 matmeh_6",
-    "375 126 matmeh_6"
-  ],
-  "426 101 matmeh_6": [
-    "412 89 matmeh_6",
-    "433 132 matmeh_6"
-  ],
-  "412 89 matmeh_6": [
-    "426 101 matmeh_6",
-    "406 103 matmeh_5"
-  ],
-  "1040 151 matmeh_6": [
-    "1040 132 matmeh_6"
-  ],
-  "198 183 matmeh_6": [
-    "284 149 matmeh_6",
-    "214 223 matmeh_6",
-    "63 237 matmeh_6"
-  ],
-  "63 237 matmeh_6": [
-    "44 276 matmeh_6",
-    "198 183 matmeh_6"
-  ],
-  "44 276 matmeh_6": [
-    "63 237 matmeh_6"
-  ],
-  "284 149 matmeh_6": [
-    "198 183 matmeh_6",
-    "290 162 matmeh_6"
-  ],
-  "214 223 matmeh_6": [
-    "198 183 matmeh_6"
-  ],
-  "467 86 matmeh_6": [
-    "443 132 matmeh_6"
-  ],
-  "301 183 matmeh_6": [
-    "290 162 matmeh_6"
-  ],
-  "808 95 matmeh_6": [
-    "808 132 matmeh_6",
-    "809 101 matmeh_5"
-  ],
-  "1647 136 matmeh_5": [
-    "1587 136 matmeh_5",
-    "1647 99 matmeh_5",
-    "1647 155 matmeh_5"
-  ],
-  "1587 136 matmeh_5": [
-    "1587 99 matmeh_5",
-    "1647 136 matmeh_5",
-    "1551 136 matmeh_5"
-  ],
-  "1647 99 matmeh_5": [
-    "1647 136 matmeh_5"
-  ],
-  "1647 155 matmeh_5": [
-    "1647 136 matmeh_5"
-  ],
-  "535 136 matmeh_5": [
-    "632 136 matmeh_5",
-    "406 136 matmeh_5",
-    "535 123 matmeh_5"
-  ],
-  "406 136 matmeh_5": [
-    "406 103 matmeh_5",
-    "535 136 matmeh_5"
-  ],
-  "406 103 matmeh_5": [
-    "406 136 matmeh_5",
-    "412 89 matmeh_6"
-  ],
-  "535 123 matmeh_5": [
-    "535 136 matmeh_5"
-  ],
-  "632 136 matmeh_5": [
-    "626 125 matmeh_5",
-    "691 136 matmeh_5",
-    "632 156 matmeh_5",
-    "535 136 matmeh_5"
-  ],
-  "632 156 matmeh_5": [
-    "632 136 matmeh_5"
-  ],
-  "691 136 matmeh_5": [
-    "632 136 matmeh_5",
-    "691 125 matmeh_5",
-    "809 136 matmeh_5"
-  ],
-  "626 125 matmeh_5": [
-    "632 136 matmeh_5"
-  ],
-  "1384 136 matmeh_5": [
-    "1355 136 matmeh_5",
-    "1384 117 matmeh_5",
-    "1412 136 matmeh_5"
-  ],
-  "1384 117 matmeh_5": [
-    "1370 105 matmeh_5"
-  ],
-  "1355 136 matmeh_5": [
-    "1355 155 matmeh_5",
-    "1384 136 matmeh_5",
-    "1273 136 matmeh_5"
-  ],
-  "1412 136 matmeh_5": [
-    "1412 105 matmeh_5",
-    "1456 136 matmeh_5",
-    "1384 136 matmeh_5"
-  ],
-  "691 125 matmeh_5": [
-    "691 136 matmeh_5"
-  ],
-  "809 136 matmeh_5": [
-    "809 101 matmeh_5",
-    "849 136 matmeh_5",
-    "691 136 matmeh_5"
-  ],
-  "849 136 matmeh_5": [
-    "924 136 matmeh_5",
-    "849 155 matmeh_5",
-    "809 136 matmeh_5"
-  ],
-  "849 155 matmeh_5": [
-    "849 136 matmeh_5"
-  ],
-  "924 136 matmeh_5": [
-    "849 136 matmeh_5",
-    "924 180 matmeh_5",
-    "954 136 matmeh_5"
-  ],
-  "924 180 matmeh_5": [
-    "924 136 matmeh_5"
-  ],
-  "954 136 matmeh_5": [
-    "1017 136 matmeh_5",
-    "954 122 matmeh_5",
-    "924 136 matmeh_5"
-  ],
-  "1017 136 matmeh_5": [
-    "954 136 matmeh_5",
-    "1017 155 matmeh_5",
-    "1045 136 matmeh_5"
+  "675 191 matmeh_6": [
+    "750 191 matmeh_6",
+    "675 175 matmeh_6",
+    "668 191 matmeh_6"
+  ],
+  "675 175 matmeh_6": [
+    "675 191 matmeh_6"
+  ],
+  "668 191 matmeh_6": [
+    "668 210 matmeh_6",
+    "589 191 matmeh_6",
+    "675 191 matmeh_6"
+  ],
+  "668 210 matmeh_6": [
+    "668 191 matmeh_6"
+  ],
+  "589 191 matmeh_6": [
+    "514 191 matmeh_6",
+    "668 191 matmeh_6",
+    "589 175 matmeh_6",
+    "589 210 matmeh_6"
+  ],
+  "589 175 matmeh_6": [
+    "589 191 matmeh_6"
+  ],
+  "589 210 matmeh_6": [
+    "589 191 matmeh_6"
+  ],
+  "514 191 matmeh_6": [
+    "589 191 matmeh_6",
+    "490 191 matmeh_6"
+  ],
+  "490 191 matmeh_6": [
+    "480 191 matmeh_6",
+    "514 191 matmeh_6",
+    "514 145 matmeh_6"
+  ],
+  "480 191 matmeh_6": [
+    "480 210 matmeh_6",
+    "443 191 matmeh_6",
+    "490 191 matmeh_6",
+    "473 160 matmeh_6"
+  ],
+  "480 210 matmeh_6": [
+    "480 191 matmeh_6"
+  ],
+  "443 191 matmeh_6": [
+    "480 191 matmeh_6",
+    "443 185 matmeh_6"
+  ],
+  "443 185 matmeh_6": [
+    "422 185 matmeh_6",
+    "443 191 matmeh_6"
+  ],
+  "422 185 matmeh_6": [
+    "443 185 matmeh_6",
+    "337 222 matmeh_6"
+  ],
+  "337 222 matmeh_6": [
+    "348 243 matmeh_6",
+    "331 209 matmeh_6",
+    "422 185 matmeh_6"
+  ],
+  "473 160 matmeh_6": [
+    "459 148 matmeh_6",
+    "480 191 matmeh_6"
+  ],
+  "459 148 matmeh_6": [
+    "473 160 matmeh_6",
+    "453 162 matmeh_5"
+  ],
+  "1087 210 matmeh_6": [
+    "1087 191 matmeh_6"
+  ],
+  "245 243 matmeh_6": [
+    "331 209 matmeh_6",
+    "261 283 matmeh_6",
+    "110 297 matmeh_6"
+  ],
+  "110 297 matmeh_6": [
+    "91 335 matmeh_6",
+    "245 243 matmeh_6"
+  ],
+  "91 335 matmeh_6": [
+    "110 297 matmeh_6"
+  ],
+  "331 209 matmeh_6": [
+    "245 243 matmeh_6",
+    "337 222 matmeh_6"
+  ],
+  "261 283 matmeh_6": [
+    "245 243 matmeh_6"
+  ],
+  "514 145 matmeh_6": [
+    "490 191 matmeh_6"
+  ],
+  "348 243 matmeh_6": [
+    "337 222 matmeh_6"
+  ],
+  "855 155 matmeh_6": [
+    "855 191 matmeh_6",
+    "856 161 matmeh_5"
+  ],
+  "1694 196 matmeh_5": [
+    "1634 196 matmeh_5",
+    "1694 159 matmeh_5",
+    "1694 214 matmeh_5"
+  ],
+  "1634 196 matmeh_5": [
+    "1634 159 matmeh_5",
+    "1694 196 matmeh_5",
+    "1598 196 matmeh_5"
+  ],
+  "1694 159 matmeh_5": [
+    "1694 196 matmeh_5"
+  ],
+  "1694 214 matmeh_5": [
+    "1694 196 matmeh_5"
+  ],
+  "582 196 matmeh_5": [
+    "679 196 matmeh_5",
+    "453 196 matmeh_5",
+    "582 183 matmeh_5"
+  ],
+  "453 196 matmeh_5": [
+    "453 162 matmeh_5",
+    "582 196 matmeh_5"
+  ],
+  "453 162 matmeh_5": [
+    "453 196 matmeh_5",
+    "459 148 matmeh_6"
+  ],
+  "582 183 matmeh_5": [
+    "582 196 matmeh_5"
+  ],
+  "679 196 matmeh_5": [
+    "673 185 matmeh_5",
+    "738 196 matmeh_5",
+    "679 216 matmeh_5",
+    "582 196 matmeh_5"
+  ],
+  "679 216 matmeh_5": [
+    "679 196 matmeh_5"
+  ],
+  "738 196 matmeh_5": [
+    "679 196 matmeh_5",
+    "738 185 matmeh_5",
+    "856 196 matmeh_5"
+  ],
+  "673 185 matmeh_5": [
+    "679 196 matmeh_5"
+  ],
+  "1431 196 matmeh_5": [
+    "1402 196 matmeh_5",
+    "1431 176 matmeh_5",
+    "1459 196 matmeh_5"
+  ],
+  "1431 176 matmeh_5": [
+    "1431 196 matmeh_5"
+  ],
+  "1402 196 matmeh_5": [
+    "1402 214 matmeh_5",
+    "1431 196 matmeh_5",
+    "1320 196 matmeh_5"
+  ],
+  "1459 196 matmeh_5": [
+    "1459 165 matmeh_5",
+    "1503 196 matmeh_5",
+    "1431 196 matmeh_5"
+  ],
+  "738 185 matmeh_5": [
+    "738 196 matmeh_5"
+  ],
+  "856 196 matmeh_5": [
+    "856 161 matmeh_5",
+    "896 196 matmeh_5",
+    "738 196 matmeh_5"
+  ],
+  "896 196 matmeh_5": [
+    "971 196 matmeh_5",
+    "896 214 matmeh_5",
+    "856 196 matmeh_5"
+  ],
+  "896 214 matmeh_5": [
+    "896 196 matmeh_5"
+  ],
+  "971 196 matmeh_5": [
+    "896 196 matmeh_5",
+    "971 239 matmeh_5",
+    "1001 196 matmeh_5"
+  ],
+  "971 239 matmeh_5": [
+    "971 196 matmeh_5"
+  ],
+  "1001 196 matmeh_5": [
+    "1064 196 matmeh_5",
+    "1001 182 matmeh_5",
+    "971 196 matmeh_5"
+  ],
+  "1064 196 matmeh_5": [
+    "1001 196 matmeh_5",
+    "1064 214 matmeh_5",
+    "1092 196 matmeh_5"
   ],
-  "1017 155 matmeh_5": [
-    "1017 136 matmeh_5"
-  ],
-  "1045 136 matmeh_5": [
-    "1053 136 matmeh_5",
-    "1017 136 matmeh_5",
-    "1045 122 matmeh_5"
-  ],
-  "1053 136 matmeh_5": [
-    "1045 136 matmeh_5",
-    "1178 136 matmeh_5",
-    "1053 155 matmeh_5"
-  ],
-  "1053 155 matmeh_5": [
-    "1053 136 matmeh_5"
-  ],
-  "1178 136 matmeh_5": [
-    "1198 136 matmeh_5",
-    "1178 155 matmeh_5",
-    "1053 136 matmeh_5"
-  ],
-  "1045 122 matmeh_5": [
-    "1045 136 matmeh_5"
-  ],
-  "954 122 matmeh_5": [
-    "954 136 matmeh_5"
-  ],
-  "1198 136 matmeh_5": [
-    "1178 136 matmeh_5",
-    "1198 122 matmeh_5",
-    "1222 136 matmeh_5"
-  ],
-  "1198 122 matmeh_5": [
-    "1198 136 matmeh_5"
-  ],
-  "1222 136 matmeh_5": [
-    "1222 155 matmeh_5",
-    "1273 136 matmeh_5",
-    "1198 136 matmeh_5"
-  ],
-  "1178 155 matmeh_5": [
-    "1178 136 matmeh_5"
-  ],
-  "1222 155 matmeh_5": [
-    "1222 136 matmeh_5"
-  ],
-  "1273 136 matmeh_5": [
-    "1273 155 matmeh_5",
-    "1355 136 matmeh_5",
-    "1222 136 matmeh_5"
-  ],
-  "1273 155 matmeh_5": [
-    "1273 136 matmeh_5"
-  ],
-  "1355 155 matmeh_5": [
-    "1355 136 matmeh_5"
-  ],
-  "1456 136 matmeh_5": [
-    "1412 136 matmeh_5",
-    "1456 99 matmeh_5",
-    "1456 155 matmeh_5",
-    "1551 136 matmeh_5"
-  ],
-  "1456 155 matmeh_5": [
-    "1456 136 matmeh_5"
-  ],
-  "1551 136 matmeh_5": [
-    "1551 155 matmeh_5",
-    "1587 136 matmeh_5",
-    "1456 136 matmeh_5"
-  ],
-  "1456 99 matmeh_5": [
-    "1456 136 matmeh_5",
-    "175 1845 kuibysheva_3",
-    "1511 94 matmeh_6"
-  ],
-  "1551 155 matmeh_5": [
-    "1551 136 matmeh_5"
-  ],
-  "1587 99 matmeh_5": [
-    "1587 136 matmeh_5"
-  ],
-  "1412 105 matmeh_5": [
-    "1412 136 matmeh_5",
-    "1412 99 matmeh_6"
-  ],
-  "809 101 matmeh_5": [
-    "809 136 matmeh_5",
-    "808 95 matmeh_6"
-  ],
-  "464 135 matmeh_5": [
-    "464 93 matmeh_5"
-  ],
-  "464 93 matmeh_5": [
-    "464 135 matmeh_5"
-  ],
-  "1370 105 matmeh_5": [
-    "1384 117 matmeh_5"
-  ],
-  "145 1907 kuibysheva_3": [
-    "145 1879 kuibysheva_3",
-    "145 1927 kuibysheva_3",
-    "168 1907 kuibysheva_3"
-  ],
-  "145 1927 kuibysheva_3": [
-    "145 1907 kuibysheva_3",
-    "145 1970 kuibysheva_3",
-    "117 1927 kuibysheva_3"
-  ],
-  "168 1907 kuibysheva_3": [
-    "145 1907 kuibysheva_3"
-  ],
-  "145 1879 kuibysheva_3": [
-    "145 1907 kuibysheva_3",
-    "145 1845 kuibysheva_3",
-    "112 1879 kuibysheva_3"
-  ],
-  "117 1927 kuibysheva_3": [
-    "145 1927 kuibysheva_3"
-  ],
-  "145 1970 kuibysheva_3": [
-    "145 1990 kuibysheva_3",
-    "145 2224 kuibysheva_3",
-    "145 1927 kuibysheva_3",
-    "571 1970 kuibysheva_3"
-  ],
-  "145 1990 kuibysheva_3": [
-    "114 1990 kuibysheva_3",
-    "145 1970 kuibysheva_3",
-    "145 2032 kuibysheva_3"
-  ],
-  "114 1990 kuibysheva_3": [
-    "145 1990 kuibysheva_3"
-  ],
-  "145 2032 kuibysheva_3": [
-    "145 1990 kuibysheva_3",
-    "145 2040 kuibysheva_3",
-    "176 2032 kuibysheva_3"
-  ],
-  "176 2032 kuibysheva_3": [
-    "145 2032 kuibysheva_3"
-  ],
-  "145 2040 kuibysheva_3": [
-    "117 2040 kuibysheva_3",
-    "145 2032 kuibysheva_3",
-    "145 2092 kuibysheva_3"
-  ],
-  "117 2040 kuibysheva_3": [
-    "145 2040 kuibysheva_3"
-  ],
-  "145 2092 kuibysheva_3": [
-    "145 2105 kuibysheva_3",
-    "122 2092 kuibysheva_3",
-    "145 2040 kuibysheva_3"
-  ],
-  "122 2092 kuibysheva_3": [
-    "145 2092 kuibysheva_3"
-  ],
-  "145 2105 kuibysheva_3": [
-    "145 2092 kuibysheva_3",
-    "176 2105 kuibysheva_3",
-    "145 2118 kuibysheva_3"
-  ],
-  "176 2105 kuibysheva_3": [
-    "145 2105 kuibysheva_3"
-  ],
-  "145 2118 kuibysheva_3": [
-    "122 2118 kuibysheva_3",
-    "145 2105 kuibysheva_3",
-    "145 2164 kuibysheva_3"
-  ],
-  "122 2118 kuibysheva_3": [
-    "145 2118 kuibysheva_3"
-  ],
-  "145 2164 kuibysheva_3": [
-    "122 2164 kuibysheva_3",
-    "145 2118 kuibysheva_3",
-    "145 2224 kuibysheva_3",
-    "176 2164 kuibysheva_3"
-  ],
-  "122 2164 kuibysheva_3": [
-    "145 2164 kuibysheva_3"
-  ],
-  "176 2164 kuibysheva_3": [
-    "145 2164 kuibysheva_3"
-  ],
-  "145 2224 kuibysheva_3": [
-    "145 1970 kuibysheva_3",
-    "163 2224 kuibysheva_3",
-    "145 2164 kuibysheva_3"
-  ],
-  "163 2224 kuibysheva_3": [
-    "145 2224 kuibysheva_3"
-  ],
-  "571 1970 kuibysheva_3": [
-    "741 1970 kuibysheva_3",
-    "571 1914 kuibysheva_3",
-    "145 1970 kuibysheva_3"
-  ],
-  "571 1914 kuibysheva_3": [
-    "571 1970 kuibysheva_3",
-    "636 1914 kuibysheva_3",
-    "571 1896 kuibysheva_3",
-    "499 1914 kuibysheva_3"
-  ],
-  "741 1970 kuibysheva_3": [
-    "571 1970 kuibysheva_3",
-    "741 1887 kuibysheva_3",
-    "973 1970 kuibysheva_3"
-  ],
-  "499 1914 kuibysheva_3": [
-    "571 1914 kuibysheva_3"
-  ],
-  "571 1896 kuibysheva_3": [
-    "571 1914 kuibysheva_3"
-  ],
-  "636 1914 kuibysheva_3": [
-    "571 1914 kuibysheva_3"
-  ],
-  "741 1887 kuibysheva_3": [
-    "741 1970 kuibysheva_3"
-  ],
-  "973 1970 kuibysheva_3": [
-    "973 1887 kuibysheva_3",
-    "741 1970 kuibysheva_3",
-    "1023 1970 kuibysheva_3"
-  ],
-  "973 1887 kuibysheva_3": [
-    "973 1970 kuibysheva_3"
-  ],
-  "1023 1970 kuibysheva_3": [
-    "1055 1970 kuibysheva_3",
-    "1023 1835 kuibysheva_3",
-    "973 1970 kuibysheva_3"
-  ],
-  "1023 1835 kuibysheva_3": [
-    "1023 1970 kuibysheva_3"
-  ],
-  "1055 1970 kuibysheva_3": [
-    "1023 1970 kuibysheva_3",
-    "1055 1925 kuibysheva_3",
-    "1334 1970 kuibysheva_3"
-  ],
-  "1055 1925 kuibysheva_3": [
-    "1091 1925 kuibysheva_3",
-    "1055 1970 kuibysheva_3"
-  ],
-  "1091 1925 kuibysheva_3": [
-    "1055 1925 kuibysheva_3"
-  ],
-  "1334 1970 kuibysheva_3": [
-    "1334 1915 kuibysheva_3",
-    "1502 1970 kuibysheva_3",
-    "1055 1970 kuibysheva_3"
-  ],
-  "1334 1915 kuibysheva_3": [
-    "1334 1970 kuibysheva_3"
-  ],
-  "1502 1970 kuibysheva_3": [
-    "1672 1970 kuibysheva_3",
-    "1502 1915 kuibysheva_3",
-    "1334 1970 kuibysheva_3"
-  ],
-  "1502 1915 kuibysheva_3": [
-    "1502 1970 kuibysheva_3"
-  ],
-  "1672 1970 kuibysheva_3": [
-    "1672 1925 kuibysheva_3",
-    "1502 1970 kuibysheva_3",
-    "1773 1970 kuibysheva_3"
-  ],
-  "1672 1925 kuibysheva_3": [
-    "1672 1970 kuibysheva_3"
-  ],
-  "1773 1970 kuibysheva_3": [
-    "1773 1905 kuibysheva_3",
-    "1672 1970 kuibysheva_3"
-  ],
-  "1773 1905 kuibysheva_3": [
-    "1773 1970 kuibysheva_3",
-    "1773 1834 kuibysheva_3",
-    "1839 1905 kuibysheva_3"
-  ],
-  "1839 1905 kuibysheva_3": [
-    "1773 1905 kuibysheva_3"
-  ],
-  "1773 1834 kuibysheva_3": [
-    "1773 1793 kuibysheva_3",
-    "1773 1905 kuibysheva_3"
-  ],
-  "1773 1793 kuibysheva_3": [
-    "1773 1834 kuibysheva_3",
-    "1754 1793 kuibysheva_3",
-    "1937 1793 kuibysheva_3"
-  ],
-  "1937 1793 kuibysheva_3": [
-    "1773 1793 kuibysheva_3"
-  ],
-  "1754 1793 kuibysheva_3": [
-    "1754 1728 kuibysheva_3",
-    "1773 1793 kuibysheva_3"
-  ],
-  "1754 1728 kuibysheva_3": [
-    "1754 1526 kuibysheva_3",
-    "1754 1793 kuibysheva_3",
-    "1821 1728 kuibysheva_3"
-  ],
-  "1821 1728 kuibysheva_3": [
-    "1754 1728 kuibysheva_3"
-  ],
-  "1754 1526 kuibysheva_3": [
-    "1754 1728 kuibysheva_3",
-    "1754 1421 kuibysheva_3",
-    "1807 1526 kuibysheva_3"
-  ],
-  "1807 1526 kuibysheva_3": [
-    "1754 1526 kuibysheva_3"
-  ],
-  "1754 1421 kuibysheva_3": [
-    "1754 1196 kuibysheva_3",
-    "1832 1421 kuibysheva_3",
-    "1754 1526 kuibysheva_3"
-  ],
-  "1832 1421 kuibysheva_3": [
-    "1754 1421 kuibysheva_3"
-  ],
-  "1754 1196 kuibysheva_3": [
-    "1754 1421 kuibysheva_3",
-    "1754 1041 kuibysheva_3",
-    "1675 1196 kuibysheva_3"
-  ],
-  "1675 1196 kuibysheva_3": [
-    "1754 1196 kuibysheva_3"
-  ],
-  "1754 1041 kuibysheva_3": [
-    "1754 989 kuibysheva_3",
-    "1754 1196 kuibysheva_3"
-  ],
-  "1754 989 kuibysheva_3": [
-    "1754 1041 kuibysheva_3",
-    "1801 989 kuibysheva_3",
-    "1754 879 kuibysheva_3"
-  ],
-  "1801 989 kuibysheva_3": [
-    "1754 989 kuibysheva_3"
-  ],
-  "1754 879 kuibysheva_3": [
-    "1754 816 kuibysheva_3",
-    "1801 879 kuibysheva_3",
-    "1754 989 kuibysheva_3"
-  ],
-  "1801 879 kuibysheva_3": [
-    "1754 879 kuibysheva_3"
-  ],
-  "1754 816 kuibysheva_3": [
-    "1754 879 kuibysheva_3",
-    "1754 611 kuibysheva_3",
-    "1801 816 kuibysheva_3"
-  ],
-  "1801 816 kuibysheva_3": [
-    "1754 816 kuibysheva_3"
-  ],
-  "1754 611 kuibysheva_3": [
-    "1804 611 kuibysheva_3",
-    "1754 816 kuibysheva_3",
-    "1754 453 kuibysheva_3"
-  ],
-  "1804 611 kuibysheva_3": [
-    "1754 611 kuibysheva_3"
-  ],
-  "1754 453 kuibysheva_3": [
-    "1822 453 kuibysheva_3",
-    "1754 611 kuibysheva_3",
-    "1754 427 kuibysheva_3"
-  ],
-  "1822 453 kuibysheva_3": [
-    "1754 453 kuibysheva_3"
-  ],
-  "1754 427 kuibysheva_3": [
-    "1754 355 kuibysheva_3",
-    "1682 427 kuibysheva_3",
-    "1754 453 kuibysheva_3"
-  ],
-  "1682 427 kuibysheva_3": [
-    "1754 427 kuibysheva_3"
-  ],
-  "1754 355 kuibysheva_3": [
-    "1754 427 kuibysheva_3",
-    "1754 283 kuibysheva_3",
-    "1710 355 kuibysheva_3"
-  ],
-  "1710 355 kuibysheva_3": [
-    "1754 355 kuibysheva_3"
-  ],
-  "1754 283 kuibysheva_3": [
-    "1733 283 kuibysheva_3",
-    "1754 355 kuibysheva_3"
-  ],
-  "1733 283 kuibysheva_3": [
-    "1620 283 kuibysheva_3",
-    "1754 283 kuibysheva_3"
-  ],
-  "1620 283 kuibysheva_3": [
-    "1733 283 kuibysheva_3",
-    "1620 233 kuibysheva_3",
-    "1525 283 kuibysheva_3"
-  ],
-  "1620 233 kuibysheva_3": [
-    "1620 283 kuibysheva_3"
-  ],
-  "1525 283 kuibysheva_3": [
-    "1375 283 kuibysheva_3",
-    "1525 233 kuibysheva_3",
-    "1620 283 kuibysheva_3"
-  ],
-  "1525 233 kuibysheva_3": [
-    "1525 283 kuibysheva_3"
-  ],
-  "1375 283 kuibysheva_3": [
-    "1375 233 kuibysheva_3",
-    "1525 283 kuibysheva_3",
-    "1192 283 kuibysheva_3"
-  ],
-  "1375 233 kuibysheva_3": [
-    "1375 283 kuibysheva_3"
-  ],
-  "1192 283 kuibysheva_3": [
-    "1375 283 kuibysheva_3",
-    "1192 243 kuibysheva_3"
-  ],
-  "1192 243 kuibysheva_3": [
-    "1192 283 kuibysheva_3",
-    "1174 243 kuibysheva_3"
-  ],
-  "1174 243 kuibysheva_3": [
-    "1174 133 kuibysheva_3",
-    "1192 243 kuibysheva_3"
-  ],
-  "1174 133 kuibysheva_3": [
-    "1174 243 kuibysheva_3"
-  ],
-  "112 1879 kuibysheva_3": [
-    "145 1879 kuibysheva_3"
-  ],
-  "145 1845 kuibysheva_3": [
-    "175 1845 kuibysheva_3",
-    "145 1879 kuibysheva_3"
-  ],
-  "175 1845 kuibysheva_3": [
-    "145 1845 kuibysheva_3",
-    "1456 99 matmeh_5"
+  "1064 214 matmeh_5": [
+    "1064 196 matmeh_5"
+  ],
+  "1092 196 matmeh_5": [
+    "1100 196 matmeh_5",
+    "1064 196 matmeh_5",
+    "1092 182 matmeh_5"
+  ],
+  "1100 196 matmeh_5": [
+    "1092 196 matmeh_5",
+    "1225 196 matmeh_5",
+    "1100 214 matmeh_5"
+  ],
+  "1100 214 matmeh_5": [
+    "1100 196 matmeh_5"
+  ],
+  "1225 196 matmeh_5": [
+    "1245 196 matmeh_5",
+    "1225 214 matmeh_5",
+    "1100 196 matmeh_5"
+  ],
+  "1092 182 matmeh_5": [
+    "1092 196 matmeh_5"
+  ],
+  "1001 182 matmeh_5": [
+    "1001 196 matmeh_5"
+  ],
+  "1245 196 matmeh_5": [
+    "1225 196 matmeh_5",
+    "1245 182 matmeh_5",
+    "1269 196 matmeh_5"
+  ],
+  "1245 182 matmeh_5": [
+    "1245 196 matmeh_5"
+  ],
+  "1269 196 matmeh_5": [
+    "1269 214 matmeh_5",
+    "1320 196 matmeh_5",
+    "1245 196 matmeh_5"
+  ],
+  "1225 214 matmeh_5": [
+    "1225 196 matmeh_5"
+  ],
+  "1269 214 matmeh_5": [
+    "1269 196 matmeh_5"
+  ],
+  "1320 196 matmeh_5": [
+    "1320 214 matmeh_5",
+    "1402 196 matmeh_5",
+    "1269 196 matmeh_5"
+  ],
+  "1320 214 matmeh_5": [
+    "1320 196 matmeh_5"
+  ],
+  "1402 214 matmeh_5": [
+    "1402 196 matmeh_5"
+  ],
+  "1503 196 matmeh_5": [
+    "1459 196 matmeh_5",
+    "1503 159 matmeh_5",
+    "1503 214 matmeh_5",
+    "1598 196 matmeh_5"
+  ],
+  "1503 214 matmeh_5": [
+    "1503 196 matmeh_5"
+  ],
+  "1598 196 matmeh_5": [
+    "1598 214 matmeh_5",
+    "1634 196 matmeh_5",
+    "1503 196 matmeh_5"
+  ],
+  "1503 159 matmeh_5": [
+    "1503 196 matmeh_5",
+    "222 1905 kuibysheva_3",
+    "1558 154 matmeh_6"
+  ],
+  "1598 214 matmeh_5": [
+    "1598 196 matmeh_5"
+  ],
+  "1634 159 matmeh_5": [
+    "1634 196 matmeh_5"
+  ],
+  "1459 165 matmeh_5": [
+    "1459 196 matmeh_5",
+    "1459 159 matmeh_6"
+  ],
+  "856 161 matmeh_5": [
+    "856 196 matmeh_5",
+    "855 155 matmeh_6"
+  ],
+  "511 195 matmeh_5": [
+    "511 153 matmeh_5"
+  ],
+  "511 153 matmeh_5": [
+    "511 195 matmeh_5"
+  ],
+  "1431 177 matmeh_5": [
+    "1417 165 matmeh_5"
+  ],
+  "1417 165 matmeh_5": [
+    "1431 177 matmeh_5"
+  ],
+  "192 1967 kuibysheva_3": [
+    "192 1938 kuibysheva_3",
+    "192 1986 kuibysheva_3",
+    "215 1967 kuibysheva_3"
+  ],
+  "192 1986 kuibysheva_3": [
+    "192 1967 kuibysheva_3",
+    "192 2030 kuibysheva_3",
+    "164 1986 kuibysheva_3"
+  ],
+  "215 1967 kuibysheva_3": [
+    "192 1967 kuibysheva_3"
+  ],
+  "192 1938 kuibysheva_3": [
+    "192 1967 kuibysheva_3",
+    "192 1905 kuibysheva_3",
+    "159 1938 kuibysheva_3"
+  ],
+  "164 1986 kuibysheva_3": [
+    "192 1986 kuibysheva_3"
+  ],
+  "192 2030 kuibysheva_3": [
+    "192 2050 kuibysheva_3",
+    "192 2284 kuibysheva_3",
+    "192 1986 kuibysheva_3",
+    "618 2030 kuibysheva_3"
+  ],
+  "192 2050 kuibysheva_3": [
+    "161 2050 kuibysheva_3",
+    "192 2030 kuibysheva_3",
+    "192 2092 kuibysheva_3"
+  ],
+  "161 2050 kuibysheva_3": [
+    "192 2050 kuibysheva_3"
+  ],
+  "192 2092 kuibysheva_3": [
+    "192 2050 kuibysheva_3",
+    "192 2099 kuibysheva_3",
+    "223 2092 kuibysheva_3"
+  ],
+  "223 2092 kuibysheva_3": [
+    "192 2092 kuibysheva_3"
+  ],
+  "192 2099 kuibysheva_3": [
+    "164 2099 kuibysheva_3",
+    "192 2092 kuibysheva_3",
+    "192 2151 kuibysheva_3"
+  ],
+  "164 2099 kuibysheva_3": [
+    "192 2099 kuibysheva_3"
+  ],
+  "192 2151 kuibysheva_3": [
+    "192 2165 kuibysheva_3",
+    "169 2151 kuibysheva_3",
+    "192 2099 kuibysheva_3"
+  ],
+  "169 2151 kuibysheva_3": [
+    "192 2151 kuibysheva_3"
+  ],
+  "192 2165 kuibysheva_3": [
+    "192 2151 kuibysheva_3",
+    "223 2165 kuibysheva_3",
+    "192 2177 kuibysheva_3"
+  ],
+  "223 2165 kuibysheva_3": [
+    "192 2165 kuibysheva_3"
+  ],
+  "192 2177 kuibysheva_3": [
+    "169 2177 kuibysheva_3",
+    "192 2165 kuibysheva_3",
+    "192 2223 kuibysheva_3"
+  ],
+  "169 2177 kuibysheva_3": [
+    "192 2177 kuibysheva_3"
+  ],
+  "192 2223 kuibysheva_3": [
+    "169 2223 kuibysheva_3",
+    "192 2177 kuibysheva_3",
+    "192 2284 kuibysheva_3",
+    "223 2223 kuibysheva_3"
+  ],
+  "169 2223 kuibysheva_3": [
+    "192 2223 kuibysheva_3"
+  ],
+  "223 2223 kuibysheva_3": [
+    "192 2223 kuibysheva_3"
+  ],
+  "192 2284 kuibysheva_3": [
+    "192 2030 kuibysheva_3",
+    "210 2284 kuibysheva_3",
+    "192 2223 kuibysheva_3"
+  ],
+  "210 2284 kuibysheva_3": [
+    "192 2284 kuibysheva_3"
+  ],
+  "618 2030 kuibysheva_3": [
+    "788 2030 kuibysheva_3",
+    "618 1974 kuibysheva_3",
+    "192 2030 kuibysheva_3"
+  ],
+  "618 1974 kuibysheva_3": [
+    "618 2030 kuibysheva_3",
+    "683 1974 kuibysheva_3",
+    "618 1955 kuibysheva_3",
+    "546 1974 kuibysheva_3"
+  ],
+  "788 2030 kuibysheva_3": [
+    "618 2030 kuibysheva_3",
+    "788 1946 kuibysheva_3",
+    "1020 2030 kuibysheva_3"
+  ],
+  "546 1974 kuibysheva_3": [
+    "618 1974 kuibysheva_3"
+  ],
+  "618 1955 kuibysheva_3": [
+    "618 1974 kuibysheva_3"
+  ],
+  "683 1974 kuibysheva_3": [
+    "618 1974 kuibysheva_3"
+  ],
+  "788 1946 kuibysheva_3": [
+    "788 2030 kuibysheva_3"
+  ],
+  "1020 2030 kuibysheva_3": [
+    "1020 1946 kuibysheva_3",
+    "788 2030 kuibysheva_3",
+    "1070 2030 kuibysheva_3"
+  ],
+  "1020 1946 kuibysheva_3": [
+    "1020 2030 kuibysheva_3"
+  ],
+  "1070 2030 kuibysheva_3": [
+    "1102 2030 kuibysheva_3",
+    "1070 1895 kuibysheva_3",
+    "1020 2030 kuibysheva_3"
+  ],
+  "1070 1895 kuibysheva_3": [
+    "1070 2030 kuibysheva_3"
+  ],
+  "1102 2030 kuibysheva_3": [
+    "1070 2030 kuibysheva_3",
+    "1102 1984 kuibysheva_3",
+    "1381 2030 kuibysheva_3"
+  ],
+  "1102 1984 kuibysheva_3": [
+    "1138 1984 kuibysheva_3",
+    "1102 2030 kuibysheva_3"
+  ],
+  "1138 1984 kuibysheva_3": [
+    "1102 1984 kuibysheva_3"
+  ],
+  "1381 2030 kuibysheva_3": [
+    "1381 1974 kuibysheva_3",
+    "1549 2030 kuibysheva_3",
+    "1102 2030 kuibysheva_3"
+  ],
+  "1381 1974 kuibysheva_3": [
+    "1381 2030 kuibysheva_3"
+  ],
+  "1549 2030 kuibysheva_3": [
+    "1719 2030 kuibysheva_3",
+    "1549 1974 kuibysheva_3",
+    "1381 2030 kuibysheva_3"
+  ],
+  "1549 1974 kuibysheva_3": [
+    "1549 2030 kuibysheva_3"
+  ],
+  "1719 2030 kuibysheva_3": [
+    "1719 1984 kuibysheva_3",
+    "1549 2030 kuibysheva_3",
+    "1820 2030 kuibysheva_3"
+  ],
+  "1719 1984 kuibysheva_3": [
+    "1719 2030 kuibysheva_3"
+  ],
+  "1820 2030 kuibysheva_3": [
+    "1820 1965 kuibysheva_3",
+    "1719 2030 kuibysheva_3"
+  ],
+  "1820 1965 kuibysheva_3": [
+    "1820 2030 kuibysheva_3",
+    "1820 1893 kuibysheva_3",
+    "1886 1965 kuibysheva_3"
+  ],
+  "1886 1965 kuibysheva_3": [
+    "1820 1965 kuibysheva_3"
+  ],
+  "1820 1893 kuibysheva_3": [
+    "1820 1853 kuibysheva_3",
+    "1820 1965 kuibysheva_3"
+  ],
+  "1820 1853 kuibysheva_3": [
+    "1820 1893 kuibysheva_3",
+    "1801 1853 kuibysheva_3",
+    "1984 1853 kuibysheva_3"
+  ],
+  "1984 1853 kuibysheva_3": [
+    "1820 1853 kuibysheva_3"
+  ],
+  "1801 1853 kuibysheva_3": [
+    "1801 1787 kuibysheva_3",
+    "1820 1853 kuibysheva_3"
+  ],
+  "1801 1787 kuibysheva_3": [
+    "1801 1586 kuibysheva_3",
+    "1801 1853 kuibysheva_3",
+    "1868 1787 kuibysheva_3"
+  ],
+  "1868 1787 kuibysheva_3": [
+    "1801 1787 kuibysheva_3"
+  ],
+  "1801 1586 kuibysheva_3": [
+    "1801 1787 kuibysheva_3",
+    "1801 1480 kuibysheva_3",
+    "1854 1586 kuibysheva_3"
+  ],
+  "1854 1586 kuibysheva_3": [
+    "1801 1586 kuibysheva_3"
+  ],
+  "1801 1480 kuibysheva_3": [
+    "1801 1255 kuibysheva_3",
+    "1879 1480 kuibysheva_3",
+    "1801 1586 kuibysheva_3"
+  ],
+  "1879 1480 kuibysheva_3": [
+    "1801 1480 kuibysheva_3"
+  ],
+  "1801 1255 kuibysheva_3": [
+    "1801 1480 kuibysheva_3",
+    "1801 1100 kuibysheva_3",
+    "1722 1255 kuibysheva_3"
+  ],
+  "1722 1255 kuibysheva_3": [
+    "1801 1255 kuibysheva_3"
+  ],
+  "1801 1100 kuibysheva_3": [
+    "1801 1048 kuibysheva_3",
+    "1801 1255 kuibysheva_3"
+  ],
+  "1801 1048 kuibysheva_3": [
+    "1801 1100 kuibysheva_3",
+    "1848 1048 kuibysheva_3",
+    "1801 939 kuibysheva_3"
+  ],
+  "1848 1048 kuibysheva_3": [
+    "1801 1048 kuibysheva_3"
+  ],
+  "1801 939 kuibysheva_3": [
+    "1801 876 kuibysheva_3",
+    "1848 939 kuibysheva_3",
+    "1801 1048 kuibysheva_3"
+  ],
+  "1848 939 kuibysheva_3": [
+    "1801 939 kuibysheva_3"
+  ],
+  "1801 876 kuibysheva_3": [
+    "1801 939 kuibysheva_3",
+    "1801 671 kuibysheva_3",
+    "1848 876 kuibysheva_3"
+  ],
+  "1848 876 kuibysheva_3": [
+    "1801 876 kuibysheva_3"
+  ],
+  "1801 671 kuibysheva_3": [
+    "1851 671 kuibysheva_3",
+    "1801 876 kuibysheva_3",
+    "1801 512 kuibysheva_3"
+  ],
+  "1851 671 kuibysheva_3": [
+    "1801 671 kuibysheva_3"
+  ],
+  "1801 512 kuibysheva_3": [
+    "1869 512 kuibysheva_3",
+    "1801 671 kuibysheva_3",
+    "1801 486 kuibysheva_3"
+  ],
+  "1869 512 kuibysheva_3": [
+    "1801 512 kuibysheva_3"
+  ],
+  "1801 486 kuibysheva_3": [
+    "1801 414 kuibysheva_3",
+    "1729 486 kuibysheva_3",
+    "1801 512 kuibysheva_3"
+  ],
+  "1729 486 kuibysheva_3": [
+    "1801 486 kuibysheva_3"
+  ],
+  "1801 414 kuibysheva_3": [
+    "1801 486 kuibysheva_3",
+    "1801 343 kuibysheva_3",
+    "1757 414 kuibysheva_3"
+  ],
+  "1757 414 kuibysheva_3": [
+    "1801 414 kuibysheva_3"
+  ],
+  "1801 343 kuibysheva_3": [
+    "1780 343 kuibysheva_3",
+    "1801 414 kuibysheva_3"
+  ],
+  "1780 343 kuibysheva_3": [
+    "1667 343 kuibysheva_3",
+    "1801 343 kuibysheva_3"
+  ],
+  "1667 343 kuibysheva_3": [
+    "1780 343 kuibysheva_3",
+    "1667 293 kuibysheva_3",
+    "1572 343 kuibysheva_3"
+  ],
+  "1667 293 kuibysheva_3": [
+    "1667 343 kuibysheva_3"
+  ],
+  "1572 343 kuibysheva_3": [
+    "1422 343 kuibysheva_3",
+    "1572 293 kuibysheva_3",
+    "1667 343 kuibysheva_3"
+  ],
+  "1572 293 kuibysheva_3": [
+    "1572 343 kuibysheva_3"
+  ],
+  "1422 343 kuibysheva_3": [
+    "1422 293 kuibysheva_3",
+    "1572 343 kuibysheva_3",
+    "1239 343 kuibysheva_3"
+  ],
+  "1422 293 kuibysheva_3": [
+    "1422 343 kuibysheva_3"
+  ],
+  "1239 343 kuibysheva_3": [
+    "1422 343 kuibysheva_3",
+    "1239 302 kuibysheva_3"
+  ],
+  "1239 302 kuibysheva_3": [
+    "1239 343 kuibysheva_3",
+    "1221 302 kuibysheva_3"
+  ],
+  "1221 302 kuibysheva_3": [
+    "1221 193 kuibysheva_3",
+    "1239 302 kuibysheva_3"
+  ],
+  "1221 193 kuibysheva_3": [
+    "1221 302 kuibysheva_3",
+    "596 127 kuibysheva_2k"
+  ],
+  "159 1938 kuibysheva_3": [
+    "192 1938 kuibysheva_3",
+    "701 181 kuibysheva_1"
+  ],
+  "192 1905 kuibysheva_3": [
+    "222 1905 kuibysheva_3",
+    "192 1938 kuibysheva_3"
+  ],
+  "222 1905 kuibysheva_3": [
+    "192 1905 kuibysheva_3",
+    "744 314 kuibysheva_1",
+    "1503 159 matmeh_5"
+  ],
+  "701 292 kuibysheva_1": [
+    "744 292 kuibysheva_1",
+    "701 181 kuibysheva_1",
+    "499 292 kuibysheva_1"
+  ],
+  "701 181 kuibysheva_1": [
+    "701 292 kuibysheva_1",
+    "159 1938 kuibysheva_3"
+  ],
+  "499 292 kuibysheva_1": [
+    "298 292 kuibysheva_1",
+    "499 305 kuibysheva_1",
+    "701 292 kuibysheva_1"
+  ],
+  "744 292 kuibysheva_1": [
+    "701 292 kuibysheva_1",
+    "744 314 kuibysheva_1"
+  ],
+  "744 314 kuibysheva_1": [
+    "744 292 kuibysheva_1",
+    "222 1905 kuibysheva_3"
+  ],
+  "298 292 kuibysheva_1": [
+    "298 431 kuibysheva_1",
+    "499 292 kuibysheva_1"
+  ],
+  "298 431 kuibysheva_1": [
+    "298 292 kuibysheva_1"
+  ],
+  "499 305 kuibysheva_1": [
+    "499 292 kuibysheva_1"
+  ],
+  "285 186 kuibysheva_1k": [
+    "322 186 kuibysheva_1k"
+  ],
+  "322 186 kuibysheva_1k": [
+    "322 247 kuibysheva_1k",
+    "285 186 kuibysheva_1k",
+    "376 186 kuibysheva_1k"
+  ],
+  "376 186 kuibysheva_1k": [
+    "482 186 kuibysheva_1k",
+    "322 186 kuibysheva_1k"
+  ],
+  "482 186 kuibysheva_1k": [
+    "482 144 kuibysheva_1k",
+    "376 186 kuibysheva_1k"
+  ],
+  "482 144 kuibysheva_1k": [
+    "482 186 kuibysheva_1k",
+    "596 127 kuibysheva_2k"
+  ],
+  "322 247 kuibysheva_1k": [
+    "322 186 kuibysheva_1k",
+    "482 247 kuibysheva_1k",
+    "322 309 kuibysheva_1k"
+  ],
+  "322 309 kuibysheva_1k": [
+    "322 247 kuibysheva_1k"
+  ],
+  "482 247 kuibysheva_1k": [
+    "322 247 kuibysheva_1k",
+    "482 309 kuibysheva_1k",
+    "554 247 kuibysheva_1k"
+  ],
+  "554 247 kuibysheva_1k": [
+    "482 247 kuibysheva_1k"
+  ],
+  "482 309 kuibysheva_1k": [
+    "482 247 kuibysheva_1k"
+  ],
+  "596 181 kuibysheva_2k": [
+    "596 127 kuibysheva_2k",
+    "737 181 kuibysheva_2k",
+    "596 239 kuibysheva_2k"
+  ],
+  "596 127 kuibysheva_2k": [
+    "596 181 kuibysheva_2k",
+    "482 144 kuibysheva_1k",
+    "1221 193 kuibysheva_3"
+  ],
+  "737 181 kuibysheva_2k": [
+    "596 181 kuibysheva_2k"
+  ],
+  "596 239 kuibysheva_2k": [
+    "472 239 kuibysheva_2k",
+    "676 239 kuibysheva_2k",
+    "596 181 kuibysheva_2k"
+  ],
+  "676 239 kuibysheva_2k": [
+    "596 239 kuibysheva_2k",
+    "676 331 kuibysheva_2k"
+  ],
+  "676 331 kuibysheva_2k": [
+    "676 239 kuibysheva_2k"
+  ],
+  "472 239 kuibysheva_2k": [
+    "275 239 kuibysheva_2k",
+    "596 239 kuibysheva_2k",
+    "472 331 kuibysheva_2k"
+  ],
+  "275 239 kuibysheva_2k": [
+    "472 239 kuibysheva_2k",
+    "219 239 kuibysheva_2k",
+    "275 331 kuibysheva_2k"
+  ],
+  "219 239 kuibysheva_2k": [
+    "275 239 kuibysheva_2k"
+  ],
+  "275 331 kuibysheva_2k": [
+    "275 239 kuibysheva_2k"
+  ],
+  "472 331 kuibysheva_2k": [
+    "472 239 kuibysheva_2k"
   ]
 }

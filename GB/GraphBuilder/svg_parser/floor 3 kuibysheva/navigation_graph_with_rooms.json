@@ -536,7 +536,7 @@
       "x": 1239.0,
       "y": 217.0,
       "rooms": [
-        "staircase 3 kontur_2"
+        "staircase 3 kontur"
       ]
     },
     {
@@ -917,7 +917,7 @@
   ],
   "rooms": [
     {
-      "number": "staircase 3 kontur_2",
+      "number": "staircase 3 kontur",
       "x": 940.0,
       "y": 434.349,
       "node_id": "node_84"

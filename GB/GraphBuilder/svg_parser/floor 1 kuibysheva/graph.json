@@ -1,0 +1,80 @@
+{
+  "node_0 1 kuibysheva": [
+    719.0,
+    316.0,
+    [
+      "node_3 1 kuibysheva",
+      "node_1 1 kuibysheva",
+      "node_2 1 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ],
+  "node_1 1 kuibysheva": [
+    719.0,
+    205.5,
+    [
+      "node_0 1 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ],
+  "node_2 1 kuibysheva": [
+    517.75,
+    316.0,
+    [
+      "node_5 1 kuibysheva",
+      "node_7 1 kuibysheva",
+      "node_0 1 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ],
+  "node_3 1 kuibysheva": [
+    762.0,
+    316.0,
+    [
+      "node_0 1 kuibysheva",
+      "node_4 1 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ],
+  "node_4 1 kuibysheva": [
+    762.0,
+    338.5,
+    [
+      "node_3 1 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ],
+  "node_5 1 kuibysheva": [
+    316.5,
+    316.0,
+    [
+      "node_6 1 kuibysheva",
+      "node_2 1 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ],
+  "node_6 1 kuibysheva": [
+    316.5,
+    455.5,
+    [
+      "node_5 1 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ],
+  "node_7 1 kuibysheva": [
+    517.75,
+    329.5,
+    [
+      "node_2 1 kuibysheva"
+    ],
+    "1",
+    "kuibysheva"
+  ]
+}
