@@ -87,7 +87,7 @@
     });
 });
 
-async function check_valid(from, to) {ы
+async function check_valid(from, to) {
     if (!from || !to) {
         alert('Пожалуйста, заполните оба поля!');
         return false;

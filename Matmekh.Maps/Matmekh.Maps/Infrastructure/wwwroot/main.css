@@ -24,6 +24,13 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Golos';
+  src: url('golos/GolosText-Regular.ttf') format('truetype'); /* ← нужен regular файл */
+  font-weight: normal;
+  font-style: normal;
+}
+
 .app {
     display: flex;
     flex-direction: column;
@@ -40,7 +47,7 @@ body {
     width: 100%;
 
     height: 64px;
-    background: #71c2e6;
+    background: #71c3e6dd;
     padding: 0 20px;
     display: flex;
     align-items: center;
@@ -48,7 +55,10 @@ body {
 
     z-index: 1000;
     box-sizing: border-box;
+    backdrop-filter: blur(3px);
 }
+
+
 
 
 .logo {
@@ -99,6 +109,46 @@ body {
     overflow-y: auto;          
 }
 
+@media(min-width:1000px){
+    .app-main-blocks {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        padding: 8px;
+        gap: 8px;
+        min-height: 0;             
+        overflow-y: auto;          
+    }
+    .block-link{
+        width: 40%;
+        height: 30%;
+    }
+}
+
+/*.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 20px 0;
+}
+
+h1 {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 1.5em;
+    text-align: center;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}*/
+
 .block{
     background-color: rgba(0, 138, 205, 0.52);
     border-radius: 16px;
@@ -114,6 +164,8 @@ body {
 .block-img{
     width: 100%;
     display: block;
+    height: 80%;
+    border-radius: 8px;
 }
 
 .block-text{
@@ -140,13 +192,9 @@ body {
     margin: 0;
     color: white;
     text-decoration: none;
+    font-size: 10pt;
 }
 
-@media (min-width: 800px) {
-    .app-main{
-        width: 800px;
-    }
-}
 
 footer{
     margin-top: 16px;
@@ -177,15 +225,17 @@ footer{
 /* ШТОРКА МЕНЮ */
 .menu {
     position: fixed; /* Фиксируем на весь экран */
-    top: 64px; /* Под шапкой */
+    top: 63px; /* Под шапкой */
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 2000;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.25s ease;
+    font-weight: 100;
+    backdrop-filter: blur(5px);
 }
 
 .menu.active {
@@ -199,15 +249,15 @@ footer{
     right: 0;
     width: 70%;
     height: 100%;
-    background-color: #ffffff;
+    background-color: #fffffff7;
     transform: translateX(100%);
     transition: transform 0.25s ease;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
     padding-top: 24px;
     display: flex;
     flex-direction: column;
     gap: 12px;
     overflow-y: auto;
+    backdrop-filter: blur(10px);
 }
 
 .menu.active .menu-panel {
@@ -217,11 +267,11 @@ footer{
 .menu-item {
     width: 100%;
     padding: 8px 5%;
-    color: #8C8C8C;
+    color: #000000;
 }
 
-.menu-item h2 {
-    font-size: 20px;
+.menu-item p {
+    font-weight: normal;
     margin: 0;
 }
 
@@ -230,20 +280,36 @@ footer{
     display: flex;
     align-items: center;
     gap: 12px;
-    padding-top: 8px;
     padding-bottom: env(safe-area-inset-bottom); 
 }
 
 .route-bar__action {
     flex: 1;
-    height: 56px;
-    border-radius: 16px;
+    height: 48px;
+    border-radius: 12px;
     border: none;
     background: #0b83cc;
     color: #ffffff;
-    font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.02em;
-    text-transform: uppercase;
     cursor: pointer;
+    font-family: 'Golos', sans-serif;
+}
+
+.route-bar__action {
+    background: linear-gradient(
+        90deg,
+        #0b83cc 0%,
+        #2a9df4 25%,
+        #0b83cc 50%,
+        #2a9df4 75%,
+        #0b83cc 100%
+    );
+    background-size: 200% 100%;
+    animation: flow 4s infinite linear;
+}
+
+@keyframes flow {
+    0% { background-position: 200% 0; }
+    100% { background-position: 0 0; }
 }

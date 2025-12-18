@@ -57,7 +57,7 @@ body {
     width: 100%;
     height: 64px;
     min-height: 64px; /* Фиксированная высота */
-    background: #71c2e6;
+    background: #71c3e6dd;
     padding: 0 20px;
     display: flex;
     align-items: center;
@@ -65,6 +65,7 @@ body {
     z-index: 1000;
     box-sizing: border-box;
     flex-shrink: 0; /* Важно: не сжимается */
+    backdrop-filter: blur(10px);
 }
 
 .logo {
@@ -191,8 +192,8 @@ body {
     height: 40px;
     border-radius: 12px;
     border: none;
-    background: #ffffff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    background: #f1f1f3cf;
+    box-shadow: 4px rgba(0, 0, 0, 0.12);
     font-size: 22px;
     font-weight: 500;
     color: #374151;
@@ -203,20 +204,23 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 10000;
+    backdrop-filter: blur(5px);
 }
 
 /* ШТОРКА МЕНЮ */
 .menu {
     position: fixed; /* Фиксируем на весь экран */
-    top: 64px; /* Под шапкой */
+    top: 63px; /* Под шапкой */
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 2000;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.25s ease;
+    font-weight: 100;
+    backdrop-filter: blur(5px);
 }
 
 .menu.active {
@@ -230,15 +234,15 @@ body {
     right: 0;
     width: 70%;
     height: 100%;
-    background-color: #ffffff;
+    background-color: #fffffff7;
     transform: translateX(100%);
     transition: transform 0.25s ease;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
     padding-top: 24px;
     display: flex;
     flex-direction: column;
     gap: 12px;
     overflow-y: auto;
+    backdrop-filter: blur(10px);
 }
 
 .menu.active .menu-panel {
@@ -248,12 +252,51 @@ body {
 .menu-item {
     width: 100%;
     padding: 8px 5%;
-    color: #8C8C8C;
+    color: #000000;
 }
 
-.menu-item h2 {
-    font-size: 20px;
+.menu-item p {
+    font-weight: normal;
     margin: 0;
+}
+
+.route-bar {
+    margin-top: 0;         
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: env(safe-area-inset-bottom); 
+}
+
+.route-bar__action {
+    flex: 1;
+    height: 48px;
+    border-radius: 12px;
+    border: none;
+    background: #0b83cc;
+    color: #ffffff;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    font-family: 'Golos', sans-serif;
+}
+
+.route-bar__action {
+    background: linear-gradient(
+        90deg,
+        #0b83cc 0%,
+        #2a9df4 25%,
+        #0b83cc 50%,
+        #2a9df4 75%,
+        #0b83cc 100%
+    );
+    background-size: 200% 100%;
+    animation: flow 4s infinite linear;
+}
+
+@keyframes flow {
+    0% { background-position: 200% 0; }
+    100% { background-position: 0 0; }
 }
 
 /* ПОИСК И ВЫБОР ЭТАЖА */
@@ -332,19 +375,7 @@ select {
     flex-shrink: 0;
 }
 
-.route-bar__action {
-    flex: 1;
-    height: 48px;
-    border-radius: 12px;
-    border: none;
-    background: #0b83cc;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    cursor: pointer;
-    font-family: 'Golos', sans-serif;
-}
+
 
 .route-bar__close {
     width: 48px;
@@ -386,15 +417,17 @@ select {
 
 /* Блок подсказок*/
 .autocomplete-clues {
-    width: 100%;
-    background-color: none ;
-    display: none; 
-    padding: 16px;
-    display: flex;
-    flex-direction: column; 
-    
-    padding-left: 16px;
-    padding-right: 16px;
+    position: fixed;
+    z-index: 9999;
+    top: 100px; /* 110px + 16px */
+    left: 8px;  /* небольшие отступы по бокам */
+    right: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    margin: 0;
+    padding: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .clues-header{
@@ -403,12 +436,12 @@ select {
 
 .clue1, .clue2, .clue3, .clue4, .clue5 {
     border: 2px solid #d1d5db;
+    background-color: white;
     border-radius: 8px;
     height: 32px;
     padding: 8px;
     cursor: pointer;
     margin-top: 0px;
-    max-width: 400px;
 }
 
 .clue1:hover, .clue2:hover, .clue3:hover, .clue4:hover, .clue5:hover {
@@ -421,6 +454,18 @@ select {
     overflow-y: auto;
 }
 /**/
+
+.autocomplete-clues {
+    position: fixed;
+    z-index: 9999;
+    top: 200px;
+    left: 0;
+    right: 0;
+    max-width: 800px;
+    margin-left: 8px;
+    background: rgba(255, 255, 255, 0.379);
+    backdrop-filter: blur(10px);
+}
 
 .route-card {
     background: #f5f5f7;

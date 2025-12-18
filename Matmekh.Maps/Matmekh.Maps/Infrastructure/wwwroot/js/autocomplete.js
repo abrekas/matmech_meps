@@ -26,7 +26,6 @@ function parseRoomsFromJson(){
     .catch(error => {
         console.error('There has been a problem with your fetch operation:', error);
     });
-
 }
 
 function giveClue(value, input){
@@ -35,28 +34,49 @@ function giveClue(value, input){
         cluesBlock.style.display = 'none';
         return;
     }
+    
     cluesBlock.style.display = 'flex';
+    cluesBlock.style.flexDirection = 'column';
+    cluesBlock.style.position = 'fixed';
+    cluesBlock.style.zIndex = '9999';
+    cluesBlock.style.top = '140px';
+    cluesBlock.style.left = '8px';
+    cluesBlock.style.right = '8px';
+    cluesBlock.style.background = 'white';
+    cluesBlock.style.border = '2px solid #d1d5db';
+    cluesBlock.style.borderRadius = '8px';
+    cluesBlock.style.padding = '16px';
+    cluesBlock.style.maxHeight = '300px';
+    cluesBlock.style.overflowY = 'auto';
+    cluesBlock.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+    
     const matches = Object.keys(roomnames).filter(room => 
         room.toLowerCase().startsWith(value.toLowerCase())
     ).slice(0, 5);
+    
     updateClues(matches, input);
 }
 
 function updateClues(matches, input){
     const cluesBlock = document.getElementById('autocomplete-clues');
     
-    // Очищаем предыдущие подсказки
-    cluesBlock.innerHTML = '<div class="clues-header"></div>';
+    cluesBlock.innerHTML = '';
     
     if (matches.length < 1) {
-        console.log("nothing found");
         const clueElement = document.createElement('div');
-        clueElement.id = 'clue1';
-        clueElement.className = 'clue1';
         clueElement.innerHTML = `
-            <span style="color: #666; font-size: 0.9em">
-                ничего не найдено
-            </span>
+            <span style="color: #666">ничего не найдено</span>
+        `;
+        clueElement.style.cssText = `
+            border: 2px solid #d1d5db;
+            border-radius: 8px;
+            height: 32px;
+            padding: 8px;
+            margin-top: 8px;
+            max-width: 400px;
+            background: white;
+            display: flex;
+            align-items: center;
         `;
         cluesBlock.appendChild(clueElement);
         return; 
@@ -64,9 +84,6 @@ function updateClues(matches, input){
     
     for (let i = 0; i < matches.length; i++) {
         const clueElement = document.createElement('div');
-        clueElement.id = `clue${i+1}`;
-        clueElement.className = `clue${i+1}`;
-        clueElement.style.cursor = 'pointer';
         
         const description = roomnames[matches[i]];
         const building = getBuildingFromDescription(description);
@@ -78,6 +95,30 @@ function updateClues(matches, input){
                 (${building}, ${floor} этаж)
             </span>
         `;
+        
+        clueElement.style.cssText = `
+            border: 2px solid #d1d5db;
+            border-radius: 8px;
+            height: 32px;
+            padding: 8px;
+            cursor: pointer;
+            margin-top: 8px;
+            max-width: 400px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.2s;
+        `;
+        
+        clueElement.onmouseover = () => {
+            clueElement.style.backgroundColor = '#ffffff';
+            clueElement.style.borderColor = '#2f80c9';
+        };
+        clueElement.onmouseout = () => {
+            clueElement.style.backgroundColor = 'white';
+            clueElement.style.borderColor = '#d1d5db';
+        };
         
         clueElement.onclick = () => setValue(matches[i], input);
         cluesBlock.appendChild(clueElement);
@@ -98,3 +139,25 @@ function setValue(value, field){
     field.value = value;
     document.getElementById('autocomplete-clues').style.display = 'none';
 }
+
+document.addEventListener('click', function(event) {
+    const cluesBlock = document.getElementById('autocomplete-clues');
+    const fromInput = document.getElementById('routeFrom');
+    const toInput = document.getElementById('routeTo');
+    
+    if (cluesBlock && cluesBlock.style.display !== 'none') {
+        if (!cluesBlock.contains(event.target) && 
+            !fromInput.contains(event.target) && 
+            !toInput.contains(event.target)) {
+            
+            cluesBlock.style.display = 'none';
+        }
+    }
+});
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        const cluesBlock = document.getElementById('autocomplete-clues');
+        if (cluesBlock) cluesBlock.style.display = 'none';
+    }
+});
