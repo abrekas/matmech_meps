@@ -10,10 +10,11 @@ html {
 
 body {
     font-family: 'Golos', sans-serif;
-    background: #ffffff;
+    background: #ffffff; 
     color: #333;
     min-height: 100vh;
     margin-top: 64px;
+    z-index: 0;
 }
 
 @font-face {

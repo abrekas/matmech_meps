@@ -39,42 +39,48 @@ function giveClue(value, input){
     const matches = Object.keys(roomnames).filter(room => 
         room.toLowerCase().startsWith(value.toLowerCase())
     ).slice(0, 5);
-
     updateClues(matches, input);
 }
 
 function updateClues(matches, input){
     const cluesBlock = document.getElementById('autocomplete-clues');
     
-    const clues = cluesBlock.querySelectorAll('.clue1, .clue2, .clue3, .clue4, .clue5');
+    // Очищаем предыдущие подсказки
+    cluesBlock.innerHTML = '<div class="clues-header"></div>';
     
-    for (let i = 0; i < 5; i++) {
-        let clueElement = document.getElementById(`clue${i+1}`);
-        if (!clueElement) {
-            clueElement = document.createElement('div');
-            clueElement.id = `clue${i+1}`;
-            clueElement.className = `clue${i+1}`;
-            clueElement.style.cursor = 'pointer';
-            cluesBlock.appendChild(clueElement);
-        }
+    if (matches.length < 1) {
+        console.log("nothing found");
+        const clueElement = document.createElement('div');
+        clueElement.id = 'clue1';
+        clueElement.className = 'clue1';
+        clueElement.innerHTML = `
+            <span style="color: #666; font-size: 0.9em">
+                ничего не найдено
+            </span>
+        `;
+        cluesBlock.appendChild(clueElement);
+        return; 
+    }
+    
+    for (let i = 0; i < matches.length; i++) {
+        const clueElement = document.createElement('div');
+        clueElement.id = `clue${i+1}`;
+        clueElement.className = `clue${i+1}`;
+        clueElement.style.cursor = 'pointer';
         
-        if (i < matches.length) {
-            const description = roomnames[matches[i]];
-            const building = getBuildingFromDescription(description);
-            const floor = description.split('_').pop();
-            
-            clueElement.innerHTML = `
-                <strong>${matches[i]}</strong> 
-                <span style="color: #666; font-size: 0.9em">
-                    (${building}, ${floor} этаж)
-                </span>
-            `;
-            clueElement.style.display = 'block';
-            
-            clueElement.onclick = () => setValue(matches[i], input);
-        } else {
-            clueElement.style.display = 'none';
-        }
+        const description = roomnames[matches[i]];
+        const building = getBuildingFromDescription(description);
+        const floor = description.split('_').pop();
+        
+        clueElement.innerHTML = `
+            <strong>${matches[i]}</strong> 
+            <span style="color: #666; font-size: 0.9em">
+                (${building}, ${floor} этаж)
+            </span>
+        `;
+        
+        clueElement.onclick = () => setValue(matches[i], input);
+        cluesBlock.appendChild(clueElement);
     }
 }
 
