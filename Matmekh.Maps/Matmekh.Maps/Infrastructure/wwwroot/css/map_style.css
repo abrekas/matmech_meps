@@ -417,9 +417,7 @@ select {
 
 /* Блок подсказок*/
 .autocomplete-clues {
-    position: fixed;
-    z-index: 9999;
-    top: 100px; /* 110px + 16px */
+    position: fixed; /* 110px + 16px */
     left: 8px;  /* небольшие отступы по бокам */
     right: 8px;
     background: rgba(255, 255, 255, 0.95);
@@ -427,7 +425,14 @@ select {
     border-radius: 12px;
     margin: 0;
     padding: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    left: 0;
+    right: 0;
+    max-width: 800px;
+    margin-left: 8px;
+    background: rgba(255, 255, 255, 0.379);
+    backdrop-filter: blur(10px);
+    max-height: 300px;
+    overflow-y: auto;
 }
 
 .clues-header{
@@ -449,23 +454,8 @@ select {
     border-color: #2f80c9;
 }
 
-.autocomplete-clues {
-    max-height: 300px;
-    overflow-y: auto;
-}
 /**/
 
-.autocomplete-clues {
-    position: fixed;
-    z-index: 9999;
-    top: 200px;
-    left: 0;
-    right: 0;
-    max-width: 800px;
-    margin-left: 8px;
-    background: rgba(255, 255, 255, 0.379);
-    backdrop-filter: blur(10px);
-}
 
 .route-card {
     background: #f5f5f7;

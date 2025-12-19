@@ -37,18 +37,14 @@ function giveClue(value, input){
     
     cluesBlock.style.display = 'flex';
     cluesBlock.style.flexDirection = 'column';
-    cluesBlock.style.position = 'fixed';
-    cluesBlock.style.zIndex = '9999';
-    cluesBlock.style.top = '140px';
-    cluesBlock.style.left = '8px';
+    cluesBlock.style.bottom = '216px';
     cluesBlock.style.right = '8px';
     cluesBlock.style.background = 'white';
-    cluesBlock.style.border = '2px solid #d1d5db';
+    cluesBlock.style.border = 'none';
     cluesBlock.style.borderRadius = '8px';
     cluesBlock.style.padding = '16px';
     cluesBlock.style.maxHeight = '300px';
     cluesBlock.style.overflowY = 'auto';
-    cluesBlock.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
     
     const matches = Object.keys(roomnames).filter(room => 
         room.toLowerCase().startsWith(value.toLowerCase())
@@ -72,7 +68,6 @@ function updateClues(matches, input){
             border-radius: 8px;
             height: 32px;
             padding: 8px;
-            margin-top: 8px;
             max-width: 400px;
             background: white;
             display: flex;
@@ -102,7 +97,6 @@ function updateClues(matches, input){
             height: 32px;
             padding: 8px;
             cursor: pointer;
-            margin-top: 8px;
             max-width: 400px;
             background: white;
             display: flex;
