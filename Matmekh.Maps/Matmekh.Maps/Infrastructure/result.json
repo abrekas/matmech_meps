@@ -1,52 +1,272 @@
 [
   {
-    "X": 778,
-    "Y": 199,
-    "Floor": "matmeh_6"
+    "X": 498,
+    "Y": 263,
+    "Floor": "kuibysheva_1"
   },
   {
-    "X": 778,
-    "Y": 215,
-    "Floor": "matmeh_6"
+    "X": 498,
+    "Y": 250,
+    "Floor": "kuibysheva_1"
   },
   {
-    "X": 827,
-    "Y": 215,
-    "Floor": "matmeh_6"
+    "X": 700,
+    "Y": 250,
+    "Floor": "kuibysheva_1"
   },
   {
-    "X": 830,
-    "Y": 215,
-    "Floor": "matmeh_6"
+    "X": 743,
+    "Y": 250,
+    "Floor": "kuibysheva_1"
   },
   {
-    "X": 873,
-    "Y": 215,
-    "Floor": "matmeh_6"
+    "X": 743,
+    "Y": 272,
+    "Floor": "kuibysheva_1"
   },
   {
-    "X": 873,
-    "Y": 179,
-    "Floor": "matmeh_6"
+    "X": 175,
+    "Y": 1845,
+    "Floor": "kuibysheva_3"
   },
   {
-    "X": 874,
-    "Y": 180,
-    "Floor": "matmeh_5"
+    "X": 145,
+    "Y": 1845,
+    "Floor": "kuibysheva_3"
   },
   {
-    "X": 874,
-    "Y": 215,
-    "Floor": "matmeh_5"
+    "X": 145,
+    "Y": 1879,
+    "Floor": "kuibysheva_3"
   },
   {
-    "X": 756,
-    "Y": 215,
-    "Floor": "matmeh_5"
+    "X": 145,
+    "Y": 1907,
+    "Floor": "kuibysheva_3"
   },
   {
-    "X": 756,
-    "Y": 185,
-    "Floor": "matmeh_5"
+    "X": 145,
+    "Y": 1927,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 145,
+    "Y": 1970,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 571,
+    "Y": 1970,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 741,
+    "Y": 1970,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 973,
+    "Y": 1970,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1023,
+    "Y": 1970,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1055,
+    "Y": 1970,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1334,
+    "Y": 1970,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1502,
+    "Y": 1970,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1672,
+    "Y": 1970,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1773,
+    "Y": 1970,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1773,
+    "Y": 1905,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1773,
+    "Y": 1834,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1773,
+    "Y": 1793,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1754,
+    "Y": 1793,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1754,
+    "Y": 1728,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1754,
+    "Y": 1526,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1754,
+    "Y": 1421,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1754,
+    "Y": 1196,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1754,
+    "Y": 1041,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1754,
+    "Y": 989,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1754,
+    "Y": 879,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1754,
+    "Y": 816,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1754,
+    "Y": 611,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1754,
+    "Y": 453,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1754,
+    "Y": 427,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1754,
+    "Y": 355,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1754,
+    "Y": 283,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1733,
+    "Y": 283,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1620,
+    "Y": 283,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1525,
+    "Y": 283,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1375,
+    "Y": 283,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1192,
+    "Y": 283,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1192,
+    "Y": 243,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1174,
+    "Y": 243,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 1174,
+    "Y": 133,
+    "Floor": "kuibysheva_3"
+  },
+  {
+    "X": 775,
+    "Y": 55,
+    "Floor": "kuibysheva_2k"
+  },
+  {
+    "X": 859,
+    "Y": 55,
+    "Floor": "kuibysheva_2k"
+  },
+  {
+    "X": 859,
+    "Y": 113,
+    "Floor": "kuibysheva_2k"
+  },
+  {
+    "X": 588,
+    "Y": 113,
+    "Floor": "kuibysheva_2k"
+  },
+  {
+    "X": 588,
+    "Y": 221,
+    "Floor": "kuibysheva_2k"
+  },
+  {
+    "X": 588,
+    "Y": 279,
+    "Floor": "kuibysheva_2k"
+  },
+  {
+    "X": 464,
+    "Y": 279,
+    "Floor": "kuibysheva_2k"
+  },
+  {
+    "X": 267,
+    "Y": 279,
+    "Floor": "kuibysheva_2k"
+  },
+  {
+    "X": 211,
+    "Y": 279,
+    "Floor": "kuibysheva_2k"
   }
 ]
