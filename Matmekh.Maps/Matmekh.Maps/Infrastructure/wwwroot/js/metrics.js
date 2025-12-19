@@ -33,7 +33,7 @@
             activeMs: Math.round(session.activeMs),
             startedAt: new Date(session.startedAt).toISOString(),
             finishedAt: new Date().toISOString(),
-            reason,                       
+            reason,
             page: location.pathname
         };
 
@@ -56,7 +56,6 @@
     }
     
     let session = loadSession();
-
     const now = Date.now();
 
     if (!session || session.ended) {
@@ -67,6 +66,23 @@
             ended: false
         };
         saveSession(session);
+    } else {
+        const idle = now - session.lastActivityAt;
+
+        if (idle >= INACTIVITY_LIMIT_MS) {
+            session.ended = true;
+            saveSession(session);
+            sendMetric(session, "inactivity_on_load");
+            clearSession();
+            
+            session = {
+                startedAt: now,
+                lastActivityAt: now,
+                activeMs: 0,
+                ended: false
+            };
+            saveSession(session);
+        }
     }
 
     function scheduleInactivityTimer() {
@@ -114,17 +130,14 @@
     
     window.addEventListener("beforeunload", () => {
         if (session.ended) return;
+
         const now = Date.now();
         const delta = now - session.lastActivityAt;
         if (delta > 0 && delta < INACTIVITY_LIMIT_MS) {
             session.activeMs += delta;
         }
+
         session.lastActivityAt = now;
         saveSession(session);
-        
-        session.ended = true;
-        saveSession(session);
-        sendMetric(session, "unload");
-        clearSession();
     });
 })();
