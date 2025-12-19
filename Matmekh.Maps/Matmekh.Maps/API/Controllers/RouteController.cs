@@ -48,12 +48,6 @@ namespace Matmekh.Maps.API.Controllers
                 Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
             };
 
-            string json = JsonSerializer.Serialize(graph, options);
-
-            string filePath = Path.Combine("Infrastructure", "result.json");
-            Directory.CreateDirectory(Path.GetDirectoryName(filePath)!);
-            System.IO.File.WriteAllText(filePath, json);
-
             return Ok(new
             {
                 success = true,

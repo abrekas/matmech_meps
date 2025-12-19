@@ -1,5 +1,5 @@
 (() => {
-    const METRIC_URL = "/api/metrics/map-active-time";
+    const METRIC_URL = "/api/metric/build";
     const INACTIVITY_LIMIT_MS = 5 * 60 * 1000;
 
     let sessionStartedAt = Date.now();
