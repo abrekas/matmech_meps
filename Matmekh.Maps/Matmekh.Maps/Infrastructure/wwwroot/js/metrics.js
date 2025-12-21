@@ -1,7 +1,7 @@
 (() => {
     const STORAGE_KEY = "mapSession";
     const METRIC_URL = "/api/metric/build";
-    const INACTIVITY_LIMIT_MS = 1000; 
+    const INACTIVITY_LIMIT_MS = 5 * 60 * 1000; 
 
     let inactivityTimerId = null;
 
