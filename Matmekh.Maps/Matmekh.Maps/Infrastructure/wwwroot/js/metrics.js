@@ -36,6 +36,7 @@
             reason,
             page: location.pathname
         };
+        console.warn("send")
 
         const body = JSON.stringify(payload);
 

@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Text;
-using static System.Net.Mime.MediaTypeNames;
+using Matmekh.Maps.Infrastructure.Scripts;
 
 namespace Matmekh.Maps.API.Controllers
 {
@@ -19,34 +18,16 @@ namespace Matmekh.Maps.API.Controllers
 
 			try
 			{
+				
 				var logEntry = ";" + request.startedAt + " " + request.activeMs.ToString();
-
-				await WriteToFileAsync(logEntry);
+				
+				await AsyncWriter.WriteToFileAsync(logEntry, _filePath);
 
 				return Ok();
 			}
 			catch (Exception ex)
 			{
 				return StatusCode(500, "Internal server error");
-			}
-		}
-
-		private static async Task WriteToFileAsync(string content)
-		{
-			var directory = Path.GetDirectoryName(_filePath);
-			if (!string.IsNullOrEmpty(directory))
-				Directory.CreateDirectory(directory);
-
-			await using (var stream = new FileStream(
-				_filePath,
-				FileMode.Append,
-				FileAccess.Write,
-				FileShare.Read,
-				bufferSize: 4096,
-				useAsync: true))
-			{
-				var bytes = Encoding.UTF8.GetBytes(content);
-				await stream.WriteAsync(bytes);
 			}
 		}
 

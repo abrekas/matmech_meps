@@ -25,7 +25,7 @@ namespace Matmekh.Maps.Infrastructure.Scripts
 					bufferSize: 4096,
 					useAsync: true))
 				{
-					var bytes = Encoding.UTF8.GetBytes(content + Environment.NewLine);
+					var bytes = Encoding.UTF8.GetBytes(content);
 					await stream.WriteAsync(bytes);
 				}
 			}
