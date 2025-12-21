@@ -13,7 +13,14 @@
             Floor = floor;
         }
 
-        public override bool Equals(object obj) =>
+		public Coordinates(int x, int y)
+		{
+			X = x;
+			Y = y;
+			Floor = "1";
+		}
+
+		public override bool Equals(object obj) =>
             obj is Coordinates point && Equals(point);
 
         public bool Equals(Coordinates other) =>

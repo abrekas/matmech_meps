@@ -42,7 +42,6 @@ public class PathFinderService : IPathFinderService
     public CabinetsRoute FindPath(string startName, string endName)
     {
 
-        // 1. Проверяем существование имен
         if (!Names.TryGetValue(startName, out var startPoint))
             throw new ArgumentException($"Не найдена начальная точка: {startName}");
 
@@ -51,23 +50,28 @@ public class PathFinderService : IPathFinderService
 
         Console.WriteLine($"Поиск пути: {startName} {startPoint} → {endName} {endPoint}");
 
-        // 2. Проверяем существование точек в графе
         if (!Graph.ContainsKey(startPoint.Location))
             throw new InvalidOperationException($"Точка {startPoint} не найдена в графе");
 
         if (!Graph.ContainsKey(endPoint.Location))
             throw new InvalidOperationException($"Точка {endPoint} не найдена в графе");
 
-        // 3. Вызываем алгоритм A*
-        var path = searcher.FindPath(Graph, startPoint.Location, endPoint.Location);
+        var path = new List<Coordinates>();
+        if (startPoint == endPoint)
+        {
+            path.Add(startPoint.Location);
+        }
+        else
+        {
+			path = searcher.FindPath(Graph, startPoint.Location, endPoint.Location);
+		}
+        
 
-        // 4. Логируем результат
         if (path.Count > 0)
         {
             Console.WriteLine($"Найден путь длиной {path.Count} шагов:");
             Console.WriteLine($"   {string.Join(" → ", path.Select(p => p.ToString()))}");
 
-            // Конвертируем в названия если возможно
             var namedPath = path.Select(p =>
                 Names.FirstOrDefault(n => n.Value.Equals(p)).Key ?? p.ToString());
             Console.WriteLine($"   По названиям: {string.Join(" → ", namedPath)}");
