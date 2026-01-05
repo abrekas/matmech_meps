@@ -1,99 +1,95 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Куйбышева</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/map_style.css">
+  <meta charset="UTF-8">
+  <title>Куйбышева</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/map_style.css">
 </head>
-<body>
-<div class="app">
-    <header class="app-header">
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/logo.png" alt="">
-            </a>
+
+<body class="app">
+<header class="app-header">
+  <div class="logo">
+    <a href="index.html"><img src="images/logo.png" alt=""></a>
+  </div>
+  <button class="burger" id="burgerBtn" aria-label="Открыть меню" onclick="activateMenu(event)">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div id="menu-placeholder"></div>
+
+<main class="app-main app-main--layout">
+  <aside class="sidebar">
+    <div class="search-wrap">
+      <div class="search-box">
+        <img class="search-icon" src="images/search_icon.png" alt="">
+        <input class="search-input" type="text" placeholder="поиск аудитории" id="searchInput">
+      </div>
+      <div id="autocomplete-clues" class="autocomplete-clues" style="display:none;"></div>
+    </div>
+
+    <div id="search-overlay" class="search-overlay" style="display:none;"></div>
+
+    <div class="recommendation">
+      <p class="recommendation__title">КУЙБЫШЕВА</p>
+      <div class="icon-grid" id="iconGrid"></div>
+    </div>
+  </aside>
+
+  <section class="map-area">
+    <div class="floor-select floor-select--overlay">
+      <div class="select-wrapper">
+        <span id="floorLabel">1 этаж</span>
+        <span class="select-arrow"></span>
+      </div>
+
+      <!-- ВАЖНО: value должны быть как в map_script.js -->
+      <select name="floor" id="floorSelect">
+        <option value="1 этаж" selected>1 этаж</option>
+        <option value="3 этаж">3 этаж</option>
+        <option value="2 этаж контуровские классы">2 контуровские классы</option>
+        <option value="1 этаж контуровские классы">1 контуровские классы</option>
+      </select>
+    </div>
+
+    <div class="map-zoom-controls map-zoom-controls--inmap">
+      <button class="zoom-btn" id="zoomInBtn">+</button>
+      <button class="zoom-btn" id="zoomOutBtn">−</button>
+    </div>
+
+    <div class="map-wrapper">
+      <div class="map-scroll">
+        <div class="map-container" id="mapContainer">
+          <div class="map-inner" id="mapInner">
+
+            <!-- ВАЖНО: id="mySvgContainer" и <image id="floorMap"> -->
+            <svg id="mySvgContainer"
+                 xmlns="http://www.w3.org/2000/svg"
+                 class="map-svg"
+                 preserveAspectRatio="xMinYMin meet">
+              <image id="floorMap" href="images/1floor_k.png" x="0" y="0"></image>
+              <g id="routeLayer"></g>
+            </svg>
+
+          </div>
         </div>
-        <button class="burger" id="burgerBtn" aria-label="Открыть меню" onclick="activateMenu(event)">
-            <span></span><span></span><span></span>
-        </button>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <main class="app-main">
-
-        <!-- меню шторка -->
-        <div id="menu-placeholder"></div>
-
-        <!-- поиск -->
-        <div class="search-box">
-            <img src="images/search_icon.png">
-            <input
-                    class="search-input"
-                    type="text"
-                    placeholder="поиск аудитории"
-                    id="searchInput"
-            />
-        </div>
-
-        <div id="autocomplete-clues" class="autocomplete-clues" style="display: none;"></div>
-        <div id="search-overlay" class="search-overlay" style="display: none;"></div>
-
-        <!-- выбор этажа -->
-        <div class="floor-select">
-            <div class="select-wrapper">
-                <span id="floorLabel">1 этаж</span>
-                <span class="select-arrow"></span>
-            </div>
-            <select name="floor" id="floorSelect">
-                <option value="1 этаж" selected>1 этаж</option>
-                <option value="3 этаж">3 этаж</option>
-                <option value="2 этаж контуровские классы">2 контуровские классы</option>
-                <option value="1 этаж контуровские классы">1 контуровские классы</option>
-            </select>
-        </div>
-
-        <!-- карта -->
-        <!-- карта -->
-        <div class="map-wrapper">
-            <div class="map-viewport">
-                <svg id="mySvgContainer"
-                     xmlns="http://www.w3.org/2000/svg"
-                     class="map-svg"
-                     preserveAspectRatio="xMinYMin meet">
-
-                    <!-- картинка этажа -->
-                    <image
-                            id="floorMap"
-                            href="images/NEW_1floor_k.png"
-                            x="0"
-                            y="0">
-                    </image>
-
-                    <!-- СЮДА drawRoute будет рисовать маршрут -->
-                    <g id="routeLayer"></g>
-                </svg>
-            </div>
-
-            <div class="map-zoom-controls">
-                <button class="zoom-btn" id="zoomInBtn">+</button>  
-                <button class="zoom-btn" id="zoomOutBtn">−</button>
-            </div>
-        </div>
-        
-        <!-- построить маршрут -->
-        <div class="route-bar">
-            <button class="route-bar__action" id="goRouteK">
-                ПОСТРОИТЬ МАРШРУТ 
-            </button>
-        </div>
-    </main>
-</div>
-
+  <div class="route-bar route-bar--bottom">
+    <button class="route-bar__action" id="goRouteK">ПОСТРОИТЬ МАРШРУТ</button>
+  </div>
+</main>
 
 <script src="js/metrics.js"></script>
 <script src="js/map_script.js"></script>
 <script src="js/route.js"></script>
+<script src="js/menu_script.js"></script>
 <script src="js/draw_route.js"></script>
+<script src="js/route_request.js"></script>
 <script src="js/search.js"></script>
+<script src="js/reccomendations.js"></script>
 </body>
 </html>

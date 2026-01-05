@@ -1,87 +1,84 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Навигация по корпусу</title> 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/map_style.css">
+  <meta charset="UTF-8">
+  <title>Матмех</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/map_style.css">
 </head>
+
 <body class="app">
-    <header class="app-header">
-        <div class="logo">
-            <a href="index.html">
-            <img src="images/logo.png" alt="">
-        </div></a>
-        <button class="burger" id="burgerBtn" aria-label="Открыть меню" onclick="activateMenu(event)">
-            <span></span><span></span><span></span>
-        </button>
-    </header>
+<header class="app-header">
+  <div class="logo">
+    <a href="index.html"><img src="images/logo.png" alt=""></a>
+  </div>
+  <button class="burger" id="burgerBtn" aria-label="Открыть меню" onclick="activateMenu(event)">
+    <span></span><span></span><span></span>
+  </button>
+</header>
 
-    <main class="app-main">
+<div id="menu-placeholder"></div>
 
-        <!-- меню шторка -->
-        <div id="menu-placeholder"></div>
-        
-        <!-- поиск -->
-        <div class="search-box">
-            <img class="search-icon" src="images/search_icon.png">
-            <input
-                    class="search-input"
-                    type="text"
-                    placeholder="поиск аудитории"
-                    id="searchInput"
-            />
+<main class="app-main app-main--layout">
+  <aside class="sidebar">
+    <div class="search-wrap">
+      <div class="search-box search-box--anchor">
+        <img class="search-icon" src="images/search_icon.png" alt="">
+        <input class="search-input" type="text" placeholder="поиск аудитории" id="searchInput">
+      </div>
+
+      <div id="autocomplete-clues" class="autocomplete-clues" style="display:none;"></div>
+    </div>
+    <div id="search-overlay" class="search-overlay" style="display:none;"></div>
+
+    <div class="recommendation">
+      <p class="recommendation__title">МАТМЕХ</p>
+      <div class="icon-grid" id="iconGrid"></div>
+    </div>
+  </aside>
+
+  <section class="map-area">
+    <div class="floor-select floor-select--overlay">
+      <div class="select-wrapper">
+        <span id="floorLabel">6 этаж</span>
+        <span class="select-arrow"></span>
+      </div>
+      <select name="floor" id="floorSelect">
+        <option value="6">6 этаж</option>
+        <option value="5">5 этаж</option>
+      </select>
+    </div>
+
+    <div class="map-zoom-controls map-zoom-controls--inmap">
+      <button class="zoom-btn" id="zoomInBtn">+</button>
+      <button class="zoom-btn" id="zoomOutBtn">−</button>
+    </div>
+
+    <div class="map-wrapper">
+      <div class="map-scroll">
+        <div class="map-container" id="mapContainer">
+          <div class="map-inner" id="mapInner">
+            <img id="floorMap" src="images/floor6.png" alt="">
+            <svg id="routeLayer" class="route-layer"></svg>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div id="autocomplete-clues" class="autocomplete-clues" style="display: none;"></div>
-        <div id="search-overlay" class="search-overlay" style="display: none;"></div>
+  <div class="route-bar route-bar--bottom">
+    <button class="route-bar__action" id="goRouteM">ПОСТРОИТЬ МАРШРУТ</button>
+  </div>
+</main>
 
 
-        <!-- выбор этажа -->
-        <div class="floor-select">
-            <div class="select-wrapper">
-                <span id="floorLabel">6 этаж</span>
-                <span class="select-arrow"></span>
-            </div>
-            <select name="floor" id="floorSelect">
-                <option value="6">6 этаж</option>
-                <option value="5">5 этаж</option>
-            </select>
-        </div>
-
-        <!-- карта -->
-        <div class="map-wrapper">
-            <div class="map-scroll">
-                <div class="map-container" id="mapContainer">
-                    <div class="map-inner" id="mapInner">
-                        <img id="floorMap" src="images/floor6.png" alt="">
-                        <svg id="routeLayer" class="route-layer" ...></svg>
-                    </div>
-                </div>
-            </div>
-
-            <div class="map-zoom-controls">
-                <button class="zoom-btn" id="zoomInBtn">+</button>
-                <button class="zoom-btn" id="zoomOutBtn">−</button>
-            </div>
-        </div>
-
-        <!-- построить маршрут -->
-        
-        <div class="route-bar">
-            <button class="route-bar__action" id="goRouteM">
-                ПОСТРОИТЬ МАРШРУТ
-            </button>
-        </div>
-        
-    </main>
-    
-<script src="js/metrics.js"></script>    
+<script src="js/metrics.js"></script>
 <script src="js/map_script.js"></script>
 <script src="js/route.js"></script>
 <script src="js/menu_script.js"></script>
 <script src="js/draw_route.js"></script>
 <script src="js/route_request.js"></script>
 <script src="js/search.js"></script>
+<script src="js/reccomendations.js"></script>
 </body>
 </html>
