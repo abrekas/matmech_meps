@@ -58,8 +58,16 @@
       <div class="map-scroll">
         <div class="map-container" id="mapContainer">
           <div class="map-inner" id="mapInner">
-            <img id="floorMap" src="images/floor6.png" alt="">
-            <svg id="routeLayer" class="route-layer"></svg>
+
+            <!-- ВАЖНО: id="mySvgContainer" и <image id="floorMap"> -->
+            <svg id="mySvgContainer"
+                 xmlns="http://www.w3.org/2000/svg"
+                 class="map-svg"
+                 preserveAspectRatio="xMinYMin meet">
+              <image id="floorMap" href="images/floor6.png" x="0" y="0"></image>
+              <g id="routeLayer"></g>
+            </svg>
+
           </div>
         </div>
       </div>
@@ -68,9 +76,9 @@
 
   <div class="route-bar route-bar--bottom">
     <button class="route-bar__action" id="goRouteM">ПОСТРОИТЬ МАРШРУТ</button>
+
   </div>
 </main>
-
 
 <script src="js/metrics.js"></script>
 <script src="js/map_script.js"></script>

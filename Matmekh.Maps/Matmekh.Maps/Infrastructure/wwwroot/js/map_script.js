@@ -25,8 +25,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   const savedFloorKey  = rawFloor ? String(rawFloor).trim() : null;
 
 
-  isKuibysheva = !!document.getElementById("mySvgContainer"); 
-  isMatmeh     = !isKuibysheva;                               
+  isKuibysheva = !!document.getElementById("goRouteK");
+  isMatmeh     = !!document.getElementById("goRouteM");
+                              
 
 
   if (floorSelect) {
@@ -117,74 +118,77 @@ function initMenuIfExists() {
 function initMatmehMap() {
   const floorSelect = document.getElementById("floorSelect");
   const floorLabel  = document.getElementById("floorLabel");
-  const floorMap    = document.getElementById("floorMap");
 
-  const mapInner    = document.getElementById("mapInner");
-  const zoomInBtn   = document.getElementById("zoomInBtn");
-  const zoomOutBtn  = document.getElementById("zoomOutBtn");
+  const svg      = document.getElementById("mySvgContainer");
+  const floorMap = document.getElementById("floorMap");
+
+  const zoomInBtn  = document.getElementById("zoomInBtn");
+  const zoomOutBtn = document.getElementById("zoomOutBtn");
+
+  if (!floorSelect || !floorLabel || !svg || !floorMap || !zoomInBtn || !zoomOutBtn) {
+    console.warn("initMatmehMap: какие-то элементы не найдены");
+    return;
+  }
 
   const floorImages = {
     "5": "images/floor5.png",
     "6": "images/floor6.png"
-  };
+  }; 
 
-  const applyFloor = (value) => {
-    if (!floorSelect) return;
+  let scale     = 0.25;
+  let MIN_SCALE = 0.25;
+  const MAX_SCALE = 3;
+  const STEP     = 0.5;
 
-    const opt       = floorSelect.querySelector(`option[value="${value}"]`);
-    const labelText = opt ? opt.textContent.trim() : value;
+  let baseW = 1000;
+  let baseH = 1000;
 
-    if (floorLabel) {
-      floorLabel.textContent = labelText;
-    }
-    if (floorMap) {
-      const digitMatch = labelText.match(/\d+/);
-      const digit      = digitMatch ? digitMatch[0] : value; 
-      const src        = floorImages[digit];
-
-      if (src) {
-        floorMap.src = src;
-        floorMap.alt = "";
-      } else {
-        floorMap.src = "";
-        floorMap.alt = "Карта не найдена";
-      }
-    }
-  };
-
-  if (floorSelect) {
-    applyFloor(floorSelect.value);
+  function applyScale() {
+    svg.style.width  = `${baseW * scale}px`;
+    svg.style.height = `${baseH * scale}px`;
   }
-  
-  if (mapInner && zoomInBtn && zoomOutBtn) {
-    let scale       = 0.25;
-    const MIN_SCALE = 0.25;
-    const MAX_SCALE = 3;
-    const STEP      = 0.25;
 
-    const applyScale = () => {
-      mapInner.style.transform = `scale(${scale})`;
+  function loadFloor(value) {
+    console.log(value);
+    const src = floorImages[value];
+    if (!src) return;
+
+    floorLabel.textContent = value;
+
+    const img = new Image();
+    img.onload = () => {
+      baseW = img.naturalWidth;
+      baseH = img.naturalHeight;
+
+      svg.setAttribute("viewBox", `0 0 ${baseW} ${baseH}`);
+
+      floorMap.setAttribute("href", src);
+      floorMap.setAttribute("x", "0");
+      floorMap.setAttribute("y", "0");
+      floorMap.setAttribute("width", baseW);
+      floorMap.setAttribute("height", baseH);
+
+      applyScale();
     };
+    img.src = src;
+  }
 
+  loadFloor(floorSelect.value);
+
+  zoomInBtn.addEventListener("click", () => {
+    scale = Math.min(MAX_SCALE, scale + STEP);
     applyScale();
+  });
 
-    zoomInBtn.addEventListener("click", () => {
-      scale = Math.min(MAX_SCALE, scale + STEP);
-      applyScale();
-    });
+  zoomOutBtn.addEventListener("click", () => {
+    scale = Math.max(MIN_SCALE, scale - STEP);
+    applyScale();
+  });
 
-    zoomOutBtn.addEventListener("click", () => {
-      scale = Math.max(MIN_SCALE, scale - STEP);
-      applyScale();
-    });
-  }
-
-  if (floorSelect) {
-    floorSelect.addEventListener("change", () => {
-      applyFloor(floorSelect.value);
-      updateRouteForCurrentFloor();   
-    });
-  }
+  floorSelect.addEventListener("change", () => {
+    loadFloor(floorSelect.value);
+    updateRouteForCurrentFloor();
+  });
 }
 
 
@@ -210,10 +214,10 @@ function initKuibyshevaMap() {
     "1 этаж контуровские классы": "images/1floor_k_k.png"
   };
 
-  let scale     = 1;
-  let MIN_SCALE = 0.5;
+  let scale     = 0.25;
+  let MIN_SCALE = 0.25;
   const MAX_SCALE = 3;
-  const STEP     = 0.05;
+  const STEP     = 0.5;
 
   let baseW = 1000;
   let baseH = 1000;
@@ -247,7 +251,7 @@ function initKuibyshevaMap() {
         MIN_SCALE = 0.2;
       } else {
         scale    = 0.7;
-        MIN_SCALE = 0.7;
+        MIN_SCALE = 0.25;
       }
 
       applyScale();
