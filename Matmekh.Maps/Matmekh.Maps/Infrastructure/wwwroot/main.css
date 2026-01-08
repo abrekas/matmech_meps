@@ -313,3 +313,11 @@ footer{
     0% { background-position: 200% 0; }
     100% { background-position: 0 0; }
 }
+
+.map-area,
+.map-wrapper,
+.map-scroll,
+.map-container,
+.map-inner {
+    background: transparent !important;   
+}

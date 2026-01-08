@@ -1,7 +1,7 @@
 let isKuibysheva = false;
 let isMatmeh     = false;
 let routePoints  = null;
-
+let pendingFocus = null;
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
@@ -135,7 +135,7 @@ function initMatmehMap() {
     "6": "images/floor6.png"
   }; 
 
-  let scale     = 0.25;
+  let scale     = 0.75;
   let MIN_SCALE = 0.25;
   const MAX_SCALE = 3;
   const STEP     = 0.5;
@@ -305,6 +305,51 @@ function getCurrentFloorSuffix() {
   }
 }
 
+function setFloorBySuffix(suffix) {
+  const floorSelect = document.getElementById("floorSelect");
+  if (!floorSelect) return;
+
+  if (isKuibysheva) {
+    const map = {
+      "1":  "1 этаж",
+      "3":  "3 этаж",
+      "1k": "1 этаж контуровские классы",
+      "2k": "2 этаж контуровские классы",
+      "2":  "2 этаж контуровские классы"
+    };
+    const val = map[String(suffix)];
+    if (!val) return;
+    floorSelect.value = val;
+  } else {
+    floorSelect.value = String(suffix); 
+  }
+
+  floorSelect.dispatchEvent(new Event("change", { bubbles: true }));
+}
+
+function focusOnSvgPoint(point) {
+  const svg = document.getElementById("mySvgContainer");
+  const scrollBox = document.querySelector(".map-scroll");
+  if (!svg || !scrollBox || !point) return;
+
+  const x = point.X ?? point.x;
+  const y = point.Y ?? point.y;
+  if (x == null || y == null) return;
+
+  const pt = svg.createSVGPoint();
+  pt.x = x; pt.y = y;
+
+  const ctm = svg.getScreenCTM();
+  if (!ctm) return;
+
+  const screen = pt.matrixTransform(ctm);
+  const rect = scrollBox.getBoundingClientRect();
+
+  const left = scrollBox.scrollLeft + (screen.x - rect.left) - scrollBox.clientWidth / 2;
+  const top  = scrollBox.scrollTop  + (screen.y - rect.top)  - scrollBox.clientHeight / 2;
+
+  scrollBox.scrollTo({ left, top, behavior: "smooth" });
+}
 
 function updateRouteForCurrentFloor() {
   const routeLayer  = document.getElementById("routeLayer");
@@ -314,44 +359,75 @@ function updateRouteForCurrentFloor() {
     console.log("updateRouteForCurrentFloor: нет routeLayer / floorSelect / routePoints");
     return;
   }
-  
-  routeLayer.innerHTML = "";
 
-  const floorSuffix = getCurrentFloorSuffix(); // "5","6","1","3","1k","2k"
-  if (!floorSuffix) {
-    console.log("updateRouteForCurrentFloor: не удалось определить суффикс этажа");
+  const floorSuffix = getCurrentFloorSuffix(); 
+  if (!floorSuffix) return;
+
+  const anyFloorPoint = routePoints.find(p => p && (p.Floor != null || p.floor != null));
+  if (!anyFloorPoint) return;
+
+  const prefix = String(anyFloorPoint.Floor ?? anyFloorPoint.floor).split("_")[0];
+  const floorCode = `${prefix}_${floorSuffix}`;
+
+  const segments = [];
+  let lastCode = null;
+
+  for (const p of routePoints) {
+    const code = String(p.Floor ?? p.floor ?? "");
+    const x = p.X ?? p.x;
+    const y = p.Y ?? p.y;
+    if (!code || x == null || y == null) continue;
+
+    if (code !== lastCode) {
+      const parts = code.split("_");
+      segments.push({
+        floorCode: code,
+        suffix: parts[1] ?? parts[0],
+        points: []
+      });
+      lastCode = code;
+    }
+    segments[segments.length - 1].points.push({ X: x, Y: y, Floor: code });
+  }
+
+  const idx = segments.findIndex(s => s.floorCode === floorCode);
+  if (idx < 0) {
+    console.log("updateRouteForCurrentFloor: сегмент этажа не найден", floorCode);
     return;
   }
-  
-  const anyFloorPoint = routePoints.find(
-      p => p && (p.Floor != null || p.floor != null)
-  );
-  if (!anyFloorPoint) {
-    console.log("updateRouteForCurrentFloor: в routePoints нет поля Floor", routePoints);
-    return;
+
+  const seg = segments[idx];
+  if (!seg.points || seg.points.length < 2) return;
+
+  const prevSeg = segments[idx - 1] || null;
+  const nextSeg = segments[idx + 1] || null;
+
+
+  let onEndClick = null;
+  if (nextSeg && nextSeg.points && nextSeg.points.length) {
+    onEndClick = () => {
+      pendingFocus = { floorCode: nextSeg.floorCode, point: nextSeg.points[0] };
+      setFloorBySuffix(nextSeg.suffix);
+    };
   }
 
-  const floorField = String(anyFloorPoint.Floor ?? anyFloorPoint.floor); 
-  const prefix     = floorField.split("_")[0];                           
-  const floorCode  = `${prefix}_${floorSuffix}`;                         
 
-  const pointsForFloor = routePoints.filter(p =>
-      String(p.Floor ?? p.floor) === floorCode
-  );
-
-  console.log("updateRouteForCurrentFloor:", {
-    floorSuffix,
-    floorField,
-    prefix,
-    floorCode,
-    allFloors: [...new Set(routePoints.map(p => String(p.Floor ?? p.floor)))],
-    count: pointsForFloor.length
-  });
-
-  if (pointsForFloor.length < 2) {
-    console.log("updateRouteForCurrentFloor: для", floorCode, "мало точек, ничего не рисуем");
-    return;
+  let onStartClick = null;
+  if (prevSeg && prevSeg.points && prevSeg.points.length) {
+    const lastPrevPoint = prevSeg.points[prevSeg.points.length - 1];
+    onStartClick = () => {
+      pendingFocus = { floorCode: prevSeg.floorCode, point: lastPrevPoint };
+      setFloorBySuffix(prevSeg.suffix);
+    };
   }
+
+  drawRoute(seg.points, { onEndClick, onStartClick });
+
+
   
-  drawRoute(pointsForFloor);
+  if (pendingFocus && pendingFocus.floorCode === floorCode) {
+    const p = pendingFocus.point;
+    pendingFocus = null;
+    requestAnimationFrame(() => focusOnSvgPoint(p));
+  }
 }
