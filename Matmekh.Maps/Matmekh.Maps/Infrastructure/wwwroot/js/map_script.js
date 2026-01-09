@@ -353,9 +353,10 @@ function focusOnSvgPoint(point) {
 }
 
 function updateRouteForCurrentFloor() {
+  console.log("=== routePoints ===", routePoints);
   const routeLayer  = document.getElementById("routeLayer");
   const floorSelect = document.getElementById("floorSelect");
-
+  routeLayer.innerHTML = ""
   if (!routeLayer || !floorSelect || !Array.isArray(routePoints) || routePoints.length < 2) {
     console.log("updateRouteForCurrentFloor: нет routeLayer / floorSelect / routePoints");
     return;
@@ -399,9 +400,26 @@ function updateRouteForCurrentFloor() {
 
   const seg = segments[idx];
   if (!seg.points || seg.points.length < 2) return;
-
-  const prevSeg = segments[idx - 1] || null;
-  const nextSeg = segments[idx + 1] || null;
+  
+  let prevSeg = null;
+  for (let i = idx - 1; i >= 0; i--) {
+    const s = segments[i];
+    if (s.suffix === "2k" && s.points.length === 1) {
+      continue;
+    }
+    prevSeg = s;
+    break;
+  }
+  
+  let nextSeg = null;
+  for (let i = idx + 1; i < segments.length; i++) {
+    const s = segments[i];
+    if (s.suffix === "2k" && s.points.length === 1) {
+      continue;
+    }
+    nextSeg = s;
+    break;
+  }
 
 
   let onEndClick = null;
