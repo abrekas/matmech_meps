@@ -135,10 +135,10 @@ function initMatmehMap() {
     "6": "images/floor6.png"
   }; 
 
-  let scale     = 0.75;
+  let scale     = 0.5;
   let MIN_SCALE = 0.25;
   const MAX_SCALE = 3;
-  const STEP     = 0.5;
+  const STEP     = 0.25;
 
   let baseW = 1000;
   let baseH = 1000;
@@ -217,7 +217,7 @@ function initKuibyshevaMap() {
   let scale     = 0.25;
   let MIN_SCALE = 0.25;
   const MAX_SCALE = 3;
-  const STEP     = 0.5;
+  const STEP     = 0.25;
 
   let baseW = 1000;
   let baseH = 1000;
@@ -329,7 +329,8 @@ function setFloorBySuffix(suffix) {
 
 function focusOnSvgPoint(point) {
   const svg = document.getElementById("mySvgContainer");
-  const scrollBox = document.querySelector(".map-scroll");
+  const scrollBox = document.querySelector(".map-wrapper");
+
   if (!svg || !scrollBox || !point) return;
 
   const x = point.X ?? point.x;
