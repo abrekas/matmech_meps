@@ -1,7 +1,5 @@
-from itertools import count
-
 loaded = ""
-with open("..\\Matmekh.Maps\\Matmekh.Maps\\Infrastructure\\metric.txt", "r") as file:
+with open("metric.txt", "r") as file:
     loaded = file.read()
 result = {}
 for data in loaded.split(";"):
@@ -12,7 +10,7 @@ for data in loaded.split(";"):
 
     is_good = False
 
-    if 6000 <= int(time) <= 12000:
+    if 50000 <= int(time) <= 180000:
         is_good = True
 
     if day in result.keys():
@@ -27,6 +25,8 @@ for data in loaded.split(";"):
         else:
             result[day]["bad"] += 1
 print(result)
+allgood = 0
+allbad = 0
 for date in result.keys():
     if result[date]['bad'] == 0:
         if result[date]['good'] == 0:
@@ -34,4 +34,7 @@ for date in result.keys():
         else:
             print(date, "100%")
         continue
-    print(date, f"{result[date]['good']/result[date]['bad']}%")
+    allgood += result[date]['good']
+    allbad += result[date]['bad']
+    res = round((result[date]['good']/(result[date]['bad'] + result[date]['good'])) * 100, 2)
+    print(date, f"{res}%")
